@@ -1,0 +1,245 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Course Intake Date</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Course Intake Date</li>
+              </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+  </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                      <div class="card-header">
+                        <h5 class="card-title">Manage Course Intake Date</h5>
+                      </div> 
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                      <div class="inner-row">
+                                        <div class="form-group row">
+                                          <label for="coursetype" class="col-sm-3 control-label alignStart">Course Type/ Status</label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="coursetype" id="coursetype">
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>VET</option>
+                                                <option>Calender Set2</option>
+                                                <option>Calender Set3</option>
+                                                <option>Calender Set4</option>
+                                              </select>
+                                             </div>
+                                             <div class="row form-check">
+                                              <div class="form-check radio">
+                                                  <input class="form-check-input" type="radio" name="coursetype" id="coursetype" value="coursetype1" checked>
+                                              <label class="form-check-label">Active Course</label>
+                                              </div>
+                                              <div class="form-check radio">
+                                                  <input class="form-check-input" type="radio" name="coursetype" id="coursetype" value="coursetype2">
+                                                  <label class="form-check-label">Inactive Course</label>
+                                              </div>
+                                          </div> 
+                                          </div>
+                                      </div>
+                  
+                                        <div class="form-group row">
+                                          <label for="courseSelection" class="col-sm-3 control-label">Course Selection</label>
+                                          <div class="col-sm-9">
+                                            <div class="form-check radio">
+                                              <input class="form-check-input" type="radio" name="courseSelection" id="AllCourses" value="AllCourses" checked>
+                                              <label class="form-check-label">All Courses</label>
+                                            </div>
+                  
+                                            <div class="form-check radio">
+                                              <input class="form-check-input" type="radio" name="courseSelection" id="SelectedCourses" value="SelectedCourses">
+                                              <label class="form-check-label">Selected Courses</label>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                          <label for="courseId" class="col-sm-3 control-label alignStart">Course Id</label>
+                                          <div class="col-sm-9 cbox">
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox1" value="option1">
+                                                  <label class="form-check-label">B2B50215 Diploma of Business</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox2" value="option2">
+                                                  <label class="form-check-label">ICT50118: Diploma of Information Technology</label>
+                                              </div>
+                                              <div class="form-check" >
+                                                  <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox3" value="option3">
+                                                  <label class="form-check-label">SIT40516: Certificate IV in Commercial Cookery</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox4" value="option4">
+                                                  <label class="form-check-label">SIT50416-PKG: Diploma of Hospitality Management</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox5" value="option5">
+                                                  <label class="form-check-label">ICT50115: Diploma of Information Technology</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox6" value="option6">
+                                                  <label class="form-check-label">ICT60115: Advanced Diploma of Information Technology</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox7" value="option7">
+                                                  <label class="form-check-label">SIT50416: Diploma od Hospitality Management</label>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-group row">
+                                          <label for="intakename" class="col-sm-3 control-label">Intake Name</label>
+                                          <div class="col-sm-9"> 
+                                            <div class="input-group">
+                                              <input class="form-control" type="text" name="intakename" id="intakename"  placeholder="Enter intake name here" >
+                                            </div>         
+                                          </div>
+                                      </div>
+                      
+                                        <div class="form-group row">
+                                          <label for="intakestartdate" class="col-sm-3 control-label">Intake Start Date</label> 
+                                          <div class="col-sm-9" id="reservationdate" data-target-input="nearest">          
+                                            <input type="date" class="form-control datetimepicker-input" name="intakestartdate" id="intakestartdate"  data-target="#reservationdate" placeholder="21/7/1999">
+                                          </div>
+                                        </div>
+                      
+                                        <div class="form-group row">
+                                          <label for="CourseType" class="col-sm-3 control-label">Duration before intake close date</label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="CourseType" id="CourseType">
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                              </select>
+                                              <span>days(after intake start date)</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                      
+                                        <div class="form-group row">
+                                          <label for="intakereceiver" class="col-sm-3 control-label">Intake Receiver</label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="intakereceiver" id="intakereceiver">
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>International, Domestic</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                              </select>
+                                            </div>
+                                            <div class="form-check cbox">
+                                              <input class="form-check-input" type="checkbox" name="checkbox1" id="checkbox1" value="cbox1">
+                                              <label class="form-check-label">Publish</label>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                          <div class="submit-button">
+                                              <button type="submit" class="btn btn-success" name="ad" id="add">Add</button>
+                                          </div>
+                                          <br>
+                                          <br>
+                                      </div><!--inner-row-->
+                                    </div> <!--col-md-12-->
+                                </div> <!--row1-->
+
+                                <div class="row">
+                                  <div class="col-md-12 sub-form">
+                                    <div class="card-header">
+                                      <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>View Intake List</h3>
+                                    </div>
+                                    <div class="inner-row">
+                                          <div class="form-group row">
+                                              <label for="viewbyyear" class="col-sm-2 label">View by year</label>
+                                              <div class="col-sm-3">
+                                                <select class="form-control" name="viewbyyear" id="viewbyyear">
+                                                  <option selected="selected" value="2020">2020</option>
+                                                  <option value="2019">2019</option>
+                                                  <option value="2018">2018</option>
+                                                  <option value="2017">2017</option>
+                                                  <option value="2016">2016</option>
+                                                  <option value="2015">2015</option>
+                                                  <option value="2014">2014</option>
+                                                  <option value="2013">2013</option>
+                                                  <option value="2012">2012</option>
+                                                </select>
+                                              </div> <!--col-sm-3-->
+                                                 
+                                              <div class="col-sm-2">
+                                                <select class="form-control" name="viewbyyear" id="viewbyyear">
+                                                  <option selected="selected" value=" Course">Course</option>
+                                                  <option value="All Service Provider">All Service Provider</option>
+                                                  <option value="NT">NT</option>
+                                                  <option value="QLD">QLD</option>
+                                                  <option value="SA">SA</option>
+                                                  <option value="TAS">TAS</option>
+                                                  <option value="VIC">VIC</option>
+                                                  <option value="WA">WA</option>
+                                                  <option value="Other - Overseas">Other - Overseas</option>
+                                                </select>
+                                              </div> <!--col-sm-2-->
+                      
+                                              <div class="col-sm-3">
+                                                <select class="form-control" name="viewbyyear" id="viewbyyear">
+                                                  <option selected="selected" value=" VET-BSB50215: Diploma of Business">VET-BSB50215: Diploma of Business</option>
+                                                  <option value="All Service Provider">All Service Provider</option>
+                                                  <option value="NT">NT</option>
+                                                  <option value="QLD">QLD</option>
+                                                  <option value="SA">SA</option>
+                                                  <option value="TAS">TAS</option>
+                                                  <option value="VIC">VIC</option>
+                                                  <option value="WA">WA</option>
+                                                  <option value="Other - Overseas">Other - Overseas</option>
+                                                </select>
+                                              </div>
+                                              <div class="col-sm-2">
+                                                <button type="submit" class="btn btn-info" name="view" id="view">View</button>
+
+                                              </div>
+                                            </div> <!--form-group-row-->
+                                            
+                    
+                                  </div> <!--row inner-->
+                                  </div><!--col-md-12 sub-form-->
+                                </div><!-- row2 -->
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+  </div> <!--content-wrapper-->
+  
+  
+   

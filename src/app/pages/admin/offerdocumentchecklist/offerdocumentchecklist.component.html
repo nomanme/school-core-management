@@ -1,0 +1,117 @@
+
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Offer Document Checklist Setup</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Offer Document Checklist</li>
+                </ol>
+            </div>
+            <span class="text-star">Define the documents that are required to be uploaded during a Student application</span>
+          </div>
+        </div><!-- container-fluid -->
+    </section> 
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary MB-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Checklist Setup Information</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="docname" class="col-sm-3 control-label">Document Name<span class="star">*</span></label>
+                                               <div class="col-sm-9">
+                                                   <input class="form-control" type="text" placeholder="Enter document name " name="docname" id="docname" required>
+                                               </div>
+                                            </div>
+                                        
+                           
+                                           <div class="form-group row">
+                                               <label for="doctype" class="col-sm-3 control-label alignStart"> Document type</label>
+                                               <div class="col-sm-9">
+                                                   <select class="form-control" name="doctype" id="doctype">
+                                                       <option selected="selected" value="In_Application">In_Application</option>
+                                                       <option value="In_Application">In_Application</option>
+                                                       <option value="VET">VET</option>
+                                                       <option value="2018">2018</option>
+                                                       <option value="2017">2017</option>
+                                                       <option value="2016">2016</option>
+                                                       <option value="2015">2015</option>
+                                                       <option value="2014">2014</option>
+                                                       <option value="2013">2013</option>   	
+                                                   </select>    
+                                
+                                                   <div class="form-check cbox">
+                                                       <input class="form-check-input" type="checkbox" name="doctype[]" id="compulsory" value="compulsory">
+                                                       <label class="form-check-label">Set Compulsory</label>
+                                                   </div>
+                                                   <div class="form-check cbox">
+                                                       <input class="form-check-input" type="checkbox" name="doctype[]" id="active" value="active">
+                                                       <label class="form-check-label">Set Active </label>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                     
+                   
+                                           <div class="form-group row">
+                                               <label for="selectorigin" class="col-sm-3 control-label alignStart" >Select Student Origin</label> 
+                                               <div class="col-sm-9">          
+                                                  
+                                                   <div class="form-check">
+                                                       <input class="form-check-input" type="checkbox" name="storigin[]" id="OverseasS" value="OverseasS">
+                                                       <label class="form-check-label">Overseas Student</label>
+                                                   </div>
+                                                   <div class="form-check">
+                                                       <input class="form-check-input" type="checkbox" name="storigin[]" id="OverseasSA" value="OverseasSA" >
+                                                       <label class="form-check-label">Overseas Student in Australia</label>
+                                                   </div>
+                   
+                                                   <div class="form-check">
+                                                       <input class="form-check-input" type="checkbox" name="storigin[]" id="ResidentS" value="ResidentS" >
+                                                       <label class="form-check-label">Resident Student</label>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                        </div><!--inner-row-->
+                                        
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> <!--row-->
+                                 <br>
+                                <!--submit-button-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="adminofferdocaddbtn" id="adminofferdocaddbtn">Add Document</button>
+                                </div>
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div> <!--content-wrapper-->
+
+
+   

@@ -1,0 +1,102 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Holiday</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Holiday</li>
+              </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+  </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                      <div class="card-header">
+                        <h5 class="card-title">Add Holiday</h5>
+                      </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                      <div class="inner-row">
+                                        <div class="form-group row">
+                                          <label for="holidaytype" class="col-sm-3 control-label">Holiday Type</label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="holidaytype" id="holidaytype" >
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>Public Holiday</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                      </div>
+                
+                                      <div class="form-group row">
+                                          <label for="timetabledate" class="col-sm-3 control-label">Select Public Holiday Date</label> 
+                                          <div class="col-sm-9" id="reservationdate" data-target-input="nearest">          
+                                            <input type="date" class="form-control datetimepicker-input" name="timetabledate" id="timetabledate"  data-target="#reservationdate" placeholder="21/7/1999">
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="form-group row">
+                                          <label for="description" class="col-sm-3 control-label">Description</label>
+                                          <div class="col-sm-9"> 
+                                            <div class="input-group">
+                                              <input class="form-control" type="text" name="description" id="description"  placeholder="Enter description here">
+                                            </div>         
+                                          </div>
+                                      </div>
+                
+                                      <div class="form-group row">
+                                          <label for="state" class="col-sm-3 control-label">State</label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="state" id="state">
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>All</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      </div><!--inner-row-->
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> <!--row-->
+                                <br>
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="add" id="add">Add Holiday</button>
+                                </div>                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div>

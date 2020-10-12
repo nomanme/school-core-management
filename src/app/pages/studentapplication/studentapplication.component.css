@@ -1,0 +1,122 @@
+.card-body {   
+    padding-top: 0.25rem;
+}
+.form-control {
+    font-size: .9rem;
+    background-color: #F1F1F199;
+    border-radius: 20px !important;
+}
+.control-label {
+    color: #333;
+    font-size:15px;
+    padding-right: 0;
+    align-self: center;
+}
+.star {
+    color:#FF6347;
+}
+.card-header {
+    padding:0;
+    margin: 0;
+    background-color: transparent;
+}
+.card-title {
+    padding: 0.6rem 1.3rem;
+    font-family: system-ui;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+}
+.card-primary:not(.card-outline) > .card-header {
+    background:#606060;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+label:not(.form-check-label):not(.custom-file-label){
+    font-weight:normal;
+    font-size: 15px;
+}
+.card-title.Title2{font-weight: bold;
+    color:#333;
+    font-size: 1em;
+}
+.card-title.Title2 i{
+    position:relative;
+    font-size: 14px;
+}
+.content-header h3 {
+    text-align: center;
+    font-weight:bold;
+    font-family: auto;
+}
+.content-header .breadcrumb {
+    display:inline-flex;
+    margin-top:5px;
+    font-size: .9em;
+    background-color: none;
+}
+ol.breadcrumb {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    padding-right: 0;
+    content: "";
+}
+.breadcrumb i {
+    align-self: center;
+
+}
+.sidebar-dark-primary{
+    background-color: #4566AD;
+}
+.sidebar a p{
+    color:#fff;
+}
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: #2C4E97;
+}
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*="navbar"]){
+    background-color: #0550aa;
+    border-bottom: 1px solid #9f9f9f;
+}
+.sidebar-dark-primary .brand-link {
+    color:#fff;
+    font-family: Roboto SLab;
+}
+.gender {
+    align-self: flex-start;
+}
+.cbox{
+    float: left;
+    padding: 8px 5px 35px 24px;
+}
+.sub-form {
+    padding: 0;
+    margin-left:0 ;
+}
+.container-fluid {
+    padding: 10px 0 10px 0;
+}
+.inner-row {
+    padding: 15px;
+}
+.form-check.radio {
+    padding-right: 7px;
+    float: left;
+}
+.text-star {
+    color:#FF6347;
+    font-weight: bold;
+    margin: auto;
+    padding-top: 18px;
+}
+.form-check.cbox {
+    float: left;
+    padding-right: 25px;
+}
+button#saveexit {
+    margin-right: 6px;
+}

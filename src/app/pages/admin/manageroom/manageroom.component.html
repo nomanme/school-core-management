@@ -1,0 +1,137 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Manage Room</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Manage Room</li>
+                </ol>
+            </div>
+            <span class="text-star">In order to setup Rooms, you must first setup training location/venue. There must be at least one room in order to setup a timable.</span>
+
+          </div>
+        </div><!-- container-fluid -->
+    </section> 
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h4 class="card-title">Add Classroom</h4>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <!-- <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group row">
+                                                      <label for="roomID" class="col-sm-4 control-label">Room Id<span class="star">*</span></label> 
+                                                        <div class="col-sm-8">   
+                                                            <div class="input-group">
+                                                              <input type="text" class="form-control" name="roomID" id="roomID" placeholder="Enter roon ID here" required>
+                                                            </div>       
+                                                        </div>
+                                                    </div>
+                          
+                                                    <div class="form-group row">
+                                                        <label for="trainingVenue" class="col-sm-4 control-label">Training Location/ Venue</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="trainingVenue" id="trainingVenue">
+                                                                  <option selected="selected">--Select State--</option>
+                                                                  <option>NSW>> SevenHills: Seven Hills Campus</option>
+                                                                  <option>NSW>> SevenHills: Seven Hills Campus</option>
+                                                                  <option>NSW>> SevenHills: Seven Hills Campus</option>
+                                                                </select>
+                                                              </div>
+                                                          </div>
+                                                      </div>  
+                                                </div> 
+                                                <div class="col-md-6">
+                                                    <div class="form-group row">
+                                                        <label for="roomName" class="col-sm-4 control-label">Room Name<span class="star">*</span></label> 
+                                                        <div class="col-sm-8"> 
+                                                            <div class="input-group">
+                                                                <input class="form-control" type="text" name="roomName" id="roomName"  placeholder="Enter Room Name here" required>
+                                                            </div>         
+                                                        </div>
+                                                    </div>
+                      
+                                                    <div class="form-group row">
+                                                        <label for="maxCapacity" class="col-sm-4 control-label" >Max Capacity<span class="star">*</span></label>
+                                                        <div class="col-sm-8">
+                                                            <div class="row">
+                                                                <div class="col-sm-9">
+                                                                    <div class="input-group">
+                                                                        <input type="number" min="0" class="form-control" name="maxCapacity" id="maxCapacity" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-3 seats">
+                                                                    <span >Seats</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div> -->
+
+
+                                        </div><!--inner-row-->
+
+                                        <div class="col-md-12 p-0 m-0">
+                                            <table class="table table-stripe">
+                                                <tr class="heading">
+                                                    <th class="rowid">ID</th>
+                                                    <th class="email">Room Name</th>
+                                                    <th class="action">Action</th>
+                                                </tr>
+                                                <tr *ngFor="let venueroom of venuerooms">
+                                                    <td class="rowid">{{venueroom.venueroomId}}</td>
+                                                    <td class="email">{{venueroom.roomName}}</td>    
+                                                    <td class="action"><a href="admin/view-venueroom/{{venueroom.venueroomId}}">View</a> | <a href="admin/edit-venueroom/{{venueroom.venueroomId}}">Edit</a></td>
+                                                </tr>        
+                                            </table>
+                                        </div>
+
+
+                                        
+                                    </div><!--col-md-12 sub-form-->
+                                    
+                                </div> 
+                                 
+                                <br>
+                                <!-- <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="add" id="add">Add New</button>
+                                    <button type="submit" class="btn btn-warning" name="res" id="res">Reset</button>
+                                </div> -->
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+    
+</div>
+
+
+   

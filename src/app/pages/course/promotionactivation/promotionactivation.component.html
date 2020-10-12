@@ -1,0 +1,214 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Promotion Activation</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Promotion Activation</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Promotion Activation</h5>
+                        </div>  
+                        <form role="form">
+                            <div class="card-body">
+                        
+                                <div class="row">
+  
+                                    <div class="col-md-12">
+
+                                        <div class="row">
+                                            <div class="col-md-12 sub-form">
+                                                <div class="card-header">
+                                                    <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Activation Details</h3>
+                                                  </div>
+                                                <div class="inner-row">
+                                                        <div class="form-group row">
+                                                            <label for="promotionName" class="col-sm-2 control-label">Promotion Name<span class="star">*</span></label>
+                                                            <div class="col-sm-10">
+                                                                <div class="input-group">
+                                                                    <input class="form-control" type="text" name="promotionName" id="promotionName"  placeholder="Enter promotion name here" required>
+                                                                </div>                                           
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="form-group row">
+                                                            <label for="promoStart" class="col-sm-2 control-label">Promotion Starts On</label> 
+                                                            <div class="col-sm-10" id="reservationdate" data-target-input="nearest">   
+                                                                <div class="input-group">
+                                                                    <input type="date" class="form-control datetimepicker-input" name="promoStart" id="promoStart" data-target="#reservationdate" placeholder="03/10/2016">
+                                                                </div> 
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="noEndDate" id="noEndDate" value="noEndDate">
+                                                                    <label class="form-check-label">No End Date</label>
+                                                                </div>      
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="form-group row">
+                                                            <label for="promoEnd" class="col-sm-2 control-label">Promotion Ends On</label> 
+                                                            <div class="col-sm-10" id="reservationdate" data-target-input="nearest">   
+                                                                <div class="input-group">
+                                                                <input type="date" class="form-control datetimepicker-input" name="promoEnd" id="promoEnd" data-target="#reservationdate" placeholder="03/10/2018">
+                                                                </div>       
+                                                            </div>
+                                                        </div>
+                            
+                            
+                                                        <div class="form-group row">
+                                                            <label for="Comments" class="col-sm-2 control-label alignStart" >Comments</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="input-group">
+                                                                    <textarea class="form-control" rows="4" name="Comments" id="Comments" placeholder="Enter Comments..." ></textarea>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                </div><!--inner-row-->
+                                            </div><!--col-md-12 sub-form-->
+                                        </div><!--row1-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 sub-form">
+                                                <div class="card-header">
+                                                    <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Promotion Details</h3>
+                                                  </div>
+                                                <div class="inner-row">
+                                                        <div class="form-group row">
+                                                            <label for="courseType" class="col-sm-2 control-label">Course Type</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="input-group">
+                                                                    <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="courseType" id="courseType">
+                                                                    <option selected="selected">--Select Option--</option>
+                                                                    <option>VET1</option>
+                                                                    <option>VET2</option>
+                                                                    <option>VET3</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                
+                                                        <div class="form-group row">
+                                                            <label for="promotionFor" class="col-sm-2 control-label">Promotion For</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="input-group">
+                                                                    <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="promotionFor" id="promotionFor">
+                                                                    <option selected="selected">--Select Option--</option>
+                                                                    <option>Specific Course</option>
+                                                                    <option>Specific Course</option>
+                                                                    <option>Specific Course</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="form-group row">
+                                                            <label for="SelectCourse" class="col-sm-2 control-label alignStart">Select Course</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="SelectCourse[]" id="SelectCourse1" value="SelectCourse1">
+                                                                    <label class="form-check-label">BSB50215: Diploma of Business ( <span>Course Fee: $16,000.00</span> )</label>
+                                                                </div>
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="SelectCourse[]" id="SelectCourse2" value="SelectCourse2">
+                                                                    <label class="form-check-label">ICT50115: Diploma of Information Technology ( <span>Course Fee: $11,000.00</span> )</label>
+                                                                </div>
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="SelectCourse[]" id="SelectCourse3" value="SelectCourse3">
+                                                                    <label class="form-check-label">ICT50118: Diploma of Information Technology ( <span>Course Fee: $11,000.00</span> )</label>
+                                                                </div>
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="SelectCourse[]" id="SelectCourse4" value="SelectCourse4">
+                                                                    <label class="form-check-label">ICT60115: Advanced Diploma of Information Technology ( <span>Course Fee: $11,000.00</span> )</label>
+                                                                </div>
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="SelectCourse[]" id="SelectCourse5" value="SelectCourse5">
+                                                                    <label class="form-check-label">SIT40516: Certificate IV in Commercial Cookery ( <span>Course Fee: $16,200.00</span> )</label>
+                                                                </div>
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="SelectCourse[]" id="SelectCourse6" value="SelectCourse6">
+                                                                    <label class="form-check-label">SIT50416: Diploma of Hospitality Management ( <span>Course Fee: $13,200.00</span> )</label>
+                                                                </div>
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="SelectCourse[]" id="SelectCourse7" value="SelectCourse7">
+                                                                    <label class="form-check-label">SIT50416-PKG:  Diploma of Hospitality Management ( <span>Course Fee: $5,150.00</span> )</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="form-group row">
+                                                            <label for="coursePromoFee" class="col-sm-2 control-label alignStart">Course Promotion Fee</label>
+                                                            <div class="col-sm-5">
+                                                                <div class="input-group">
+                                                                    <input class="form-control" type="text" name="coursePromoFee" id="coursePromoFee"  placeholder="0">
+                                                                </div> 
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="setPromoFee[]" id="setPromoFee1" value="setPromoFee1">
+                                                                    <label class="form-check-label">Set Promotion for Enrolment Fee</label>
+                                                                </div>
+                                                                <div class="form-check cbox">
+                                                                    <input class="form-check-input" type="checkbox" name="setPromoFee[]" id="setPromoFee2" value="setPromoFee2">
+                                                                    <label class="form-check-label">Set Promotion for Material Fee</label>
+                                                                </div>                                          
+                                                            </div>
+                                                            <div class="col-sm-5 rightfield">
+                                                                <span>
+                                                                    Per Course <span class="star">Inavlid Fee Specified!</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="form-group row">
+                                                            <label for="promoRemarks" class="col-sm-2 control-label alignStart" >Promotion Remarks</label>
+                                                            <div class="col-sm-10">
+                                                                <div class="input-group">
+                                                                    <textarea class="form-control" rows="4" name="promoRemarks" id="promoRemarks" placeholder="Enter Promotion Remarks..." ></textarea>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                </div><!--inner-row-->
+                                            </div><!--col-md-12 sub-form-->
+                                        </div><!--row2-->
+                                    </div> <!--col-md-12-->
+                                </div> <!--row-->
+                                 
+                                <br>
+  
+                                <!--submit option-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="addpromobtn" id="addpromobtn">Add Promotion</button>
+                                </div>
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+  </div> <!--content-wrapper-->
+  
+  
+   

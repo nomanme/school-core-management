@@ -1,0 +1,210 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Assign Replacement Teacher</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Assign Replacement Teacher</li>
+                </ol>
+            </div>
+            <div class="sub-title">
+                <span class="text-star">In case where the Teacher is sick or cannot take his/her class or ha left college, you can assign an alternate teacher to take his/her place using this page.</span>
+                <br>
+                <span class="text-star">- Replace: assign new Teacher to existing teacher. (Existing Teacher is no longer teaching the class)</span>
+                <br>
+                <span class="text-star">- Relie: Assign new Teacher as na alternate teacher for the existing class. (Existing Teacher is still responsible for the class)</span>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Replacement Teacher</h5>
+                          </div>
+                        <form role="form">
+                            <div class="card-body">
+                        
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="selectTeacher" class="col-sm-3 control-label alignStart">Select Teacher<span class="star">*</span></label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="selectTeacher" id="selectTeacher" required>
+                                                        <option selected="selected">--No Teacher Found--</option>
+                                                        <option>Teacher1</option>
+                                                        <option>Teacher2</option>
+                                                        <option>Teacher3</option>
+                                                        </select>
+                                                    </div>
+                                                    <span><a href="#">Refresh List?</a></span>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="year" class="col-sm-3 control-label">Year</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="year" id="year">
+                                                        <option selected="selected">--Select Year--</option>
+                                                        <option>2020</option>
+                                                        <option>2019</option>
+                                                        <option>2018</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="semester" class="col-sm-3 control-label">Semester</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="semester" id="semester">
+                                                        <option selected="selected">--No Semester Found--</option>
+                                                        <option>2020_VET</option>
+                                                        <option>2020_VET</option>
+                                                        <option>2020_VET</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="term" class="col-sm-3 control-label">Term</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="term" id="term">
+                                                        <option selected="selected">--No Term Found--</option>
+                                                        <option>Term1</option>
+                                                        <option>Term2</option>
+                                                        <option>Term3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="subject" class="col-sm-3 control-label">Subject</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="subject" id="subject">
+                                                        <option selected="selected">--No Subject Found--</option>
+                                                        <option>Subject1</option>
+                                                        <option>Subject2</option>
+                                                        <option>Subject3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="newTeacher" class="col-sm-3 control-label">New Teacher<span class="star">*</span></label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="newTeacher" id="newTeacher" required>
+                                                        <option selected="selected">--No Teacher Found--</option>
+                                                        <option>Teacher1-</option>
+                                                        <option>Teacher2-</option>
+                                                        <option>Teacher3-</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="teacherChangeType" class="col-sm-3 control-label">Select Teacher Change Type</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="teacherChangeType[]" id="replace" value="replace" checked>
+                                                      <label class="form-check-label">Replace</label>
+                                                    </div>
+                
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="teacherChangeType[]" id="relief" value="relief">
+                                                      <label class="form-check-label">Relief</label>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                
+                                              <div class="form-group row">
+                                                <label for="criteria" class="col-sm-3 control-label">Select Criteria</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="criteria[]" id="allClasses" value="allClasses" checked>
+                                                      <label class="form-check-label">All Classes</label>
+                                                    </div>
+                
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="criteria[]" id="specificClass" value="specificClass">
+                                                      <label class="form-check-label">Specific Class</label>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                
+                                            <div class="form-group row">
+                                                <label for="selectBatch" class="col-sm-3 control-label">Select Batch</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="selectBatch" id="selectBatch">
+                                                        <option selected="selected">--No Batch Found--</option>
+                                                        <option>Batch1</option>
+                                                        <option>Batch2</option>
+                                                        <option>Batch3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="selectClass" class="col-sm-3 control-label">Select Class</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="selectClass" id="selectClass">
+                                                        <option selected="selected">--Select Class--</option>
+                                                        <option>Class1</option>
+                                                        <option>Class2</option>
+                                                        <option>Class3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--inner-row-->
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> 
+                                 <br>
+                                 <!--Submit Button-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="assign" id="assign">Assign Teacher</button>
+                                </div>
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div> <!--content wrapper-->
+
+
+   

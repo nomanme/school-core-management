@@ -1,0 +1,143 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+              <h3 class="page-heading">Leave Info</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Leave Info</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+      </section> 
+
+    <!-- Main content -->
+    <div class="row p-0 m-0">
+        <div class="col-md-8 offset-md-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="content">
+                        <div class="container-fluid">
+                        <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h5 class="card-title">Staff Unavilabilty Info</h5>
+                                  </div>
+                            <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="inner-row">
+
+                                                    <div class="form-group row">
+                                                        <label for="selectposition" class="col-sm-3 control-label">Select Position</label>
+                                                        <div class="col-sm-9">
+                                                            <div class="form-check radio">
+                                                                <input class="form-check-input" type="radio" name="selectposition" id="selectposition" checked>
+                                                                <label class="form-check-label">Teacher</label>
+                                                            </div>
+                                                            <div class="form-check radio">
+                                                                <input class="form-check-input" type="radio" name="selectposition" id="selectposition">
+                                                                <label class="form-check-label">Staff</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                           
+                                                    <div class="form-group row">
+                                                        <label for="selectuser" class="col-sm-3 control-label">Select User</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-control" name="selectuser" id="selectuser">
+                                                                <option selected="selected" value="All Teachers">All Teachers</option>
+                                                                <option value="All Teachers">All Teachers</option>
+                                                                <option value="NT">NT</option>
+                                                                <option value="QLD">QLD</option>
+                                                                <option value="SA">SA</option>
+                                                                <option value="TAS">TAS</option>
+                                                                <option value="VIC">VIC</option>
+                                                                <option value="WA">WA</option>
+                                                                <option value="Other - Overseas">Other - Overseas</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="form-group row">
+                                                        <label for="year" class="col-sm-3 control-label">Year</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-control" name="year" id="year">
+                                                                <option selected="selected" value="2020">2020</option>
+                                                                <option value="2020">2020</option>
+                                                                <option value="2019">2019</option>
+                                                                <option value="2018">2018</option>
+                                                                <option value="2017">2017</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2013">2013</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="form-group row">
+                                                        <label for="semester" class="col-sm-3 control-label">Semester</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-control" name="semester" id="semester">
+                                                                <option selected="selected" value="2020_VET">2020_VET</option>
+                                                                <option value="2020_VET">2020_VET</option>
+                                                                <option value="2019_VET">2019_VET</option>
+                                                                <option value="2018_VET">2018_VET</option>
+                                                                <option value="2017_VET">2017_VET</option>
+                                                                <option value="2016_VET">2016_VET</option>
+                                                                <option value="2015_VET">2015_VET</option>
+                                                                <option value="2014_VET">2014_VET</option>
+                                                                <option value="2013_VET">2013_VET</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="form-group row">
+                                                        <label for="unavailablefrom" class="col-sm-3 control-label" >Unavailable From</label> 
+                                                        <div class="col-sm-9" id="reservationdate" data-target-input="nearest">          
+                                                            <input type="date" class="form-control datetimepicker-input" name="unavailablefrom" id="unavailablefrom"  data-target="#reservationdate" placeholder="27/7/2020">
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="form-group row">
+                                                        <label for="unavailableto" class="col-sm-3 control-label" >Unavailable To</label> 
+                                                        <div class="col-sm-9" id="reservationdate" data-target-input="nearest">          
+                                                            <input type="date" class="form-control datetimepicker-input" name="unavailableto" id="unavailableto"  data-target="#reservationdate" placeholder="27/7/2020">
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="form-group row">
+                                                        <label for="comment" class="col-sm-3 control-label">Comment</label>
+                                                        <div class="col-sm-9">
+                                                            <textarea class="form-control" rows="3" placeholder="Enter comment" name="comment" id="comment"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div><!--inner-row-->
+                                            </div>
+                                        </div>
+                                                                        
+                                        <br>
+                                        <div class="submit-button">
+                                            <button type="submit" class="btn btn-info" name="inforrecordbtn" id="inforrecordbtn">Record Data</button>
+                                        </div>
+                                    </div> <!--card-body-->
+                                </form>     
+                            </div> <!--card card-primary-->
+                        </div> <!--container-fluid-->     
+                    </section> <!--section2-->
+                </div>
+            </div> <!--row1-->
+      </div>
+    </div>
+</div> <!--content-wrapper-->
+
+
+   

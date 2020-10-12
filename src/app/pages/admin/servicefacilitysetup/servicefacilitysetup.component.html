@@ -1,0 +1,140 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Student Online Application</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Student Application</li>
+              </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+</section>    
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Service Details</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                      <div class="inner-row">
+                                        <div class="form-group row">
+                                          <label for="servicename" class="col-sm-3 control-label alignStart">Service Name<span class="star">*</span></label>   
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <input class="form-control" type="text"  name="servicename" id="servicename" placeholder="Enter service name" required>
+                                            </div>
+                                            <a href="#" class="refresh">Refresh?</a>
+                                          </div>
+                                      </div>
+            
+                                      <div class="form-group row">
+                                          <label for="datetype" class="col-sm-3 control-label alignStart">Date type</label>
+                                          <div class="col-sm-9">
+                                              <select class="form-control" name="datetype" id="datetype">
+                                                  <option selected="selected" value="Date Only">Date Only</option>
+                                                  <option value="Date Only">Date Only</option>
+                                                  <option value="VET">VET</option>
+                                                  <option value="2018">2018</option>
+                                                  <option value="2017">2017</option>
+                                                  <option value="2016">2016</option>
+                                                  <option value="2015">2015</option>
+                                                  <option value="2014">2014</option>
+                                                  <option value="2013">2013</option>
+                                              </select>
+                         
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox1">
+                                                  <label class="form-check-label">Allow student to choose service provider for this service</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox2" >
+                                                  <label class="form-check-label">Internal Only</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox3" >
+                                                  <label class="form-check-label">Student address is required </label>
+                                              </div>
+                                          </div>
+                                      </div>
+                     
+                                      <div class="form-group row">
+                                          <label for="categoryname" class="col-sm-3 control-label alignStart">Category Name<span class="star">*</span></label>   
+                                          <div class="col-sm-9">
+                                              <div class="input-group">
+                                                  <input class="form-control" type="text"  name="categoryname" id="categoryname" placeholder="Enter category name" required>
+                                              </div>
+                                              <a href="#" class="refresh">Refresh?</a>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-group row">
+                                          <label for="facilityname" class="col-sm-3 control-label">Facility Name<span class="star">*</span></label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <input class="form-control" type="text" name="facilityname" id="facilityname" placeholder="Enter facility name" required>
+                                            </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-group row">
+                                          <label for="studentprice" class="col-sm-3 control-label">Student Price<span class="star">*</span></label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <input class="form-control" type="text"  name="studentprice" id="studentprice" placeholder="Enter student price" required>
+                                              </div>
+                                            </div>
+                                      </div>
+                                                      
+                                      <div class="form-group row">
+                                          <label for="facilitypricetype" class="col-sm-3 control-label"> Facility Price Type</label>
+                                          <div class="col-sm-9">
+                                            <select class="form-control" name="facilitypricetype" id="facilitypricetype">
+                                              <option selected="selected" value="Per Service">Per Service</option>
+                                              <option value="Per Service">Per Service</option>
+                                              <option value="VET">VET</option>
+                                              <option value="2018">2018</option>
+                                              <option value="2017">2017</option>
+                                              <option value="2016">2016</option>
+                                              <option value="2015">2015</option>
+                                              <option value="2014">2014</option>
+                                              <option value="2013">2013</option>
+                                            </select>
+                                          </div>
+                                      </div>
+                                      </div><!--inner-row-->
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> 
+                                <br>
+                                <div class="submit-button">
+                                  <button type="submit" class="btn btn-success" name="add" id="add">Add Facility</button>
+                              </div> 
+                                                             
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div>

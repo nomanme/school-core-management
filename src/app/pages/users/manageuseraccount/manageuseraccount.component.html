@@ -1,0 +1,117 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">User Account Management</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>User Account Management</li>
+                </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0 shadow-lg bg-white rounded">
+                        <div class="card-header">
+                            <h5 class="card-title">Search User Account</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="searchby" class="col-sm-2 label">Search by</label>
+                                                <div class="col-sm-4">
+                                                    <select class="form-control" name="searchby" id="searchby">
+                                                        <option selected="selected" value="User Name">Choose Option</option>
+                                                        <option value="All Service Provider">All Service Provider</option>
+                                                        <option value="NT">NT</option>
+                                                        <option value="QLD">QLD</option>
+                                                        <option value="SA">SA</option>
+                                                        <option value="TAS">TAS</option>
+                                                        <option value="VIC">VIC</option>
+                                                        <option value="WA">WA</option>
+                                                        <option value="Other - Overseas">Other - Overseas</option>
+                                                    </select>
+                                                </div> <!--col-sm-4-->
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" type="text" name="searchname" id="searchname" placeholder=" Enter user name" required>
+                                                </div> <!--col-sm-4-->
+                                                <div class="col-sm-2">
+                                                    <div class="submit-button">
+                                                        <button type="submit" class="btn btn-success" name="viewuseraccountbtn" id="viewuseraccountbtn">View</button>
+                                                    </div>                                          
+                                                </div>
+                                            </div> <!--form-group-row-->
+                  
+                                            <br>
+                                            <div class="form-group row searchvaluebox">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group">
+                                                        <div class="col-sm-12 searchvalue">
+                                                            <span>
+                                                                Please enter search value!
+                                                            </span>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-12 p-0 m-0">
+                                                <table class="table table-stripe">
+                                                    <tr class="heading">
+                                                        <th class="rowid">ID</th>
+                                                        <th class="email">Email</th>
+                                                        <th class="action">Action</th>
+                                                    </tr>
+                                                    <tr *ngFor="let user of users">
+                                                        <td class="rowid">{{user.id}}</td>
+                                                        <td class="email">{{user.email}}</td>    
+                                                        <td class="action"><a href="users/view-user/{{user.userId}}">View</a> | <a href="users/edit-user/{{user.userId}}">Edit</a></td>
+                                                    </tr>        
+                                                </table>
+                                            </div>
+                                            
+                                            <!-- <div class="col-md-12">
+                                                <table class="table table-stripe">
+                                                    <tr class="heading">
+                                                        <th>ID</th>
+                                                        <th>Email</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    <tr *ngFor="let user of users">
+                                                        <td>{{user.id}}</td>
+                                                        <td>{{user.email}}</td>
+                                                        <td><a href="/admin/view-user/{{user.id}}">View</a> | <a href="/admin/edit-user/{{user.id}}">Edit</a></td>
+                                                    
+                                                    </tr>        
+                                                </table>
+                                            </div> -->
+
+                                        </div><!--inner-row-->
+                                    </div><!--col-md-12 sub-form-->
+                                </div> <!--row1-->
+                            </div> <!--card-body-->
+                        </form>
+                    </div> <!--card card-primary-->
+                </div> <!--col-md-6 offset-md-2-->
+            </div> <!--row-->
+        </div> <!--container-fluid-->
+    </section> <!--section2-->
+  </div> <!--content-wrapper-->
+  
+  
+   

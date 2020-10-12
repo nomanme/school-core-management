@@ -1,0 +1,324 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">View Course</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View Course</li>
+              </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+  </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                      <div class="card-header">
+                        <h5 class="card-title">View Full Course</h5>
+                      </div> 
+                      <form method="post" action="" enctype="multipart/form-data" *ngFor="let course of course">
+                        <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                      <div class="row">
+                                        <div class="col-md-12 sub-form">
+                                          <div class="card-header">
+                                            <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Course Information</h3>
+                                          </div>
+                                          <div class="inner-row">
+                                            <div class="row">
+                                              <div class="col-md-6">
+                                                <div class="form-group row">
+                                                  <label for="coursetype" class="col-sm-4 control-label">Course Type</label>
+                                                  <div class="col-sm-8">
+                                                    
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                  <label for="nationalCode" class="col-sm-4 control-label">National Code</label>
+                                                  <div class="col-sm-8"> 
+                                                    {{ course.nationalCode }}
+
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                  <label for="courseCode" class="col-sm-4 control-label">Course Code</label>
+                                                  <div class="col-sm-8"> 
+                                                    {{ course.courseCode }}
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                  <label for="courseName" class="col-sm-4 control-label">Course Name</label>
+                                                  <div class="col-sm-8"> 
+                                                    {{ course.courseName }}
+                                                  </div>
+                                                </div>
+                                              </div><!--col-md-6-->
+                                              
+                                              <div class="col-md-6">
+                                                <div class="form-group row">
+                                                  <label for="moduleDelivery" class="col-sm-4 control-label">Module Delivery?</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.moduleDelivery }}
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                  <label for="isSuperseded" class="col-sm-4 control-label alignStart">Is Superseded?</label>
+                                                    <div class="col-sm-8">
+                                                      {{ course.isSuperseded }}
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                  <label for="cricosCode" class="col-sm-4 control-label alignStart">Crisco Code</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.cricosCode }}
+                                                  </div>
+                                                </div>
+                                              </div><!--col-md-6-->
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="duration" class="col-sm-4 control-label">Course Duration</label>
+                                                <div class="col-sm-8">
+                                                  {{ course.duration }}
+                                                
+                                                </div>
+                                            </div> <!--form-group-row-->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                  <div class="form-group row">
+                                                    <label for="deliveryTarget" class="col-sm-4 control-label">Delivery Target</label>
+                                                    <div class="col-sm-8">
+                                                      {{ course.deliveryTarget }}
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group row bottomzero">
+                                                    <label for="internationTutionFees" class="col-sm-4 control-label">International Tution Fee</label>
+                                                    <div class="col-sm-8"> 
+                                                      {{ course.internationTutionFees }}
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                    <label for="faculty" class="col-sm-4 control-label alignStart">Faculty</label>
+                                                    <div class="col-sm-8">
+                                                      {{ course.faculty }}
+                                                    </div>
+                                                     
+                                                  </div>
+                                                  <div class="form-group row bottomzero">
+                                                    <label for="qualificationPrerequisite" class="col-sm-4 control-label">Qualification Prerequisite</label>
+                                                    <div class="col-sm-8">
+                                                      {{ course.qualificationPrerequisite }}
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                    <label for="courseStartDate" class="col-sm-4 control-label" >Course Effective From Date</label>
+                                                    <div class="col-sm-8" id="reservationdate" data-target-input="nearest">          
+                                                      {{ course.courseStartDate }}
+                                                    </div>
+                                                  </div>
+                                                </div><!--col-md-6-->
+  
+                                                <div class="col-md-6">
+                                                  <div class="form-group row bottomzero">
+                                                    <label for="maximumWeeklyStudy" class="col-sm-4 control-label">Maximum Weekly Study</label>
+                                                    <div class="col-sm-8">
+                                                      {{ course.maximumWeeklyStudy }}
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group row bottomzero">
+                                                    <label for="domesticTutionFees" class="col-sm-4 control-label">Domestic Tution Fee</label>
+                                                    <div class="col-sm-8"> 
+                                                      {{ course.domesticTutionFees }}
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                    <label for="department" class="col-sm-4 control-label alignStart">Department</label>
+                                                    <div class="col-sm-8">
+                                                      {{ course.department }}
+  
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                    <label for="major" class="col-sm-4 control-label">Major</label>
+                                                    <div class="col-sm-8"> 
+                                                      {{ course.major }}
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                    <label for="courseEndDate" class="col-sm-4 control-label" >Course Effective End Date</label>
+                                                      <div class="col-sm-8" id="reservationdate" data-target-input="nearest">          
+                                                        {{ course.courseEndDate }}
+                                                      </div>
+                                                  </div>
+                                                </div><!--col-md-6-->
+                                            </div>
+                                          </div><!--inner-row-->
+                                        </div><!--col-md-12 sub-form-->
+                                      </div> <!--row1-->
+
+                                      <div class="row">
+                                        <div class="col-md-12 sub-form">
+                                          <div class="card-header">
+                                            <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Specific Information</h3>
+                                          </div>
+                                          <div class="inner-row">
+                                            <div class="form-group row">
+                                              <label for="resultCalculationMethod" class="col-sm-3 control-label">Results Calculation Method</label>
+                                              <div class="col-sm-9">
+                                                {{ course.resultCalculationMethod }}
+                                              </div>
+                                            </div>
+                            
+                                            <div class="row">
+                                              <div class="col-md-6">
+                                                <div class="form-group row">
+                                                  <label for="hasWorkPlacement" class="col-sm-6 control-label">Has Work Placement</label>
+                                                  <div class="col-sm-6">
+                                                    {{ course.hasWorkPlacement }}
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                  <label for="flexibleTimetable" class="col-sm-6 control-label">Flexible Timetable</label>
+                                                  <div class="col-sm-6">
+                                                    {{ course.flexibleTimetable }}
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-6">
+                                                <div class="form-group row">
+                                                  <label for="courseLevel" class="col-sm-4 control-label">Course Level</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.courseLevel }}
+                                                  </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                  <label for="activatedNow" class="col-sm-4 control-label">Activated Now</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.activatedNow }}
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div><!--inner-row-->
+                                        </div><!--col-md-12 sub-form-->
+                                      </div> <!--row2-->
+
+                                      <div class="row">
+                                        <div class="col-md-12 sub-form">
+                                          <div class="card-header">
+                                            <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>AVETMISS Information</h3>
+                                          </div>
+                                          <div class="inner-row">
+                                            <div class="row">
+                                              <div class="col-md-6">
+                                                <div class="form-group row bottomzero">
+                                                  <label for="avetmissCourseRecognitionId" class="col-sm-4 control-label">Course Recognition</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.avetmissCourseRecognitionId }}
+                                                  </div>
+                                                </div>
+                                
+                                                <div class="form-group row bottomzero">
+                                                  <label for="avetmissLevelOfEducationId" class="col-sm-4 control-label">Level of Education</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.avetmissLevelOfEducationId }}
+                                                  </div>
+                                                </div>
+                                
+                                                <div class="form-group row bottomzero">
+                                                  <label for="avetmissFieldOfEducationId" class="col-sm-4 control-label">Field of Education</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.avetmissFieldOfEducationId }}
+                                                  </div>
+                                                </div>
+                                              </div><!--col-md-6-->
+                                              <div class="col-md-6">
+                                                <div class="form-group row">
+                                                  <label for="avetmissANZSCOId" class="col-sm-4 control-label">ANZSCO Code</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.avetmissANZSCOId }}
+                                                  </div>
+                                                </div>
+  
+                                                <div class="form-group row bottomzero">
+                                                  <label for="avetmissTotalNominalHours" class="col-sm-4 control-label">Total Nominal hours</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.avetmissTotalNominalHours }}
+                                                  </div>
+                                                </div>
+  
+                                                <div class="form-group row">
+                                                  <label for="avetmissReport" class="col-sm-4 control-label" >AVETMISS Report</label>
+                                                  <div class="col-sm-8">
+                                                    {{ course.avetmissReport }}
+                                                  </div>
+                                                </div>
+                                              </div><!--col-md-6-->
+                                            </div>
+                                          </div><!--inner-row-->
+                                        </div><!--col-md-12 sub-form-->
+                                      </div> <!--row3-->
+
+
+                                      <div class="row">
+                                        <div class="col-md-12 sub-form">
+                                          <div class="card-header">
+                                            <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Additional Information</h3>
+                                          </div>
+                                          <div class="inner-row">
+                                            <span class="text-star">NO OTHER DETAILS FOUND</span>
+                                          </div><!--inner-row-->
+                                        </div><!--col-md-12 sub-form-->
+                                      </div> <!--row4-->
+
+                                      <div class="row">
+                                        <div class="col-md-12 sub-form">
+                                          <div class="card-header">
+                                            <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Course Description</h3>
+                                          </div>
+                                          <div class="inner-row">
+                                            {{ course.courseDescriptin }}
+                                          </div><!--inner-row-->
+                                        </div><!--col-md-12 sub-form-->
+                                      </div> <!--row5-->
+
+                                    </div> <!--main-column-->
+                                </div><!--main-row-->
+                                
+                                <br>
+                            <!-- <div class="submit-button">
+                              <button type="submit" class="btn btn-success" name="save" id="save">Save</button>
+                            </div> -->
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div> <!--content-wrapper-->
+
+
+  
+  
+  
+  
+   

@@ -1,0 +1,154 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Course Calender Type</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Course Calender Type</li>
+            </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+  </section> 
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Assign Calender Type to Course</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-12 sub-form">
+                                  <div class="inner-row">
+                                    <div class="form-group row">
+                                      <label for="clenderType" class="col-sm-3 control-label" >Calender Type</label>
+                                      <div class="col-sm-9">
+                                          <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="clenderType" id="clenderType">
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>Calender Set1</option>
+                                                <option>Calender Set2</option>
+                                                <option>Calender Set3</option>
+                                                <option>Calender Set4</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                      <label for="CourseType" class="col-sm-3 control-label">Course Type</label>
+                                      <div class="col-sm-9">
+                                          <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="CourseType" id="CourseType">
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>VET</option>
+                                                <option>VET</option>
+                                                <option>VET</option>
+                                                <option>VET</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="courseStatus" class="col-sm-3 control-label">Course Status</label>
+                                        <div class="col-sm-9">
+                                          <div class="form-check radio">
+                                            <input class="form-check-input" type="radio" name="courseStatus" id="courseActive" value="courseActive" checked>
+                                            <label class="form-check-label">Active</label>
+                                          </div>
+              
+                                          <div class="form-check radio">
+                                            <input class="form-check-input" type="radio" name="courseStatus" id="courseInactive" value="courseInactive">
+                                            <label class="form-check-label">Inactive</label>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                      <label for="courseSelection" class="col-sm-3 control-label">Course Selection</label>
+                                      <div class="col-sm-9">
+                                        <div class="form-check radio">
+                                          <input class="form-check-input" type="radio" name="courseSelection" id="AllCourses" value="AllCourses" checked>
+                                          <label class="form-check-label">All Courses</label>
+                                        </div>
+              
+                                        <div class="form-check radio">
+                                          <input class="form-check-input" type="radio" name="courseSelection" id="SelectedCourses" value="SelectedCourses">
+                                          <label class="form-check-label">Selected Courses</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="courseId" class="col-sm-3 control-label alignStart">Course ID</label>
+                                      <div class="col-sm-9">
+                                        <div class="form-check ">
+                                          <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox1" value="option1">
+                                          <label class="form-check-label">B2B50215 Diploma of Business</label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox2" value="option2">
+                                          <label class="form-check-label">ICT50118: Diploma of Information Technology</label>
+                                        </div>
+                                        <div class="form-check" >
+                                          <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox3" value="option3">
+                                          <label class="form-check-label">SIT40516: Certificate IV in Commercial Cookery</label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox4" value="option4">
+                                          <label class="form-check-label">SIT50416-PKG: Diploma of Hospitality Management</label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox5" value="option5">
+                                          <label class="form-check-label">ICT50115: Diploma of Information Technology</label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox6" value="option6">
+                                          <label class="form-check-label">ICT60115: Advanced Diploma of Information Technology</label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" name="courseId[]" id="checkbox7" value="option7">
+                                          <label class="form-check-label">SIT50416: Diploma od Hospitality Management</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div><!--inner-row-->
+                                    
+                                </div> <!--col-md-12 sub-form-->
+                                    
+                              </div> <!--row-->
+                              <br>
+                              <!--submit-button-->
+                              <div class="submit-button">
+                                <button type="submit" class="btn btn-success" name="setup" id="setup">Setup</button>
+                              </div>
+                            </div><!--card-body-->
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div> <!--content-wrapper-->
+
+
+   

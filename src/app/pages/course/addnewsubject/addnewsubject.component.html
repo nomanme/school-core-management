@@ -1,0 +1,289 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Subject</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Subject</li>
+              </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+      <div class="container-fluid">
+          <div class="row m-0 p-0">
+              <!-- left column -->
+              <div class="col-md-10 offset-md-1">
+                <!-- general form elements -->
+                  <div class="card card-primary mb-0">
+                    <div class="card-header">
+                      <h5 class="card-title">Add New Subject</h5>
+                    </div> 
+                      <form role="form">
+                          <div class="card-body">
+                      
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="row">
+                                          <div class="col-md-12 sub-form">
+                                            <div class="card-header">
+                                              <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Subject Details</h3>
+                                            </div>
+                                            <div class="inner-row">
+                                              <div class="form-group row">
+                                                <label for="coursetype" class="col-sm-3 control-label">Use for course type</label>
+                                                <div class="col-sm-9">
+                                                  <select class="form-control" name="coursetype" id="coursetype">
+                                                    <option selected="selected" value="Any">Any</option>
+                                                    <option value="All Teachers">All Teachers</option>
+                                                    <option value="NT">NT</option>
+                                                    <option value="QLD">QLD</option>
+                                                    <option value="SA">SA</option>
+                                                    <option value="TAS">TAS</option>
+                                                    <option value="VIC">VIC</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="Other - Overseas">Other - Overseas</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                    
+                                              <div class="form-group row">
+                                                <label for="subcode" class="col-sm-3 control-label">Subject Code<span class="star">*</span></label>
+                                                <div class="col-sm-9"> 
+                                                  <div class="input-group">
+                                                    <input class="form-control" type="text" name="subcode" id="subcode"  placeholder="Enter subject code here" required>
+                                                  </div>         
+                                                </div>
+                                              </div>
+                    
+                                              <div class="form-group row">
+                                                <label for="subname" class="col-sm-3 control-label">Subject Name<span class="star">*</span></label>
+                                                <div class="col-sm-9"> 
+                                                  <div class="input-group">
+                                                    <input class="form-control" type="text" name="subname" id="subname"  placeholder="Enter subject name here" required>
+                                                  </div>         
+                                                </div>
+                                              </div>
+                    
+                                              <div class="form-group row">
+                                                <label for="gradingtype" class="col-sm-3 control-label">Grading Type</label>
+                                                <div class="col-sm-9">
+                                                  <select class="form-control" name="gradingtype" id="gradingtype">
+                                                    <option selected="selected" value="Any">Competency Grading</option>
+                                                    <option value="All Teachers">All Teachers</option>
+                                                    <option value="NT">NT</option>
+                                                    <option value="QLD">QLD</option>
+                                                    <option value="SA">SA</option>
+                                                    <option value="TAS">TAS</option>
+                                                    <option value="VIC">VIC</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="Other - Overseas">Other - Overseas</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                    
+                                              <div class="form-group row">
+                                                <label for="required" class="col-sm-3 control-label">Is Input Level Required?</label>
+                                                <div class="col-sm-9">
+                                                  <div class="form-check radio">
+                                                    <input class="form-check-input" type="radio" name="required" id="required1" value="required1" checked>
+                                                    <label class="form-check-label">Yes</label>
+                                                  </div>
+                                                  <div class="form-check radio">
+                                                    <input class="form-check-input" type="radio" name="required" id="required2" value="required2">
+                                                    <label class="form-check-label">No</label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div><!--inner-row-->
+                                          </div> <!--col-md-12 sub-form-->
+                      
+                                          
+                                      </div> <!--row1-->
+
+                                      <div class="row">
+                                        <div class="col-md-12 sub-form">
+                                          <div class="card-header">
+                                            <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Unit Details</h3>
+                                          </div>
+                                          <div class="inner-row">
+                                            <div class="form-group row">
+                                              <label for="unitcode" class="col-sm-3 control-label alignStart">Unit Code<span class="star">*</span></label>
+                                              <div class="col-sm-9"> 
+                                                <div class="input-group">
+                                                  <input class="form-control" type="text" name="unitcode" id="unitcode"  placeholder="Enter unit code" required>
+                                                </div> 
+                                                <a href="#" class="refresh">Refresh?</a> 
+                                              </div>
+                                            </div>
+                          
+                                            <div class="form-group row">
+                                              <label for="unitname" class="col-sm-3 control-label">Unit Name<span class="star">*</span></label>
+                                              <div class="col-sm-9"> 
+                                                  <div class="input-group">
+                                                    <input class="form-control" type="text" name="unitname" id="unitname"  placeholder="Enter unit name" required>
+                                                  </div>         
+                                              </div>
+                                            </div>
+                                            <div class="form-group row bottom">
+                                              <label for="displaycode" class="col-sm-3 control-label">Unit Display Code<span class="star">*</span></label>
+                                              <div class="col-sm-9"> 
+                                                  <div class="input-group">
+                                                    <input class="form-control" type="text" name="displaycode" id="displaycode"  placeholder="Enter unit display code" required>
+                                                  </div>         
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label for="unittype" class="col-sm-3 control-label">Unit type</label>
+                                              <div class="col-sm-9">
+                                                <div class="form-check radio">
+                                                  <input class="form-check-input" type="radio" name="unittype" id="unittype1" value="unittype1" checked>
+                                                  <label class="form-check-label">Core</label>
+                                                </div>
+                                                <div class="form-check radio">
+                                                  <input class="form-check-input" type="radio" name="unittype" id="unittype2" value="unittype2">
+                                                  <label class="form-check-label">Elective</label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                              <label for="description" class="col-sm-3 control-label">Description</label>
+                                              <div class="col-sm-9"> 
+                                                <div class="input-group">
+                                                  <input class="form-control" type="text" name="description" id="description"  placeholder="Enter description here" >
+                                                </div>         
+                                              </div>
+                                            </div>
+  
+                                              <div class="form-group row">
+                                                <label for="hours" class="col-sm-3 control-label">Scheduled nominal hours</label>
+                                                <div class="col-sm-9"> 
+                                                  <div class="input-group">
+                                                    <input class="form-control" type="text" name="hours" id="hours"  placeholder="Enter scheduled nominal hours here" >
+                                                  </div>         
+                                                </div>
+                                              </div>
+  
+                                              <div class="form-group row">
+                                                <label for="predominant" class="col-sm-3 control-label">Predominant Delivery mode</label>
+                                                <div class="col-sm-9">
+                                                  <select class="form-control" name="predominant" id="predominant">
+                                                    <option selected="selected" value="Any">I- Internal delivery(e.g. classroom based)</option>
+                                                    <option value="All Teachers">All Teachers</option>
+                                                    <option value="NT">NT</option>
+                                                    <option value="QLD">QLD</option>
+                                                    <option value="SA">SA</option>
+                                                    <option value="TAS">TAS</option>
+                                                    <option value="VIC">VIC</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="Other - Overseas">Other - Overseas</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+  
+                                              <div class="form-group row">
+                                                <label for="fieldofedu" class="col-sm-3 control-label">Field of Education</label>
+                                                <div class="col-sm-9">
+                                                  <select class="form-control" name="fieldofedu" id="fieldofedu">
+                                                    <option selected="selected" value="Any">Not Specified()</option>
+                                                    <option value="All Teachers">All Teachers</option>
+                                                    <option value="NT">NT</option>
+                                                    <option value="QLD">QLD</option>
+                                                    <option value="SA">SA</option>
+                                                    <option value="TAS">TAS</option>
+                                                    <option value="VIC">VIC</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="Other - Overseas">Other - Overseas</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="tutionfee" class="col-sm-3 control-label">Tution Fee(AUD)<span class="star">*</span></label>
+                                                <div class="col-sm-9"> 
+                                                  <div class="input-group">
+                                                    <input class="form-control" type="text" name="tutionfee" id="tutionfee"  placeholder="Enter subject name here" required>
+                                                  </div>         
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="deliverymode" class="col-sm-3 control-label alignStart" >Delivery Mode(s)</label>
+                                                  <div class="col-sm-9">
+                                                    <div class="form-check cbox">
+                                                      <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox1">
+                                                      <label class="form-check-label">I- Internal delivery(e.g. classroom based)</label>
+                                                    </div>
+                                                    <div class="form-check cbox">
+                                                      <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox2" >
+                                                      <label class="form-check-label">External Delivery(e.g. online)</label>
+                                                    </div>
+                                                    <div class="form-check cbox">
+                                                      <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox3" >
+                                                      <label class="form-check-label">W-Workplace-based</label>
+                                                    </div>
+                                                  </div>
+                                              </div>
+
+                                              <div class="form-group row">
+                                                <label for="vetflag" class="col-sm-3 control-label">VET Flag</label>
+                                                <div class="col-sm-9">
+                                                  <div class="form-check radio">
+                                                    <input class="form-check-input" type="radio" name="vetflag" id="vetflag1" value="vetflag1" checked>
+                                                    <label class="form-check-label">Yes</label>
+                                                  </div>
+                                                  <div class="form-check radio">
+                                                    <input class="form-check-input" type="radio" name="vetflag" id="vetflag2" value="vetflag2">
+                                                    <label class="form-check-label">No</label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                          
+                                              <div class="form-group row">
+                                                <label for="AVETMISS" class="col-sm-3 control-label" >AVETMISS</label>
+                                                <div class="col-sm-9">
+                                                  <div class="form-check cbox">
+                                                    <input class="form-check-input" type="checkbox" name="checkbox1" id="checkbox1" value="cbox1">
+                                                    <label class="form-check-label">Report</label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            
+                                          </div><!--inner-row-->
+                                        </div> <!--col-md-12 sub-form-->
+                    
+                                        
+                                      </div> <!--row2-->                                      
+                                  </div> <!--col-md-12-->
+                              </div> <!--row-->
+                               
+                              <br>
+
+                              <!--submit option-->
+                              <div class="submit-button">
+                                  <button type="submit" class="btn btn-success" name="addnewsubjectbtn" id="addnewsubjectbtn">Add New Subject</button>
+                              </div>
+                          
+                          </div>
+                      </form>
+                    
+                  </div> <!--card card-primary-->
+                 
+              </div> <!--col-md-6 offset-md-2-->
+             
+          </div> <!--row-->
+         
+      </div> <!--container-fluid-->
+           
+  </section> <!--section2-->
+  
+</div> <!--content-wrapper-->
+
+
+ 

@@ -1,0 +1,161 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Enrollment Fee</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Enrollment Fee</li>
+            </ol>
+        </div>
+        <span class="text-star">Please setup initial enrollment fee information for your institute before using the System.</span>
+      </div>
+    </div><!-- container-fluid -->
+  </section> 
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <!-- left column -->
+        <div class="col-md-10 offset-md-1">
+          <!-- general form elements -->
+            <div class="card card-primary mb-0">
+              <div class="card-header">
+                <h5 class="card-title">Setup Enrollment Fee Information</h5>
+              </div>
+              <form role="form">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="inner-row">
+                        <div class="form-group row">
+                          <label for="enrolmentfee" class="col-sm-3 control-label">Enrollment fee</label>
+                          <div class="col-sm-9">
+                            <select class="form-control" name="enrolmentfee" id="enrolmentfee">
+                              <option selected="selected" value="200">200</option>
+                              <option value="200">200</option>
+                              <option value="300">300</option>
+                              <option value="400">400</option>
+                              <option value="500">500</option>
+                              <option value="600">600</option>
+                              <option value="700">700</option>
+                              <option value="800">800</option>
+                              <option value="900">900</option>
+                            </select>
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <label for="validto" class="col-sm-3 control-label" >Valid to</label> 
+                          <div class="col-sm-9" id="validto" data-target-input="nearest">          
+                            <input type="date" class="form-control datetimepicker-input" name="validto" id="validto"  data-target="#reservationdate" placeholder="27/7/2020">
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <label for="selectcoursetype" class="col-sm-3 control-label"> Select Course type</label>
+                          <div class="col-sm-9">
+                            <select class="form-control" name="selectcoursetype" id="selectcoursetype">
+                              <option selected="selected" value="VET">VET</option>
+                              <option value="VET">VET</option>
+                              <option value="VET">VET</option>
+                              <option value="2018">2018</option>
+                              <option value="2017">2017</option>
+                              <option value="2016">2016</option>
+                              <option value="2015">2015</option>
+                              <option value="2014">2014</option>
+                              <option value="2013">2013</option>
+                            </select>
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <label for="courseselection" class="col-sm-3 control-label">Course Selection</label>
+                          <div class="col-sm-9">
+                            <div class="form-check radio">
+                              <input class="form-check-input" type="radio" name="courseselection" id="courseselection" value="courseselection1" checked>
+                              <label class="form-check-label">All Courses</label>
+                            </div>
+                            <div class="form-check radio">
+                              <input class="form-check-input" type="radio" name="courseselection" id="courseselection" value="courseselection2">
+                              <label class="form-check-label">Selected Course</label>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <label for="selectorigin" class="col-sm-3 control-label alignStart">Select Origin</label> 
+                          <div class="col-sm-9">          
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="origin[]" id="offshore" value="offshore">
+                                  <label class="form-check-label">Overseas Student(Offshore)</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="origin[]" id="onshore" value="onshore">
+                                  <label class="form-check-label">Overseas Student in Australia(Onshore)</label>
+                              </div>
+  
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="origin[]" id="domestic" value="domestic">
+                                  <label class="form-check-label">Resident Student(Domestic)</label>
+                              </div>
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <label for="course" class="col-sm-3 control-label alignStart">Course</label> 
+                          <div class="col-sm-9">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="course[]" id="checkbox1" value="option1">
+                                  <label class="form-check-label">BSB50215: Diploma of Business</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="course[]" id="checkbox2" value="option2">
+                                  <label class="form-check-label">ICT50115: Diploma of Information Technology</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="course[]" id="checkbox3" value="option3">
+                                  <label class="form-check-label">ICT50118: Diploma of Information Technology</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="course[]" id="checkbox4" value="option4">
+                                  <label class="form-check-label">ICT60115: Advanced Diploma of Information Technology</label>
+                                </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="course[]" id="checkbox5" value="option5">
+                                  <label class="form-check-label">SIT40516: Certificate IV in Commercial Cookery </label>
+                                </div> 
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="course[]" id="checkbox6" value="option6" >
+                                  <label class="form-check-label">SIT50416: Diploma of Hospitality Management</label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="course[]" id="checkbox7" value="option7">
+                                  <label class="form-check-label">SIT50416-PKG: Diploma of Hospitality Management</label>
+                                </div>
+                          </div>
+                        </div>
+                      </div><!--inner-row-->
+                    </div> <!--col-md-12-->
+                  </div> <!--row-->
+
+                  <!--submit-button-->
+                  <div class="submit-button">
+                    <button type="submit" class="btn btn-success" name="enrollmentfeesetupbtn" id="enrollmentfeesetupbtn">Setup</button>
+                  </div>
+                </div>
+              </form>
+            </div> <!--card card-primary-->
+        </div> <!--col-md-6 offset-md-2-->
+      </div> <!--row-->
+    </div> <!--container-fluid-->
+  </section> <!--section2-->
+</div> <!--content-wrapper-->
+
+
+   

@@ -1,0 +1,96 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Validate PRISMS</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Validate PRISMS</li>
+            </ol>
+        </div>
+        <span class="text-star">
+          **Please remove all empty rows before column name in worksheet.
+          **Maximum 800 rows can be validated at once.
+        </span>
+      </div>
+    </div><!-- container-fluid -->
+  </section>  
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">PRISMS Data Validation</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                      <div class="inner-row">
+                                        <div class="form-group row">
+                                          <label for="folder" class="col-sm-3 control-label">Select Existing File</label>
+                                          <div class="col-sm-9">
+                                              <div class="input-group">
+                                                  <select class="form-control" name="selectexixtingtype" id="selectexixtingtype">
+                                                        <option selected="selected" value="Prism.xls">Prism.xls</option>
+                                                        <option value="Report">Report</option>
+                                                        <option value="Europe">Europe</option>
+                                                        <option value="Brazil">Brazil</option>
+                                                        <option value="500">500</option>
+                                                        <option value="600">600</option>
+                                                        <option value="700">700</option>
+                                                        <option value="800">800</option>
+                                                        <option value="900">900</option>
+                                                    </select>
+                                                    <div class="input-group-prepend">
+                                                        <button type="button" id="createFolder" class="btn btn-info">Compare </button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                  </div>
+                                
+                                  <div class="form-group row">
+                                      <label for="folder" class="col-sm-3 control-label">Upload New File</label>
+                                      <div class="col-sm-9">
+                                          <div class="input-group">
+                                              <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="InputFile">
+                                                <label class="custom-file-label" for="InputFile">Choose file</label>
+                                              </div>
+                                              <div class="input-group-append">
+                                                  <span class="input-group-text" style="padding:0;" id="InputFile"><button type="button" class="btn btn-link" id="upload-btn">Upload</button>
+                                                  </span>
+                                                </div>
+                                            </div>
+                                      </div>
+                                  </div>
+                                      </div><!--inner-row-->            
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> 
+                                                             
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div>
+
+
+   

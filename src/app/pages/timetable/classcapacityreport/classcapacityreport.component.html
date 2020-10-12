@@ -1,0 +1,153 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Class Capacity Report</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Class Capacity Report</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Class Report</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                        
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="courseType" class="col-sm-3 control-label">Course Type</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="courseType" id="courseType">
+                                                        <option selected="selected">--Select Option--</option>
+                                                        <option>VET</option>
+                                                        <option>VET</option>
+                                                        <option>VET</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="semester" class="col-sm-3 control-label">Semester</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="semester" id="semester">
+                                                        <option selected="selected">--Select Option--</option>
+                                                        <option>--2020_VET--</option>
+                                                        <option>--2020_VET--</option>
+                                                        <option>--2020_VET--</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="reportType" class="col-sm-3 control-label">Report Type</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="reportType[]" id="reportsubject" value="reportsubject" checked>
+                                                      <label class="form-check-label">Subject</label>
+                                                    </div>
+                
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="reportType[]" id="reportroom" value="reportroom">
+                                                      <label class="form-check-label">Room</label>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                
+                                              <div class="form-group row">
+                                                <label for="viewBy" class="col-sm-3 control-label">View By</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="viewBy[]" id="viewBydate" value="viewBydate" checked>
+                                                      <label class="form-check-label">Date</label>
+                                                    </div>
+                
+                                                    <div class="form-check radio">
+                                                      <input class="form-check-input" type="radio" name="viewBy[]" id="viewByweek" value="viewByweek">
+                                                      <label class="form-check-label">Week</label>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                
+                                            <div class="form-group row">
+                                                <label for="reportFrom" class="col-sm-3 control-label">From</label> 
+                                                <div class="col-sm-9" id="reservationdate" data-target-input="nearest">   
+                                                    <div class="input-group">
+                                                    <input type="date" class="form-control datetimepicker-input" name="reportFrom" id="reportFrom" data-target="#reservationdate" placeholder="03/10/2018">
+                                                    </div>       
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="reportTo" class="col-sm-3 control-label">To</label> 
+                                                <div class="col-sm-9" id="reservationdate" data-target-input="nearest">   
+                                                    <div class="input-group">
+                                                    <input type="date" class="form-control datetimepicker-input" name="reportFrom" id="reportFrom" data-target="#reservationdate" placeholder="03/10/2018">
+                                                    </div>       
+                                                </div>
+                                            </div>
+    
+                                            <div class="space">
+                                                <span> 
+                                                    <div class="red"></div>
+                                                    No space available
+                                                </span>
+                
+                                                <span> 
+                                                    <div class="yellow"></div>
+                                                    Limited space available
+                                                </span>
+                
+                                                <span> 
+                                                    <div class="green"></div>
+                                                    Sufficient space available
+                                                </span>
+                                            </div>
+                                        </div><!--inner-row-->
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> 
+                                 <br>
+                                 <!--Submit Button-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="classcapacityviewbtn" id="classcapacityviewbtn">View</button>
+                                </div>
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div> <!--content wrapper-->
+
+
+   

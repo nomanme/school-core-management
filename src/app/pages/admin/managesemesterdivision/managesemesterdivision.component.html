@@ -1,0 +1,274 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+
+        <div class="container-fluid">
+
+          <div class="row m-0 p-0">
+
+            <div class="col-sm-12">
+
+                <h3 class="page-heading">Manage Semester Division</h3>
+
+            </div>
+
+            <div class="col-sm-12 text-center">
+
+                <ol class="breadcrumb">
+
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Manage Semester Division</li>
+
+                </ol>
+
+            </div>
+
+            <span class="text-star">In order to setup Rooms, you must first setup training location/venue. There must be at least one room in order to setup a timable.</span>
+
+          </div>
+
+        </div><!-- container-fluid -->
+
+    </section>  
+
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container-fluid">
+
+            <div class="row m-0 p-0">
+
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+
+                    <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+
+                        <div class="card-header">
+
+                            <h5 class="card-title">Add Semester Division</h5>
+
+                        </div>
+
+                        <form role="form">
+
+                            <div class="card-body">
+
+                                <div class="row">
+
+                                    <div class="col-md-12">
+
+                                        <div class="form-group row">
+
+                                            <label for="CourseType" class="col-sm-3 control-label">Course Type</label>
+
+                                            <div class="col-sm-9">
+
+                                                <div class="input-group">
+
+                                                    <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="CourseType" id="CourseType">
+
+                                                        <option selected="selected">--Select Option----</option>
+
+                                                        <option>VET</option>
+
+                                                        <option>VET</option>
+
+                                                        <option>VET</option>
+
+                                                        <option>VET</option>
+
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+            
+                                        <div class="form-group row">
+
+                                            <label for="semester" class="col-sm-3 control-label">Semester</label>
+
+                                            <div class="col-sm-9">
+
+                                                <div class="input-group">
+
+                                                    <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="semester" id="semester">
+
+                                                        <option selected="selected">--Select Option----</option>
+
+                                                        <option>2020_VET</option>
+
+                                                        <option>2020_VET</option>
+
+                                                        <option>2020_VET</option>
+
+                                                        <option>2020_VET</option>
+
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+            
+                                        <div class="form-group row">
+
+                                            <label for="termaddtype" class="col-sm-3 control-label">Term Adding Type</label>
+
+                                            <div class="col-sm-9">
+
+                                                <div class="form-check radio">
+
+                                                    <input class="form-check-input" type="radio" name="termaddtype" id="newterm" value="newterm" checked>
+    
+                                                    <label class="form-check-label">New Term</label>
+    
+                                                </div>
+
+                                                <div class="form-check radio">
+
+                                                    <input class="form-check-input" type="radio" name="termaddtype" id="previousterm" value="previousterm">
+    
+                                                    <label class="form-check-label">Continue from  Previous Semester</label>
+    
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+            
+                                        <div class="form-group row">
+
+                                            <label for="term" class="col-sm-3 control-label">Term</label>
+                                            <div class="col-sm-9">
+
+                                                <div class="input-group">
+
+                                                    <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="term" id="term">
+
+                                                        <option selected="selected">--Select Option----</option>
+
+                                                        <option>1</option>
+
+                                                        <option>2</option>
+
+                                                        <option>3</option>
+
+                                                        <option>4</option>
+
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+            
+                                        <div class="form-group row">
+
+                                            <label for="numofweeks" class="col-sm-3 control-label">No. of Weeks<span class="star">*</span></label>
+
+                                            <div class="col-sm-9">
+
+                                                <div class="input-group">
+
+                                                    <input type="number" min="0" class="form-control" name="numofweeks" id="numofweeks" required>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+            
+                                        <div class="form-group row">
+
+                                            <label for="weekStart" class="col-sm-3 control-label">Week Start</label> 
+                                            <div class="col-sm-9"> 
+
+                                                <div class="input-group">
+
+                                                    <input type="date" class="form-control" name="weekStart" id="weekStart"  data-target="#reservationdate" placeholder="20/6/2020">
+
+                                                </div>  
+
+                                            </div>
+
+                                        </div>
+            
+                                        <div class="form-group row">
+
+                                            <label for="numofhours" class="col-sm-3 control-label">No. of hours<span class="star">*</span></label>
+
+                                            <div class="col-sm-9">
+
+                                                <div class="row">
+
+                                                    <div class="col-sm-5 p-0">
+
+                                                        <div class="input-group">
+
+                                                            <input type="number" min="0" class="form-control" name="numofhours" id="numofhours" required>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-sm-5 week">
+
+                                                        <span class="col-sm-10">/ Week</span>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div> <!--col-md-12-->
+
+                                </div> 
+                                 
+                                <div class="submit-button">
+
+                                    <button type="submit" class="btn btn-success" name="add" id="add">Add Semester Division</button>
+
+                                    <button type="button" class="btn btn-info" name="viewall" id="viewall">View All Division</button>
+
+                                    <button type="button" class="btn btn-warning" name="viewdetail" id="viewdetail">View Detail By Semester</button>
+
+                                </div>
+
+                                <br>
+
+                                <div class="delete-button">
+
+                                    <label for="deleteSemester" class="col-sm-5 deleteSemester">Delete Division By Semester & Term</label>
+
+                                    <button type="button" class="btn btn-danger col-sm-2" name="delete" id="delete">Confirm</button>
+
+                                </div>
+                            
+                            </div><!--card-body-->
+
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div><!--cintent-wrapper-->
+
+
+   

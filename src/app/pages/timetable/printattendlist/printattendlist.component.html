@@ -1,0 +1,149 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Print Attendance</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Print Attendance</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+  
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Print Attendance List</h5>
+                          </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="courseType" class="col-sm-3 control-label">Course Type</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="courseType" id="courseType">
+                                                        <option selected="selected">--Select Option--</option>
+                                                        <option>VET</option>
+                                                        <option>VET</option>
+                                                        <option>VET</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="semesterTerm" class="col-sm-3 control-label">Semester/ Term</label>
+                                                <div class="col-sm-9">
+                                                    <div class="row">
+                                                        <div class="input-group col-sm-8">
+                                                            <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="semesterTerm" id="semesterTerm">
+                                                            <option selected="selected">--Select Option--</option>
+                                                            <option>2020_VET</option>
+                                                            <option>2019_VET</option>
+                                                            <option>2018_VET</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                          <span> / </span>
+                                                        </div>
+                                                        <div class="input-group col-sm-3 numfield">
+                                                          <input class="form-control" type="number" min="0" name="DisplayValue" id="DisplayValue"  placeholder="1">
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="subject" class="col-sm-3 control-label">Subject</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="subject" id="subject">
+                                                        <option selected="selected">--No Subject Found--</option>
+                                                        <option>Subject1</option>
+                                                        <option>Subject2</option>
+                                                        <option>Subject3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="specifyBatch" class="col-sm-3 control-label">Specify Batch</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <input class="form-control appebdbtn" type="text" name="specifyBatch" id="specifyBatch" placeholder="Enter your batch name here">
+                                                        <div class="input-group-prepend">
+                                                            <button type="button" id="findclsbtn" class="btn btn-info">Find Class</button>
+                                                        </div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="class" class="col-sm-3 control-label">Class</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="class" id="class">
+                                                        <option selected="selected">--No Class Found--</option>
+                                                        <option>Class1</option>
+                                                        <option>Class2</option>
+                                                        <option>Class3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="studentStatus" class="col-sm-3 control-label">Student Status</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="studentStatus" id="studentStatus" style="width: 100%;">
+                                                        <option selected="selected">--Select Option--</option>
+                                                        <option>Current Student</option>
+                                                        <option>Current Student</option>
+                                                        <option>Current Student</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--inner-row--> 
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> <!--row1-->
+                                <br>
+
+                                <!--submit option-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="view" id="view">View</button>
+                                </div>
+                            
+                            </div>
+                        </form>
+                    
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+  </div> <!--content-wrapper-->
+  
+  
+   

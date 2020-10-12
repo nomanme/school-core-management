@@ -1,0 +1,156 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Staff Email</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Staff Email</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Send Email to Staff</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                        
+                                <div class="row">
+
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="staffId" class="col-sm-3 control-label">Staff ID</label>
+                                                <div class="col-sm-9">
+                                                  <div class="input-group">
+                                                    <span id="staffId" class="staffId">staff id here </span>
+                                                  </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="staffName" class="col-sm-3 control-label">Staff Name</label>
+                                                <div class="col-sm-9">
+                                                  <div class="input-group">
+                                                    <span id="staffName" class="staffName">staff name here</span>
+                                                  </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="staffEmailaddr" class="col-sm-3 control-label">Staff Email Address</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="checkbox1" id="staffEmailaddr" value="staffEmailaddr">
+                                                        <label class="form-check-label">email address here</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="from" class="col-sm-3 control-label">From</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="from" id="from">
+                                                            <option selected="selected">--Select--</option>
+                                                            <option>Me: "Email Address Here"</option>
+                                                            <option>Me: "Email Address Here"</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="template" class="col-sm-3 control-label">Select Template</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="template" id="template">
+                                                            <option selected="selected">--No Template Found--</option>
+                                                            <option>Template 1</option>
+                                                            <option>Template 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="subject" class="col-sm-3 control-label">Subject<span class="star">*</span></label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <input class="form-control" type="text" name="subject" id="subject"  placeholder="Enter email subject here" required> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="emailText" class="col-sm-3 control-label alignStart">Email Text</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <textarea class="form-control" rows="4" name="emailText" id="emailText" placeholder="Place some text here. . . ."></textarea>
+                                                      </div>
+                                                </div>
+                                            </div>
+                
+                
+                                            <div class="form-group row">
+                                                <label for="customFile" class="col-sm-3 control-label alignStart">File Attachment</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <div class="custom-file">
+                                                          <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="checkbox1" id="enableLog" value="enableLog">
+                                                        <label class="form-check-label">Add to Staff Communication Log</label>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div><!--inner-row-->            
+                                    </div> <!--col-md-12 sub-form-->
+
+                                </div> <!--row1-->
+                                 
+                                
+                                <br>
+
+                     
+                                <!--submit option-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" id="staffemailbtn" name="staffemailbtn">Send Email</button>
+                                </div>
+                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div> <!--content-wrapper-->
+
+
+   

@@ -1,0 +1,152 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Manage Study Periods</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Manage Study Periods</li>
+                </ol>
+            </div>
+            <span class="text-star">Enter system configuration and setup information below</span>
+          </div>
+        </div><!-- container-fluid -->
+    </section> 
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                  <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h5 class="card-title">Add Semester</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6">
+
+                                                    <div class="form-group row">
+                                                        <label for="smstrName" class="col-sm-4 control-label">Semester Name<span class="star">*</span></label> 
+                                                        <div class="col-sm-8"> 
+                                                            <div class="input-group">
+                                                                <input class="form-control" type="text" name="smstrName" id="smstrName"  placeholder="Enter semester name here" required>
+                                                            </div>         
+                                                        </div>
+                                                    </div>
+                            
+                                                    <div class="form-group row">
+                                                        <label for="year" class="col-sm-4 control-label">Year</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="year" id="year">
+                                                                  <option selected="selected">--Select Year--</option>
+                                                                  <option>2019</option>
+                                                                  <option>2018</option>
+                                                                  <option>2017</option>
+                                                                  <option>2016</option>
+                                                                  <option>2015</option>
+                                                                  <option>2014</option>
+                                                                  <option>2013</option>
+                                                                  <option>2012</option>
+                            
+                                                                </select>
+                                                              </div>
+                                                          </div>
+                                                        </div>
+                            
+                            
+                                                    <div class="form-group row">
+                                                        <label for="smstrStart" class="col-sm-4 control-label">Semester Start</label> 
+                                                          <div class="col-sm-8">   
+                                                              <div class="input-group">
+                                                                <input type="date" class="form-control" name="smstrStart" id="smstrStart"  data-target="#reservationdate" placeholder="21/7/2019">
+                                                              </div>       
+                                                          </div>
+                                                      </div>
+                            
+                            
+                                                  </div> <!--col-md-6-->
+                            
+                            
+                                                  <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label for="coursetype" class="col-sm-4 control-label">Course Type</label>
+                                                                <div class="col-sm-8">
+                                                                    <div class="input-group">
+                                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="coursetype" id="coursetype">
+                                                                            <option selected="selected">--Select course Type--</option>
+                                                                            <option>Type A</option>
+                                                                            <option>Type B</option>
+                                                                            <option>Type C</option>
+                                                                            <option>Type D</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                            
+                                                            <div class="form-group row">
+                                                                <label for="celenderType" class="col-sm-4 control-label">Celender Type</label>
+                                                                <div class="col-sm-8">
+                                                                    <div class="input-group">
+                                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="celenderType" id="celenderType">
+                                                                        <option selected="selected">--Select celender Type--</option>
+                                                                        <option>Celender Type 1</option>
+                                                                        <option>Celender Type 2</option>
+                                                                        <option>Celender Type 3</option>
+                                                                        <option>Celender Type 4</option>
+                                                                        <option>Celender Type 5</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                            
+                            
+                                                    <div class="form-group row">
+                                                        <label for="smstrFinish" class="col-sm-4 control-label">Semester Finish</label> 
+                                                          <div class="col-sm-8">   
+                                                              <div class="input-group">
+                                                                <input type="date" class="form-control" name="smstrFinish" id="smstrFinish"  data-target="#reservationdate" placeholder="21/7/2024">
+                                                              </div>       
+                                                          </div>
+                                                      </div>
+                            
+                                                  </div> <!--col-md-6-->
+                                            </div>
+                                        </div><!--inner-row-->
+                                    </div><!--col-md-12 sub-form-->
+                                </div> 
+                                 
+                                <br>
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="add" id="add">Add Semester Division</button>
+                                    <button type="button" class="btn btn-info" name="view" id="view">View All Semester</button>
+                                </div>
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div>
+
+
+   

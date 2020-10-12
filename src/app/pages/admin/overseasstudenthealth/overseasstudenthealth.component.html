@@ -1,0 +1,222 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Overseas Student Health Care (OSHC)</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>OSHC</li>
+            </ol>
+        </div>
+        <span class="text-star">Please setup initial OSHC information for your institue before using the System.</span>
+      </div>
+    </div><!-- container-fluid -->
+  </section> 
+
+    <!-- Main content -->
+    <div class="row p-0 m-0">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-12">
+            <section class="content">
+              <div class="container-fluid">
+                  <!-- general form elements -->
+                  <div class="card card-primary mb-0">
+                    <div class="card-header">
+                      <h5 class="card-title">New OSHC Information</h5>
+                    </div>
+                      <!-- form start -->
+                      <form role="form">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-12 sub-form">
+                              <div class="inner-row">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group row">
+                                      <label for="selectoshcduration" class="col-sm-6 control-label">Provider Name<span class="star">*</span></label>
+                                      <div class="col-sm-6">
+                                        <select class="form-control" name="selectoshcduration" id="selectoshcduration" required>
+                                          <option selected="selected" value="NIB">NIB</option>
+                                          <option value="NIB">NIB</option>
+                                          <option value="NT">NT</option>
+                                          <option value="QLD">QLD</option>
+                                          <option value="SA">SA</option>
+                                          <option value="TAS">TAS</option>
+                                          <option value="VIC">VIC</option>
+                                          <option value="WA">WA</option>
+                                          <option value="Other - Overseas">Other - Overseas</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="selectoshcduration" class="col-sm-6 control-label">Select OSHC Duration</label>
+                                        <div class="col-sm-6">
+                                          <select class="form-control" name="selectoshcduration" id="selectoshcduration">
+                                            <option selected="selected" value="0">0</option>
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                              <option value="4">4</option>
+                                              <option value="5">5</option>
+                                              <option value="6">6</option>
+                                              <option value="7">7</option>
+                                              <option value="8">8</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="selectoshctype" class="col-sm-6 control-label">Select OSHC Type</label>
+                                      <div class="col-sm-6">
+                                        <select class="form-control" name="selectoshctype" id="selectoshctype">
+                                          <option selected="selected" value="100">100</option>
+                                          <option value="100">100</option>
+                                          <option value="NT">NT</option>
+                                          <option value="QLD">QLD</option>
+                                          <option value="SA">SA</option>
+                                          <option value="TAS">TAS</option>
+                                          <option value="VIC">VIC</option>
+                                          <option value="WA">WA</option>
+                                          <option value="Other - Overseas">Other - Overseas</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    
+                                    <div class="form-group row">
+                                      <label for="oshcfee" class="col-sm-4 control-label">OSHC Fee</label>
+                                        <div class="col-sm-8">
+                                          <select class="form-control" name="oshcfee" id="oshcfee">
+                                            <option selected="selected" value="0">0</option>
+                                            <option value="100">100</option>
+                                            <option value="200">300</option>
+                                            <option value="400">400</option>
+                                            <option value="500">500</option>
+                                            <option value="TAS">TAS</option>
+                                            <option value="VIC">VIC</option>
+                                            <option value="WA">WA</option>
+                                            <option value="Other - Overseas">Other - Overseas</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="validfrom" class="col-sm-4 control-label" >Valid from</label> 
+                                        <div class="col-sm-8" id="reservationdate" data-target-input="nearest">          
+                                                  <input type="date" class="form-control datetimepicker-input" name="validfrom" id="validfrom"  data-target="#reservationdate" placeholder="27/7/2020">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="validto" class="col-sm-4 label">Valid to</label> 
+                                        <div class="col-sm-8" id="reservationdate" data-target-input="nearest">          
+                                          <input type="date" class="form-control datetimepicker-input" name="validto" id="validto"  data-target="#reservationdate" placeholder="27/7/2020">
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div><!--row-->
+                              </div><!--inner-row-->
+                            </div><!--col-md-12 sub-form-->
+                          </div><!--row-->
+      
+                          <div class="submit-button">
+                            <button type="submit" class="btn btn-success" name="overseasinfobtn" id="overseasinfobtn">Add</button>
+                          </div>
+                        </div> <!--card-body-->
+                      </form>     
+                  </div> <!--card card-primary-->
+              </div> <!--container-fluid-->     
+            </section> <!--section2-->
+          </div>
+        </div> <!--row1-->
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <section class="content">
+              <div class="container-fluid">
+                  <!-- general form elements -->
+                  <div class="card card-primary mb-0">
+                    <div class="card-header">
+                      <h5 class="card-title">Setup Active Provider</h5>
+                    </div>
+                      <!-- form start -->
+                      <form role="form">
+                        <div class="card-body">
+                          <div class="text-star">
+                            <span><b>Please activate provider for system usage</b></span>
+                          </div>
+                          <div class="inner-row">
+                            <div class="form-group row">
+                              <label for="selectorigin" class="col-sm-2 control-label" >Provider</label> 
+                              <div class="col-sm-10">          
+                                <div class="form-check col-sm-12">
+                                  <input class="form-check-input" type="checkbox" name="checkbox1" id="checkbox1" value="cbox1">
+                                  <label class="form-check-label">NIB</label>
+                                </div>
+                              </div>
+                          </div>
+                          </div><!--inner-row-->
+                        <div class="submit-button">
+                          <button type="submit" class="btn btn-success" name="overseassetactivebtn" id="overseassetactivebtn">Set Active</button>
+                        </div>
+        
+                        </div><!--card-body-->
+        
+                      </form>  
+                  </div> <!--card card-primary-->
+                 
+              </div> <!--container-fluid-->     
+            </section> <!--section3-->
+          
+          </div><!--col-md-12-->
+        </div> <!--row2-->
+
+        <div class="row">
+          <div class="col-md-12">
+            <section class="content">
+              <div class="container-fluid">
+                  <!-- general form elements -->
+                  <div class="card card-primary mb-0">
+                    <div class="card-header">
+                      <h5 class="card-title">Import OSHC Price</h5>
+                    </div>
+                      <!-- form start -->
+                      <form role="form">
+                        <div class="card-body">
+                          <div class="inner-row">
+                            <div class="form-group row">
+                              <label for="doc" class="col-sm-3 control-label">Select file to export</label>
+                              <div class="col-sm-9">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="customFile" name="doc" id="doc" accept=".xls,.xlsx">
+                                  <label class="custom-file-label" for="customFile">( .xls,.xlsx)</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div><!--inner-row-->
+                           
+                          <!--submit-button-->
+                          <div class="submit-button">
+                            <button type="submit" class="btn btn-info" name="overseasuploadbtn" id="overseasuploadbtn">Upload</button>
+                            <button type="submit" class="btn btn-success" name="overseasdownloadbtn" id="overseasdownloadbtn">Download Template</button>
+                          </div>
+                        </div><!--card-body-->
+                      </form>  
+                  </div> <!--card card-primary-->
+                 
+              </div> <!--container-fluid-->     
+            </section> <!--section4-->
+          </div><!--colmd-12-->
+    
+        </div> <!--row3-->
+      </div>
+    </div>
+   
+</div> <!--content-wrapper-->
+
+
+   

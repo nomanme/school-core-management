@@ -1,0 +1,292 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <div class="sidenav-heading">
+      <img src="assets/image/school1.png" alt="SchMsystem" class="brand-image">
+      <a href="#" class="brand-link">
+        <span class="brand-text">SchMsystem</span>
+      </a>
+    </div>
+    
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel  pt-3 pb-3 pl-2 pr-3">
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <div class="outer-div">
+            <div class="scrollable">
+              <!--Student Application-->
+              <li class="nav-item">
+                <a href="student-application"><i class="fas fa-circle nav-icon"></i>Student Online Application</a>
+              </li> 
+              <!--Agent Registration-->
+              <li class="nav-item">
+                <a href="agent-registration"><i class="fas fa-circle nav-icon"></i>Agent Registration</a>
+              </li> 
+              <li class="nav-item">
+                <a href="agent-reg"><i class="fas fa-circle nav-icon"></i>Agent Reg</a>
+              </li>
+              <!--Profile Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Profile
+                <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="profile/edit-profile"><i class="far fa-circle nav-icon"></i>Edit Profile</a>
+                <a href="profile/change-password"><i class="far fa-circle nav-icon"></i>Change Password</a>
+                <a href="profile/leave-info"><i class="far fa-circle nav-icon"></i>Leave Info</a>
+              </div>          
+            </li> 
+            <!--Profile End-->
+      
+            <!--Admin Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Admin <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="admin/create-student"><i class="far fa-circle nav-icon"></i>Create Student</a>
+                <a href="admin/student-list"><i class="far fa-circle nav-icon"></i>Student List</a>
+                <a href="admin/list-roles"><i class="far fa-circle nav-icon"></i>Roles</a>
+                <a href="admin/create-role"><i class="far fa-circle nav-icon"></i>Create Role</a>
+
+                <ol class="nav-item">
+                  <!--Configuration Start-->
+                  <button class="dropdown-btn" onclick="myFunction()"><i class="far fa-circle nav-icon"></i>Configuration & Setup<i class="fas fa-angle-left right"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a class="dropdown-item" href="admin/college-info"><i class="far fa-dot-circle nav-icon"></i>College Info</a>
+                    <a href="admin/enrollment-fee"><i class="far fa-dot-circle nav-icon"></i>Enrollment Fee</a>
+                    <a href="admin/overseas-student-health"><i class="far fa-dot-circle nav-icon"></i>OSHC Info</a>
+                    <a href="admin/offer-document-checklist"><i class="far fa-dot-circle nav-icon"></i>Offer Document Checklist</a>
+                    <a href="admin/agent-document"><i class="far fa-dot-circle nav-icon"></i>Agent Document Checklist</a>
+                    <a href="admin/edit-agent-status"><i class="far fa-dot-circle nav-icon"></i>Agent Status</a>
+                    <a href="admin/country-nationality-info"><i class="far fa-dot-circle nav-icon"></i>Country List Info</a>
+                    <a href="admin/edit-language-info"><i class="far fa-dot-circle nav-icon"></i>Language List Info</a>
+                    <a href="admin/certificateid-format"><i class="far fa-dot-circle nav-icon"></i>Certificate Id Format</a>
+                    <a href="admin/result-grade"><i class="far fa-dot-circle nav-icon"></i>Result Grade</a>
+                    <a href="admin/invention-strategy"><i class="far fa-dot-circle nav-icon"></i>Invention Strategy</a>
+                    <a href="admin/system-field-setup"><i class="far fa-dot-circle nav-icon"></i>System Field Setup</a>
+                    <a href="admin/checklist-setup"><i class="far fa-dot-circle nav-icon"></i>Checklist Setup</a>
+                    <a href="admin/custom-fields"><i class="far fa-dot-circle nav-icon"></i>Custom Fields</a>
+                    <a href="admin/additional-email"><i class="far fa-dot-circle nav-icon"></i>Additional Email Setup</a>
+                    <a href="admin/assessment-due-date"><i class="far fa-dot-circle nav-icon"></i>Assessment Due Date</a>
+                  </div>
+                  <!--Configuration End-->              
+                </ol>
+      
+                <ol class="nav-item">
+                  <!--Manage Calender Start-->
+                  <button class="dropdown-btn" onclick="myFunction()"><i class="far fa-circle nav-icon"></i>Manage Calender
+                    <i class="fas fa-angle-left right"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="admin/manage-study-periods"><i class="far fa-dot-circle nav-icon"></i>Manage Semester</a>
+                    <a href="admin/manage-semester-division"><i class="far fa-dot-circle nav-icon"></i>Manage Semester Division</a>
+                    <a href="admin/course-calender-type"><i class="far fa-dot-circle nav-icon"></i>Course Calender Type</a>
+                  </div>
+                  <!--Manage Calender End-->
+                </ol> 
+                
+                <a href="admin/view-files-folder"><i class="far fa-circle nav-icon"></i>Manage College Materials</a>
+                
+                <ol class="nav-item">
+                  <!--Manage Contract Schedule Start-->
+                  <button class="dropdown-btn" onclick="myFunction()"><i class="far fa-circle nav-icon"></i>Manage Contract<i class="fas fa-angle-left right"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="admin/add-contact"><i class="far fa-dot-circle nav-icon"></i>Add Contract</a>
+                    <a href="admin/manage-contract-schedule"><i class="far fa-dot-circle nav-icon"></i>Manage Contract Schedule</a>
+                    <a href="admin/course-site"><i class="far fa-dot-circle nav-icon"></i>Course Site</a>
+                  </div>
+                  <!--Manage Contract Schedule End-->
+                </ol>
+      
+                <ol class="nav-item">
+                  <!--Traininf Location Room Start-->
+                <button class="dropdown-btn" onclick="myFunction()"><i class="far fa-circle nav-icon"></i>Training Location/Room
+                  <i class="fas fa-angle-left right"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="admin/list-venue"><i class="far fa-dot-circle nav-icon"></i>Venues</a>
+                  <a href="admin/create-venue"><i class="far fa-dot-circle nav-icon"></i>Create Venue</a>
+                  <a href="admin/list-venueroom"><i class="far fa-dot-circle nav-icon"></i>Manage Room</a>
+                  <a href="admin/create-venueroom"><i class="far fa-dot-circle nav-icon"></i>Create Room</a>
+
+                </div>
+                <!--Traininf Location Room End-->
+                </ol>
+      
+                <ol class="nav-item">
+                  <!--Setup Permission Start-->
+                  <button class="dropdown-btn" onclick="myFunction()"><i class="far fa-circle nav-icon"></i>Setup Permission
+                    <i class="fas fa-angle-left right"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="admin/create-permission-group"><i class="far fa-dot-circle nav-icon"></i>Create Permission Group</a>
+                    <a href="admin/set-user-permission"><i class="far fa-dot-circle nav-icon"></i>Set User Permission</a>
+                    <a href="admin/page-permission-setup"><i class="far fa-dot-circle nav-icon"></i>Page Permission Setup</a>
+                  </div>
+                  <!--Setup Permission End-->
+                </ol> 
+                
+                <a href="admin/view-database"><i class="far fa-circle nav-icon"></i>View Log</a>
+      
+                <ol class="nav-item">
+                  <!--Manage Report Start-->
+                  <button class="dropdown-btn" onclick="myFunction()"><i class="far fa-circle nav-icon"></i>Manage Report
+                    <i class="fas fa-angle-left right"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="admin/manage-system-reports"><i class="far fa-dot-circle nav-icon"></i>Manage System Report</a>
+                    <a href="admin/update-report"><i class="far fa-dot-circle nav-icon"></i>Update Report</a>
+                  </div>
+                  
+                </ol> 
+                
+                <a href="admin/register-activity-detail"><i class="far fa-circle nav-icon"></i>Improvement Register</a>
+                <a href="admin/prisms-data-validation"><i class="far fa-circle nav-icon"></i>Validate PRISMS</a>
+                <a href="admin/manage-employee"><i class="far fa-circle nav-icon"></i>Manage Employer</a>
+      
+                <ol class="nav-item">
+                  <!--Service Setup Start-->
+                  <button class="dropdown-btn" onclick="myFunction()"><i class="far fa-circle nav-icon"></i>Service Setup
+                    <i class="fas fa-angle-left right"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="admin/service-facility-setup"><i class="far fa-dot-circle nav-icon"></i>Service Facility Setup</a>
+                    <a href="admin/service-details"><i class="far fa-dot-circle nav-icon"></i>Service Provider Setup</a>
+                    <a href="admin/service-provider"><i class="far fa-dot-circle nav-icon"></i>Service Provider Facility</a>
+                  </div>
+                  <!--Service Setup End-->
+                </ol> 
+                
+              </div>          
+            </li>
+            <!--Admin End-->
+      
+      
+            <!--Staff Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Staff
+                <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a class="" href="staff/add-staff"><i class="far fa-circle nav-icon"></i>Add Staff</a>
+                <a href="staff/management-home"><i class="far fa-circle nav-icon"></i>Staff List</a>
+                <a href="staff/profile"><i class="far fa-circle nav-icon"></i>Profile</a>
+                <a href="staff/email"><i class="far fa-circle nav-icon"></i>Email</a>
+                <a href="staff/communication-log"><i class="far fa-circle nav-icon"></i>Dairy</a>
+                <a href="staff/documents"><i class="far fa-circle nav-icon"></i>Document</a>
+                <a href="staff/photo"><i class="far fa-circle nav-icon"></i>Photo</a>
+                <a href="staff/professional-development"><i class="far fa-circle nav-icon"></i>PD</a>              
+              </div>
+            </li>
+            <!--Staff End-->
+      
+      
+            <!--Compliance Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Compliance
+                <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="compliance/add-update-student"><i class="far fa-circle nav-icon"></i>Add Update Student</a>
+                <a href="compliance/attendance-summary"><i class="far fa-circle nav-icon"></i>Attendance Summary</a>
+                <a href="compliance/bulk-update"><i class="far fa-circle nav-icon"></i>Bulk Update</a>
+                <a href="compliance/daily-attendance-roll"><i class="far fa-circle nav-icon"></i>Daily Attendance Roll</a>             
+              </div>
+            </li> 
+            <!--Compliance End-->
+      
+      
+            <!--Course Site Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Course Site
+                <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="course/list-courses"><i class="far fa-circle nav-icon"></i>Courses</a>
+                <a href="course/create-course"><i class="far fa-circle nav-icon"></i>Create Course</a>
+                <a href="course/add-course-template"><i class="far fa-circle nav-icon"></i>Add Course Template</a>
+                <a href="course/add-holidays"><i class="far fa-circle nav-icon"></i>Add Holidays</a>
+                <a href="course/add-new-subject"><i class="far fa-circle nav-icon"></i>Add New Subject</a>
+                <a href="course/add-subject"><i class="far fa-circle nav-icon"></i>Add Subject</a>  
+                <a href="course/intake-dates"><i class="far fa-circle nav-icon"></i>Intake Dates</a>
+                <a href="course/manage"><i class="far fa-circle nav-icon"></i>Manage</a>
+                <a href="course/manage-course-initial"><i class="far fa-circle nav-icon"></i>Manage Course Initial</a>
+                <a href="course/manage-course-structure"><i class="far fa-circle nav-icon"></i>Manage Course Structure</a>
+                <a href="course/manage-subject"><i class="far fa-circle nav-icon"></i>Manage Subject</a>
+                <a href="course/manage-unit"><i class="far fa-circle nav-icon"></i>Manage Unit</a>           
+                <a href="course/nationality-group"><i class="far fa-circle nav-icon"></i>Nationality Group</a>           
+                <a href="course/promotion-activation"><i class="far fa-circle nav-icon"></i>Promotion Activation</a>           
+                <a href="course/promotion-set"><i class="far fa-circle nav-icon"></i>Promotion Set</a>           
+                <a href="course/update-subject"><i class="far fa-circle nav-icon"></i>Update Subject</a>           
+              </div>
+            </li> 
+            <!--Course Site End-->
+      
+            <!--Teacher Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Teacher
+                <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="teacher/add-teacher"><i class="far fa-circle nav-icon"></i>Add New Teacher</a>
+                <a href="teacher/manage-teacher"><i class="far fa-circle nav-icon"></i>Manage Teacher</a>
+                <a href="teacher/teacher-matric"><i class="far fa-circle nav-icon"></i>Teacher Matric</a>
+              </div>
+            </li> 
+            <!--Teacher End-->
+      
+            <!--Timetable Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Timetable
+                <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="timetable/asign-replace-teacher"><i class="far fa-circle nav-icon"></i>Assign Replace Teacher</a>
+                <a href="timetable/class-capacity-report"><i class="far fa-circle nav-icon"></i>Class Capacity Report</a>
+                <a href="timetable/create-class-timetable"><i class="far fa-circle nav-icon"></i>Create Class Timetable</a>
+                <a href="timetable/generate-class-attendance"><i class="far fa-circle nav-icon"></i>Generate Class Attendance</a>
+                <a href="timetable/manage-class-timetable"><i class="far fa-circle nav-icon"></i>Manage Class Timetable</a>
+                <a href="timetable/print-attendance"><i class="far fa-circle nav-icon"></i>Print Attendance List</a>
+                <a href="timetable/timetable-reports"><i class="far fa-circle nav-icon"></i>Timetable Reports</a>
+                <a href="timetable/view-template"><i class="far fa-circle nav-icon"></i>View Template</a>
+                <a href="timetable/list-schedule"><i class="far fa-circle nav-icon"></i>Schedule</a>
+                <a href="timetable/create-schedule"><i class="far fa-circle nav-icon"></i>Create Schedule</a>
+              </div>          
+            </li> 
+            <!--Timetable End-->
+      
+            <!--Users Start-->
+            <li class="nav-item">
+              <button class="dropdown-btn" onclick="myFunction()"><i class="nav-icon fas fa-edit"></i>Users
+                <i class="fas fa-angle-left right"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="users/create-user"><i class="far fa-circle nav-icon"></i>Create Users</a>
+                <a href="users/manage-user-account"><i class="far fa-circle nav-icon"></i>Manage Users</a>
+                <a href="users/user-activity"><i class="far fa-circle nav-icon"></i>Users Ip Activity Track</a>
+              </div>
+            </li> 
+            <!--Users End-->
+            </div>
+          </div>
+        </ul>
+
+      </nav>
+      <!-- /.sidebar-menu -->
+
+    </div>
+    <!-- /.sidebar -->
+  </aside>

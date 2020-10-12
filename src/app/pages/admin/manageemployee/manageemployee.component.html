@@ -1,0 +1,229 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Manage Employee</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Manage Employee</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section> 
+
+    <!-- Main content -->
+    <div class="row p-0 m-0">
+        <div class="col-md-10 offset-md-1">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="content">
+                        <div class="container-fluid">
+                        <!-- general form elements -->
+                            <div class="card card-primary mb-0">
+                                <div class="card-header">
+                                    <h5 class="card-title">Add Employee</h5>
+                                  </div>
+                            <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12 sub-form">
+                                                <div class="inner-row">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label for="employername" class="col-sm-4 control-label">Employer Name<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="text" name="employername" id="employername" placeholder=" Enter employer name" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="tradingname" class="col-sm-4 control-label">Trading Name<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                <input class="form-control" type="text" name="tradingname" id="tradingname" placeholder=" Enter trading name" required >
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="abn" class="col-sm-4 control-label">ABN<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                <input class="form-control" type="text" name="abn" id="abn" placeholder=" Enter ABN" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="phone" class="col-sm-4 control-label">Phone<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="tel" name="phone" id="phone" placeholder=" Enter phone number" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="mobile" class="col-sm-4 control-label">Mobile</label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="tel" name="mobile" id="mobile" placeholder=" Enter mobile number">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="email" class="col-sm-4 control-label">Email<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="email" name="email" id="email" placeholder=" Enter email" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="fax" class="col-sm-4 control-label">Fax</label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="tel" name="fax" id="fax" placeholder=" Enter fax">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="status" class="col-sm-4 control-label">Status</label>
+                                                                <div class="form-check col-sm-3">
+                                                                  <input class="form-check-input" type="radio" name="statusActive" id="statusActive" value="statusActive" checked>
+                                                                  <label class="form-check-label">Active</label>
+                                                                </div>
+                                                                <div class="form-check col-sm-5">
+                                                                  <input class="form-check-input" type="radio" name="statusInactive" id="statusInactive" value="statusInactive">
+                                                                  <label class="form-check-label">Inactive</label>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!--col-md-6-->
+            
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label for="contactperson" class="col-sm-4 control-label">Contact<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="text" name="contactperson" id="contactperson" placeholder=" Enter contact person" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="industry" class="col-sm-4 control-label">Industry</label>
+                                                                <div class="col-sm-8">
+                                                                    <select class="form-control" name="industry" id="industry">
+                                                                        <option selected="selected" value="Not Specified or Blank valur for Funding Source Identifier-State is not LSG, PSG or SSG()">Not specified or Blank valur for Funding Source Identifier-State is not LSG, PSG or SSG()</option>
+                                                                        <option value="America">America</option>
+                                                                        <option value="Europe">Europe</option>
+                                                                        <option value="Brazil">Brazil</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="address" class="col-sm-4 control-label">Address<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="text" name="address" id="address" placeholder=" Enter address" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="country" class="col-sm-4 control-label">Country</label>
+                                                                <div class="col-sm-8">
+                                                                    <select class="form-control" name="country" id="country">
+                                                                        <option selected="selected" value="Australia">Australia</option>
+                                                                        <option value="America">America</option>
+                                                                        <option value="Europe">Europe</option>
+                                                                        <option value="Brazil">Brazil</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="suburb" class="col-sm-4 control-label">Suburb<span class="star">*</span></label>
+                                                            <div class="col-sm-8">
+                                                                <input class="form-control" type="text" name="suburb" id="suburb" placeholder=" Enter suburb" required>
+                                                            </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="postcode" class="col-sm-4 control-label">Postcode<span class="star">*</span></label>
+                                                                <div class="col-sm-8">
+                                                                    <input class="form-control" type="number" name="postcode" id="postcode" placeholder=" Enter postcode" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="state" class="col-sm-4 control-label">State</label>
+                                                                <div class="col-sm-8">
+                                                                    <select class="form-control" name="state" id="state">
+                                                                        <option selected="selected" value="NSW">NSW</option>
+                                                                        <option value="America">America</option>
+                                                                        <option value="Europe">Europe</option>
+                                                                        <option value="Brazil">Brazil</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--col-md-6-->
+                                                    </div>
+                                                </div><!--inner-row-->
+                                            </div><!--col-md-12 sub-form-->
+                                        </div>
+                                        <br>
+                
+                                        <div class="submit-button">
+                                            <button type="submit" class="btn btn-success" name="add" id="add">Add</button>
+                                            <button type="button" class="btn btn-warning" name="clear" id="clear">Clear</button>
+                                        </div>
+                                    </div> <!--card-body-->
+                                </form>     
+                            </div> <!--card card-primary-->
+                        </div> <!--container-fluid-->     
+                    </section> <!--section2-->
+                </div>
+            </div> <!--row1-->
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="content">
+                        <div class="container-fluid">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h5 class="card-title">Setup Active Provider</h5>
+                                </div>
+                                <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12 sub-form">
+                                                <div class="inner-row">
+                                                    <div class="form-group row">
+                                                        <label for="search" class="col-sm-3 control-label">Search Employer By</label>
+                                                        <div class="col-sm-9">
+                                                            <select class="form-control" name="search" id="search">
+                                                                <option selected="selected" value="Name">Name</option>
+                                                                <option value="Name">Name</option>
+                                                                <option value="NT">NT</option>
+                                                                <option value="QLD">QLD</option>
+                                                                <option value="SA">SA</option>
+                                                                <option value="TAS">TAS</option>
+                                                                <option value="VIC">VIC</option>
+                                                                <option value="WA">WA</option>
+                                                                <option value="Other - Overseas">Other - Overseas</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                
+                                                    <div class="form-group row">
+                                                        <label for="name" class="col-sm-3 control-label">Name</label>
+                                                        <div class="col-sm-9">
+                                                            <input class="form-control" type="text" name="name" id="name" placeholder=" Enter name">
+                                                        </div>
+                                                    </div>
+                                                </div><!--inner-row-->
+                                            </div><!--col-md-12 sub-form-->
+                                        </div>
+                                        
+                                        <div class="submit-button">
+                                            <button type="submit" class="btn btn-info" name="search" id="search">Search</button>
+                                        </div>
+                                    </div><!--card-body-->
+                                </form>  
+                            </div> <!--card card-primary-->
+                        </div> <!--container-fluid-->     
+                    </section> <!--section3-->
+                </div> 
+            </div> <!--row2-->
+      </div>
+    </div>
+</div> <!--content-wrapper-->
+
+
+   

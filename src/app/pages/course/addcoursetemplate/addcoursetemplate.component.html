@@ -1,0 +1,104 @@
+<div class="content-wrapper">
+
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+            <h3 class="page-heading">Course Template</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Course Template</li>
+              </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+  </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary">
+                      <div class="card-header">
+                        <h5 class="card-title">Add Course Template</h5>
+                      </div> 
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                      <div class="inner-row">
+                                        <div class="form-group row">
+                                          <label for="templatename" class="col-sm-3 control-label">Template Name<span class="star">*</span></label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <input class="form-control" type="text" name="templatename" id="templatename"  placeholder="Enter template name here" required >
+                                            </div>  
+                                          </div>
+                                      </div>
+                                          
+                                      <div class="form-group row">
+                                          <label for="coursename" class="col-sm-3 control-label">Course Name</label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="coursename" id="coursename">
+                                                <option selected="selected">--Select Option----</option>
+                                                <option>BSB50215 : Diploma of Business</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                      </div>
+              
+                                      <div class="form-group row">
+                                          <label for="coresub" class="col-sm-3 control-label">No of Core Subject(s)<span class="star">*</span></label>
+                                          <div class="col-sm-9">
+                                            <div class="input-group">
+                                              <input class="form-control" type="text" name="coresub" id="coresub"  placeholder="Enter no of core subject here" required >
+                                            </div>  
+                                          </div>
+                                      </div>
+                                                   
+                                      <div class="form-group row">
+                                          <label for="electivesub" class="col-sm-3 control-label alignStart">No of Elective Subject(s)<span class="star">*</span></label>
+                                          <div class="col-sm-9">
+                                              <div class="input-group">
+                                                  <input class="form-control" type="text" name="electivesub" id="electivesub"  placeholder="Enter no of elective subject here" required>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox1">
+                                                  <label class="form-check-label">Set Default</label>
+                                              </div>
+                                              <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" name="checkbox1[]" id="checkbox1" value="cbox2" >
+                                                  <label class="form-check-label">Set Active </label>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      </div><!--inner-row-->
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> <!--row-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="add" id="add">Add Template</button>
+                                </div>                            
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div>

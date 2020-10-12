@@ -1,0 +1,162 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Permission Group</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Permission Group</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container-fluid">
+
+            <div class="row m-0 p-0">
+
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+
+                  <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h5 class="card-title">Create Permission Group</h5>
+                        </div>
+                        <form role="form">
+
+                            <div class="card-body">
+
+                                <div class="row">
+
+                                    <div class="col-md-12 sub-form">
+
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="permissionName" class="col-sm-3 control-label">Select Permission Name</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="permissionName" id="permissionName">
+                                                        <option selected="selected">--Select Option----</option>
+                                                        <option>Activate</option>
+                                                        <option>Deactivate Staff</option>
+                                                        <option>Teacher Common Log</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="permissionInfo" class="col-sm-3 control-label alignStart">Permission Info</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <div class="col-sm-12 log">
+                                                            <span class="log-box">
+                                                                Allows User to Activate or Deactivate Staff/Teacher communication Log
+                                                            </span>
+                                                        </div>
+                                                        <!-- <textarea class="form-control"   rows="2" name="permissionInfo" id="permissionInfo"></textarea> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="form-group row">
+                                                <label for="roleAssociated" class="col-sm-3 control-label alignStart">Select Role(s) Associated</label>
+                                                <div class="col-sm-9">
+                                                    <div class="row">
+                                                        <div class="col-sm-3 chbox">
+                                                            <div class="form-check ">
+                                                                <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox1" value="option1">
+                                                                <label class="form-check-label">Accounts</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox2" value="option2">
+                                                                    <label class="form-check-label">Admin</label>
+                                                            </div>
+                                                            <div class="form-check" >
+                                                                    <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox3" value="option3">
+                                                                    <label class="form-check-label">DOS</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 chbox">
+                                                            <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox4" value="option4">
+                                                                    <label class="form-check-label">DOS-ELICOS</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox5" value="option5">
+                                                                    <label class="form-check-label">DOS-HE</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox6" value="option6">
+                                                                    <label class="form-check-label">DOS-VET</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 chbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox7" value="option7">
+                                                                <label class="form-check-label">IT</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox8" value="option8">
+                                                                <label class="form-check-label">Marketing</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox9" value="option9">
+                                                                <label class="form-check-label">Offer</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 chbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox10" value="option10">
+                                                                <label class="form-check-label">Sadmin</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox11" value="option11">
+                                                                <label class="form-check-label">Staff</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="roleAssociated[]" id="checkbox12" value="option12">
+                                                                <label class="form-check-label">Student Service</label>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                    
+                                            </div>
+                                        </div><!--inner-row-->
+
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> <!--row-->
+                                 <br>
+                                <!--submit-button-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="add" id="add">Add / Update Role Permission</button>
+                                </div>
+                            
+                            </div>
+
+                        </form>
+
+                    </div> <!--card card-primary-->
+
+                </div> <!--col-md-6 offset-md-2-->
+
+            </div> <!--row-->
+
+        </div> <!--container-fluid-->
+
+    </section> <!--section2-->
+
+</div> <!--content-wrapper-->
+
+
+   

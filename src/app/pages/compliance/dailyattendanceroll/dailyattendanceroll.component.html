@@ -1,0 +1,139 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Daily Attendance Roll</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Daily Attendance Roll</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                  <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Daily Attendance</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="date" class="col-sm-3 control-label">Date</label>
+                                                <div class="col-sm-9">
+                        
+                                                </div>
+                                            </div>
+                        
+                                            <div class="form-group row">
+                                                <label for="courseType" class="col-sm-3 control-label">Course Type</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" name="courseType" id="courseType">
+                                                        <option selected="selected" value="VET">VET</option>
+                                                        <option value="one">one</option>
+                                                        <option value="Two">Two</option>
+                                                        <option value="Three">Three</option>
+                                                        <option value="Four">Four</option>
+                                                        <option value="Five">Five</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="form-group row">
+                                                <label for="selectSemester" class="col-sm-3 control-label">Select Semester<span class="star">*</span></label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" name="selectSemester" id="selectSemester" required>
+                                                        <option selected="selected" value="2020-VET ">2020-VET</option>
+                                                        <option value="2020-VET One">2020-VET One</option>
+                                                        <option value="2020-VET Two">2020-VET Two</option>
+                                                        <option value="2020-VET Three">2020-VET Three</option>
+                                                        <option value="2020-VET Four">2020-VET Four</option>
+                                                        <option value="2020-VET Five">2020-VET Five</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="form-group row">
+                                                <label for="termWeek" class="col-sm-3 control-label">Select Term-week</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" id="termWeek" name="termWeek">
+                                                        <option selected="selected" value="18/08/2020">18/08/2020</option>
+                                                        <option value="18/08/2020">18/08/2020</option>
+                                                        <option value="18/08/2020">18/08/2020</option>
+                                                        <option value="18/08/2020">18/08/2020</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="form-group row">
+                                                <label for="selectDay" class="col-sm-3 control-label">Select day<span class="star">*</span></label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" name="selectDay" id="selectDay" required>
+                                                        <option selected="selected" value="Sunday">Sunday</option>
+                                                        <option value="Monday">Monday</option>
+                                                        <option value="Tuesday">Tuesday</option>
+                                                        <option value="Wednesday">Wednesday</option>
+                                                        <option value="Thursday">Thursday</option>
+                                                        <option value="Friday">Friday</option>
+                                                        <option value="Saturday">Saturday</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                                                       
+                                            <div class="form-group row">
+                                                <label for="filterClass" class="col-sm-3 control-label">Filter Class</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" type="text"  name="filterClass" id="filterClass" placeholder="Enter  Filter Class">
+                                                </div>
+                                            </div>
+                        
+                                            <div class="form-group row">
+                                                <label for="selectClass" class="col-sm-3 control-label">Select Class<span class="star">*</span></label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" name="selectClass" id="selectClass" required>
+                                                      <option selected="selected" value="No class found">No class found</option>
+                                                      <option value="No class found">No class found</option>
+                                                      <option value="No class found">No class found</option>
+                                                      <option value="No class found">No class found</option>
+                                                      <option value="No class found">No class found</option>
+                                                      <option value="No class found">No class found</option>
+                                                      <option value="No class found">No class found</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!--col-md-12-->
+                                </div> 
+                                <br>
+                                <div class="submit-button">
+                                  <button type="submit" class="btn btn-success" name="view" id="view">View Student List</button>
+                              </div> 
+                                                             
+                            </div>
+                        </form>
+                      
+                    </div> <!--card card-primary-->
+                   
+                </div> <!--col-md-6 offset-md-2-->
+               
+            </div> <!--row-->
+           
+        </div> <!--container-fluid-->
+             
+    </section> <!--section2-->
+    
+</div>

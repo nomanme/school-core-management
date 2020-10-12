@@ -1,0 +1,336 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">View Student</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View Student</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+  
+    <!-- Main content -->
+    <div class="row p-0 m-0">
+        <div class="col-md-10 offset-md-1">
+            <div class="row">
+                <div class="col-md-12">
+                    <section class="content">
+                        <div class="container-fluid">
+                        <!-- general form elements -->
+                            <div class="card card-primary mb-0">
+                                <div class="card-header">
+                                    <h5 class="card-title">View Student Information</h5> 
+                                </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="inner-row">
+                                                    <form  method="post" action="" enctype="multipart/form-data" *ngFor="let student of student">
+                                                        <h4>Personal Information</h4>
+                                                        <div class="form-group row">
+                                                            <label for="australianPr" class="col-sm-3 control-label">Australian PR</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.australianPr }}
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group row">
+                                                            <label for="forFullName" class="col-sm-3 control-label">Full Name</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.NameTitle }} {{ student.firstName }} {{ student.middleName }} {{ student.lastName }}
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group row">
+                                                            <label for="dob" class="col-sm-3 control-label">Date of Birth</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.dob }}
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group row">
+                                                            <label for="birthPlace" class="col-sm-3 control-label">Birth Place</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.birthPlace }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="birthcountryId" class="col-sm-3 control-label">Country of Birth</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.birthcountryId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="gender" class="col-sm-3 control-label">Gender</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.gender }}
+                                                            </div>
+                                                        </div>
+
+                                                        
+
+                                                        <div class="form-group row">
+                                                            <label for="email" class="col-sm-3 control-label">Email Address</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.email }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="altEmail" class="col-sm-3 control-label">Alter Email Address</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.altEmail }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="nationalityId" class="col-sm-3 control-label">Nationality</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.nationalityId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="passportNo" class="col-sm-3 control-label">Passport No.</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.passportNo }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="passportExpdate" class="col-sm-3 control-label">Passport Expiry Date</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.passportExpdate }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="visaNo" class="col-sm-3 control-label">Visa Number</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.visaNo }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="visaStatusId" class="col-sm-3 control-label">Visa Status</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.visaStatusId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="visaExpdate" class="col-sm-3 control-label">Visa Expiry Date</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.visaExpdate }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="homeLanguageId" class="col-sm-3 control-label">Home Language</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.homeLanguageId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="englishSpeakingStatusId" class="col-sm-3 control-label">English Spoken Status</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.englishSpeakingStatusId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="indigenousStatusId" class="col-sm-3 control-label">Indigenous Status</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.indigenousStatusId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="employmentStatusId" class="col-sm-3 control-label">Employment Status</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.employmentStatusId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="completedSchoolLevelId" class="col-sm-3 control-label">Completed School Level</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.completedSchoolLevelId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="PriorEducationalAchievementFlag" class="col-sm-3 control-label">Prior Educatioal Achievement Flag</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.PriorEducationalAchievementFlag }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="stillInSecSchool" class="col-sm-3 control-label">Still In Secondery School</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.stillInSecSchool }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="schoolTypeId" class="col-sm-3 control-label">School Type</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.schoolTypeId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="statisticalAreaLevel1Id" class="col-sm-3 control-label">Statistical Area Level 1</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.statisticalAreaLevel1Id }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="statisticalAreaLevel2Id" class="col-sm-3 control-label">Statistical Area Level 2</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.statisticalAreaLevel2Id }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="disability" class="col-sm-3 control-label">Any Disability</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.disability }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="surveyContactStatusId" class="col-sm-3 control-label">Survey Contact Status</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.surveyContactStatusId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="signatoryText" class="col-sm-3 control-label">Signatory Text</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.signatoryText }}
+                                                            </div>
+                                                        </div>
+
+                                                        <h4>USI: Unique Student Identifier</h4>
+
+                                                        <div class="form-group row">
+                                                            <label for="usiNo" class="col-sm-3 control-label">USI Number</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.usiNo }}
+                                                            </div>
+                                                        </div>
+
+                                                        <br>
+                                                        <h4>Current Street Address</h4>
+
+                                                        <div class="form-group row">
+                                                            <label for="flatUnitDetails" class="col-sm-3 control-label">Flat/ Unit Details</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.flatUnitDetails }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="streetNumber" class="col-sm-3 control-label">Street Number</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.streetNumber }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="streetName" class="col-sm-3 control-label">Street Name</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.streetName }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="suburb" class="col-sm-3 control-label">City/ Town/ Suburb</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.suburb }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="buildingName" class="col-sm-3 control-label">Building/ Property Name</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.buildingName }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="stateId" class="col-sm-3 control-label">State</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.stateId }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="postCode" class="col-sm-3 control-label">Postcode</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.postCode }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="telHome" class="col-sm-3 control-label">Home Phone</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.telHome }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="telWork" class="col-sm-3 control-label">Work Phone</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.telWork }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="mobile" class="col-sm-3 control-label">Mobile Phone</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.mobile }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="differentPostalAddress" class="col-sm-3 control-label">Different Postal Address</label>
+                                                            <div class="col-sm-9">
+                                                                {{ student.differentPostalAddress }}
+                                                            </div>
+                                                        </div>
+                                                
+                            
+                                                    </form>
+                                                </div><!--inner-row-->
+                                            </div><!--col-md-12-->
+                                        </div><!--row-->
+                                    </div> <!--card-body-->
+                            </div> <!--card card-primary-->
+                        </div> <!--container-fluid-->     
+                    </section> <!--section2-->
+                </div>
+            </div> <!--row1-->
+        </div><!--col-md-10offset-md-1-->
+    </div> <!--main content row-->
+  </div> <!--content-wrapper-->
+  
+  
+  
+  
+  
+   

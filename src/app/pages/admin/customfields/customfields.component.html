@@ -1,0 +1,157 @@
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row m-0 p-0">
+            <div class="col-sm-12">
+                <h3 class="page-heading">Custom Fields</h3>
+            </div>
+            <div class="col-sm-12 text-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Custom Fields</li>
+                  </ol>
+            </div>
+          </div>
+        </div><!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                    <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Create Permission Group</h5>
+                        </div>
+                        <form role="form">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="customFieldtype" class="col-sm-3 control-label">Custom Field Type</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="customFieldtype" id="customFieldtype">
+                                                            <option selected="selected">--Select Option----</option>
+                                                            <option>Do you want to pay more than 50% upfront fee?</option>
+                                                            <option>Do you want to pay more than 50% upfront fee?</option>
+                                                            <option>Do you want to pay more than 50% upfront fee?</option>
+                                                            <option>Do you want to pay more than 50% upfront fee?</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="fieldUsedfor" class="col-sm-3 control-label">Field Used For</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="fieldUsedfor" id="fieldUsedfor">
+                                                            <option selected="selected">--Select Option----</option>
+                                                            <option>Offer</option>
+                                                            <option>Offer</option>
+                                                            <option>Offer</option>
+                                                            <option>Offer</option>
+                                                        </select>
+                                                    </div>
+                                                </div>       
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputControltype" class="col-sm-3 control-label">Input Control Type</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="inputControltype" id="inputControltype">
+                                                            <option selected="selected">--Select Option----</option>
+                                                            <option>Radio Button</option>
+                                                            <option>Radio Button</option>
+                                                            <option>Radio Button</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="dataType" class="col-sm-3 control-label">Data Type</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="dataType" id="dataType">
+                                                            <option selected="selected">--Select Option--</option>
+                                                            <option>String</option>
+                                                            <option>String</option>
+                                                            <option>String</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="DisplayValue" class="col-sm-3 control-label">Display Value<span class="star">*</span></label> 
+                                                <div class="col-sm-9"> 
+                                                    <div class="input-group">
+                                                        <input class="form-control" type="number" name="DisplayValue" id="DisplayValue"  placeholder="Enter Value here" required>
+                                                    </div>         
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="otherSettings" class="col-sm-3 control-label alignStart">Other Settings</label>
+                                                <div class="col-sm-9 chbox-text">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="otherSettings[]" id="default" value="default">
+                                                        <label class="form-check-label">Is Default Selected?</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="otherSettings[]" id="mandatory" value="mandatory">
+                                                        <label class="form-check-label">Mandatory</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="otherSettings[]" id="public" value="public">
+                                                        <label class="form-check-label">Show in Public Application</label>
+                                                    </div>
+                                                    <div class="form-check ">
+                                                        <input class="form-check-input" type="checkbox" name="otherSettings[]" id="agent" value="agent">
+                                                        <label class="form-check-label">Show in Agent Application</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="otherSettings[]" id="shortPublic" value="shortPublic">
+                                                        <label class="form-check-label">Show in Public Short Application</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="studentOrigin" class="col-sm-3 control-label alignStart">Student Origin</label>
+                                                <div class="col-sm-9 chbox-text">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="StudentOrigin[]" id="Overseas" value="Overseas">
+                                                        <label class="form-check-label">Overseas Student</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="StudentOrigin[]" id="OverseasAustralia" value="OverseasAustralia">
+                                                        <label class="form-check-label">Overseas Student in Australia</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="checkbox2[]" id="Resident" value="Resident">
+                                                        <label class="form-check-label">Resident Student</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--inner-row-->
+                                    </div> <!--col-md-12 sub-form-->
+                                </div> <!--row1-->
+                                <!--submit-button-->
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn-success" name="add" id="add">Add</button>
+                                    <button type="submit" class="btn btn-danger" name="cancel" id="cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div> <!--card card-primary-->
+                </div> <!--col-md-6 offset-md-2-->
+            </div> <!--row-->
+        </div> <!--container-fluid-->
+    </section> <!--section2-->
+</div> <!--content-wrapper-->
+
+
+   
