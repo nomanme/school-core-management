@@ -45,7 +45,7 @@
                                             <div class="form-group row">
                                               <label for="roleId" class="col-sm-2 col-form-label">Role Id</label>
                                               <div class="col-sm-10">
-                                                <input  type="text" class="form-control" id="roleId" name="roleId" [(ngModel)]='user.roleId' placeholder="roleId" value="{{user.roleId}}">
+                                                <input  type="text" class="form-control" id="roleId" name="roleId" [(ngModel)]='edituser.roleId' placeholder="roleId" value="{{edituser.roleId}}">
                                               </div>
                                             </div>
   
@@ -53,7 +53,7 @@
                                               <label for="exampleInputEmail1" class="col-sm-2 control-label alignStart">Email Address<span class="star">*</span></label>
                                               <div class="col-sm-10">
                                                 <div class="input-group">
-                                                  <input  type="email" class="form-control" name="email" [(ngModel)]='user.email' id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{user.email}}" required>
+                                                  <input  type="email" class="form-control" name="email" [(ngModel)]='edituser.email' id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{edituser.email}}" required>
                                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   
                                                 </div>
@@ -63,7 +63,7 @@
                                             <div class="form-group row">
                                               <label for="inputPassword" class="col-sm-2 col-form-label">Password<span class="star">*</span></label>
                                               <div class="col-sm-10">
-                                                <input  type="password" class="form-control" id="userpassword" name="userpassword" [(ngModel)]='user.userpassword' placeholder="Password" value="{{user.userpassword}}" required>
+                                                <input  type="password" class="form-control" id="userpassword" name="userpassword" [(ngModel)]='edituser.userpassword' placeholder="Password" value="{{edituser.userpassword}}" required>
                                               </div>
                                             </div>
   

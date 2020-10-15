@@ -7,10 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './edit-users.component.html',
   styleUrls: ['./edit-users.component.css']
 })
-export class EditUsersComponent implements OnInit {
+export class EditUsersComponent implements OnInit { 
 
   userId;
-  user={email:null, dateCreated:null, roleId:null, userId:null, userpassword:''};
+  edituser={email:null, dateCreated:null, roleId:null, userId:null, userpassword:''};
 
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
@@ -20,11 +20,11 @@ export class EditUsersComponent implements OnInit {
 
 // `dev/user?userId=${}`
 
-    this.apiService.getAPI(`dev/user?userId=${this.userId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getuser?userId=${this.userId}`).subscribe((data)=>{
       console.log(data);
-      this.user=data[0];
+      this.edituser=data[0];
       // this.student=this.getStudentFromList(this.studentID, data);
-      console.log(this.user)
+      console.log(this.edituser)
     })
   }
 
@@ -34,9 +34,9 @@ export class EditUsersComponent implements OnInit {
     let datajson=`{"userpassword":"${form.value.userpassword }"}`;
     // let datajson=`{"userpassword":"testkkk"}`;
     console.log(datajson);
-    this.apiService.postAPI(`dev/user?userId=${this.userId}`, datajson).subscribe((data)=>{
+    this.apiService.postAPI(`dev/edituser?userId=${this.userId}`, datajson).subscribe((data)=>{
     console.log(data);
-      // this.router.navigate(['/users/manage-user-account']);
+    this.router.navigate(['/users/manage-user-account']);
     })
 
   }
@@ -47,9 +47,9 @@ export class EditUsersComponent implements OnInit {
     let datajson=`{"userpassword":"${form.value.userpassword }"}`;
     // let datajson=`{"userpassword":"testkkk"}`;
     console.log(datajson);
-    this.apiService.postAPI(`dev/user?userId=${this.userId}`, datajson).subscribe((data)=>{
+    this.apiService.postAPI(`dev/deleteuser?userId=${this.userId}`, datajson).subscribe((data)=>{
     console.log(data);
-      // this.router.navigate(['/users/manage-user-account']);
+    this.router.navigate(['/users/manage-user-account']);
     })
 
   }

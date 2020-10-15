@@ -14,7 +14,7 @@ export class StudentListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.apiService.getUser('dev/student').subscribe((data)=>{
+    this.apiService.getAPI('dev/getstudent').subscribe((data)=>{
       console.log(data);
       this.student=data;
     })

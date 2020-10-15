@@ -10,25 +10,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class StudentviewComponent implements OnInit {
 
   studentID;
-  student;
   students;
+  getstudent;
+
+  
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.studentID= this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService.getAPI('dev/student').subscribe((data)=>{
-      // console.log(data);
+    this.apiService.getAPI(`dev/getstudent?studentId=${this.studentID}`).subscribe((data)=>{
+      console.log(data);
       // this.students=data;
-      this.student=this.getStudentFromList(this.studentID, data);
+      this.students=data;
       // console.log(this.student)
     })
+
+    
   }
 
-  getStudentFromList(id, data){
-    // console.log(this.studentID)
-    // console.log(data)
-    return data.filter(x => x.studentId == id);
-  }
+
 
 }

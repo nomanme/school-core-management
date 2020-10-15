@@ -13,7 +13,7 @@ export class CreateUserComponent implements OnInit {
   dataString;
 
   email:null;
-  password:null; 
+  password:null;  
   constructor(private apiService: ApiService, private router:Router) { }
 
   ngOnInit(): void {
@@ -22,10 +22,10 @@ export class CreateUserComponent implements OnInit {
 
   createUser(form){
 
-    this.dataString=`{"roleId":"1","email":"${form.value.email}", "userpassword":"${form.value.password}"}`;
+    this.dataString=`{"roleId":"1","email":"${form.value.email}", "userpassword":"${form.value.userpassword}"}`;
     
     console.log(this.dataString);
-    this.apiService.postAPI('dev/user', this.dataString).subscribe((data)=>{
+    this.apiService.postAPI('dev/adduser', this.dataString).subscribe((data)=>{
       console.log(data);
       this.router.navigate(['/users/manage-user-account']);
 

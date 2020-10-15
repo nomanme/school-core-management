@@ -19,6 +19,7 @@ function myFunction() {
         $(this).addClass('active').siblings().removeClass('active');
      });
   }
+  
 
 
 

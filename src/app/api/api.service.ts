@@ -36,11 +36,15 @@ export class ApiService {
   // });
   // api_url = 'https://w1uzabbs5b.execute-api.ap-southeast-2.amazonaws.com';
   // api_url = 'https://bhorf007xe.execute-api.ap-southeast-2.amazonaws.com/https://bhorf007xe.execute-api.ap-southeast-2.amazonaws.com';
-  api_url = 'https://bhorf007xe.execute-api.ap-southeast-2.amazonaws.com';
+  // api_url = 'https://bhorf007xe.execute-api.ap-southeast-2.amazonaws.com';
+  api_url = 'https://0p8y7okgr2.execute-api.ap-southeast-2.amazonaws.com';
+  api_url2 = 'https://2olljr3w8i.execute-api.ap-southeast-2.amazonaws.com';
+
   constructor(private httpClient: HttpClient) { }
 
 
-  public getUser(url='dev/user') {
+
+  public getUser(url='dev/getuser') {
     // console.log(`${this.api_url}/${url}`)
     return this.httpClient.get(`${this.api_url}/${url}`);
   }
@@ -58,6 +62,19 @@ export class ApiService {
 
   public putAPI(url, data) {
     return this.httpClient.put(`${this.api_url}/${url}`, data);
+  }
+
+
+  
+  public getAPI2(url2) {
+    return this.httpClient.get(`${this.api_url2}/${url2}`);
+  }
+  public postAPI2(url2, data) {
+    return this.httpClient.post(`${this.api_url2}/${url2}`, data);
+  }
+
+  public putAPI2(url2, data) {
+    return this.httpClient.put(`${this.api_url2}/${url2}`, data);
   }
 
 }

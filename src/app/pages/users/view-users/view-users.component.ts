@@ -27,7 +27,7 @@ export class ViewUsersComponent implements OnInit {
     // })
 
     
-    this.apiService.getAPI(`dev/user?userId=${this.userId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getuser?userId=${this.userId}`).subscribe((data)=>{
       console.log(data);
       // this.students=data;
       this.users=data;

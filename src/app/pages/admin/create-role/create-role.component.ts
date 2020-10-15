@@ -12,7 +12,7 @@ export class CreateRoleComponent implements OnInit {
   role;
   dataString;
   roleName;
-  roleGroup; 
+  roleGroup;  
   constructor(private apiService: ApiService, private router:Router) { }
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class CreateRoleComponent implements OnInit {
 
     this.dataString=`{"roleId":"1","roleName":"${form.value.roleName}", "roleGroup":"${form.value.roleGroup}"}`;
     console.log(this.dataString);
-    this.apiService.postAPI('dev/roles', this.dataString).subscribe((data)=>{
+    this.apiService.postAPI('dev/addroles', this.dataString).subscribe((data)=>{
       console.log(data);
       this.router.navigate(['/admin/list-role']);
 

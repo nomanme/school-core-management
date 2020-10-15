@@ -14,7 +14,7 @@ export class ManageuseraccountComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.apiService.getUser('dev/user').subscribe((data)=>{
+    this.apiService.getUser('dev/getuser').subscribe((data)=>{
       console.log(data);
       this.users=data;
     })
