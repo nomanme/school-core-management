@@ -11,7 +11,6 @@ export class CreateUserComponent implements OnInit {
 
   users;
   dataString;
-
   email:null;
   password:null;  
   constructor(private apiService: ApiService, private router:Router) { }
@@ -32,5 +31,5 @@ export class CreateUserComponent implements OnInit {
     })
   }
  
-
+ 
 }

@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditRoleComponent implements OnInit {
 
   roleId;
-  roles;
+  editroles={roleName:null, roleGroup:null};
 
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
@@ -18,26 +18,38 @@ export class EditRoleComponent implements OnInit {
   ngOnInit(): void {
     this.roleId= this.activatedRoute.snapshot.paramMap.get('id');
 
-// `dev/user?userId=${}`
-
-    this.apiService.getAPI(`dev/roles?roleId=${this.roleId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getroles?roleId=${this.roleId}`).subscribe((data)=>{
       console.log(data);
-      this.roles=data[0];
-      // this.student=this.getStudentFromList(this.studentID, data);
-      console.log(this.roles)
+      this.editroles=data[0];
+      console.log(this.editroles)
     })
   }
 
   editRole(form){
 
     console.log(form.value);
-    let datajson=`{"roleId":"1","roleName":"${form.value.roleName}", "roleGroup":"${form.value.roleGroup}"}`;
+    let datajson=`{"roleName":"${form.value.roleName}", "roleGroup":"${form.value.roleGroup}"}`;
     console.log(datajson);
-    this.apiService.putAPI(`dev/roles?roleId=${this.roleId}`, datajson).subscribe((data)=>{
-      console.log(data);
-      this.router.navigate(['/admin/list-roles']);
+    this.apiService.postAPI(`dev/editroles?roleId=${this.roleId}`, datajson).subscribe((data)=>{
+    console.log(data);
+    this.router.navigate(['/admin/list-roles']);
     })
 
-}
+  }
+
+  // delRole(form){
+
+  //   console.log(form.value);
+  //   let datajson=`{"userpassword":"${form.value.userpassword }"}`;
+  //   // let datajson=`{"userpassword":"testkkk"}`;
+  //   console.log(datajson);
+  //   this.apiService.postAPI(`dev/deleteuser?editrole=${this.editroles}`, datajson).subscribe((data)=>{
+  //   console.log(data);
+  //   this.router.navigate(['/']);
+  //   })
+
+  // }
+
+
 
 }

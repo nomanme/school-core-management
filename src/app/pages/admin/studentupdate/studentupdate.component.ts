@@ -11,53 +11,7 @@ export class StudentupdateComponent implements OnInit {
 
   studentId;
   getstudent;
-  editstudent = {
-    PriorEducationalAchievementFlag: String,
-  altEmail: [String, null],
-  australianPr: null,
-  birthcountryId: Number,
-  buildingName: [String, null],
-  clientId: String,
-  completedSchoolLevelId: Number,
-  dateModified: null,
-  differentPostalAddress: Number,
-  disability: String,
-  dob: Date,
-  email: String,
-  employmentStatusId: Number,
-  englishSpeakingStatusId: [Number, null],
-  firstName: String,
-  flatUnitDetails: [String, null],
-  gender: String,
-  homeLanguageId: Number,
-  indigenousStatusId: Number,
-  lastName: [String, null],
-  middleName: [String, null],
-  mobile: [String, null],
-  nationalityId: [Number, null],
-  passportExpdate: [Date, null],
-  passportNo: [String, null],
-  postCode: String,
-  schoolTypeId: [Number, null],
-  signatoryText: [String, null],
-  stateId: Number,
-  statisticalAreaLevel1Id: [String, null],
-  statisticalAreaLevel2Id: [String, null],
-  stillInSecSchool: [String, null],
-  streetName: String,
-  streetNumber: String,
-  studentId: Number,
-  suburb: String,
-  surveyContactStatusId: Number,
-  telHome: [String, null],
-  telWork: [String, null],
-  title: [String, null],
-  userId: Number,
-  usiNo: [String, null],
-  visaExpdate: Date,
-  visaNo: [String, null],
-  visaStatusId: [Number, null],
-  };
+  editstudent = {  PriorEducationalAchievementFlag: null,  altEmail: null,  australianPr: null,  birthcountryId: null,  buildingName: null,  clientId: null,  completedSchoolLevelId: null,  dateModified: null,  differentPostalAddress: null,  disability: null,  dob: null,  email: null,  employmentStatusId: null,  englishSpeakingStatusId: null,  firstName: null,  flatUnitDetails: null,  gender: null,  homeLanguageId: null,  indigenousStatusId: null,  lastName: null,  middleName: null,  mobile: null,  nationalityId: null,  passportExpdate: null,  passportNo: null,  postCode: null,  schoolTypeId: null,  signatoryText: null,  stateId: null,  statisticalAreaLevel1Id: null,  statisticalAreaLevel2Id: null,  stillInSecSchool: null,  streetName: null,  streetNumber: null,  studentId: null,  suburb: null,  surveyContactStatusId: null,  telHome: null,  telWork: null,  title: null,  userId: null,  usiNo: null,  visaExpdate: null,  visaNo: null,  visaStatusId: null  };
   
 
 
@@ -85,11 +39,8 @@ export class StudentupdateComponent implements OnInit {
     console.log(datajson);
     this.apiService.postAPI(`dev/editstudent?studentId=${this.studentId}`, datajson).subscribe((data)=>{
     console.log(data);
-    // this.router.navigate(['/users/manage-user-account']);
+    this.router.navigate(['/admin/student-list']);
 
-  }
-
-
-  
+  })
   }
 }

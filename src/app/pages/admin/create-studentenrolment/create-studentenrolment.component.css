@@ -1,5 +1,5 @@
 .card-body {   
-    padding-top: 0.25rem;
+    padding-top: 0.25rem; 
 }
 .form-control {
     font-size: .9rem;
@@ -10,6 +10,10 @@
     color: #333;
     font-size:15px;
     padding-right: 0;
+    align-self: center;
+}
+.seats {
+    padding: 0;
     align-self: center;
 }
 .star {
@@ -86,13 +90,6 @@ ol.breadcrumb {
     color:#fff;
     font-family: Roboto SLab;
 }
-.gender {
-    align-self: flex-start;
-}
-.cbox{
-    float: left;
-    padding: 8px 5px 35px 24px;
-}
 .sub-form {
     padding: 0;
     margin-left:0 ;
@@ -104,19 +101,13 @@ ol.breadcrumb {
     padding: 15px;
 }
 .form-check.radio {
-    padding-right: 30px;
     float: left;
+    padding-right: 30px;
 }
 .text-star {
     color:#FF6347;
-    font-weight: bold;
-    margin: auto;
-    padding-top: 18px;
+    margin: auto 235px;
 }
-.form-check.cbox {
-    float: left;
-    padding-right: 25px;
-}
-button#create {
+button#add {
     margin-right: 6px;
 }

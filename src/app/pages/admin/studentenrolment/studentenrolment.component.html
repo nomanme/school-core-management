@@ -4,12 +4,12 @@
         <div class="container-fluid">
           <div class="row m-0 p-0">
             <div class="col-sm-12">
-                <h3 class="page-heading">Roles</h3>
+                <h3 class="page-heading">Student Enrolment</h3>
             </div>
             <div class="col-sm-12 text-center">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Roles</li>
+                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Student Enrolment</li>
                 </ol>
             </div>
           </div>
@@ -25,30 +25,27 @@
                   <!-- general form elements -->
                     <div class="card card-primary mb-0 shadow-lg bg-white rounded">
                         <div class="card-header">
-                            <h5 class="card-title">Role List Table</h5>
+                            <h5 class="card-title">Student Enrolment List</h5>
                         </div>
                         <form role="form">
                             <div class="card-body ">
                                 <div class="row">
                                     <div class="col-md-12 sub-form">
-                                        <div class="inner-row">
+                                        <div class="inner-row">                  
                                             
                                             <div class="col-md-12 p-0 m-0">
                                                 <table class="table table-stripe">
                                                     <tr class="heading">
-                                                        <th class="rowid">ID</th>
-                                                        <th class="name">Role Name</th>
+                                                        <th class="rowid">Student Enrolment Id</th>
                                                         <th class="action">Action</th>
                                                     </tr>
-                                    
-                                                    <tr *ngFor="let getroles of role">
-                                                        <td class="rowid">{{getroles.roleId}}</td>
-                                                        <td class="name">{{getroles.roleName}}</td>
-                                                        <td class="action"><a href="admin/view-role/{{getroles.roleId}}">View</a> | <a href="admin/edit-role/{{getroles.roleId}}">Edit</a></td>
-                                                    
+                                                    <tr *ngFor="let StudentEnrolment of StudentEnrolments">
+                                                        <td class="rowid">{{StudentEnrolment.studentEnrolmentId}}</td>
+                                                        <td class="action"><a href="admin/view-student-enrolment/{{StudentEnrolment.studentEnrolmentId}}">View</a> | <a href="admin/edit-student-enrolment/{{StudentEnrolment.studentEnrolmentId}}">Edit</a></td>
                                                     </tr>        
                                                 </table>
                                             </div>
+
                                         </div><!--inner-row-->
                                     </div><!--col-md-12 sub-form-->
                                 </div> <!--row1-->

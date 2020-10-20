@@ -36,16 +36,6 @@
                                             <div class="col-md-12">
                                               <div class="row">
                                                 <div class="col-md-12 sub-form">
-                                                  <div class="inner-row">
-                                                    <div class="form-group row">
-                                                      <label for="clientId" class="col-sm-2 control-label">Client Id<span class="star">*</span></label>
-                                                      <div class="col-sm-4">
-                                                        <div class="input-group">
-                                                          <input type="text" class="form-control" name="clientId" id="clientId" placeholder="Enter email" [(ngModel)]="editstudent.clientId" required>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
                                                   
                                                   <div class="card-header">
                                                     <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Are You?</h3>
@@ -815,11 +805,7 @@
                                                             <label for="visaStatusId" class="col-sm-4 control-label">Visa Status</label>
                                                             <div class="input-group col-sm-8">
                                                               <select [(ngModel)]="editstudent.visaStatusId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="visaStatusId" id="visaStatusId">
-                                                                <option selected="selected" > --Please select status--</option>
-                                                                <option value="1">Student Visa</option>
-                                                                <option value="2">Turist/Visitor</option>
-                                                                <option value="3">Working Holiday</option>
-                                                                <option value="4">Others</option>
+                                                                <option selected="selected" value="1">Student Visa</option>
                                                               </select>
                                                             </div>
                                                           </div>
@@ -1059,11 +1045,11 @@
                                                               <div class="col-sm-12">
                                                                 <div class="col-sm-8">
                                                                   <div class="form-check radio pr-5">
-                                                                    <input class="form-check-input" type="radio" name="differentPostalAddress" id="on" value="1" [(ngModel)]="editstudent.differentPostalAddress">
+                                                                    <input class="form-check-input" type="radio" name="differentPostalAddress" id="on" value="0" [(ngModel)]="editstudent.differentPostalAddress">
                                                                     <label class="form-check-label">Do you have a Postal Address?</label>
                                                                   </div>
                                                                   <div class="form-check radio">
-                                                                    <input class="form-check-input" type="radio" name="differentPostalAddress" id="off" value="2" [(ngModel)]="editstudent.differentPostalAddress">
+                                                                    <input class="form-check-input" type="radio" name="differentPostalAddress" id="off" value="1" [(ngModel)]="editstudent.differentPostalAddress">
                                                                     <label class="form-check-label">Do you have an Overseas/Permanent Address?</label>
                                                                   </div>
                                                                 </div>

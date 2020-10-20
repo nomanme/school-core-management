@@ -21,1095 +21,581 @@
         <div class="col-md-10 offset-md-1">
             <div class="row">
                 <div class="col-md-12">
-                    <section class="content">
-                        <div class="container-fluid">
-                        <!-- general form elements -->
-                            <div class="card card-primary mb-0">
-                                <div class="card-header">
-                                    <h5 class="card-title">Student Informations</h5>
-                                </div>
-                                <!-- form start -->
-                                <form #f = "ngForm">
-                                    <div class="card-body">
+                  <!-- form start -->
+                  <form #f = "ngForm">
+                    <div class="card-header shadow-sm mb-1">
+                      <h2 class="card-title Title2">Are You?</h2>
+                      <div class="inner-row">
+                        <div class="col-md-12">
+                          <div class="form-group row"> 
+                            <div class="col-sm-12 p-0">
+                              <div class="form-check radio pr-1">
+                                <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="1" >
+                                <label class="form-check-label">Overseas Student<b>(<u>Offshore</u>)</b></label>
+                              </div>
+                              <div class="form-check radio pr-1">
+                                <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="2" >
+                                <label class="form-check-label">Overseas Student in Australia<b>(<u>Onshore</u>)</b></label>
+                              </div>
+                              <div class="form-check radio">
+                                <input class="form-check-input" type="radio" name="" id="ResidentStudent" value="3" >
+                                <label class="form-check-label">Resident Student<b>(<u>Domestic</u>)</b></label>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div><!--col-md-12-->
+                      </div><!--inner-row-->
+                    </div>
 
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                              <div class="row">
-                                                <div class="col-md-12 sub-form">
-                                                  <div class="inner-row">
-                                                    <div class="row">
-                                                      <div class="col-md-6">
-                                                        <div class="form-group row">
-                                                          <label for="clientId" class="col-sm-4 control-label">Client Id<span class="star">*</span></label>
-                                                          <div class="col-sm-8">
-                                                            <div class="input-group">
-                                                              <input type="text" class="form-control" name="clientId" id="clientId" placeholder="Enter Client Id here" [(ngModel)]="clientId" required>
-                                                            </div>
+
+                    <section class="content">
+                      <div class="container-fluid">
+                      <!-- general form elements -->
+                          <div class="card card-primary mb-0">
+                              <div class="card-header">
+                                  <h5 class="card-title">Student Informations</h5>
+                              </div>
+                                
+                                  <div class="card-body">
+                                    
+
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                            <div class="row">
+                                              <div class="col-md-12 sub-form">
+                                                <div class="inner-row">
+                                                  <div class="row">
+                                                    <div class="col-md-6">
+                                                      <div class="form-group row">
+                                                        <label for="clientId" class="col-sm-4 control-label">Client Id<span class="star">*</span></label>
+                                                        <div class="col-sm-8">
+                                                          <div class="input-group">
+                                                            <input type="text" class="form-control" name="clientId" id="clientId" placeholder="Enter Client Id here" [(ngModel)]="clientId" required>
                                                           </div>
                                                         </div>
                                                       </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                      <!-- <div class="form-group row">
+                                                        <label for="userId" class="col-sm-4 control-label">User Id<span class="star">*</span></label>
+                                                        <div class="col-sm-8">
+                                                          <div class="input-group">
+                                                            <input type="text" class="form-control" name="userId" id="userId" placeholder="Enter User Id here" [(ngModel)]="userId" required>
+                                                          </div>
+                                                        </div>
+                                                      </div> -->
+                                                    </div>
+                                                  </div>
+                                                </div> 
+                                                
+                                                
+                                              </div><!--col-md-12 sub-form-->
+                                            </div><!-- row1 -->
+
+                                            <div class="row">
+                                              <div class="col-md-12 sub-form">
+                                                <div class="card-header">
+                                                  <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Personal Information</h3>
+                                                </div>
+                                                <div class="inner-row">
+                                                  <div class="col-md-12">
+                                                    <div class="form-group row">
+                                                      <label for="forFullName" class="col-sm-2 control-label">Full Name</label>
+                                                      <div class="input-group col-sm-2">
+                                                        <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="title" id="title" [(ngModel)]="title">
+                                                          <option value="Mr" selected="selected">Mr</option>
+                                                          <option value="Mrs">Mrs</option>
+                                                          <option value="Miss">Miss</option>
+                                                          <option value="Ms">Ms</option>
+                                                          <option value="Dr">Dr</option>
+                                                          <option value="Rev">Rev</option>
+                                                          <option value="Hon">Hon</option>
+                                                          <option value="Etc">Etc</option>
+                                                          <option value="Not_Specified">Not Specified</option>
+                                                        </select>
+                                                      </div>
+                                                      <div class="input-group col-sm-3">
+                                                        <input class="form-control" type="text" name="firstName" id="firstName" placeholder="Firts Name" [(ngModel)]="firstName" required>
+                                                        <span class="star">*</span>
+                                                      </div>
+                                                      <div class="input-group col-sm-3">
+                                                        <input class="form-control" type="text" name="middleName" id="middleName" placeholder="Middle Name" [(ngModel)]="middleName">
+                                                      </div>
+                                                      <div class="input-group col-sm-2">
+                                                        <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" [(ngModel)]="lastName">
+                                                      </div>
+                                                    </div>
+          
+                                                    <div class="row">
                                                       <div class="col-md-6">
-                                                        <div class="form-group row">
-                                                          <label for="userId" class="col-sm-4 control-label">User Id<span class="star">*</span></label>
+                                                        <!-- <div class="form-group row">
+                                                          <label for="NickName" class="col-sm-4 control-label">Nick Name</label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input type="text" class="form-control" name="userId" id="userId" placeholder="Enter User Id here" [(ngModel)]="userId" required>
+                                                              <input class="form-control" type="text" name="NickName" id="NickName" placeholder="Nick Name" >
+                                                            </div>
+                                                          </div>
+                                                        </div> -->
+
+                                                        <div class="form-group row">
+                                                          <label for="dob" class="col-sm-4 control-label" >Date of Birth<span class="star">*</span></label> 
+                                                          <div class="col-sm-8" id="DateofBirth" data-target-input="nearest">          
+                                                            <input type="date" class="form-control datetimepicker-input" name="dob" id="dob"  data-target="#reservationdate" placeholder="17/9/1999" [(ngModel)]="dob" required>
+                                                          </div>
+                                                        </div>
+
+                                                        <!-- <div class="form-group row">
+                                                          <label for="birthPlace" class="col-sm-4 control-label">Birth Place</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="birthPlace" id="birthPlace" placeholder="Enter City of Birth" [(ngModel)]="birthPlace">
+                                                            </div>
+                                                          </div>
+                                                        </div> -->
+
+                                                        <div class="form-group row">
+                                                          <label for="passportNo" class="col-sm-4 control-label">Passport No.</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control"  type="text" pattern="[0-9]" name="passportNo" id="passportNo" placeholder="Enter your Passport number here" [(ngModel)]="passportNo">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                  
+                                                        <div class="form-group row">
+                                                          <label for="passportExpdate" class="col-sm-4 control-label" >Passport Expiry Date</label> 
+                                                          <div class="col-sm-8" id="DateofBirth" data-target-input="nearest">          
+                                                            <input type="date" class="form-control datetimepicker-input" name="passportExpdate" id="passportExpdate"  data-target="#reservationdate" placeholder="17/9/2024" [(ngModel)]="passportExpdate">
+                                                          </div>
+                                                        </div>
+          
+                                                        <div class="form-group row">
+                                                          <label for="gender" class="col-sm-4 control-label gender">Gender<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check">
+                                                              <input class="form-check-input" type="radio" name="gender" id="Male" value="M" [(ngModel)]="gender">
+                                                              <label class="form-check-label">Male</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                              <input class="form-check-input" type="radio" name="gender" id="Female" value="F" [(ngModel)]="gender">
+                                                              <label class="form-check-label">Female</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                              <input class="form-check-input" type="radio" name="gender" id="Others" value="O" [(ngModel)]="gender">
+                                                              <label class="form-check-label">Others/ Not Specified</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="homeLanguageId" class="col-sm-4 control-label">Home Language<span class="star">*</span></label>
+                                                          <div class="input-group col-sm-8">
+                                                            <select [(ngModel)]="homeLanguageId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="homeLanguageId" id="homeLanguageId" required>
+                                                              <option *ngFor="let lang of getlanguage" [value]="lang.languageId" selected="selected">{{lang.languageName}}</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="englishSpeakingStatusId" class="col-sm-4 control-label gender">English Spoken Status</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio pr-1" *ngFor="let engspoken of getenglishspeakingstatus">
+                                                              <input class="form-check-input" type="radio" name="englishSpeakingStatusId" id="englishSpeakingStatusId" [value] ="engspoken.englishSpeakingStatusId" [(ngModel)]="englishSpeakingStatusId" checked="checked">
+                                                              <label class="form-check-label">{{engspoken.englishSpeakingStatus}}</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="stillInSecSchool" class="col-sm-4 control-label">Still In Secondery School</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio pr-1">
+                                                              <input class="form-check-input" type="radio" name="stillInSecSchool" id="yes" value="yes" [(ngModel)]="stillInSecSchool">
+                                                              <label class="form-check-label">Yes</label>
+                                                            </div>
+                                                            <div class="form-check radio pr-1">
+                                                              <input class="form-check-input" type="radio" name="stillInSecSchool" id="no" value="no" [(ngModel)]="stillInSecSchool">
+                                                              <label class="form-check-label">No</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="schoolTypeId" class="col-sm-4 control-label gender">School Type</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio pr-1">
+                                                              <input class="form-check-input" type="radio" name="schoolTypeId" id="secondary" value="1" [(ngModel)]="schoolTypeId">
+                                                              <label class="form-check-label">Secondary</label>
+                                                            </div>
+                                                            <div class="form-check radio pr-1">
+                                                              <input class="form-check-input" type="radio" name="schoolTypeId" id="higher" value="2" [(ngModel)]="schoolTypeId">
+                                                              <label class="form-check-label">Higher</label>
+                                                            </div>
+                                                            <div class="form-check radio pr-1">
+                                                              <input class="form-check-input" type="radio" name="schoolTypeId" id="college" value="3" [(ngModel)]="schoolTypeId">
+                                                              <label class="form-check-label">College</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="disability" class="col-sm-4 control-label gender">Any Disability<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio pr-5">
+                                                              <input class="form-check-input" type="radio" name="disability" id="yes" value="yes" [(ngModel)]="disability">
+                                                              <label class="form-check-label">Yes</label>
+                                                            </div>
+                                                            <div class="form-check radio">
+                                                              <input class="form-check-input" type="radio" name="disability" id="no" value="no" [(ngModel)]="disability">
+                                                              <label class="form-check-label">No</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="statisticalAreaLevel1Id" class="col-sm-4 control-label">Statistical Area Level 1</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="statisticalAreaLevel1Id" id="statisticalAreaLevel1Id" placeholder="Enter area level 1" [(ngModel)]="statisticalAreaLevel1Id">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="statisticalAreaLevel2Id" class="col-sm-4 control-label">Statistical Area Level 2</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="statisticalAreaLevel2Id" id="statisticalAreaLevel2Id" placeholder="Enter area level 2" [(ngModel)]="statisticalAreaLevel2Id">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="australianPr" class="col-sm-4 control-label">Australian Permanent Resident<span class="star">*</span></label> 
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio">
+                                                              <input class="form-check-input" type="radio" name="australianPr" id="OverseasStudent" value="0" [(ngModel)]="australianPr" ng-value="australianPr">
+                                                              <label class="form-check-label">Yes</label>
+                                                            </div>
+                                                            <div class="form-check radio">
+                                                              <input class="form-check-input" type="radio" name="australianPr" id="OverseasStudent" value="1" [(ngModel)]="australianPr">
+                                                              <label class="form-check-label">No</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                      </div>
+                                  
+                                                      <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                          <label for="email" class="col-sm-4 control-label">Email Address<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" [(ngModel)]="email" required>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="altEmail" class="col-sm-4 control-label">Alter Email Address</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input type="email" class="form-control" name="altEmail" id="altEmail" placeholder="Enter email" [(ngModel)]="altEmail">
+                                                            </div>
+                                                          </div>
+                                                        </div> 
+                                  
+                                                        <div class="form-group row">
+                                                          <label for="birthcountryId" class="col-sm-4 control-label">Country of Birth<span class="star">*</span></label>
+                                                          <div class="input-group col-sm-8">
+                                                            <select  class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="birthcountryId" id="birthcountryId" [(ngModel)]="birthcountryId" required>
+                                                              <option *ngFor="let countries of getcountry" [value]="countries.countryId" selected="selected">{{countries.countryName}}</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+          
+                                                        <div class="form-group row">
+                                                          <label for="nationalityId" class="col-sm-4 control-label">Nationality</label>
+                                                          <div class="input-group col-sm-8">
+                                                            <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="nationalityId" id="nationalityId"  [(ngModel)]="nationalityId">
+                                                              <option *ngFor="let nationality of getnationality" 
+                                                              [value]="nationality.nationalityId">{{nationality.nationalityName}}</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+                                                    
+                                                        <div class="form-group row">
+                                                          <label for="visaNo" class="col-sm-4 control-label">Visa Number</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" pattern="[0-9]" name="visaNo" id="visaNo" placeholder="Enter your  Visa number here" [(ngModel)]="visaNo">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                  
+                                                        <div class="form-group row">
+                                                          <label for="visaStatusId" class="col-sm-4 control-label">Visa Status</label>
+                                                          <div class="input-group col-sm-8">
+                                                            <select [(ngModel)]="visaStatusId"  class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="visaStatusId" id="visaStatusId">
+                                                              <option *ngFor="let visa of getvisastatus" [value]="visa.visaStatusId" selected="selected">{{visa.visaStatusName}}</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+          
+                                                        <div class="form-group row">
+                                                          <label for="visaExpdate" class="col-sm-4 control-label">Visa Expiry Date</label> 
+                                                          <div class="col-sm-8" id="visaExpirydate" data-target-input="nearest">          
+                                                            <input type="date" class="form-control datetimepicker-input" name="visaExpdate" id="visaExpdate"  data-target="#reservationdate" placeholder="17/10/2024" [(ngModel)]="visaExpdate">
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="indigenousStatusId" class="col-sm-4 control-label gender">Indigenous Status<span class="star">*</span></label>
+                                                          <div class="input-group col-sm-8">
+                                                            <select [(ngModel)]="indigenousStatusId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="indigenousStatusId" id="indigenousStatusId" required>
+                                                              <option *ngFor="let indig of getindigenousstatus" [value]="indig.indigenousStatusId" selected="selected">{{indig.indigenousStatusName}}</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="employmentStatusId" class="col-sm-4 control-label gender">Employment Status<span class="star">*</span></label>
+                                                          <div class="input-group col-sm-8">
+                                                            <select [(ngModel)]="employmentStatusId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="employmentStatusId" id="employmentStatusId" required>
+                                                              <option *ngFor="let empstatus of getemploymentstatus" [value]="empstatus.employmentStatusId" selected="selected">{{empstatus.EmploymentStatusName}}</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="completedSchoolLevelId" class="col-sm-4 control-label gender">Completed School Level<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio pr-1" *ngFor="let schlevel of getschoollevel">
+                                                              <input class="form-check-input" type="radio" name="completedSchoolLevelId" id="completedSchoolLevelId" [value] ="schlevel.schoolLevelId" [(ngModel)]="completedSchoolLevelId" checked="checked">
+                                                              <label class="form-check-label">{{schlevel.SchoolLevelName}}</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="PriorEducationalAchievementFlag" class="col-sm-4 control-label gender">Prior Educatioal Achievement Flag<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio pr-5">
+                                                              <input class="form-check-input" type="radio" name="PriorEducationalAchievementFlag" id="yes" value="yes" [(ngModel)]="PriorEducationalAchievementFlag">
+                                                              <label class="form-check-label">Yes</label>
+                                                            </div>
+                                                            <div class="form-check radio">
+                                                              <input class="form-check-input" type="radio" name="PriorEducationalAchievementFlag" id="no" value="no" [(ngModel)]="PriorEducationalAchievementFlag">
+                                                              <label class="form-check-label">No</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="surveyContactStatusId" class="col-sm-4 control-label gender">Survey Contact Status<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="form-check radio pr-1" *ngFor="let survey of getsurveycontactstatus">
+                                                              <input class="form-check-input" type="radio" name="surveyContactStatusId" id="surveyContactStatusId" [value] ="survey.surveyContactStatusId" [(ngModel)]="surveyContactStatusId" checked="checked">
+                                                              <label class="form-check-label">{{survey.surveyContactStatusName}}</label>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="signatoryText" class="col-sm-4 control-label">Signatory Text</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="signatoryText" id="signatoryText" placeholder="Enter signatory text" [(ngModel)]="signatoryText">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                                  
+                                                      </div>
+                                                    </div>
+                                                  </div><!--col-md-12-->
+                                                </div><!--inner-row-->
+                                              </div><!--col-md-12 sub-form-->
+                                            </div><!-- row2 -->
+
+
+                                            <div class="row">
+                                              <div class="col-md-12 sub-form">
+                                                <div class="card-header">
+                                                  <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>USI: Unique Student Identifier</h3>
+                                                </div>
+                                                <div class="inner-row">
+                                                  <div class="col-md-12">
+                                                    <div class="form-group row">
+                                                      <label for="usiNo" class="col-sm-4 control-label">Do you have your USI number available now?</label>
+                                                      <div class="col-sm-4 usiinputfield">
+                                                        <div class="input-group">
+                                                          <input class="form-control" type="number" min="0" name="usiNo" id="usiNo" placeholder="Enter your valid USI here" [(ngModel)]="usiNo">
+                                                        </div>
+                                                      </div>
+      
+                                                      <div class="col-sm-4 usitextfield">
+                                                        <div class="input-group">
+                                                          <span><a href="#">What is USI?</a> | <a href="#">Steps to Create your own USI</a></span>
+                                                        </div>
+                                                      </div>
+                                                      <span class="text-star"> ***You can leave this field blank if you don't have the USI or can't recall at this stage.***</span>
+                                                    </div>
+                                                  </div><!--col-md-12-->
+                                                </div><!--inner-row-->
+                                              </div><!--col-md-12 sub-form-->
+                                            </div><!-- row3 -->
+                                              
+                                            <div class="row">
+                                              <div class="col-md-12 sub-form">
+                                                <div class="card-header">
+                                                  <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Current Street Address</h3>
+                                                </div>
+                                                <div class="inner-row">
+                                                  <div class="col-md-12">
+
+                                                    <div class="row">
+
+                                                      <div class="col-md-6">
+                                                       
+                                                        <div class="form-group row">
+                                                          <label for="flatUnitDetails" class="col-sm-4 control-label">Flat/ Unit Details</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="flatUnitDetails" id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here" [(ngModel)]="flatUnitDetails"> 
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="streetNumber" class="col-sm-4 control-label">Street Number<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="streetNumber" id="streetNumber" placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="streetNumber" required>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="streetName" class="col-sm-4 control-label">Street Name<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="streetName" id="streetName" placeholder="Enter your Street Name here" [(ngModel)]="streetName" required>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="suburb" class="col-sm-4 control-label">City/ Town/ Suburb<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="suburb" id="suburb" placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="suburb" required>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="buildingName" class="col-sm-4 control-label">Building/ Property Name</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" name="buildingName" id="buildingName" placeholder="Enter your Building Name here" [(ngModel)]="buildingName">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                      </div>
+      
+                                                      <div class="col-md-6">
+                                                        <div class="form-group row">
+                                                          <label for="stateId" class="col-sm-4 control-label">State<span class="star">*</span></label>
+                                                          <div class="input-group col-sm-8">
+                                                            <select [(ngModel)]="stateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
+                                                              <option *ngFor="let state of getstate" [value]="state.stateId" selected="selected">{{state.stateName}}</option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="postCode" class="col-sm-4 control-label">Postcode<span class="star">*</span></label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode" id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="postCode" required>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="telHome" class="col-sm-4 control-label">Home Phone</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="tel" name="telHome" id="telHome" placeholder="Enter your Home Phone here" [(ngModel)]="telHome">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="telWork" class="col-sm-4 control-label">Work Phone</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="tel" name="telWork" id="telWork" placeholder="Enter your Work Phone here" [(ngModel)]="telWork">
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                          <label for="mobile" class="col-sm-4 control-label">Mobile Phone</label>
+                                                          <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                              <input class="form-control" type="tel" name="mobile" id="mobile" placeholder="Enter your Mobile Phone here" [(ngModel)]="mobile">
                                                             </div>
                                                           </div>
                                                         </div>
                                                       </div>
                                                     </div>
-                                                  </div>
-                                                  <div class="card-header">
-                                                    <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Are You?</h3>
-                                                  </div>
-                                                  <div class="inner-row">
-                                                    <div class="col-md-12">
-                                                      
-                                                      <div class="form-group row">
-                                                        <div class="col-sm-12">
-                                                          <div class="form-check radio">
-                                                            <input class="form-check-input" type="radio" name="australianPr" id="OverseasStudent" value="1" [(ngModel)]="australianPr" ng-value="australianPr">
-                                                            <label class="form-check-label">Overseas Student<b>(<u>Offshore</u>)</b></label>
-                                                          </div>
-                                                          <div class="form-check radio">
-                                                            <input class="form-check-input" type="radio" name="australianPr" id="OverseasStudent" value="2" [(ngModel)]="australianPr">
-                                                            <label class="form-check-label">Overseas Student in Australia<b>(<u>Onshore</u>)</b></label>
-                                                          </div>
-                                                          <div class="form-check radio">
-                                                            <input class="form-check-input" type="radio" name="australianPr" id="ResidentStudent" value="3" [(ngModel)]="australianPr">
-                                                            <label class="form-check-label">Resident Student<b>(<u>Domestic</u>)</b></label>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div><!--col-md-12-->
-                                                  </div><!--inner-row-->
-                                                </div><!--col-md-12 sub-form-->
-                                              </div><!-- row1 -->
-  
-                                              <div class="row">
-                                                <div class="col-md-12 sub-form">
-                                                  <div class="card-header">
-                                                    <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Personal Information</h3>
-                                                  </div>
-                                                  <div class="inner-row">
-                                                    <div class="col-md-12">
-                                                      <div class="form-group row">
-                                                        <label for="forFullName" class="col-sm-2 control-label">Full Name</label>
-                                                        <div class="input-group col-sm-2">
-                                                          <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="title" id="title" [(ngModel)]="title">
-                                                            <option value="Mr" selected="selected">Mr</option>
-                                                            <option value="Mrs">Mrs</option>
-                                                            <option value="Miss">Miss</option>
-                                                            <option value="Ms">Ms</option>
-                                                            <option value="Dr">Dr</option>
-                                                            <option value="Rev">Rev</option>
-                                                            <option value="Hon">Hon</option>
-                                                            <option value="Etc">Etc</option>
-                                                            <option value="Not_Specified">Not Specified</option>
-                                                          </select>
-                                                        </div>
-                                                        <div class="input-group col-sm-3">
-                                                          <input class="form-control" type="text" name="firstName" id="firstName" placeholder="Firts Name" [(ngModel)]="firstName" required>
-                                                          <span class="star">*</span>
-                                                        </div>
-                                                        <div class="input-group col-sm-3">
-                                                          <input class="form-control" type="text" name="middleName" id="middleName" placeholder="Middle Name" [(ngModel)]="middleName">
-                                                        </div>
-                                                        <div class="input-group col-sm-2">
-                                                          <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" [(ngModel)]="lastName">
-                                                        </div>
-                                                      </div>
-            
-                                                      <div class="row">
-                                                        <div class="col-md-6">
-                                                          <!-- <div class="form-group row">
-                                                            <label for="NickName" class="col-sm-4 control-label">Nick Name</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="NickName" id="NickName" placeholder="Nick Name" >
-                                                              </div>
-                                                            </div>
-                                                          </div> -->
-  
-                                                          <div class="form-group row">
-                                                            <label for="dob" class="col-sm-4 control-label" >Date of Birth<span class="star">*</span></label> 
-                                                            <div class="col-sm-8" id="DateofBirth" data-target-input="nearest">          
-                                                              <input type="date" class="form-control datetimepicker-input" name="dob" id="dob"  data-target="#reservationdate" placeholder="17/9/1999" [(ngModel)]="dob" required>
-                                                            </div>
-                                                          </div>
-  
-                                                          <!-- <div class="form-group row">
-                                                            <label for="birthPlace" class="col-sm-4 control-label">Birth Place</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="birthPlace" id="birthPlace" placeholder="Enter City of Birth" [(ngModel)]="birthPlace">
-                                                              </div>
-                                                            </div>
-                                                          </div> -->
-  
-                                                          <div class="form-group row">
-                                                            <label for="passportNo" class="col-sm-4 control-label">Passport No.</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control"  type="text" pattern="[0-9]" name="passportNo" id="passportNo" placeholder="Enter your Passport number here" [(ngModel)]="passportNo">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                    
-                                                          <div class="form-group row">
-                                                            <label for="passportExpdate" class="col-sm-4 control-label" >Passport Expiry Date</label> 
-                                                            <div class="col-sm-8" id="DateofBirth" data-target-input="nearest">          
-                                                              <input type="date" class="form-control datetimepicker-input" name="passportExpdate" id="passportExpdate"  data-target="#reservationdate" placeholder="17/9/2024" [(ngModel)]="passportExpdate">
-                                                            </div>
-                                                          </div>
-            
-                                                          <div class="form-group row">
-                                                            <label for="gender" class="col-sm-4 control-label gender">Gender<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="gender" id="Male" value="M" [(ngModel)]="gender">
-                                                                <label class="form-check-label">Male</label>
-                                                              </div>
-                                                              <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="gender" id="Female" value="F" [(ngModel)]="gender">
-                                                                <label class="form-check-label">Female</label>
-                                                              </div>
-                                                              <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="gender" id="Others" value="O" [(ngModel)]="gender">
-                                                                <label class="form-check-label">Others/ Not Specified</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="homeLanguageId" class="col-sm-4 control-label">Home Language<span class="star">*</span></label>
-                                                            <div class="input-group col-sm-8">
-                                                              <select [(ngModel)]="homeLanguageId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="homeLanguageId" id="homeLanguageId" required>
-                                                                <option selected="selected" >English</option>
-                                                                <option value="1">English</option>
-                                                                <option value="2">Bangla</option>
-                                                                <option value="3">Hindi</option>
-                                                                <option value="4">Urdu</option>
-                                                              </select>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="englishSpeakingStatusId" class="col-sm-4 control-label gender">English Spoken Status</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="englishSpeakingStatusId" id="high" value="1" [(ngModel)]="englishSpeakingStatusId">
-                                                                <label class="form-check-label">High</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="englishSpeakingStatusId" id="medium" value="2" [(ngModel)]="englishSpeakingStatusId"> 
-                                                                <label class="form-check-label">Medium</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="englishSpeakingStatusId" id="low" value="3" [(ngModel)]="englishSpeakingStatusId">
-                                                                <label class="form-check-label">Low</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="stillInSecSchool" class="col-sm-4 control-label">Still In Secondery School</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="stillInSecSchool" id="stillInSecSchool" placeholder="Enter your school" [(ngModel)]="stillInSecSchool">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="schoolTypeId" class="col-sm-4 control-label gender">School Type</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio pr-1">
-                                                                <input class="form-check-input" type="radio" name="schoolTypeId" id="secondary" value="1" [(ngModel)]="schoolTypeId">
-                                                                <label class="form-check-label">Secondary</label>
-                                                              </div>
-                                                              <div class="form-check radio pr-1">
-                                                                <input class="form-check-input" type="radio" name="schoolTypeId" id="higher" value="2" [(ngModel)]="schoolTypeId">
-                                                                <label class="form-check-label">Higher</label>
-                                                              </div>
-                                                              <div class="form-check radio pr-1">
-                                                                <input class="form-check-input" type="radio" name="schoolTypeId" id="college" value="3" [(ngModel)]="schoolTypeId">
-                                                                <label class="form-check-label">College</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="disability" class="col-sm-4 control-label gender">Any Disability<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio pr-5">
-                                                                <input class="form-check-input" type="radio" name="disability" id="yes" value="yes" [(ngModel)]="disability">
-                                                                <label class="form-check-label">Yes</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="disability" id="no" value="no" [(ngModel)]="disability">
-                                                                <label class="form-check-label">No</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="statisticalAreaLevel1Id" class="col-sm-4 control-label">Statistical Area Level 1</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="statisticalAreaLevel1Id" id="statisticalAreaLevel1Id" placeholder="Enter area level 1" [(ngModel)]="statisticalAreaLevel1Id">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="statisticalAreaLevel2Id" class="col-sm-4 control-label">Statistical Area Level 2</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="statisticalAreaLevel2Id" id="statisticalAreaLevel2Id" placeholder="Enter area level 2" [(ngModel)]="statisticalAreaLevel2Id">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                        </div>
-                                    
-                                                        <div class="col-md-6">
-                                                          <div class="form-group row">
-                                                            <label for="email" class="col-sm-4 control-label">Email Address<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" [(ngModel)]="email" required>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="altEmail" class="col-sm-4 control-label">Alter Email Address</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input type="email" class="form-control" name="altEmail" id="altEmail" placeholder="Enter email" [(ngModel)]="altEmail">
-                                                              </div>
-                                                            </div>
-                                                          </div> 
-                                    
-                                                          <div class="form-group row">
-                                                            <label for="birthcountryId" class="col-sm-4 control-label">Country of Birth<span class="star">*</span></label>
-                                                            <div class="input-group col-sm-8">
-                                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="birthcountryId" id="birthcountryId" [(ngModel)]="birthcountryId" required>
-                                                                <option selected="selected"> --Please select country--</option>
-                                                                <option value="1">Adelie Land (France)</option>
-                                                                <option value="2">Afghanistan</option>
-                                                                <option value="3 Islands">Aland Islands</option>
-                                                                <option value="4">Albania</option>
-                                                                <option value="5">Algeria</option>
-                                                                <option value="6">Andorra</option>
-                                                                <option value="7">Angola</option>
-                                                                <option value="8">Anguilla</option>
-                                                                <option value="9 and Barbuda">Antigua and Barbuda</option>
-                                                                <option value="10">Argentina</option>
-                                                                <option value="11">Argentinian Antarctic Territory</option>
-                                                                <option value="12">Armenia</option>
-                                                                <option value="13">Aruba</option>
-                                                                <option value="14">Australia</option>
-                                                                <option value="15">Australian Antarctic Territory</option>
-                                                                <option value="16">Australian External Territories, nec</option>
-                                                                <option value="17">Austria</option>
-                                                                <option value="18">Azerbaijan</option>
-                                                                <option value="19">Bahamas</option>
-                                                                <option value="20">Bahrain</option>
-                                                                <option value="21">Bangladesh</option>
-                                                                <option value="22">Barbados</option>
-                                                                <option value="23">Belarus</option>
-                                                                <option value="24">Belgium</option>
-                                                                <option value="25">Belize</option>
-                                                                <option value="26">Benin</option>
-                                                                <option value="27">Bermuda</option>
-                                                                <option value="28">Bhutan</option>
-                                                                <option value="29">Bolivia</option>
-                                                                <option value="30">Bonaire, Sint Eustatius and Saba</option>
-                                                                <option value="31">Bosnia and Herzegovina</option>
-                                                                <option value="32">Botswana</option>
-                                                                <option value="33">Brazil</option>
-                                                                <option value="34">British Antarctic Territory</option>
-                                                                <option value="35">Brunei Darussalam</option>
-                                                                <option value="36">Bulgaria</option>
-                                                                <option value="37">Burkina Faso</option>
-                                                                <option value="38">Burma (Republic of the Union of Myanmar)</option>
-                                                                <option value="39">Burundi</option>
-                                                                <option value="40">Cambodia</option>
-                                                                <option value="41">Cameroon</option>
-                                                                <option value="42">Canada</option>
-                                                                <option value="43">Cape Verde</option>
-                                                                <option value="44">Cayman Islands</option>
-                                                                <option value="45">Central African Republic</option>
-                                                                <option value="46">Chad</option>
-                                                                <option value="47">Chile</option>
-                                                                <option value="48">Chilean Antarctic Territory</option>
-                                                                <option value="49">China</option>
-                                                                <option value="50">China (excludes SARs and Taiwan)</option>
-                                                                <option value="51">Colombia</option>
-                                                                <option value="52">Comoros</option>
-                                                                <option value="43">Congo</option>
-                                                                <option value="44">Congo, Democratic Republic of</option>
-                                                                <option value="45">Cook Islands</option>
-                                                                <option value="46">Costa Rica</option>
-                                                                <option value="47">Cote d'Ivoire</option>
-                                                                <option value="48">Croatia</option>
-                                                                <option value="49">Cuba</option>
-                                                                <option value="50">Curacao</option>
-                                                                <option value="51">Cyprus</option>
-                                                                <option value="52">Czech Republic</option>
-                                                                <option value="53">Denmark</option>
-                                                                <option value="54">Djibouti</option>
-                                                                <option value="55">Dominica</option>
-                                                                <option value="56">Dominican Republic</option>
-                                                                <option value="57">Ecuador</option>
-                                                                <option value="58">Egypt</option>
-                                                                <option value="59">El Salvador</option>
-                                                                <option value="60">England</option>
-                                                                <option value="61">Equatorial Guinea</option>
-                                                                <option value="62">Eritrea</option>
-                                                                <option value="63">Estonia</option>
-                                                                <option value="64">Ethiopia</option>
-                                                                <option value="65">Falkland Islands</option>
-                                                                <option value="66">Faroe Islands</option>
-                                                                <option value="67">Fiji</option>
-                                                                <option value="68">Finland</option>
-                                                                <option value="69">France</option>
-                                                                <option value="70">French Guiana</option>
-                                                                <option value="71">French Polynesia</option>
-                                                                <option value="72">Gabon</option>
-                                                                <option value="73">Gambia</option>
-                                                                <option value="74">Gaza Strip and West Bank</option>
-                                                                <option value="75">Georgia</option>
-                                                                <option value="76">Germany</option>
-                                                                <option value="77">Ghana</option>
-                                                                <option value="78">Gibraltar</option>
-                                                                <option value="79">Greece</option>
-                                                                <option value="80">Greenland</option>
-                                                                <option value="81">Grenada</option>
-                                                                <option value="82">Guadeloupe</option>
-                                                                <option value="83">Guam</option>
-                                                                <option value="84">Guatemala</option>
-                                                                <option value="85">Guernsey</option>
-                                                                <option value="86">Guinea</option>
-                                                                <option value="87">Guinea-Bissau</option>
-                                                                <option value="88">Guyana</option>
-                                                                <option value="89">Haiti</option>
-                                                                <option value="90">Holy See</option>
-                                                                <option value="91">Honduras</option>
-                                                                <option value="92">Hong Kong</option>
-                                                                <option value="93">Hong Kong (SAR of China)</option>
-                                                                <option value="94">Hungary</option>
-                                                                <option value="95">Iceland</option>
-                                                                <option value="96">India</option>
-                                                                <option value="97">Indonesia</option>
-                                                                <option value="98">Iran</option>
-                                                                <option value="99">Iraq</option>
-                                                                <option value="100">Ireland</option>
-                                                                <option value="101">Isle of Man</option>
-                                                                <option value="102">Israel</option>
-                                                                <option value="103">Italy</option>
-                                                                <option value="104">Jamaica</option>
-                                                                <option value="105">Japan</option>
-                                                                <option value="106">Jersey</option>
-                                                                <option value="107">Jordan</option>
-                                                                <option value="108">Kazakhstan</option>
-                                                                <option value="109">Kenya</option>
-                                                                <option value="110">Kiribati</option>
-                                                                <option value="111">Korea</option>
-                                                                <option value="112">Korea, Democratic People's Republic of (North)</option>
-                                                                <option value="113">Korea, Republic of (South)</option>
-                                                                <option value="114">Kosovo</option>
-                                                                <option value="115">Kuwait</option>
-                                                                <option value="116">Kyrgyzstan </option>
-                                                                <option value="117">Laos</option>
-                                                                <option value="118">Latvia</option>
-                                                                <option value="119">Lebanon</option>
-                                                                <option value="120">Lesotho</option>
-                                                                <option value="121">Liberia</option>
-                                                                <option value="122">Libya</option>
-                                                                <option value="123">Liechtenstein</option>
-                                                                <option value="124">Lithuania</option>
-                                                                <option value="125">Luxembourg</option>
-                                                                <option value="126">Macau (SAR of China)</option>
-                                                                <option value="127">Macedonia</option>
-                                                                <option value="128">Madagascar</option>
-                                                                <option value="129">Malawi</option>
-                                                                <option value="130">Malaysia</option>
-                                                                <option value="131">Maldives</option>
-                                                                <option value="132">Mali</option>
-                                                                <option value="133">Malta</option>
-                                                                <option value="134">Marshall Islands</option>
-                                                                <option value="135">Martinique</option>
-                                                                <option value="136">Mauritania</option>
-                                                                <option value="137">Mauritius</option>
-                                                                <option value="138">Mayotte</option>
-                                                                <option value="139">Mexico</option>
-                                                                <option value="140">Micronesia, Federated States of</option>
-                                                                <option value="141">Moldova</option>
-                                                                <option value="142">Monaco</option>
-                                                                <option value="143">Mongolia</option>
-                                                                <option value="144">Montenegro</option>
-                                                                <option value="145">Montserrat</option>
-                                                                <option value="146">Morocco</option>
-                                                                <option value="147">Mozambique</option>
-                                                                <option value="148">Myanmar</option>
-                                                                <option value="149">Namibia</option>
-                                                                <option value="150">Nauru</option>
-                                                                <option value="151">Nepal</option>
-                                                                <option value="152">Netherlands</option>
-                                                                <option value="153">Netherlands Antilles</option>
-                                                                <option value="154">New Caledonia</option>
-                                                                <option value="155">New Zealand</option>
-                                                                <option value="156">Nicaragua</option>
-                                                                <option value="157">Niger</option>
-                                                                <option value="158">Nigeria</option>
-                                                                <option value="159">Niue</option>
-                                                                <option value="160">Norfolk Island</option>
-                                                                <option value="161">Northern Ireland</option>
-                                                                <option value="162">Northern Mariana Islands</option>
-                                                                <option value="163">Norway</option>
-                                                                <option value="164">Not Specified</option>
-                                                                <option value="165">Oman</option>
-                                                                <option value="166">Pakistan</option>
-                                                                <option value="167">Palau</option>
-                                                                <option value="168">Panama</option>
-                                                                <option value="169">Papua New Guinea</option>
-                                                                <option value="170">Paraguay</option>
-                                                                <option value="171">Peru</option>
-                                                                <option value="172">Philippines</option>
-                                                                <option value="173">Pitcairn Islands</option>
-                                                                <option value="174">Poland</option>
-                                                                <option value="175">Polynesia (excludes Hawaii), nec</option>
-                                                                <option value="176">Portugal</option>
-                                                                <option value="177">Puerto Rico</option>
-                                                                <option value="178">Qatar</option>
-                                                                <option value="179">Queen Maud Land (Norway)</option>
-                                                                <option value="180">Reunion</option>
-                                                                <option value="181">Romania</option>
-                                                                <option value="182">Ross Dependency (New Zealand)</option>
-                                                                <option value="183">Russia</option>
-                                                                <option value="184">Russian Federation</option>
-                                                                <option value="185">Rwanda</option>
-                                                                <option value="186">Samoa</option>
-                                                                <option value="187">Samoa, American</option>
-                                                                <option value="188">San Marino</option>
-                                                                <option value="189">Sao Tome and Principe</option>
-                                                                <option value="190">Saudi Arabia</option>
-                                                                <option value="191">Scotland</option>
-                                                                <option value="192">Senegal</option>
-                                                                <option value="193">Serbia</option>
-                                                                <option value="194">Seychelles</option>
-                                                                <option value="195">Sierra Leone</option>
-                                                                <option value="196">Singapore</option>
-                                                                <option value="197">Sint Maarten</option>
-                                                                <option value="198">Slovakia</option>
-                                                                <option value="199">Slovenia</option>
-                                                                <option value="200">Solomon Islands</option>
-                                                                <option value="201">Somalia</option>
-                                                                <option value="202">South Africa</option>
-                                                                <option value="203">South America, nec</option>
-                                                                <option value="204">South Sudan</option>
-                                                                <option value="205">Southern and East Africa, nec</option>
-                                                                <option value="206">Spain</option>
-                                                                <option value="207">Spanish North Africa</option>
-                                                                <option value="208">Sri Lanka</option>
-                                                                <option value="209">St Barthelemy</option>
-                                                                <option value="210">St Helena</option>
-                                                                <option value="211">St Kitts and Nevis</option>
-                                                                <option value="212">St Lucia</option>
-                                                                <option value="213">St Martin (French part)</option>
-                                                                <option value="214">St Pierre and Miquelon</option>
-                                                                <option value="215">St Vincent and the Grenadines</option>
-                                                                <option value="216">Sudan</option>
-                                                                <option value="217">Suriname</option>
-                                                                <option value="218">Swaziland</option>
-                                                                <option value="219">Sweden</option>
-                                                                <option value="220">Switzerland</option>
-                                                                <option value="221">Syria</option>
-                                                                <option value="222">Taiwan</option>
-                                                                <option value="223">Tajikistan</option>
-                                                                <option value="224">Tanzania</option>
-                                                                <option value="225">Thailand</option>
-                                                                <option value="226">The former Yugoslav Republic of Macedonia</option>
-                                                                <option value="227">Timor-Leste</option>
-                                                                <option value="228">Togo</option>
-                                                                <option value="229">Tokelau</option>
-                                                                <option value="230">Tonga</option>
-                                                                <option value="231">Trinidad and Tobago</option>
-                                                                <option value="232">Tunisia</option>
-                                                                <option value="233">Turkey</option>
-                                                                <option value="234">Turkmenistan</option>
-                                                                <option value="235">Turks and Caicos Islands</option>
-                                                                <option value="236">Tuvalu</option>
-                                                                <option value="237">Uganda</option>
-                                                                <option value="238">Ukraine</option>
-                                                                <option value="239">United Arab Emirates</option>
-                                                                <option value="240">United Kingdom</option>
-                                                                <option value="241">United States of America</option>
-                                                                <option value="242">Uruguay</option>
-                                                                <option value="243">Uzbekistan</option>
-                                                                <option value="244">Vanuatu</option>
-                                                                <option value="245">Venezuela</option>
-                                                                <option value="246">Vietnam</option>
-                                                                <option value="247">Virgin Islands, British</option>
-                                                                <option value="248">Virgin Islands, United States</option>
-                                                                <option value="249">Wales</option>
-                                                                <option value="250">Wallis and Futuna</option>
-                                                                <option value="251">Western Sahara</option>
-                                                                <option value="252">Yemen</option>
-                                                                <option value="253">Zambia</option>
-                                                                <option value="254">Zimbabwe</option>
-                                                              </select>
-                                                            </div>
-                                                          </div>
-            
-                                                          <div class="form-group row">
-                                                            <label for="nationalityId" class="col-sm-4 control-label">Nationality</label>
-                                                            <div class="input-group col-sm-8">
-                                                              <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="nationalityId" id="nationalityId"  [(ngModel)]="nationalityId">
-                                                                <option selected="selected" value="">--Please select nationality--</option>
-                                                                <option value="1">Afghan</option>
-                                                                <option value="2">African</option>
-                                                                <option value="3">Aland Islander</option>
-                                                                <option value="4">Albanian</option>
-                                                                <option value="5">Algerian</option>
-                                                                <option value="6">Amercian Samoan</option>
-                                                                <option value="7">American</option>
-                                                                <option value="8">Andorran</option>
-                                                                <option value="9">Angolan</option>
-                                                                <option value="10">Anguillan</option>
-                                                                <option value="11">Antiguan</option>
-                                                                <option value="12">Argentinian</option>
-                                                                <option value="13">Armenian</option>
-                                                                <option value="14">Aruban</option>
-                                                                <option value="15">Australian</option>
-                                                                <option value="16">Austrian</option>
-                                                                <option value="17">Azerbaijani</option>
-                                                                <option value="18">Bahamian</option>
-                                                                <option value="19">Bahraini</option>
-                                                                <option value="20">Bangladeshi</option>
-                                                                <option value="21">Barbadian</option>
-                                                                <option value="22">Belgian</option>
-                                                                <option value="23">Belizian</option>
-                                                                <option value="24">Belorussian</option>
-                                                                <option value="25">Beninese</option>
-                                                                <option value="26">Bermudian</option>
-                                                                <option value="27">Bhutanese</option>
-                                                                <option value="28">Bolivian</option>
-                                                                <option value="29">Bonaire, Sint Eustatius and Saba People</option>
-                                                                <option value="30">Bosnian</option>
-                                                                <option value="31">Botswanan</option>
-                                                                <option value="32">Brazilian</option>
-                                                                <option value="33">British Virgin Islander</option>
-                                                                <option value="34">Bruneian</option>
-                                                                <option value="35">Bulgarian</option>
-                                                                <option value="36">Burkinabe</option>
-                                                                <option value="37">Burmese</option>
-                                                                <option value="38">Burundian</option>
-                                                                <option value="39">Cambodian</option>
-                                                                <option value="40">Cameroonian</option>
-                                                                <option value="41">Canadian</option>
-                                                                <option value="42">Cape Verdean</option>
-                                                                <option value="43">Caymanian</option>
-                                                                <option value="44">Central African</option>
-                                                                <option value="45">Chadian</option>
-                                                                <option value="46">Channel Islander</option>
-                                                                <option value="47">Chilean</option>
-                                                                <option value="48">Chinese</option>
-                                                                <option value="49">Colombian</option>
-                                                                <option value="50">Comoran</option>
-                                                                <option value="51">Congolese</option>
-                                                                <option value="52">Cook Islander</option>
-                                                                <option value="53">Costa Rican</option>
-                                                                <option value="54 ">Croat </option>
-                                                                <option value="55">Cuban</option>
-                                                                <option value="56">Curacao People</option>
-                                                                <option value="57">Cypriot</option>
-                                                                <option value="58">Czech</option>
-                                                                <option value="59">Danish</option>
-                                                                <option value="60">Djiboutian</option>
-                                                                <option value="61">Dominican</option>
-                                                                <option value="62">Dutch</option>
-                                                                <option value="63">Dutch Antillean</option>
-                                                                <option value="64">East Timorese</option>
-                                                                <option value="65">Ecuadorean</option>
-                                                                <option value="66">Egyptian</option>
-                                                                <option value="67">Emirati</option>
-                                                                <option value="68">English</option>
-                                                                <option value="69">Equatorial Guinean</option>
-                                                                <option value="70">Eritrean</option>
-                                                                <option value="71">Estonian</option>
-                                                                <option value="72">Ethiopian</option>
-                                                                <option value="73">Falkland Islander</option>
-                                                                <option value="74">Faroe Islander</option>
-                                                                <option value="75">Fijian</option>
-                                                                <option value="76">Filipino</option>
-                                                                <option value="77">Finnish</option>
-                                                                <option value="78">French</option>
-                                                                <option value="79">French Polynesian</option>
-                                                                <option value="80">Gabonese</option>
-                                                                <option value="81">Gambian</option>
-                                                                <option value="82">Georgian</option>
-                                                                <option value="83">German</option>
-                                                                <option value="84">Ghanaian</option>
-                                                                <option value="85">Gibraltarian</option>
-                                                                <option value="86">Greek</option>
-                                                                <option value="87">Greenlander</option>
-                                                                <option value="88">Grenadian</option>
-                                                                <option value="89">Guamanian</option>
-                                                                <option value="90">Guatemalan</option>
-                                                                <option value="91">Guinean</option>
-                                                                <option value="92">Guinean-Bissau</option>
-                                                                <option value="93">Guyanese</option>
-                                                                <option value="94">Haitian</option>
-                                                                <option value="95">Honduran</option>
-                                                                <option value="96">Hong Konger</option>
-                                                                <option value="97">Hungarian</option>
-                                                                <option value="98">Icelander</option>
-                                                                <option value="99">I-Kiribati</option>
-                                                                <option value="100">Indian</option>
-                                                                <option value="101">Indonesian</option>
-                                                                <option value="102">Iranian</option>
-                                                                <option value="103">Iraqi</option>
-                                                                <option value="104">Irish</option>
-                                                                <option value="105">Israeli</option>
-                                                                <option value="106">Italian</option>
-                                                                <option value="107">Ivoirian</option>
-                                                                <option value="108">Jamaican</option>
-                                                                <option value="109">Japanese</option>
-                                                                <option value="110">Jordanian</option>
-                                                                <option value="111">Kazakh</option>
-                                                                <option value="112">Kenyan</option>
-                                                                <option value="113">Kittitian</option>
-                                                                <option value="114">Korean</option>
-                                                                <option value="115">Kosovac</option>
-                                                                <option value="116">Kuwaiti</option>
-                                                                <option value="117">Kyrgyzstani</option>
-                                                                <option value="118">Laotian</option>
-                                                                <option value="119">Latvian</option>
-                                                                <option value="120">Lebanese</option>
-                                                                <option value="121">Liberian</option>
-                                                                <option value="122">Libyan</option>
-                                                                <option value="123">Liechtensteiner</option>
-                                                                <option value="124">Lithuanian</option>
-                                                                <option value="125">Luxembourger</option>
-                                                                <option value="126">Macedonian</option>
-                                                                <option value="127">Mahorais</option>
-                                                                <option value="128">Malagasay</option>
-                                                                <option value="129">Malawian</option>
-                                                                <option value="130">Malaysian</option>
-                                                                <option value="Maldivian">Maldivian</option>
-                                                                <option value="Malian">Malian</option>
-                                                                <option value="Maltese">Maltese</option>
-                                                                <option value="Manx">Manx</option>
-                                                                <option value="Marshall Islander">Marshall Islander</option>
-                                                                <option value="Mauritanian">Mauritanian</option>
-                                                                <option value="Mauritian">Mauritian</option>
-                                                                <option value="Mexican">Mexican</option>
-                                                                <option value="Micronesian">Micronesian</option>
-                                                                <option value="Moldovan">Moldovan</option>
-                                                                <option value="Monacan">Monacan</option>
-                                                                <option value="Mongolian">Mongolian</option>
-                                                                <option value="Montenegrin">Montenegrin</option>
-                                                                <option value="Montserratian">Montserratian</option>
-                                                                <option value="Moroccan">Moroccan</option>
-                                                                <option value="Mosotho">Mosotho</option>
-                                                                <option value="Mozambican">Mozambican</option>
-                                                                <option value="Namibian">Namibian</option>
-                                                                <option value="Nauruan">Nauruan</option>
-                                                                <option value="Nepalese">Nepalese</option>
-                                                                <option value="New Caledonian">New Caledonian</option>
-                                                                <option value="New Zealander">New Zealander</option>
-                                                                <option value="Nicaraguan">Nicaraguan</option>
-                                                                <option value="Nigerian">Nigerian</option>
-                                                                <option value="Nigerien">Nigerien</option>
-                                                                <option value="Niuean">Niuean</option>
-                                                                <option value="None">None</option>
-                                                                <option value="Norfolk Islander">Norfolk Islander</option>
-                                                                <option value="North Korean">North Korean</option>
-                                                                <option value="Northern Irish">Northern Irish</option>
-                                                                <option value="Northern Mariana Islander">Northern Mariana Islander</option>
-                                                                <option value="Norwegian">Norwegian</option>
-                                                                <option value="Omani">Omani</option>
-                                                                <option value="Pakistani">Pakistani</option>
-                                                                <option value="Palauan">Palauan</option>
-                                                                <option value="Palestinian">Palestinian</option>
-                                                                <option value="Panamanian">Panamanian</option>
-                                                                <option value="Paraguayan">Paraguayan</option>
-                                                                <option value="Peruvian">Peruvian</option>
-                                                                <option value="Pitcairn Islander">Pitcairn Islander</option>
-                                                                <option value="Polish">Polish</option>
-                                                                <option value="Polynesian">Polynesian</option>
-                                                                <option value="Portuguese">Portuguese</option>
-                                                                <option value="Puerto Rican">Puerto Rican</option>
-                                                                <option value="Qatari">Qatari</option>
-                                                                <option value="Reunionese">Reunionese</option>
-                                                                <option value="Romanian">Romanian</option>
-                                                                <option value="Russian">Russian</option>
-                                                                <option value="Rwandan">Rwandan</option>
-                                                                <option value="Sahrawi">Sahrawi</option>
-                                                                <option value="Salvadorean">Salvadorean</option>
-                                                                <option value="Sammarinese">Sammarinese</option>
-                                                                <option value="Samoan">Samoan</option>
-                                                                <option value="Sao Tomean">Sao Tomean</option>
-                                                                <option value="Saudi">Saudi</option>
-                                                                <option value="Scottish">Scottish</option>
-                                                                <option value="Senegalese">Senegalese</option>
-                                                                <option value="Serb">Serb</option>
-                                                                <option value="Seychellois">Seychellois</option>
-                                                                <option value="Sierra Leonian">Sierra Leonian</option>
-                                                                <option value="Singaporean">Singaporean</option>
-                                                                <option value="Sint Maarten People">Sint Maarten People</option>
-                                                                <option value="Slovak">Slovak</option>
-                                                                <option value="Slovenian">Slovenian</option>
-                                                                <option value="Solomon Islander">Solomon Islander</option>
-                                                                <option value="Somali">Somali</option>
-                                                                <option value="South African">South African</option>
-                                                                <option value="South American">South American</option>
-                                                                <option value="South Korean">South Korean</option>
-                                                                <option value="South Sudanese">South Sudanese</option>
-                                                                <option value="Spanish">Spanish</option>
-                                                                <option value="Spanish North African">Spanish North African</option>
-                                                                <option value="Sri Lankan">Sri Lankan</option>
-                                                                <option value="St Barthelemy People">St Barthelemy People</option>
-                                                                <option value="St Helena English">St Helena English</option>
-                                                                <option value="St Lucian">St Lucian</option>
-                                                                <option value="St Martin People">St Martin People</option>
-                                                                <option value="Sudanese">Sudanese</option>
-                                                                <option value="Surinamese">Surinamese</option>
-                                                                <option value="Swazi">Swazi</option>
-                                                                <option value="Swedish">Swedish</option>
-                                                                <option value="Swiss">Swiss</option>
-                                                                <option value="Syrian">Syrian</option>
-                                                                <option value="Taiwanese">Taiwanese</option>
-                                                                <option value="Tajikistani">Tajikistani</option>
-                                                                <option value="Tanzanian">Tanzanian</option>
-                                                                <option value="Thai">Thai</option>
-                                                                <option value="Togolese">Togolese</option>
-                                                                <option value="Tokelauan">Tokelauan</option>
-                                                                <option value="Tongan">Tongan</option>
-                                                                <option value="Trinidadian">Trinidadian</option>
-                                                                <option value="Tunisian">Tunisian</option>
-                                                                <option value="Turkish">Turkish</option>
-                                                                <option value="Turkmen ">Turkmen </option>
-                                                                <option value="Turks and Caicos Islander">Turks and Caicos Islander</option>
-                                                                <option value="Tuvaluan">Tuvaluan</option>
-                                                                <option value="Ugandan">Ugandan</option>
-                                                                <option value="Ukrainian">Ukrainian</option>
-                                                                <option value="Uruguayan">Uruguayan</option>
-                                                                <option value="US Virgin Islander">US Virgin Islander</option>
-                                                                <option value="Uzbek">Uzbek</option>
-                                                                <option value="Vanuatuan">Vanuatuan</option>
-                                                                <option value="Venezuelan">Venezuelan</option>
-                                                                <option value="Vietnamese">Vietnamese</option>
-                                                                <option value="Vincentian">Vincentian</option>
-                                                                <option value="Wallis and Futuna Islanders">Wallis and Futuna Islanders</option>
-                                                                <option value="Welsh">Welsh</option>
-                                                                <option value="Yemeni">Yemeni</option>
-                                                                <option value="Zambian">Zambian</option>
-                                                                <option value="Zimbabwean">Zimbabwean</option>      
-                                                              </select>
-                                                            </div>
-                                                          </div>
-                                                      
-                                                          <div class="form-group row">
-                                                            <label for="visaNo" class="col-sm-4 control-label">Visa Number</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" pattern="[0-9]" name="visaNo" id="visaNo" placeholder="Enter your  Visa number here" [(ngModel)]="visaNo">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                    
-                                                          <div class="form-group row">
-                                                            <label for="visaStatusId" class="col-sm-4 control-label">Visa Status</label>
-                                                            <div class="input-group col-sm-8">
-                                                              <select [(ngModel)]="visaStatusId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="visaStatusId" id="visaStatusId">
-                                                                <option selected="selected" > --Please select status--</option>
-                                                                <option value="1">Student Visa</option>
-                                                                <option value="2">Turist/Visitor</option>
-                                                                <option value="3">Working Holiday</option>
-                                                                <option value="4">Others</option>
-                                                              </select>
-                                                            </div>
-                                                          </div>
-            
-                                                          <div class="form-group row">
-                                                            <label for="visaExpdate" class="col-sm-4 control-label">Visa Expiry Date</label> 
-                                                            <div class="col-sm-8" id="visaExpirydate" data-target-input="nearest">          
-                                                              <input type="date" class="form-control datetimepicker-input" name="visaExpdate" id="visaExpdate"  data-target="#reservationdate" placeholder="17/10/2024" [(ngModel)]="visaExpdate">
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="indigenousStatusId" class="col-sm-4 control-label gender">Indigenous Status<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio pr-5">
-                                                                <input class="form-check-input" type="radio" name="indigenousStatusId" id="yes" value="1" [(ngModel)]="indigenousStatusId">
-                                                                <label class="form-check-label">Yes</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="indigenousStatusId" id="no" value="2" [(ngModel)]="indigenousStatusId">
-                                                                <label class="form-check-label">No</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="employmentStatusId" class="col-sm-4 control-label gender">Employment Status<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio pr-1">
-                                                                <input class="form-check-input" type="radio" name="employmentStatusId" id="employment" value="1" [(ngModel)]="employmentStatusId">
-                                                                <label class="form-check-label">Employment</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="employmentStatusId" id="unemployment" value="2" [(ngModel)]="employmentStatusId">
-                                                                <label class="form-check-label">Unemployment</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="completedSchoolLevelId" class="col-sm-4 control-label gender">Completed School Level<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio pr-5">
-                                                                <input class="form-check-input" type="radio" name="completedSchoolLevelId" id="yes" value="1" [(ngModel)]="completedSchoolLevelId">
-                                                                <label class="form-check-label">Yes</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="completedSchoolLevelId" id="no" value="2" [(ngModel)]="completedSchoolLevelId">
-                                                                <label class="form-check-label">No</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="PriorEducationalAchievementFlag" class="col-sm-4 control-label gender">Prior Educatioal Achievement Flag<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio pr-5">
-                                                                <input class="form-check-input" type="radio" name="PriorEducationalAchievementFlag" id="yes" value="yes" [(ngModel)]="PriorEducationalAchievementFlag">
-                                                                <label class="form-check-label">Yes</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="PriorEducationalAchievementFlag" id="no" value="no" [(ngModel)]="PriorEducationalAchievementFlag">
-                                                                <label class="form-check-label">No</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="surveyContactStatusId" class="col-sm-4 control-label gender">Survey Contact Status<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="form-check radio pr-5">
-                                                                <input class="form-check-input" type="radio" name="surveyContactStatusId" id="on" value="1" [(ngModel)]="surveyContactStatusId">
-                                                                <label class="form-check-label">On</label>
-                                                              </div>
-                                                              <div class="form-check radio">
-                                                                <input class="form-check-input" type="radio" name="surveyContactStatusId" id="off" value="2" [(ngModel)]="surveyContactStatusId">
-                                                                <label class="form-check-label">Off</label>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                          <div class="form-group row">
-                                                            <label for="signatoryText" class="col-sm-4 control-label">Signatory Text</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="signatoryText" id="signatoryText" placeholder="Enter signatory text" [(ngModel)]="signatoryText">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-
-                                                                    
-                                                        </div>
-                                                      </div>
-                                                    </div><!--col-md-12-->
-                                                  </div><!--inner-row-->
-                                                </div><!--col-md-12 sub-form-->
-                                              </div><!-- row2 -->
-  
-
-                                              <div class="row">
-                                                <div class="col-md-12 sub-form">
-                                                  <div class="card-header">
-                                                    <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>USI: Unique Student Identifier</h3>
-                                                  </div>
-                                                  <div class="inner-row">
-                                                    <div class="col-md-12">
-                                                      <div class="form-group row">
-                                                        <label for="usiNo" class="col-sm-4 control-label">Do you have your USI number available now?</label>
-                                                        <div class="col-sm-4 usiinputfield">
-                                                          <div class="input-group">
-                                                            <input class="form-control" type="number" min="0" name="usiNo" id="usiNo" placeholder="Enter your valid USI here" [(ngModel)]="usiNo">
-                                                          </div>
-                                                        </div>
         
-                                                        <div class="col-sm-4 usitextfield">
-                                                          <div class="input-group">
-                                                            <span><a href="#">What is USI?</a> | <a href="#">Steps to Create your own USI</a></span>
-                                                          </div>
-                                                        </div>
-                                                        <span class="text-star"> ***You can leave this field blank if you don't have the USI or can't recall at this stage.***</span>
-                                                      </div>
-                                                    </div><!--col-md-12-->
-                                                  </div><!--inner-row-->
-                                                </div><!--col-md-12 sub-form-->
-                                              </div><!-- row3 -->
-                                                
-                                              <div class="row">
-                                                <div class="col-md-12 sub-form">
-                                                  <div class="card-header">
-                                                    <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Current Street Address</h3>
-                                                  </div>
-                                                  <div class="inner-row">
-                                                    <div class="col-md-12">
-  
-                                                      <div class="row">
-  
-                                                        <div class="col-md-6">
-                                                         
-                                                          <div class="form-group row">
-                                                            <label for="flatUnitDetails" class="col-sm-4 control-label">Flat/ Unit Details</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="flatUnitDetails" id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here" [(ngModel)]="flatUnitDetails"> 
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="streetNumber" class="col-sm-4 control-label">Street Number<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="streetNumber" id="streetNumber" placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="streetNumber" required>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="streetName" class="col-sm-4 control-label">Street Name<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="streetName" id="streetName" placeholder="Enter your Street Name here" [(ngModel)]="streetName" required>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="suburb" class="col-sm-4 control-label">City/ Town/ Suburb<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="suburb" id="suburb" placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="suburb" required>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="buildingName" class="col-sm-4 control-label">Building/ Property Name</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="buildingName" id="buildingName" placeholder="Enter your Building Name here" [(ngModel)]="buildingName">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                        </div>
-        
-                                                        <div class="col-md-6">
-                                                          <div class="form-group row">
-                                                            <label for="stateId" class="col-sm-4 control-label">State<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" name="stateId" id="stateId" placeholder="Enter your State here" [(ngModel)]="stateId" required>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="postCode" class="col-sm-4 control-label">Postcode<span class="star">*</span></label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode" id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="postCode" required>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="telHome" class="col-sm-4 control-label">Home Phone</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="tel" name="telHome" id="telHome" placeholder="Enter your Home Phone here" [(ngModel)]="telHome">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="telWork" class="col-sm-4 control-label">Work Phone</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="tel" name="telWork" id="telWork" placeholder="Enter your Work Phone here" [(ngModel)]="telWork">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-  
-                                                          <div class="form-group row">
-                                                            <label for="mobile" class="col-sm-4 control-label">Mobile Phone</label>
-                                                            <div class="col-sm-8">
-                                                              <div class="input-group">
-                                                                <input class="form-control" type="tel" name="mobile" id="mobile" placeholder="Enter your Mobile Phone here" [(ngModel)]="mobile">
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-          
-                                                      <div class="row">
-                                                        <div class="col-sm-12">
-                                                          <div class="form-group row">
-                                                              <div class="col-sm-12">
-                                                                <div class="col-sm-8">
-                                                                  <div class="form-check radio pr-5">
-                                                                    <input class="form-check-input" type="radio" name="differentPostalAddress" id="on" value="1" [(ngModel)]="differentPostalAddress">
-                                                                    <label class="form-check-label">Do you have a Postal Address?</label>
-                                                                  </div>
-                                                                  <div class="form-check radio">
-                                                                    <input class="form-check-input" type="radio" name="differentPostalAddress" id="off" value="2" [(ngModel)]="differentPostalAddress">
-                                                                    <label class="form-check-label">Do you have an Overseas/Permanent Address?</label>
-                                                                  </div>
+                                                    <div class="row">
+                                                      <div class="col-sm-12">
+                                                        <div class="form-group row">
+                                                          <label for="differentPostalAddress" class="col-sm-3 control-label">Different Postal Address<span class="star">*</span></label> 
+
+                                                              <div class="col-sm-9">
+                                                                <div class="form-check radio">
+                                                                  <input class="form-check-input" type="radio" name="differentPostalAddress" id="on" value="0" [(ngModel)]="differentPostalAddress">
+                                                                  <label class="form-check-label">Yes</label>
                                                                 </div>
-                                                                <!-- <div class="form-check cbox">
-                                                                    <input class="form-check-input" type="checkbox" name="differentPostalAddress[]" id="PostalAddr" value="1" >
-                                                                    <label class="form-check-label">Do you have a Postal Address?</label>
-                                                                  </div>
-                                                                  <div class="form-check cbox">
-                                                                    <input class="form-check-input" type="checkbox" name="differentPostalAddress[]" id="PermanentAddr" value="2">
-                                                                    <label class="form-check-label">Do you have an Overseas/Permanent Address?</label>
-                                                                  </div> -->
+                                                                <div class="form-check radio">
+                                                                  <input class="form-check-input" type="radio" name="differentPostalAddress" id="off" value="1" [(ngModel)]="differentPostalAddress">
+                                                                  <label class="form-check-label">No</label>
+                                                                </div>
                                                               </div>
-                                                          </div>
                                                         </div>
                                                       </div>
-                                                    </div><!--col-md-12-->
-                                                  </div><!--inner-row-->
-                                                </div><!--col-md-12 sub-form-->
-                                              </div><!-- row4 -->
-  
-                                              <div class="submit-button">
-                                                <button type="submit" (click)="createStudent(f)" class="btn btn-primary" name="create" id="create">Create & Exit</button>
-                                                <button type="submit" class="btn btn-warning" name="gonext" id="gonext">Go Next</button>
-                                              </div>
-                                                
-                                            </div><!--col-md-12-->
-                                        </div><!--row-->
-                                        
-                                    </div> <!--card-body-->
-                                </form>     
-                            </div> <!--card card-primary-->
-                        </div> <!--container-fluid-->     
+                                                    </div>
+                                                  </div><!--col-md-12-->
+                                                </div><!--inner-row-->
+                                              </div><!--col-md-12 sub-form-->
+                                            </div><!-- row4 -->
+
+                                            <div class="submit-button">
+                                              <button type="submit" (click)="createStudent(f)" class="btn btn-primary" name="create" id="create">Create & Exit</button>
+                                              <!-- <a [routerLink]="['/admin/create-student-enrolment/',students.studentId]">go</a> -->
+                                              <!-- <a href="admin/create-student-enrolment/{{students.studentId}}" class="btn btn-warning" role="button" aria-pressed="true"  name="gonext" id="gonext">Go Next</a> -->
+                                            </div>
+                                              
+                                          </div><!--col-md-12-->
+                                      </div><!--row-->
+                                      
+                                  </div> <!--card-body-->
+                                  
+                          </div> <!--card card-primary-->
+                      </div> <!--container-fluid-->     
                     </section> <!--section2-->
+                    
+                    
+                    
+                    
+                  </form> 
                 </div>
             </div> <!--row-->
         </div> <!--col-md-10offset-md-1-->

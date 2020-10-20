@@ -9,26 +9,27 @@ import { ApiService } from 'src/app/api/api.service';
 })
 export class CreateRoleComponent implements OnInit {
 
-  role;
+  roles;
   dataString;
-  roleName;
-  roleGroup;  
-  constructor(private apiService: ApiService, private router:Router) { }
+  roleId: number;
+  roleName: null;
+  roleGroup: null;  
 
+  constructor(private apiService: ApiService, private router:Router) { }
   ngOnInit(): void {
- 
   }
 
   createRole(form){
 
-    this.dataString=`{"roleId":"1","roleName":"${form.value.roleName}", "roleGroup":"${form.value.roleGroup}"}`;
+    this.dataString=`{"userId":"1", "roleName":"${form.value.roleName}", "roleGroup":"${form.value.roleGroup}"}`;
+    
     console.log(this.dataString);
     this.apiService.postAPI('dev/addroles', this.dataString).subscribe((data)=>{
       console.log(data);
-      this.router.navigate(['/admin/list-role']);
+      this.router.navigate(['/admin/list-roles']);
 
     })
   }
- 
+  
 
 }

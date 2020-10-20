@@ -45,7 +45,7 @@
                                                 <label for="roleName" class="col-sm-3 control-label">Role Name<span class="star">*</span></label>
                                                 <div class="col-sm-9"> 
                                                   <div class="input-group">
-                                                      <input class="form-control" type="text" name="roleName" id="roleName" [(ngModel)]='roles.roleName' placeholder="Enter role name here" required>
+                                                      <input class="form-control" type="text" name="roleName" id="roleName" [(ngModel)]='editroles.roleName' placeholder="Enter role name here" required>
                                                   </div>         
                                                 </div>
                                               </div>
@@ -54,7 +54,7 @@
                                             <div class="form-group row">
                                               <label for="roleGroup" class="col-sm-3 col-form-label">Role Group<span class="star">*</span></label>
                                               <div class="col-sm-9">
-                                                <input  type="text" class="form-control" id="roleGroup" name="roleGroup" [(ngModel)]='roles.roleGroup' placeholder="Enter role group here" value="{{roles.roleGroup}}" required>
+                                                <input  type="text" class="form-control" id="roleGroup" name="roleGroup" [(ngModel)]='editroles.roleGroup' placeholder="Enter role group here" required>
                                               </div>
                                             </div>
   
@@ -71,7 +71,7 @@
                                                 
                                             
                                     </div> <!--card-body-->
-                                </form>     
+                                </form>      
                             </div> <!--card card-primary-->
                         </div> <!--container-fluid-->     
                     </section> <!--section2-->

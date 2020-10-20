@@ -40,7 +40,7 @@ export class EditUsersComponent implements OnInit {
     })
 
   }
-
+ 
   delUser(form){
 
     console.log(form.value);

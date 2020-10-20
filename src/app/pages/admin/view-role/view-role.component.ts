@@ -12,23 +12,18 @@ export class ViewRoleComponent implements OnInit {
   roleId;
   roles;
   role;
+  
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.roleId= this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService.getAPI('dev/roles').subscribe((data)=>{
-      // console.log(data);
-      // this.students=data;
-      this.roles=this.getStudentFromList(this.roleId, data);
-      // console.log(this.student)
+    this.apiService.getAPI(`dev/getroles?roleId=${this.roleId}`).subscribe((data)=>{
+      console.log(data);
+      this.roles=data;
     })
-  }
 
-  getStudentFromList(id, data){
-    // console.log(this.studentID)
-    // console.log(data)
-    return data.filter(x => x.roleId == id);
+    
   }
 
 }
