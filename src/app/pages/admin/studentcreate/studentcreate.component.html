@@ -70,10 +70,14 @@
                                                       <div class="form-group row">
                                                         <label for="clientId" class="col-sm-4 control-label">Client Id<span class="star">*</span></label>
                                                         <div class="input-group col-sm-8">
-                                                          <select [(ngModel)]="clientId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="clientId" id="clientId" required>
+                                                          <input class="form-control" type="text" name="clientId" id="clientId" placeholder="e.g. - TEST1234" [(ngModel)]="getclientid">
+                                                        </div>
+
+                                                        <!-- <div class="input-group col-sm-8">
+                                                          <select [(ngModel)]="getclientid.clientId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="clientId" id="clientId" required>
                                                             <option *ngFor="let client of getclientid" [value]="client.clientId" selected="selected">{{client.clientId}}</option>
                                                           </select>
-                                                        </div>
+                                                        </div> -->
                                                       </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -510,7 +514,7 @@
                                                           <label for="stateId" class="col-sm-4 control-label">State<span class="star">*</span></label>
                                                           <div class="input-group col-sm-8">
                                                             <select [(ngModel)]="stateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
-                                                              <option *ngFor="let state of getstate" [value]="state.stateId" selected="selected">{{state.stateName}}</option>
+                                                              <option *ngFor="let state of getstate" [value]="state.stateId" selected="selected">{{state.stateCode}} - {{state.stateName}}</option>
                                                             </select>
                                                           </div>
                                                         </div>
@@ -552,11 +556,11 @@
                                                         </div>
                                                       </div>
                                                     </div>
-        
+                                                    <br>
                                                     <div class="row">
                                                       <div class="col-sm-12">
                                                         <div class="form-group row">
-                                                          <label for="differentPostalAddress" class="col-sm-3 control-label">Different Postal Address<span class="star">*</span></label> 
+                                                          <label for="differentPostalAddress" class="col-sm-3 control-label"><b>Different Postal Address</b><span class="star">*</span></label> 
 
                                                               <div class="col-sm-9">
                                                                 <div class="form-check radio">
@@ -596,7 +600,7 @@
                                                           <label for="buildingName" class="col-sm-4 control-label">Building/ Property Name</label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="buildingName" id="buildingName" placeholder="Enter your Building Name here" [(ngModel)]="buildingName">
+                                                              <input class="form-control" type="text" name="buildingName" id="buildingName" placeholder="Enter your Building Name here" [(ngModel)]="getstudentpostaldetails.buildingName">
                                                             </div>
                                                           </div>
                                                         </div>
@@ -605,7 +609,7 @@
                                                           <label for="flatUnitDetails" class="col-sm-4 control-label">Flat/ Unit Details</label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="flatUnitDetails" id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here" [(ngModel)]="flatUnitDetails"> 
+                                                              <input class="form-control" type="text" name="flatUnitDetails" id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here" [(ngModel)]="getstudentpostaldetails.flatUnitDetails"> 
                                                             </div>
                                                           </div>
                                                         </div>
@@ -614,7 +618,7 @@
                                                           <label for="streetNumber" class="col-sm-4 control-label">Street Number<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="streetNumber" id="streetNumber" placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="streetNumber" required>
+                                                              <input class="form-control" type="text" name="streetNumber" id="streetNumber" placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="getstudentpostaldetails.streetNumber" required>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -623,7 +627,7 @@
                                                           <label for="streetName" class="col-sm-4 control-label">Street Name<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="streetName" id="streetName" placeholder="Enter your Street Name here" [(ngModel)]="streetName" required>
+                                                              <input class="form-control" type="text" name="streetName" id="streetName" placeholder="Enter your Street Name here" [(ngModel)]="getstudentpostaldetails.streetName" required>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -636,15 +640,15 @@
                                                           <label for="suburb" class="col-sm-4 control-label">City/ Town/ Suburb<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="suburb" id="suburb" placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="suburb" required>
+                                                              <input class="form-control" type="text" name="suburb" id="suburb" placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="getstudentpostaldetails.suburb" required>
                                                             </div>
                                                           </div>
                                                         </div>
                                                         <div class="form-group row">
                                                           <label for="stateId" class="col-sm-4 control-label">State<span class="star">*</span></label>
                                                           <div class="input-group col-sm-8">
-                                                            <select [(ngModel)]="stateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
-                                                              <option *ngFor="let state of getstate" [value]="state.stateId" selected="selected">{{state.stateName}}</option>
+                                                            <select [(ngModel)]="getstudentpostaldetails.stateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
+                                                              <option *ngFor="let state of getstate" [value]="state.stateId" selected="selected">{{state.stateCode}} - {{state.stateName}}</option>
                                                             </select>
                                                           </div>
                                                         </div>
@@ -653,7 +657,7 @@
                                                           <label for="postCode" class="col-sm-4 control-label">Postcode<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode" id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="postCode" required>
+                                                              <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode" id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="getstudentpostaldetails.postCode" required>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -662,7 +666,7 @@
                                                           <label for="pobox" class="col-sm-4 control-label">Post Box</label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="pobox" id="pobox" placeholder="Enter post box here">
+                                                              <input class="form-control" type="text" name="pobox" id="pobox" placeholder="Enter post box here" [(ngModel)]="getstudentpostaldetails.pobox">
                                                             </div>
                                                           </div>
                                                         </div>

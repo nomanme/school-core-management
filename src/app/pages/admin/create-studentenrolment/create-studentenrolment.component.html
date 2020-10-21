@@ -133,13 +133,24 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="reasonTakingCourseId" class="col-sm-3 control-label">Reason Taking Course<span class="star">*</span></label> 
+                              <label for="reasonTakingCourseId" class="col-sm-3 control-label">Reason Taking Course<span class="star">*</span></label> 
+                              <div class="input-group col-sm-9">
+                                  <select [(ngModel)]="reasonTakingCourseId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="reasonTakingCourseId" id="reasonTakingCourseId" required>
+                                    <option *ngFor="let reasontaking of getreasontakingcourse" [value]="reasontaking.reasonTakingCourseId" selected="selected">{{reasontaking.reasonName}}</option> 
+                                  </select>
+                              </div>
+                          </div> 
+
+                            <!-- <div class="form-group row">
+                                <label for="qualificationId" class="col-sm-3 control-label">Qualification<span class="star">*</span></label> 
                                 <div class="input-group col-sm-9">
-                                    <select [(ngModel)]="reasonTakingCourseId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="reasonTakingCourseId" id="reasonTakingCourseId" required>
-                                      <option *ngFor="let reasontaking of getreasontakingcourse" [value]="reasontaking.reasonTakingCourseId" selected="selected">{{reasontaking.reasonName}}</option>
+                                    <select [(ngModel)]="qualificationId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="qualificationId" id="qualificationId" required>
+                                      <option *ngFor="let qualification of getqualification" [value]="qualification.qualificationId" selected="selected">{{qualification.qualificationName}}</option>
                                     </select>
                                 </div>
-                            </div> 
+                            </div>  -->
+
+                            
 
 
                             <div class="form-group row">

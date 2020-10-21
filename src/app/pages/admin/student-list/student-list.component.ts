@@ -10,14 +10,23 @@ import { Router } from '@angular/router';
 export class StudentListComponent implements OnInit {
 
   student;
+  outputD;
   constructor(private apiService: ApiService, private router:Router) { }
 
   ngOnInit(): void {
 
+    this.outputD=this.apiService.getLocalStorage('studentId');
+    console.log(this.outputD);
+
     this.apiService.getAPI('dev/getstudent').subscribe((data)=>{
       console.log(data);
       this.student=data;
+      this.student=JSON.parse(this.student);
     })
+
+
+    
   }
+ 
 
 }

@@ -20,6 +20,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
   getcommencingprogram;
   getreasontakingcourse;
   gettrainingcontract;
+  getqualification;
 
   addstudentenrolment;
   dataString;
@@ -77,7 +78,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.getreasontakingcourse=data;
     })
 
-    this.apiService.getAPI4('dev/getcourse').subscribe((data)=>{
+    this.apiService.getAPI('dev/getcourse').subscribe((data)=>{
       // console.log(data);
       this.getcourse=data;
     })
@@ -100,6 +101,10 @@ export class CreateStudentenrolmentComponent implements OnInit {
     this.apiService.getAPI3('dev/gettrainingcontract').subscribe((data)=>{
       // console.log(data);
       this.gettrainingcontract=data;
+    })
+
+    this.apiService.getAPI3('dev/getqualification').subscribe((data)=>{
+      this.getqualification=data;
     })
 
 

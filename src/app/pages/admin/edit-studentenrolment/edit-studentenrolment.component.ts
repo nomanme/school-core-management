@@ -63,12 +63,12 @@ export class EditStudentenrolmentComponent implements OnInit {
       this.getreasontakingcourse=data;
     })
 
-    this.apiService.getAPI4('dev/getcourse').subscribe((data)=>{
+    this.apiService.getAPI('dev/getcourse').subscribe((data)=>{
       console.log(data);
       this.getcourse=data;
     })
 
-    this.apiService.getAPI4('dev/getcourseintakedate').subscribe((data)=>{
+    this.apiService.getAPI('dev/getcourseintakedate').subscribe((data)=>{
       console.log(data);
       this.getcourseintakedate=data;
     })
