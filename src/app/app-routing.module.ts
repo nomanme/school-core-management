@@ -22,7 +22,6 @@ import { AssessmentduedateComponent } from './pages/admin/assessmentduedate/asse
 import { AddcontactComponent } from './pages/admin/addcontact/addcontact.component';
 import { CertificateidformatComponent } from './pages/admin/certificateidformat/certificateidformat.component';
 import { ChecklistsetupComponent } from './pages/admin/checklistsetup/checklistsetup.component';
-import { EnrollmentfeeComponent } from './pages/admin/enrollmentfee/enrollmentfee.component';
 import { OfferdocumentchecklistComponent } from './pages/admin/offerdocumentchecklist/offerdocumentchecklist.component';
 import { OverseasstudenthealthComponent } from './pages/admin/overseasstudenthealth/overseasstudenthealth.component';
 import { CoursecalendertypeComponent } from './pages/admin/coursecalendertype/coursecalendertype.component';
@@ -50,6 +49,12 @@ import { ServicedetailsComponent } from './pages/admin/servicedetails/servicedet
 import { ServicefacilitysetupComponent } from './pages/admin/servicefacilitysetup/servicefacilitysetup.component';
 import { ServiceproviderComponent } from './pages/admin/serviceprovider/serviceprovider.component';
 import { UpdatereportComponent } from './pages/admin/updatereport/updatereport.component';
+
+//StudentEnrolment
+import { StudentenrolmentComponent } from './pages/admin/studentenrolment/studentenrolment.component';
+import { CreateStudentenrolmentComponent } from './pages/admin/create-studentenrolment/create-studentenrolment.component';
+import { ViewStudentenrolmentComponent } from './pages/admin/view-studentenrolment/view-studentenrolment.component';
+import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
 
 
 //Venue
@@ -170,7 +175,6 @@ const routes: Routes = [
   { path: 'admin/add-contact', component: AddcontactComponent },
   { path: 'admin/certificateid-format', component: CertificateidformatComponent },
   { path: 'admin/checklist-setup', component: ChecklistsetupComponent },
-  { path: 'admin/enrollment-fee', component: EnrollmentfeeComponent },
   { path: 'admin/offer-document-checklist', component: OfferdocumentchecklistComponent },
   { path: 'admin/overseas-student-health', component: OverseasstudenthealthComponent },
   { path: 'admin/course-calender-type', component: CoursecalendertypeComponent },
@@ -198,7 +202,14 @@ const routes: Routes = [
   { path: 'admin/service-facility-setup', component: ServicefacilitysetupComponent },
   { path: 'admin/service-provider', component: ServiceproviderComponent },
   { path: 'admin/update-report', component: UpdatereportComponent },
-  
+
+  //StudentEnrolment
+  { path: 'admin/list-student-enrolment', component: StudentenrolmentComponent },
+  { path: 'admin/create-student-enrolment', component: CreateStudentenrolmentComponent },
+  { path: 'admin/view-student-enrolment/:id', component: ViewStudentenrolmentComponent },
+  { path: 'admin/edit-student-enrolment/:id', component: EditStudentenrolmentComponent },
+
+
   //Venue
   { path: 'admin/list-venue', component: ManagevenueComponent },
   { path: 'admin/create-venue', component: CreateVenueComponent },

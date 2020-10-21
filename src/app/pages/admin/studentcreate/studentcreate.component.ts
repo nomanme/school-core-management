@@ -9,6 +9,11 @@ import { ApiService } from 'src/app/api/api.service';
 })
 export class StudentcreateComponent implements OnInit { 
 
+  schltype=false;
+  Visa=false;
+  disable=false;
+  PostalDetail=false;
+
   Users;
   getvisastatus;
   getcountry;
@@ -20,6 +25,10 @@ export class StudentcreateComponent implements OnInit {
   getindigenousstatus;
   getschoollevel;
   getsurveycontactstatus;
+  getschooltype;
+  getclientid;
+  getdisability;
+
 
   students;
   dataString;
@@ -81,7 +90,13 @@ export class StudentcreateComponent implements OnInit {
   ngOnInit(): void {
     this.outputD=this.apiService.getLocalStorage('studentId');
     console.log(this.outputD);
+
     
+
+    this.apiService.getAPI4('dev/getclientid').subscribe((data)=>{
+      this.getclientid=data;
+    })
+
     this.apiService.getAPI3('dev/getvisastatus').subscribe((data)=>{
       // console.log(data);
       this.getvisastatus=data;
@@ -131,7 +146,42 @@ export class StudentcreateComponent implements OnInit {
       // console.log(data);
       this.getsurveycontactstatus=data; 
     })
+
+    this.apiService.getAPI3('dev/getschooltype').subscribe((data)=>{
+      this.getschooltype=data; 
+    })
+
+    this.apiService.getAPI3('dev/getdisability').subscribe((data)=>{
+      this.getdisability=data; 
+    })
+
   }
+
+  showschltype() {
+    this.schltype=true;
+  }
+  hideschltype(){
+    this.schltype=false;
+  }
+  ShowVisa(){
+    this.Visa=true;
+  }
+  HideVisa(){
+    this.Visa=false;
+  }
+  ShowDisablity(){
+    this.disable=true;
+  }
+  HideDisablity(){
+    this.disable=false;
+  }
+  ShowStudentPostal(){
+    this.PostalDetail=true;
+  }
+  HideStudentPostal(){
+    this.PostalDetail=false;
+  }
+
 
   createStudent(form){
     // form.value.studentId=this.apiService.getLocalStorage('studentId');
@@ -151,7 +201,7 @@ export class StudentcreateComponent implements OnInit {
       // console.log(JSON.parse(data['msg'])[0]['studentId']);
       console.log(this.outputD); 
       this.apiService.setLocalStorage('studentId',this.outputD);
-      // this.router.navigate(['/admin/create-student-enrolment/:data' ]);
+      this.router.navigate(['/admin/create-student-enrolment' ]);
 
 
     })

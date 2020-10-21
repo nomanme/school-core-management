@@ -24,7 +24,6 @@ import { AssessmentduedateComponent } from './pages/admin/assessmentduedate/asse
 import { AddcontactComponent } from './pages/admin/addcontact/addcontact.component';
 import { CertificateidformatComponent } from './pages/admin/certificateidformat/certificateidformat.component';
 import { ChecklistsetupComponent } from './pages/admin/checklistsetup/checklistsetup.component';
-import { EnrollmentfeeComponent } from './pages/admin/enrollmentfee/enrollmentfee.component';
 import { OfferdocumentchecklistComponent } from './pages/admin/offerdocumentchecklist/offerdocumentchecklist.component';
 import { OverseasstudenthealthComponent } from './pages/admin/overseasstudenthealth/overseasstudenthealth.component';
 import { CoursecalendertypeComponent } from './pages/admin/coursecalendertype/coursecalendertype.component';
@@ -118,6 +117,10 @@ import { ViewScheduleComponent } from './pages/timetable/view-schedule/view-sche
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { ViewVenueComponent } from './pages/admin/view-venue/view-venue.component';
 import { EditVenueComponent } from './pages/admin/edit-venue/edit-venue.component';
+import { StudentenrolmentComponent } from './pages/admin/studentenrolment/studentenrolment.component';
+import { CreateStudentenrolmentComponent } from './pages/admin/create-studentenrolment/create-studentenrolment.component';
+import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
+import { ViewStudentenrolmentComponent } from './pages/admin/view-studentenrolment/view-studentenrolment.component';
 
 
 
@@ -143,7 +146,6 @@ import { EditVenueComponent } from './pages/admin/edit-venue/edit-venue.componen
     AddcontactComponent,
     CertificateidformatComponent,
     ChecklistsetupComponent,
-    EnrollmentfeeComponent,
     OfferdocumentchecklistComponent,
     OverseasstudenthealthComponent,
     CoursecalendertypeComponent,
@@ -235,6 +237,10 @@ import { EditVenueComponent } from './pages/admin/edit-venue/edit-venue.componen
     EditRoomComponent,
     ViewVenueComponent,
     EditVenueComponent,
+    StudentenrolmentComponent,
+    CreateStudentenrolmentComponent,
+    EditStudentenrolmentComponent,
+    ViewStudentenrolmentComponent,
   ],
   imports: [
     BrowserModule,

@@ -42,8 +42,9 @@ export class ApiService {
   api_url = 'https://0p8y7okgr2.execute-api.ap-southeast-2.amazonaws.com';
   api_url2 = 'https://2olljr3w8i.execute-api.ap-southeast-2.amazonaws.com'; 
   api_url3 = 'https://9ivnf9l6xc.execute-api.ap-southeast-2.amazonaws.com';
-  api_url4 = 'https://2olljr3w8i.execute-api.ap-southeast-2.amazonaws.com';
-  api_url5 = 'https://0p8y7okgr2.execute-api.ap-southeast-2.amazonaws.com';
+  api_url4 = 'https://0p8y7okgr2.execute-api.ap-southeast-2.amazonaws.com';
+
+
 
 
   constructor(private httpClient: HttpClient) { }
@@ -88,11 +89,9 @@ export class ApiService {
   public getAPI3(url3) {
     return this.httpClient.get(`${this.api_url3}/${url3}`);
   }
+ 
   public getAPI4(url4) {
     return this.httpClient.get(`${this.api_url4}/${url4}`);
-  }
-  public getAPI5(url5) {
-    return this.httpClient.get(`${this.api_url5}/${url5}`);
   }
 
   public setLocalStorage(name, key){
