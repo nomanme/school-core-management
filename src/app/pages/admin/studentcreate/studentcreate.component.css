@@ -120,3 +120,6 @@ ol.breadcrumb {
 button#create {
     margin-right: 6px;
 }
+.dropdown{
+    width: 250px !important;
+}

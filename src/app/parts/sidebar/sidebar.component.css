@@ -232,3 +232,9 @@ button.btn.btn-link.active {
 }
 
 
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}

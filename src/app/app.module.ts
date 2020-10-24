@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { NgSelectModule } from '@ng-select/ng-select';
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -121,6 +125,10 @@ import { StudentenrolmentComponent } from './pages/admin/studentenrolment/studen
 import { CreateStudentenrolmentComponent } from './pages/admin/create-studentenrolment/create-studentenrolment.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
 import { ViewStudentenrolmentComponent } from './pages/admin/view-studentenrolment/view-studentenrolment.component';
+import { CourseUnitComponent } from './pages/course/course-unit/course-unit.component';
+import { CreateCourseUnitComponent } from './pages/course/create-course-unit/create-course-unit.component';
+import { EditCourseUnitComponent } from './pages/course/edit-course-unit/edit-course-unit.component';
+import { ViewCourseUnitComponent } from './pages/course/view-course-unit/view-course-unit.component';
 
 
 
@@ -241,13 +249,18 @@ import { ViewStudentenrolmentComponent } from './pages/admin/view-studentenrolme
     CreateStudentenrolmentComponent,
     EditStudentenrolmentComponent,
     ViewStudentenrolmentComponent,
+    CourseUnitComponent,
+    CreateCourseUnitComponent,
+    EditCourseUnitComponent,
+    ViewCourseUnitComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

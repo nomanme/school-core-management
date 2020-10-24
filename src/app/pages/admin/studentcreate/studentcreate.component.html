@@ -62,7 +62,7 @@
 
                                       <div class="row">
                                           <div class="col-md-12">
-                                            <div class="row">
+                                            <!-- <div class="row">
                                               <div class="col-md-12 sub-form">
                                                 <div class="inner-row">
                                                   <div class="row">
@@ -71,31 +71,15 @@
                                                         <label for="clientId" class="col-sm-4 control-label">Client Id<span class="star">*</span></label>
                                                         <div class="input-group col-sm-8">
                                                           <input class="form-control" type="text" name="clientId" id="clientId" placeholder="e.g. - TEST1234" [(ngModel)]="getclientid">
-                                                        </div>
-
-                                                        <!-- <div class="input-group col-sm-8">
-                                                          <select [(ngModel)]="getclientid.clientId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="clientId" id="clientId" required>
-                                                            <option *ngFor="let client of getclientid" [value]="client.clientId" selected="selected">{{client.clientId}}</option>
-                                                          </select>
-                                                        </div> -->
+                                                        <div>     
                                                       </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                      <!-- <div class="form-group row">
-                                                        <label for="userId" class="col-sm-4 control-label">User Id<span class="star">*</span></label>
-                                                        <div class="col-sm-8">
-                                                          <div class="input-group">
-                                                            <input type="text" class="form-control" name="userId" id="userId" placeholder="Enter User Id here" [(ngModel)]="userId" required>
-                                                          </div>
-                                                        </div>
-                                                      </div> -->
                                                     </div>
                                                   </div>
                                                 </div> 
-                                                
-                                                
-                                              </div><!--col-md-12 sub-form-->
-                                            </div><!-- row1 -->
+                                              </div>
+                                            </div> -->
 
                                             <div class="row">
                                               <div class="col-md-12 sub-form">
@@ -238,17 +222,18 @@
                                                           <label for="disability" class="col-sm-4 control-label gender">Any Disability<span class="star">*</span></label>
                                                           <div class="input-group col-sm-8">
                                                             <div class="form-check radio pr-5">
-                                                              <input class="form-check-input" type="radio" name="disability" id="yes" value="yes" [(ngModel)]="disability" (click)="ShowDisablity()">
+                                                              <input class="form-check-input" type="radio" name="disability" id="yes" value="yes"  (click)="ShowDisablity()">
                                                               <label class="form-check-label">Yes</label>
                                                             </div>
                                                             <div class="form-check radio">
-                                                              <input class="form-check-input" type="radio" name="disability" id="no" value="no" [(ngModel)]="disability" (click)="HideDisablity()">
+                                                              <input class="form-check-input" type="radio" name="disability" id="no" value="no"  (click)="HideDisablity()">
                                                               <label class="form-check-label">No</label>
                                                             </div>
-                                                            <div class="input-group" *ngIf="disable">
-                                                              <select  [(ngModel)]="disability"  class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="disability" id="disability">
-                                                                <option *ngFor="let disable of getdisability" [value]="disable.disabilityId" selected="selected">{{disable.disabilityCode}} - {{disable.disabilityName}}</option>
-                                                              </select>
+                                                            
+                                                            <div class="input-group" *ngIf="disable" >
+                                                              <ng-select [(ngModel)]="getdisability.disabilityId" name="disabilityId" class="dropdown" multiple="true">
+                                                                <ng-option *ngFor="let disable of getdisability" [value]="disable.disabilityId">{{disable.disabilityCode}} - {{disable.disabilityName}}</ng-option>
+                                                             </ng-select>
                                                             </div>
                                                             
                                                           </div>
@@ -600,7 +585,7 @@
                                                           <label for="buildingName" class="col-sm-4 control-label">Building/ Property Name</label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="buildingName" id="buildingName" placeholder="Enter your Building Name here" [(ngModel)]="getstudentpostaldetails.buildingName">
+                                                              <input class="form-control" type="text" name="buildingName" id="buildingName" placeholder="Enter your Building Name here" [(ngModel)]="buildingName">
                                                             </div>
                                                           </div>
                                                         </div>
@@ -609,7 +594,7 @@
                                                           <label for="flatUnitDetails" class="col-sm-4 control-label">Flat/ Unit Details</label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="flatUnitDetails" id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here" [(ngModel)]="getstudentpostaldetails.flatUnitDetails"> 
+                                                              <input class="form-control" type="text" name="flatUnitDetails" id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here" [(ngModel)]="flatUnitDetails"> 
                                                             </div>
                                                           </div>
                                                         </div>
@@ -618,7 +603,7 @@
                                                           <label for="streetNumber" class="col-sm-4 control-label">Street Number<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="streetNumber" id="streetNumber" placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="getstudentpostaldetails.streetNumber" required>
+                                                              <input class="form-control" type="text" name="streetNumber" id="streetNumber" placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="streetNumber" required>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -627,7 +612,7 @@
                                                           <label for="streetName" class="col-sm-4 control-label">Street Name<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="streetName" id="streetName" placeholder="Enter your Street Name here" [(ngModel)]="getstudentpostaldetails.streetName" required>
+                                                              <input class="form-control" type="text" name="streetName" id="streetName" placeholder="Enter your Street Name here" [(ngModel)]="streetName" required>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -640,14 +625,14 @@
                                                           <label for="suburb" class="col-sm-4 control-label">City/ Town/ Suburb<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="suburb" id="suburb" placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="getstudentpostaldetails.suburb" required>
+                                                              <input class="form-control" type="text" name="suburb" id="suburb" placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="suburb" required>
                                                             </div>
                                                           </div>
                                                         </div>
                                                         <div class="form-group row">
                                                           <label for="stateId" class="col-sm-4 control-label">State<span class="star">*</span></label>
                                                           <div class="input-group col-sm-8">
-                                                            <select [(ngModel)]="getstudentpostaldetails.stateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
+                                                            <select [(ngModel)]="stateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
                                                               <option *ngFor="let state of getstate" [value]="state.stateId" selected="selected">{{state.stateCode}} - {{state.stateName}}</option>
                                                             </select>
                                                           </div>
@@ -657,7 +642,7 @@
                                                           <label for="postCode" class="col-sm-4 control-label">Postcode<span class="star">*</span></label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode" id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="getstudentpostaldetails.postCode" required>
+                                                              <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode" id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="postCode" required>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -666,7 +651,7 @@
                                                           <label for="pobox" class="col-sm-4 control-label">Post Box</label>
                                                           <div class="col-sm-8">
                                                             <div class="input-group">
-                                                              <input class="form-control" type="text" name="pobox" id="pobox" placeholder="Enter post box here" [(ngModel)]="getstudentpostaldetails.pobox">
+                                                              <input class="form-control" type="text" name="pobox" id="pobox" placeholder="Enter post box here" [(ngModel)]="pobox">
                                                             </div>
                                                           </div>
                                                         </div>
@@ -692,10 +677,6 @@
                           </div> <!--card card-primary-->
                       </div> <!--container-fluid-->     
                     </section> <!--section2-->
-                    
-                    
-                    
-                    
                   </form> 
                 </div>
             </div> <!--row-->

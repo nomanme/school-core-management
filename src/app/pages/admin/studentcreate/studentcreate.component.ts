@@ -28,7 +28,8 @@ export class StudentcreateComponent implements OnInit {
   getschooltype;
   getclientid;
   getdisability;
-  getstudentpostaldetails;
+
+  addstudentpostaldetails;
 
 
   students;
@@ -84,6 +85,8 @@ export class StudentcreateComponent implements OnInit {
   visaStatusId: [number, null];
   dataString2;
   outputD;
+  outputD2;
+
  
 
   constructor(private apiService: ApiService, private router:Router) { }
@@ -157,9 +160,7 @@ export class StudentcreateComponent implements OnInit {
       this.getdisability=data; 
     })
 
-    this.apiService.getAPI2('dev/getstudentpostaldetails').subscribe((data)=>{
-      this.getstudentpostaldetails=data; 
-    })
+    
 
   }
 
@@ -215,7 +216,8 @@ export class StudentcreateComponent implements OnInit {
       console.log(this.outputD); 
       this.apiService.setLocalStorage('studentId',this.outputD);
 
-      this.apiService.postAPI('dev/getstudentpostaldetails', this.dataString2).subscribe((data)=>{
+      this.apiService.postAPI2('dev/addstudentpostaldetails', this.dataString2).subscribe((data2)=>{
+        this.outputD2=JSON.parse(data2['msg'])[0]['studentPostalDetailsId'];
 
         this.router.navigate(['/admin/create-student-enrolment' ]);
       })

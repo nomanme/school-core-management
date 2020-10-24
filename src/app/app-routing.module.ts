@@ -77,6 +77,11 @@ import { CreateRoleComponent } from './pages/admin/create-role/create-role.compo
 import { ViewRoleComponent } from './pages/admin/view-role/view-role.component';
 import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 
+//Course-Unit
+import { CourseUnitComponent } from './pages/course/course-unit/course-unit.component';
+import { CreateCourseUnitComponent } from './pages/course/create-course-unit/create-course-unit.component';
+import { EditCourseUnitComponent } from './pages/course/edit-course-unit/edit-course-unit.component';
+import { ViewCourseUnitComponent } from './pages/course/view-course-unit/view-course-unit.component';
 
 
 
@@ -229,6 +234,12 @@ const routes: Routes = [
   { path: 'admin/create-role', component: CreateRoleComponent },
   { path: 'admin/view-role/:id', component: ViewRoleComponent },
   { path: 'admin/edit-role/:id', component: EditRoleComponent },
+
+  //Course-Unit
+  { path: 'course/list-course-units', component: CourseUnitComponent },
+  { path: 'course/create-course-unit', component: CreateCourseUnitComponent },
+  { path: 'course/view-course-unit/:id', component: ViewCourseUnitComponent },
+  { path: 'course/edit-course-unit/:id', component: EditCourseUnitComponent },
 
 
   //Compliance
