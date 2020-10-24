@@ -195,12 +195,12 @@ button.dropdown-btn.active i.fas.fa-angle-left.right {
 /*Scrollable div*/
 .outer-div {
     display: inline-block;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 .scrollable {
-    height: 500px;
-    max-height: 100%;
+    height: calc(100vh - 8rem);
+    max-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
