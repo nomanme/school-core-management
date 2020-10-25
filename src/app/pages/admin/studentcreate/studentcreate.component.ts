@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/api/api.service';
   styleUrls: ['./studentcreate.component.css']
 })
 export class StudentcreateComponent implements OnInit { 
-
+ 
   schltype=false;
   Visa=false;
   disable=false;
