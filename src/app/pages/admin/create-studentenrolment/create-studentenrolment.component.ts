@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/api/api.service';
 })
 export class CreateStudentenrolmentComponent implements OnInit {
   
-  getstudentorigin;
+  // getstudentorigin;
   getcourse;
   getagent;
   getcourseintakedate;
@@ -26,6 +26,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
   dataString;
 
   studentEnrolmentId: number;
+  studentOriginId: number;
   courseId: number;
   agentId: number;
   courseIntakeDateId:number;
@@ -93,10 +94,10 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.getagent=data;
     })
 
-    this.apiService.getAPI3('dev/getstudentorigin').subscribe((data)=>{
-      // console.log(data);
-      this.getstudentorigin=data;
-    })
+    // this.apiService.getAPI3('dev/getstudentorigin').subscribe((data)=>{
+    //   // console.log(data);
+    //   this.getstudentorigin=data;
+    // })
 
     this.apiService.getAPI3('dev/gettrainingcontract').subscribe((data)=>{
       // console.log(data);
