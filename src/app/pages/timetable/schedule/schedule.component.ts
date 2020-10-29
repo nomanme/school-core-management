@@ -14,7 +14,7 @@ export class ScheduleComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.apiService.getUser('dev/schedule').subscribe((data)=>{
+    this.apiService.getAPI('dev/getschedule').subscribe((data)=>{
       console.log(data);
       this.schedules=data;
     })
