@@ -92,8 +92,8 @@ export class ApiService {
  
   
 
-  public setLocalStorage(name, key){
-    localStorage.setItem(`${name}`, key);
+  public setLocalStorage(data, key){
+    localStorage.setItem(`${data}`, key);
   }
   public getLocalStorage(key){
     return localStorage.getItem(key);
