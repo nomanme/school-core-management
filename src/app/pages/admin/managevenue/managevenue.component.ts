@@ -14,7 +14,7 @@ export class ManagevenueComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.apiService.getUser('dev/venue').subscribe((data)=>{
+    this.apiService.getAPI('dev/getvenue').subscribe((data)=>{
       console.log(data);
       this.venues=data;
     })

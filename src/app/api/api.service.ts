@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
 
 const httpOptions = {
   headers: new HttpHeaders({ 
@@ -18,13 +16,11 @@ const httpOptions = {
    })
 };
 
-
-
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
 
+export class ApiService {
 
   // headers = new HttpHeaders({
   //   'ScreetKey': 'hJK1oEqdEQa12kOF39hanKJD8ZSTwRMVkxXjZ0PR',
@@ -38,18 +34,11 @@ export class ApiService {
   // api_url = 'https://bhorf007xe.execute-api.ap-southeast-2.amazonaws.com/https://bhorf007xe.execute-api.ap-southeast-2.amazonaws.com';
   // api_url = 'https://bhorf007xe.execute-api.ap-southeast-2.amazonaws.com';
 
-
   api_url = 'https://0p8y7okgr2.execute-api.ap-southeast-2.amazonaws.com';
   api_url2 = 'https://2olljr3w8i.execute-api.ap-southeast-2.amazonaws.com'; 
   api_url3 = 'https://9ivnf9l6xc.execute-api.ap-southeast-2.amazonaws.com';
  
-
- 
-
-
   constructor(private httpClient: HttpClient) { }
-
-
 
   public getUser(url='dev/getuser') {
     // console.log(`${this.api_url}/${url}`)
@@ -71,10 +60,10 @@ export class ApiService {
     return this.httpClient.put(`${this.api_url}/${url}`, data);
   }
 
-
   public getAPI2(url2) {
     return this.httpClient.get(`${this.api_url2}/${url2}`);
   }
+
   public postAPI2(url2, data) {
     return this.httpClient.post(`${this.api_url2}/${url2}`, data);
   }
@@ -83,21 +72,16 @@ export class ApiService {
     return this.httpClient.put(`${this.api_url2}/${url2}`, data);
   }
 
-
-
-
   public getAPI3(url3) {
     return this.httpClient.get(`${this.api_url3}/${url3}`);
   }
  
   
-
   public setLocalStorage(data, key){
     localStorage.setItem(`${data}`, key);
   }
+  
   public getLocalStorage(key){
     return localStorage.getItem(key);
   }
-
-
 }

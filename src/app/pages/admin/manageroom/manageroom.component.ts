@@ -13,7 +13,7 @@ export class ManageroomComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.apiService.getUser('dev/venueroom').subscribe((data)=>{
+    this.apiService.getUser('dev/getvenueroom').subscribe((data)=>{
       console.log(data);
       this.venuerooms=data;
     })

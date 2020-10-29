@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   templateUrl: './schedule.component.html',
   styleUrls: ['./schedule.component.css']
 })
+
 export class ScheduleComponent implements OnInit {
 
   schedules;
   constructor(private apiService: ApiService, private router:Router) { }
 
   ngOnInit(): void {
-
     this.apiService.getAPI('dev/getschedule').subscribe((data)=>{
       console.log(data);
       this.schedules=data;

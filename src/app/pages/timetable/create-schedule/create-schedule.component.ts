@@ -25,7 +25,7 @@ export class CreateScheduleComponent implements OnInit {
 
     this.dataString=`{"scheduleId":"1","semisterId":"${form.value.semisterId}", "termId":"${form.value.termId}", "weekId":"${form.value.weekId}","startDate":"${form.value.startDate}" }`;
     console.log(this.dataString);
-    this.apiService.postAPI('dev/schedule', this.dataString).subscribe((data)=>{
+    this.apiService.postAPI('dev/addschedule', this.dataString).subscribe((data)=>{
       console.log(data);
       this.router.navigate(['/timetable/list-schedule']);
 
