@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     //   data;
     //   console.log(data);
     // });
+    
     console.log(this.user)
 
     // this.apiService.postAPI('dev/user', this.user).subscribe((data)=>{
