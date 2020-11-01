@@ -28,12 +28,11 @@ export class HomeComponent implements OnInit {
     //   console.log(data);
     // });
     
-    console.log(this.user)
+    console.log(this.user);
 
     // this.apiService.postAPI('dev/user', this.user).subscribe((data)=>{
     //   console.log(data);
     // });
     
   }
-
 }

@@ -304,10 +304,9 @@ const routes: Routes = [
 { path: 'users/edit-user/:id', component: EditUsersComponent },
 
 
-
-
   
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
