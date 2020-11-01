@@ -210,15 +210,15 @@ export class StudentcreateComponent implements OnInit {
       
       // console.log(JSON.parse(data['msg'])[0]['studentId']);
       this.dataString2=`{"userId":"1", "studentId":"${this.outputD}"  "buildingName":"${form.value.buildingName}", "flatUnitDetails":"${form.value.flatUnitDetails}", "streetName":"${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.suburb}", "stateId": "${form.value.stateId}", "postCode": "${form.value.postCode}", "pobox": "${form.value.pobox}", "stateId": "${form.value.stateId}"}`;
-      console.log(this.dataString2);
+      // console.log(this.dataString2);
       console.log(this.outputD); 
       this.apiService.setLocalStorage('studentId',this.outputD);
 
-      this.apiService.postAPI2('dev/addstudentpostaldetails', this.dataString2).subscribe((data2)=>{
-        this.outputD2=JSON.parse(data2['msg'])[0]['studentPostalDetailsId'];
+      // this.apiService.postAPI2('dev/addstudentpostaldetails', this.dataString2).subscribe((data2)=>{
+      //   this.outputD2=JSON.parse(data2['msg'])[0]['studentPostalDetailsId'];
 
-        this.router.navigate(['/admin/create-student-enrolment' ]);
-      })
+      //   this.router.navigate(['/admin/create-student-enrolment' ]);
+      // })
 
 
     })
