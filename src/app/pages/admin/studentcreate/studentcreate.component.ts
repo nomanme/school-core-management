@@ -206,7 +206,7 @@ export class StudentcreateComponent implements OnInit {
     console.log(this.dataString);
     this.apiService.postAPI('dev/addstudent', this.dataString).subscribe((data)=>{
       this.outputD=JSON.parse(data['msg'])[0]['studentId'];
-      
+      console.log(data)
       
       // console.log(JSON.parse(data['msg'])[0]['studentId']);
       this.dataString2=`{"userId":"1", "studentId":"${this.outputD}"  "buildingName":"${form.value.buildingName}", "flatUnitDetails":"${form.value.flatUnitDetails}", "streetName":"${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.suburb}", "stateId": "${form.value.stateId}", "postCode": "${form.value.postCode}", "pobox": "${form.value.pobox}", "stateId": "${form.value.stateId}"}`;
