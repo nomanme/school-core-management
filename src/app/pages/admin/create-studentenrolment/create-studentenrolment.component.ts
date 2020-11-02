@@ -119,7 +119,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
     console.log(this.dataString);
     this.apiService.postAPI2('dev/addstudentenrolment', this.dataString).subscribe((data)=>{
       console.log(data); 
-      this.router.navigate(['/admin/list-student-enrolment']);
+      // this.router.navigate(['/admin/list-student-enrolment']);
 
     })
   }
