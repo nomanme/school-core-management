@@ -48,7 +48,7 @@
                       </div><!--inner-row-->
                     </div>
 
-
+                        <!-- =========== Input filed Start ============ -->
                     <section class="content">
                       <div class="container-fluid">
                       <!-- general form elements -->
@@ -108,7 +108,7 @@
                                                         <span class="star">*</span>
                                                       </div>
                                                       <div class="input-group col-sm-3">
-                                                        <input class="form-control" type="text" name="middleName" id="middleName" placeholder="Middle Name" [(ngModel)]="middleName">
+                                                        <input [ngClass]="{'form-control': true, 'error':errorMessage != '' }" type="text" name="middleName" id="middleName" placeholder="Middle Name" [(ngModel)]="middleName">
                                                       </div>
                                                       <div class="input-group col-sm-2">
                                                         <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" [(ngModel)]="lastName">
@@ -677,6 +677,7 @@
                           </div> <!--card card-primary-->
                       </div> <!--container-fluid-->     
                     </section> <!--section2-->
+                    <!-- Input field End-->
                   </form> 
                 </div>
             </div> <!--row-->

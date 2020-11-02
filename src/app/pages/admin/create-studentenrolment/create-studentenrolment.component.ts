@@ -24,7 +24,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
 
   addstudentenrolment;
   dataString;
-
+getstudentorigin:any;
   studentEnrolmentId: number;
   studentOriginId: number;
   courseId: number;
@@ -94,10 +94,10 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.getagent=data;
     })
 
-    // this.apiService.getAPI3('dev/getstudentorigin').subscribe((data)=>{
-    //   // console.log(data);
-    //   this.getstudentorigin=data;
-    // })
+    this.apiService.getAPI3('dev/getstudentorigin').subscribe((data)=>{
+      console.log(data);
+      this.getstudentorigin=data;
+    })
 
     this.apiService.getAPI3('dev/gettrainingcontract').subscribe((data)=>{
       // console.log(data);
@@ -113,7 +113,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
 
   createStudentEnrolment(form){
 
-    this.dataString=`{"userId":"1", "studentId":"${this.apiService.getLocalStorage('studentId')}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId}", "courseIntakeDateId":"${form.value.courseIntakeDateId}", "applicationStatusId":"${form.value.applicationStatusId}", "deliveryModeId":"${form.value.deliveryModeId}", "fundingSourceNationalId":"${form.value.fundingSourceNationalId}", "fundingSourceStateId":"${form.value.fundingSourceStateId}", "commencingProgramId":"${form.value.commencingProgramId}", "trainingContractid":"${form.value.trainingContractid}", "reasonTakingCourseId":"${form.value.reasonTakingCourseId}", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee}"}`;
+    this.dataString=`{"userId":"1", "studentId":"${this.apiService.getLocalStorage('studentId')}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId}", "courseIntakeDateId":"${form.value.courseIntakeDateId}", "applicationStatusId":"${form.value.applicationStatusId}",  "applicationStatusId":"${form.value.applicationStatusId}","studentOriginId":"${form.value.studentOriginId}", "fundingSourceNationalId":"${form.value.fundingSourceNationalId}", "fundingSourceStateId":"${form.value.fundingSourceStateId}", "commencingProgramId":"${form.value.commencingProgramId}", "trainingContractid":"${form.value.trainingContractid}", "deliveryModeId":"${form.value.deliveryModeId}", "reasonTakingCourseId":"${form.value.reasonTakingCourseId}", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee}"}`;
 
 
     console.log(this.dataString);
@@ -122,8 +122,8 @@ export class CreateStudentenrolmentComponent implements OnInit {
       // this.router.navigate(['/admin/list-student-enrolment']);
 
     })
-  }
 
- 
+
+  } 
 
 }
