@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api/api.service';
 
+
 @Component({
   selector: 'app-studentcreate',
   templateUrl: './studentcreate.component.html',
@@ -191,7 +192,7 @@ export class StudentcreateComponent implements OnInit {
 
     if(this.errors==true){
     
-      console.log('fill the form');
+      // console.log('fill the form');
 
  
     this.dataString=`{
@@ -226,9 +227,15 @@ export class StudentcreateComponent implements OnInit {
         this.router.navigate(['/admin/create-student-enrolment' ]);
       })
 
-
     })
+
+      
+
+
     }
+  else{
+    console.log('sucess')
+  }
   }
 
 }
