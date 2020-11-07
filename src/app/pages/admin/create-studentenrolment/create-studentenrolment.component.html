@@ -50,8 +50,8 @@
                             </div> 
 
                             <div class="form-group row">
-                                <label for="studentOriginId" class="col-sm-4 control-label">Student Origin Id<span class="star">*</span></label> 
-                                <div class="input-group col-sm-8">
+                                <label for="studentOriginId" class="col-sm-3 control-label">Student Origin Id<span class="star">*</span></label> 
+                                <div  [ngClass]="(errorMessage !='')?'input-group col-sm-8 text-danger':'input-group col-sm-9'">
                                   <select  [(ngModel)]="studentOriginId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="studentOriginId" id="studentOriginId" required>
                                     <option *ngFor="let studentorigin of getstudentorigin" [value]="studentorigin.studentOriginId" selected="selected">{{studentorigin.originName}}</option>
                                   </select>
