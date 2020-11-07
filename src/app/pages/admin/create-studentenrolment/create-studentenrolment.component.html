@@ -28,6 +28,14 @@
                 <div class="card-header">
                   <h5 class="card-title">Setup Enrolment Fee Information</h5>
                 </div>
+                  
+                  <div class="col-sm-12" *ngIf="errors==true">
+                    <div class="text-danger">
+                      {{allerrors}}
+                  
+                    </div>
+                  </div>
+
                 <form #f = "ngForm">
                   <div class="card-body">
                     <div class="row">
@@ -47,6 +55,12 @@
                                   <select  [(ngModel)]="studentOriginId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="studentOriginId" id="studentOriginId" required>
                                     <option *ngFor="let studentorigin of getstudentorigin" [value]="studentorigin.studentOriginId" selected="selected">{{studentorigin.originName}}</option>
                                   </select>
+                                  <div class="col-sm-12" *ngIf="errors==true">
+                                    <div class="text-danger">
+                                      {{errorMessage}}
+                                  
+                                    </div>
+                                  </div>
                               </div>
                             </div>
 
@@ -56,6 +70,12 @@
                                     <select [(ngModel)]="courseId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="courseId" id="courseId" required>
                                       <option *ngFor="let course of getcourse" [value]="course.courseId" selected="selected">{{course.courseCode}} - {{course.courseName}}</option>                                      
                                     </select>
+                                    <div class="col-sm-12" *ngIf="errors==true">
+                                      <div class="text-danger">
+                                        {{errorMessage1}}
+                                    
+                                      </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -65,6 +85,12 @@
                                     <select [(ngModel)]="agentId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="agentId" id="agentId" required>
                                       <option *ngFor="let agent of getagent" [value]="agent.agentId" selected="selected">{{agent.agencyName}}</option> 
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage2}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -74,6 +100,12 @@
                                     <select [(ngModel)]="courseIntakeDateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="courseIntakeDateId" id="courseIntakeDateId" required>
                                       <option *ngFor="let courseintake of getcourseintakedate" [value]="courseintake.courseIntakeDateId" selected="selected">{{courseintake.startDate}} - {{courseintake.endDate}}</option>                                     
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage3}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -83,6 +115,12 @@
                                     <select  [(ngModel)]="applicationStatusId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="applicationStatusId" id="applicationStatusId" required>
                                       <option *ngFor="let appstatus of getapplicationstatus" [value]="appstatus.applicationStatusId" selected="selected">{{appstatus.applicationStatusName}}</option>
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage4}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -93,6 +131,12 @@
                                       <option *ngFor="let delivery of getdeliverymode" [value]="delivery.deliveryModeId" selected="selected">{{delivery.deliveryModeName}}</option>
                                       
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage4}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -102,6 +146,12 @@
                                     <select [(ngModel)]="fundingSourceNationalId"  class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="fundingSourceNationalId" id="fundingSourceNationalId" required>
                                       <option *ngFor="let fundnat of getfundingsourcenational" [value]="fundnat.fundingSourceNationalId" selected="selected">{{fundnat.fundingSourceNationalName}}</option>
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage5}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -111,6 +161,12 @@
                                     <select [(ngModel)]="fundingSourceStateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="fundingSourceStateId" id="fundingSourceStateId" required>
                                       <option *ngFor="let fundstate of getfundingsourcestate" [value]="fundstate.fundingSourceStateId" selected="selected">{{fundstate.fundingSourceStateName}}</option>
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage6}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -120,6 +176,12 @@
                                     <select [(ngModel)]="commencingProgramId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="commencingProgramId" id="commencingProgramId" required>
                                       <option *ngFor="let commencing of getcommencingprogram" [value]="commencing.commencingProgramId" selected="selected">{{commencing.commencingProgramName}}</option>
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage7}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -129,6 +191,12 @@
                                     <select [(ngModel)]="trainingContractid" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="trainingContractid" id="trainingContractid" required>
                                       <option *ngFor="let training of gettrainingcontract" [value]="training.trainingContractId" selected="selected">{{training.trainingContractCode}} - {{training.trainingContractName}}</option>
                                     </select>
+                                      <div class="col-sm-12" *ngIf="errors==true">
+                                        <div class="text-danger">
+                                          {{errorMessage8}}
+                                      
+                                        </div>
+                                      </div>
                                 </div>
                             </div>
 
@@ -138,6 +206,12 @@
                                   <select [(ngModel)]="reasonTakingCourseId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="reasonTakingCourseId" id="reasonTakingCourseId" required>
                                     <option *ngFor="let reasontaking of getreasontakingcourse" [value]="reasontaking.reasonTakingCourseId" selected="selected">{{reasontaking.reasonName}}</option> 
                                   </select>
+                                    <div class="col-sm-12" *ngIf="errors==true">
+                                      <div class="text-danger">
+                                        {{errorMessage9}}
+                                    
+                                      </div>
+                                    </div>
                               </div>
                           </div> 
 
