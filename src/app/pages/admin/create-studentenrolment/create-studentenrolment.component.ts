@@ -26,37 +26,39 @@ export class CreateStudentenrolmentComponent implements OnInit {
   dataString;
   getstudentorigin;
   studentEnrolmentId;
-  studentOriginId;
-  courseId;
-  agentId;
-  courseIntakeDateId;
-  applicationStatusId;
-  deliveryModeId;
-  fundingSourceNationalId;
-  fundingSourceStateId;
-  commencingProgramId;
-  trainingContractid;
-  reasonTakingCourseId;
-  applyForRPL;
-  TuitionFee;
+  studentOriginId='';
+  courseId='';
+  agentId='';
+  courseIntakeDateId='';
+  applicationStatusId='';
+  deliveryModeId='';
+  fundingSourceNationalId='';
+  fundingSourceStateId='';
+  commencingProgramId='';
+  trainingContractid='';
+  reasonTakingCourseId='';
+  applyForRPL='';
+  TuitionFee='';
   userId;
   outputD;
 
   allerrors='';
 
-  errorMessage='';
-  errorMessage1='';
-  errorMessage2='';
-  errorMessage3='';
-  errorMessage4='';
-  errorMessage5='';
-  errorMessage6='';
-  errorMessage7='';
-  errorMessage8='';
-  errorMessage9='';
-  errorMessage10='';
-  errorMessage11='';
-  errors=true;
+  error0='';
+  error1='';
+  error2='';
+  error3='';
+  error4='';
+  error5='';
+  error6='';
+  error7='';
+  error8='';
+  error9='';
+  error10='';
+  error11='';
+  error12='';
+  error13='';
+  errors='';
   errorCodes:{studentOriginId:''}
 
   constructor(private apiService: ApiService, private router:Router) { }
@@ -131,91 +133,135 @@ export class CreateStudentenrolmentComponent implements OnInit {
   createStudentEnrolment(form){
 
 
-      this.allerrors='Required filled mustbe fillup otherwise you cant continue';
-      console.log(form.value.allerrors)
-      if(form.value.allerrors ==''){
-      this.errorMessage = this.errorMessage + "allerrors"
-      console.log(this.allerrors)
+    if(form.value.allerrors ==''){
+      this.error0 ='true'; 
+      this.errors='true';
+    }else{
+      this.error0 ='';
+      this.errors='false';
     }
 
-      this.errorMessage='Required filled must be fillup studentOriginId'
-      console.log(form.value.studentOriginId)
-      if(form.value.studentOriginId ==''){
-      this.errorMessage = this.errorMessage + "studentOriginId"
-      console.log(this.errorMessage)
+    console.log(form.value.studentOriginId)
+   if(form.value.studentOriginId ==''){
+     this.error1 ='true'; 
+      this.errors='true';
+     
+    }else{
+      this.error1 ='';
+      this.errors='false';
+     
     }
 
-    this.errorMessage1='Please fill up courseId'
-    console.log(form.value.courseId)
-      if(form.value.courseId ==''){
-      this.errorMessage1 = this.errorMessage1 + "courseId"
-      console.log(this.errorMessage1)
+     console.log(`1: ${this.errors}`);
+    
+    if(form.value.courseId ==''){
+      this.error2 ='true'; 
+      this.errors='true';
+    }else{
+      this.error2 ='';
+      this.errors='false';
     }
 
-      this.errorMessage2='Please fill up courseIntakeDateId'
-      console.log(form.value.courseIntakeDateId)
+    console.log(`2: ${this.errors}`);
+      
       if(form.value.courseIntakeDateId ==''){
-      this.errorMessage2 = this.errorMessage2 + "courseIntakeDateId"
-      console.log(this.errorMessage2)
-    }
-
-      this.errorMessage3='Please fill up applicationStatusId'
-      console.log(form.value.applicationStatusId)
+       this.error3 ='true'; 
+        this.errors='true';
+      }else{
+        this.error3 ='';
+        this.errors='false';
+      }
+console.log(`3: ${this.errors}`);
       if(form.value.applicationStatusId ==''){
-      this.errorMessage3 = this.errorMessage3 + "applicationStatusId"
-      console.log(this.errorMessage3)
-    }
-      this.errorMessage4='Please fill up deliveryModeId'
-      console.log(form.value.deliveryModeId)
-      if(form.value.deliveryModeId ==''){
-      this.errorMessage4 = this.errorMessage4 + "deliveryModeId"
-      console.log(this.errorMessage4)
-    }
-      this.errorMessage5='Please fill up fundingSourceNationalId'
-      console.log(form.value.fundingSourceNationalId)
-      if(form.value.fundingSourceNationalId ==''){
-      this.errorMessage5 = this.errorMessage5 + "fundingSourceNationalId"
-      console.log(this.errorMessage5)
-    }
-      this.errorMessage6='Please fill up fundingSourceStateId'
-      console.log(form.value.fundingSourceStateId)
-      if(form.value.fundingSourceStateId ==''){
-      this.errorMessage6 = this.errorMessage6 + "fundingSourceStateId"
-      console.log(this.errorMessage6)
-    }
-      this.errorMessage7='Please fill up commencingProgramId'
-      console.log(form.value.commencingProgramId)
-      if(form.value.commencingProgramId ==''){
-      this.errorMessage7 = this.errorMessage7 + "commencingProgramId"
-      console.log(this.errorMessage7)
-    }
-      this.errorMessage8='Please fill up courseId'
-      console.log(form.value.courseId)
-      if(form.value.courseId ==''){
-      this.errorMessage8 = this.errorMessage8 + "courseId"
-      console.log(this.errorMessage8)
-    }
-      this.errorMessage9='Please fill up courseId'
-      console.log(form.value.courseId)
-      if(form.value.courseId ==''){
-      this.errorMessage9 = this.errorMessage9 + "courseId"
-      console.log(this.errorMessage9)
-    }
-      this.errorMessage10='Please fill up courseId'
-      console.log(form.value.courseId)
-      if(form.value.courseId ==''){
-      this.errorMessage10 = this.errorMessage10 + "courseId"
-      console.log(this.errorMessage10)
-    }
-      this.errorMessage11='Please fill up courseId'
-      console.log(form.value.courseId)
-      if(form.value.courseId ==''){
-      this.errorMessage11 = this.errorMessage11 + "courseId"
-      console.log(this.errorMessage11)
+       this.error4 ='true'; 
+        this.errors='true';
+      }else{
+        this.error4 ='';
+        this.errors='false';
+      }
+
+    if(form.value.deliveryModeId ==''){
+      this.error5 ='true'; 
+        this.errors='true';
+      }else{
+        this.error5 ='';
+        this.errors='false';
+      }
+
+
+    if(form.value.fundingSourceNationalId ==''){
+  this.error6 ='true'; 
+      this.errors='true';
+    }else{
+      this.error6 ='';
+      this.errors='false';
     }
 
 
-    if (this.errors == false){
+    if(form.value.fundingSourceStateId ==''){
+  this.error7 ='true'; 
+      this.errors='true';
+    }else{
+      this.error7 ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.commencingProgramId ==''){
+  this.error8 ='true'; 
+      this.errors='true';
+    }else{
+      this.error8 ='';
+      this.errors='false';
+    }
+
+    
+      if(form.value.courseId ==''){
+  this.error9 ='true'; 
+      this.errors='true';
+    }else{
+      this.error9 ='';
+      this.errors='false';
+    }
+
+    
+      if(form.value.courseId ==''){
+   this.error10 ='true'; 
+      this.errors='true';
+    }else{
+      this.error10 ='';
+      this.errors='false';
+    }
+
+    
+      if(form.value.courseId ==''){
+  this.error11 ='true'; 
+      this.errors='true';
+    }else{
+      this.error11 ='';
+      this.errors='false';
+    }
+
+    
+      if(form.value.courseId ==''){
+   this.error12 ='true'; 
+      this.errors='true';
+    }else{
+      this.error12 ='';
+      this.errors='false';
+    }
+
+        
+      if(form.value.courseId ==''){
+   this.error13 ='true'; 
+      this.errors='true';
+    }else{
+      this.error13 ='';
+      this.errors='false';
+    }
+
+console.log(`atend: ${this.errors}`);
+    if (this.errors != 'true'){
 
     this.dataString=`{"userId":"1", "studentId":"${this.apiService.getLocalStorage('studentId')}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId}", "courseIntakeDateId":"${form.value.courseIntakeDateId}", "applicationStatusId":"${form.value.applicationStatusId}",  "applicationStatusId":"${form.value.applicationStatusId}","studentOriginId":"${form.value.studentOriginId}", "fundingSourceNationalId":"${form.value.fundingSourceNationalId}", "fundingSourceStateId":"${form.value.fundingSourceStateId}", "commencingProgramId":"${form.value.commencingProgramId}", "trainingContractid":"${form.value.trainingContractid}", "deliveryModeId":"${form.value.deliveryModeId}", "reasonTakingCourseId":"${form.value.reasonTakingCourseId}", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee}"}`;
 
