@@ -45,6 +45,11 @@
                           </div>
                           
                         </div><!--col-md-12-->
+                        <div class="col-sm-12" *ngIf="errors==true">
+                          <div class="text-danger">
+                            {{errorMessage}}
+                          </div>
+                        </div>
                       </div><!--inner-row-->
                     </div>
 

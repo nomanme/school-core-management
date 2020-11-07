@@ -37,56 +37,57 @@ export class StudentcreateComponent implements OnInit {
   dataString;
 
 
-  PriorEducationalAchievementFlag: string;
-  altEmail: [string, null];
-  australianPr: [any, null];
-  birthcountryId: number;
-  buildingName: [string, null];
-  clientId: string;
-  completedSchoolLevelId: number;
-  dateModified: null;
-  differentPostalAddress: any;
-  disability: string;
-  dob: Date;
-  email: string;
-  employmentStatusId: number;
-  englishSpeakingStatusId: [number, null];
-  firstName: string;
-  flatUnitDetails: [string, null];
-  gender: string;
-  homeLanguageId: number;
-  indigenousStatusId: number;
-  lastName: [string, null];
-  middleName: [string, null];
-  mobile: [string, null];
-  nationalityId: [number, null];
-  passportExpdate: [Date, null];
-  passportNo: [string, null];
-  postCode: string;
-  schoolTypeId: [number, null];
-  signatoryText: [string, null];
-  stateId: number;
-  statisticalAreaLevel1Id: [string, null];
-  statisticalAreaLevel2Id: [string, null];
-  stillInSecSchool: [string, null];
-  streetName: string;
-  streetNumber: string;
-  studentId: number;
-  suburb: string;
-  surveyContactStatusId: number;
-  telHome: [string, null];
-  telWork: [string, null];
-  title: [string, null];
-  userId: number;
-  usiNo: [string, null];
-  visaExpdate: Date;
-  visaNo: [string, null];
-  visaStatusId: [number, null];
+  PriorEducationalAchievementFlag
+  altEmail;
+  australianPr;
+  birthcountryId;
+  buildingName;
+  clientId
+  completedSchoolLevelId;
+  dateModified;
+  differentPostalAddress;
+  disability
+  dob;
+  email
+  employmentStatusId;
+  englishSpeakingStatusId;
+  firstName ='';
+  flatUnitDetails;
+  gender
+  homeLanguageId;
+  indigenousStatusId;
+  lastName;
+  middleName;
+  mobile;
+  nationalityId;
+  passportExpdate;
+  passportNo;
+  postCode
+  schoolTypeId;
+  signatoryText;
+  stateId;
+  statisticalAreaLevel1Id;
+  statisticalAreaLevel2Id;
+  stillInSecSchool;
+  streetName
+  streetNumber
+  studentId;
+  suburb
+  surveyContactStatusId;
+  telHome;
+  telWork;
+  title;
+  userId;
+  usiNo;
+  visaExpdate;
+  visaNo;
+  visaStatusId;
   dataString2;
   outputD;
   outputD2;
-  errorMessage :string ='Error is here';
-  errors:true;
+  errorMessage='';
+  errors=true;
+  errorCodes:{firstName:null}
   constructor(private apiService: ApiService, private router:Router) { }
 
   ngOnInit(): void {
@@ -187,10 +188,14 @@ export class StudentcreateComponent implements OnInit {
 
 
   createStudent(form){
+    this.errorMessage='Fillup following - '
+  console.log(form.value.firstName)
+    if(form.value.firstName ==''){
+      this.errorMessage = this.errorMessage + " FirstName"
+      console.log(this.errorMessage)
+    }
 
-
-
-    if(this.errors==true){
+    if(this.errors==false){
     
       // console.log('fill the form');
 
@@ -233,9 +238,9 @@ export class StudentcreateComponent implements OnInit {
 
 
     }
-  else{
-    console.log('sucess')
-  }
+    else{
+      console.log('There are error')
+    }
   }
 
 }
