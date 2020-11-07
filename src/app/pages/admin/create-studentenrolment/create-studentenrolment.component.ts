@@ -215,7 +215,6 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.errors='false';
     }
 
-
     if(form.value.commencingProgramId ==''){
     this.error8 ='true'; 
       this.errors='true';

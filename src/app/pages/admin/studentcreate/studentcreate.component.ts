@@ -37,23 +37,23 @@ export class StudentcreateComponent implements OnInit {
   dataString;
 
 
-  PriorEducationalAchievementFlag
+  PriorEducationalAchievementFlag;
   altEmail;
   australianPr;
   birthcountryId;
   buildingName;
-  clientId
+  clientId;
   completedSchoolLevelId;
   dateModified;
   differentPostalAddress;
-  disability
+  disability;
   dob;
-  email
+  email;
   employmentStatusId;
   englishSpeakingStatusId;
   firstName ='';
   flatUnitDetails;
-  gender
+  gender;
   homeLanguageId;
   indigenousStatusId;
   lastName;
@@ -62,17 +62,17 @@ export class StudentcreateComponent implements OnInit {
   nationalityId;
   passportExpdate;
   passportNo;
-  postCode
+  postCode;
   schoolTypeId;
   signatoryText;
   stateId;
   statisticalAreaLevel1Id;
   statisticalAreaLevel2Id;
   stillInSecSchool;
-  streetName
-  streetNumber
+  streetName;
+  streetNumber;
   studentId;
-  suburb
+  suburb;
   surveyContactStatusId;
   telHome;
   telWork;
@@ -85,8 +85,35 @@ export class StudentcreateComponent implements OnInit {
   dataString2;
   outputD;
   outputD2;
+
+
+  
+  errors='';
+  allerrors='';
+  
+  errorfirstname='';
+  errordob='';
+  erroremail='';
+  errorbirthcountry='';
+  errorgender='';
+  errorindigenousStatus='';
+  errorhomelang='';
+  erroremploymentStatus='';
+  errorschoolLevel='';
+  errordisability='';
+  errorpriorEducation='';
+  erroraustralianPr='';
+  errorsurvey='';
+  errorstate='';
+  errorstreetNumber='';
+  errorstreetName='';
+  errorsuburb='';
+  errorpostcode='';
+
+
+
   errorMessage='';
-  errors=true;
+ 
   errorCodes:{firstName:null}
   constructor(private apiService: ApiService, private router:Router) { }
 
@@ -188,17 +215,202 @@ export class StudentcreateComponent implements OnInit {
 
 
   createStudent(form){
-    this.errorMessage='Fillup following - '
-  console.log(form.value.firstName)
+    this.errorMessage='Fields are required'
+    console.log(form.value.firstName)
     if(form.value.firstName ==''){
-      this.errorMessage = this.errorMessage + " FirstName"
+      // this.errorfirstName = this.errorfirstName + "firstName"
       console.log(this.errorMessage)
     }
 
-    if(this.errors==false){
+  
+    if(form.value.firstName ==''){
+      this.errorfirstname ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorfirstname ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.dob ==''){
+      this.errordob ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errordob ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.email ==''){
+      this.erroremail ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.erroremail ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.birthcountryId ==''){
+      this.errorbirthcountry ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorbirthcountry ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.gender ==''){
+      this.errorgender ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorgender ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.indigenousStatusId ==''){
+      this.errorindigenousStatus ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorindigenousStatus ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.homeLanguageId ==''){
+      this.errorhomelang ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorhomelang ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.employmentStatusId ==''){
+      this.erroremploymentStatus ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.erroremploymentStatus ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.completedSchoolLevelId ==''){
+      this.errorschoolLevel ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorschoolLevel ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.disability ==''){
+      this.errordisability ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errordisability ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.PriorEducationalAchievementFlag ==''){
+      this.errorpriorEducation ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorpriorEducation ='';
+      this.errors='false';
+    }
+
+   
+    if(form.value.australianPr ==''){
+      this.erroraustralianPr ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.erroraustralianPr ='';
+      this.errors='false';
+    }
+
+
+
+    if(form.value.surveyContactStatusId ==''){
+      this.errorsurvey ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorsurvey ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.stateId ==''){
+      this.errorstate ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorstate ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.streetNumber ==''){
+      this.errorstreetNumber ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorstreetNumber ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.streetName ==''){
+      this.errorstreetName ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorstreetName ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.suburb ==''){
+      this.errorsuburb ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorsuburb ='';
+      this.errors='false';
+    }
+
+
+    if(form.value.postCode ==''){
+      this.errorpostcode ='true'; 
+      this.errors='true';
+    }
+    else{
+      this.errorpostcode ='';
+      this.errors='false';
+    }
+    
+
+
+    if(this.errors=='false'){
     
       // console.log('fill the form');
 
+
+      
  
     this.dataString=`{
       "userId":"1", "clientId": ${this.getclientid}, "PriorEducationalAchievementFlag":"${form.value.PriorEducationalAchievementFlag}", "altEmail":"${form.value.altEmail}", "australianPr":"${form.value.australianPr}", "birthcountryId": "${form.value.birthcountryId}", "buildingName": "${form.value.buildingName}",  "completedSchoolLevelId": "${form.value.completedSchoolLevelId}", "differentPostalAddress": "${form.value.differentPostalAddress}", "disability": "${form.value.disability}", "dob": "${form.value.dob}", "email":"${form.value.email}", "employmentStatusId": "${form.value.employmentStatusId}", "englishSpeakingStatusId": "${form.value.englishSpeakingStatusId}", "firstName": "${form.value.firstName}", "flatUnitDetails": "${form.value.flatUnitDetails}", "gender": "${form.value.gender}", "homeLanguageId": "${form.value.homeLanguageId}", "indigenousStatusId": "${form.value.indigenousStatusId}", "lastName": "${form.value.lastName}", "middleName": "${form.value.middleName}", "mobile": "${form.value.mobile}", "nationalityId": "${form.value.nationalityId}", "passportExpdate": "${form.value.passportExpdate}", "passportNo": "${form.value.passportNo}", "postCode": "${form.value.postCode}", "schoolTypeId": "${form.value.schoolTypeId}", "signatoryText": "${form.value.signatoryText}", "stateId": "${form.value.stateId}", "statisticalAreaLevel1Id": "${form.value.statisticalAreaLevel1Id}", "statisticalAreaLevel2Id": "${form.value.statisticalAreaLevel2Id}", "stillInSecSchool": "${form.value.stillInSecSchool}", "streetName": "${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.suburb}", "surveyContactStatusId": "${form.value.surveyContactStatusId}", "telHome": "${form.value.telHome}", "telWork": "${form.value.telWork}", "title": "${form.value.title}", "usiNo": "${form.value.usiNo}", "visaExpdate": "${form.value.visaExpdate}", "visaNo": "${form.value.visaNo}", "visaStatusId": "${form.value.visaStatusId}"
