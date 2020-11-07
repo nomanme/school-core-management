@@ -136,28 +136,31 @@ export class CreateStudentenrolmentComponent implements OnInit {
     if(form.value.allerrors ==''){
       this.error0 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error0 ='';
       this.errors='false';
     }
 
     console.log(form.value.studentOriginId)
+
    if(form.value.studentOriginId ==''){
      this.error1 ='true'; 
       this.errors='true';
      
-    }else{
+    }
+    else{
       this.error1 ='';
       this.errors='false';
      
     }
-
      console.log(`1: ${this.errors}`);
     
     if(form.value.courseId ==''){
       this.error2 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error2 ='';
       this.errors='false';
     }
@@ -167,15 +170,18 @@ export class CreateStudentenrolmentComponent implements OnInit {
       if(form.value.courseIntakeDateId ==''){
        this.error3 ='true'; 
         this.errors='true';
-      }else{
+      }
+      else{
         this.error3 ='';
         this.errors='false';
       }
-console.log(`3: ${this.errors}`);
+    console.log(`3: ${this.errors}`);
+
       if(form.value.applicationStatusId ==''){
        this.error4 ='true'; 
         this.errors='true';
-      }else{
+      }
+      else{
         this.error4 ='';
         this.errors='false';
       }
@@ -183,87 +189,96 @@ console.log(`3: ${this.errors}`);
     if(form.value.deliveryModeId ==''){
       this.error5 ='true'; 
         this.errors='true';
-      }else{
+      }
+      else{
         this.error5 ='';
         this.errors='false';
       }
 
 
     if(form.value.fundingSourceNationalId ==''){
-  this.error6 ='true'; 
+    this.error6 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error6 ='';
       this.errors='false';
     }
 
 
     if(form.value.fundingSourceStateId ==''){
-  this.error7 ='true'; 
+    this.error7 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error7 ='';
       this.errors='false';
     }
 
 
     if(form.value.commencingProgramId ==''){
-  this.error8 ='true'; 
+    this.error8 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error8 ='';
       this.errors='false';
     }
 
-    
-      if(form.value.courseId ==''){
-  this.error9 ='true'; 
+    if(form.value.courseId ==''){
+      this.error9 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error9 ='';
       this.errors='false';
     }
 
     
-      if(form.value.courseId ==''){
-   this.error10 ='true'; 
+    if(form.value.courseId ==''){
+    this.error10 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error10 ='';
       this.errors='false';
     }
 
-    
-      if(form.value.courseId ==''){
-  this.error11 ='true'; 
+  
+    if(form.value.courseId ==''){
+    this.error11 ='true'; 
       this.errors='true';
-    }else{
+    }
+    else{
       this.error11 ='';
       this.errors='false';
     }
 
     
-      if(form.value.courseId ==''){
-   this.error12 ='true'; 
-      this.errors='true';
-    }else{
+  if(form.value.courseId ==''){
+  this.error12 ='true'; 
+  this.errors='true';
+  }
+  else{
       this.error12 ='';
       this.errors='false';
     }
 
         
-      if(form.value.courseId ==''){
-   this.error13 ='true'; 
-      this.errors='true';
-    }else{
+  if(form.value.courseId ==''){
+  this.error13 ='true'; 
+  this.errors='true';
+  }
+  else{
       this.error13 ='';
       this.errors='false';
     }
 
 console.log(`atend: ${this.errors}`);
-    if (this.errors != 'true'){
+  
+if (this.errors != 'true'){
 
-    this.dataString=`{"userId":"1", "studentId":"${this.apiService.getLocalStorage('studentId')}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId}", "courseIntakeDateId":"${form.value.courseIntakeDateId}", "applicationStatusId":"${form.value.applicationStatusId}",  "applicationStatusId":"${form.value.applicationStatusId}","studentOriginId":"${form.value.studentOriginId}", "fundingSourceNationalId":"${form.value.fundingSourceNationalId}", "fundingSourceStateId":"${form.value.fundingSourceStateId}", "commencingProgramId":"${form.value.commencingProgramId}", "trainingContractid":"${form.value.trainingContractid}", "deliveryModeId":"${form.value.deliveryModeId}", "reasonTakingCourseId":"${form.value.reasonTakingCourseId}", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee}"}`;
+this.dataString=`{"userId":"1", "studentId":"${this.apiService.getLocalStorage('studentId')}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId}", "courseIntakeDateId":"${form.value.courseIntakeDateId}", "applicationStatusId":"${form.value.applicationStatusId}",  "applicationStatusId":"${form.value.applicationStatusId}","studentOriginId":"${form.value.studentOriginId}", "fundingSourceNationalId":"${form.value.fundingSourceNationalId}", "fundingSourceStateId":"${form.value.fundingSourceStateId}", "commencingProgramId":"${form.value.commencingProgramId}", "trainingContractid":"${form.value.trainingContractid}", "deliveryModeId":"${form.value.deliveryModeId}", "reasonTakingCourseId":"${form.value.reasonTakingCourseId}", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee}"}`;
 
 
     console.log(this.dataString);

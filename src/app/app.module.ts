@@ -254,6 +254,7 @@ import { ViewCourseUnitComponent } from './pages/course/view-course-unit/view-co
     EditCourseUnitComponent,
     ViewCourseUnitComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -265,4 +266,5 @@ import { ViewCourseUnitComponent } from './pages/course/view-course-unit/view-co
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

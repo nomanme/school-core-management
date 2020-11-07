@@ -80,12 +80,7 @@
                                     <select [ngClass]="(error3=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="agentId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="agentId" id="agentId" required>
                                       <option *ngFor="let agent of getagent" [value]="agent.agentId" selected="selected">{{agent.agencyName}}</option> 
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage2}}
-                                      
-                                        </div>
-                                      </div> -->
+                                   
                                 </div>
                             </div>
 
@@ -95,12 +90,7 @@
                                     <select [ngClass]="(error4=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="courseIntakeDateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="courseIntakeDateId" id="courseIntakeDateId" required>
                                       <option *ngFor="let courseintake of getcourseintakedate" [value]="courseintake.courseIntakeDateId" selected="selected">{{courseintake.startDate}} - {{courseintake.endDate}}</option>                                     
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage3}}
-                                      
-                                        </div>
-                                      </div> -->
+                                   
                                 </div>
                             </div>
 
@@ -110,12 +100,7 @@
                                     <select [ngClass]="(error5=='')?'form-control select2':'form-control select2 is-invalid'"   [(ngModel)]="applicationStatusId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="applicationStatusId" id="applicationStatusId" required>
                                       <option *ngFor="let appstatus of getapplicationstatus" [value]="appstatus.applicationStatusId" selected="selected">{{appstatus.applicationStatusName}}</option>
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage4}}
-                                      
-                                        </div>
-                                      </div> -->
+                                   
                                 </div>
                             </div>
 
@@ -126,12 +111,7 @@
                                       <option *ngFor="let delivery of getdeliverymode" [value]="delivery.deliveryModeId" selected="selected">{{delivery.deliveryModeName}}</option>
                                       
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage4}}
-                                      
-                                        </div>
-                                      </div> -->
+                                     
                                 </div>
                             </div>
 
@@ -141,12 +121,7 @@
                                     <select [ngClass]="(error7=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="fundingSourceNationalId"  class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="fundingSourceNationalId" id="fundingSourceNationalId" required>
                                       <option *ngFor="let fundnat of getfundingsourcenational" [value]="fundnat.fundingSourceNationalId" selected="selected">{{fundnat.fundingSourceNationalName}}</option>
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage5}}
-                                      
-                                        </div>
-                                      </div> -->
+                                     
                                 </div>
                             </div>
 
@@ -156,12 +131,7 @@
                                     <select [ngClass]="(error8=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="fundingSourceStateId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="fundingSourceStateId" id="fundingSourceStateId" required>
                                       <option *ngFor="let fundstate of getfundingsourcestate" [value]="fundstate.fundingSourceStateId" selected="selected">{{fundstate.fundingSourceStateName}}</option>
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage6}}
-                                      
-                                        </div>
-                                      </div> -->
+                                    
                                 </div>
                             </div>
 
@@ -171,12 +141,7 @@
                                     <select [ngClass]="(error9=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="commencingProgramId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="commencingProgramId" id="commencingProgramId" required>
                                       <option *ngFor="let commencing of getcommencingprogram" [value]="commencing.commencingProgramId" selected="selected">{{commencing.commencingProgramName}}</option>
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage7}}
-                                      
-                                        </div>
-                                      </div> -->
+                                    
                                 </div>
                             </div>
 
@@ -186,12 +151,7 @@
                                     <select [ngClass]="(error10=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="trainingContractid" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="trainingContractid" id="trainingContractid" required>
                                       <option *ngFor="let training of gettrainingcontract" [value]="training.trainingContractId" selected="selected">{{training.trainingContractCode}} - {{training.trainingContractName}}</option>
                                     </select>
-                                      <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                        <div class="text-danger">
-                                          {{errorMessage8}}
-                                      
-                                        </div>
-                                      </div> -->
+                                    
                                 </div>
                             </div>
 
@@ -201,12 +161,7 @@
                                   <select [ngClass]="(error11=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="reasonTakingCourseId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="reasonTakingCourseId" id="reasonTakingCourseId" required>
                                     <option *ngFor="let reasontaking of getreasontakingcourse" [value]="reasontaking.reasonTakingCourseId" selected="selected">{{reasontaking.reasonName}}</option> 
                                   </select>
-                                    <!-- <div class="col-sm-12" *ngIf="errors==''">
-                                      <div class="text-danger">
-                                        {{errorMessage9}}
-                                    
-                                      </div>
-                                    </div> -->
+                                  
                               </div>
                           </div> 
 
@@ -218,9 +173,6 @@
                                     </select>
                                 </div>
                             </div>  -->
-
-                            
-
 
                             <div class="form-group row">
                               <label for="applyForRPL" class="col-sm-3 control-label gender" >Apply For RPL<span class="star">*</span></label>
