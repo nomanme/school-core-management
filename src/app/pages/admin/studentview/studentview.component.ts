@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./studentview.component.css']
 })
 export class StudentviewComponent implements OnInit {
-
+ 
   studentID;
   students;
   getstudent;

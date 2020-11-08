@@ -49,6 +49,7 @@ export class ApiService {
     return this.httpClient.post(`${this.api_url}/${url}`, data);
   }
 
+  //API-1
   public getAPI(url) {
     return this.httpClient.get(`${this.api_url}/${url}`);
   }
@@ -60,6 +61,12 @@ export class ApiService {
     return this.httpClient.put(`${this.api_url}/${url}`, data);
   }
 
+  public delAPI(url) {
+    return this.httpClient.get(`${this.api_url}/${url}`);
+  }
+
+
+  //API-2
   public getAPI2(url2) {
     return this.httpClient.get(`${this.api_url2}/${url2}`);
   }
@@ -72,11 +79,31 @@ export class ApiService {
     return this.httpClient.put(`${this.api_url2}/${url2}`, data);
   }
 
+  public delAPI2(url2) {
+    return this.httpClient.get(`${this.api_url2}/${url2}`);
+  }
+
+
+//API-3
   public getAPI3(url3) {
     return this.httpClient.get(`${this.api_url3}/${url3}`);
   }
- 
+
+  public postAPI3(url3, data) {
+    return this.httpClient.post(`${this.api_url3}/${url3}`, data);
+  }
+
+  public putAPI3(url3, data) {
+    return this.httpClient.put(`${this.api_url3}/${url3}`, data);
+  }
+
+  public delAPI3(url3) {
+    return this.httpClient.get(`${this.api_url3}/${url3}`);
+  }
   
+
+
+
   public setLocalStorage(data, key){
     localStorage.setItem(`${data}`, key);
   }

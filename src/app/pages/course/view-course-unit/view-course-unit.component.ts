@@ -20,7 +20,8 @@ export class ViewCourseUnitComponent implements OnInit {
     
     this.apiService.getAPI(`dev/getcourseunit?courseUnitId=${this.courseUnitId}`).subscribe((data)=>{
       console.log(data);
-      this.courseunits=data;
+      this.courseunits=data; 
+      this.courseunits=JSON.parse(this.courseunits);
     })
 
     

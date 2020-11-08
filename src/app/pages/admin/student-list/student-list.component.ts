@@ -25,8 +25,29 @@ export class StudentListComponent implements OnInit {
     })
 
 
+
+
+
+
+
     
   }
+
+
+
+
+  // delUser(form){
+
+  //   console.log(form.value);
+  //   let datajson=`{"userpassword":"${form.value.userpassword }"}`;
+  //   // let datajson=`{"userpassword":"testkkk"}`;
+  //   console.log(datajson);
+  //   this.apiService.postAPI(`dev/deleteuser?userId=${this.userId}`, datajson).subscribe((data)=>{
+  //   console.log(data);
+  //   this.router.navigate(['/users/manage-user-account']);
+  //   })
+
+  // }
  
 
 }

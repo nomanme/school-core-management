@@ -109,8 +109,7 @@
                                                         </select>
                                                       </div>
                                                       <div class="input group col-sm-3" >
-                                                        <input [ngClass]="(errorfirstname=='')?'form-control':'form-control is-invalid'" class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name" [(ngModel)]="firstName" required >
-                                                        <span class="star">*</span>
+                                                        <input [ngClass]="(errorfirstname=='')?'form-control':'form-control is-invalid'" class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name" [(ngModel)]="firstName" required><span class="star">*</span>
                                                       </div>
                                                       <div class="input-group col-sm-3">
                                                         <input class="form-control" type="text" name="middleName" id="middleName" placeholder="Middle Name" [(ngModel)]="middleName">
@@ -134,7 +133,7 @@
                                                         <div class="form-group row">
                                                           <label for="dob" class="col-sm-4 control-label" >Date of Birth<span class="star">*</span></label> 
                                                           <div class="col-sm-8" id="DateofBirth" data-target-input="nearest">          
-                                                            <input [ngClass]="(errordob=='')?'form-control':'form-control is-invalid'" type="date" class="form-control datetimepicker-input" name="dob" id="dob"  data-target="#reservationdate" placeholder="17/9/1999" [(ngModel)]="dob" required>
+                                                            <input [ngClass]="(errordob=='')?'form-control':'form-control is-invalid'"  type="date" class="form-control datetimepicker-input" name="dob" id="dob"  data-target="#reservationdate" placeholder="17/9/1999" [(ngModel)]="dob" required>
                                                             
                                                           </div>
                                                           

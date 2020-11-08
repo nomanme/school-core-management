@@ -61,8 +61,10 @@ export class EditCourseUnitComponent implements OnInit {
     let datajson=`{"descriptions":"${form.value.descriptions}", "unitType":"${form.value.unitType}", "vetFlag":"${form.value.vetFlag}", "AVETMISS":"${form.value.AVETMISS }"}`;
     console.log(datajson);
     
+    
     this.apiService.postAPI(`dev/editcourseunit?courseUnitId=${this.courseUnitId}`, datajson).subscribe((data)=>{
     console.log(data);
+    console.log();
     this.router.navigate(['/course/list-course-units']);
     })
 
@@ -79,5 +81,6 @@ export class EditCourseUnitComponent implements OnInit {
   //   })
 
   // }
+
 
 }

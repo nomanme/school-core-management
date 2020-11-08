@@ -1,4 +1,4 @@
-<div class="content-wrapper">
+<div class="content-wrapper"> 
 
     <section class="content-header">
       <div class="container-fluid">
@@ -176,14 +176,16 @@
 
                             <div class="form-group row">
                               <label for="applyForRPL" class="col-sm-3 control-label gender" >Apply For RPL<span class="star">*</span></label>
-                              <div class="col-sm-9" [ngClass]="(error12=='')?'form-control select2':'form-control select2 is-invalid'" >
-                                <div class="form-check radio" >
-                                  <input class="form-check-input" type="radio" name="applyForRPL" id="applyForRPL1" value="1" [(ngModel)]="applyForRPL">
-                                  <label class="form-check-label">Yes</label>
-                                </div>
-                                <div class="form-check radio">
-                                  <input class="form-check-input" type="radio" name="applyForRPL" id="applyForRPL2" value="2" [(ngModel)]="applyForRPL">
-                                  <label class="form-check-label">No</label>
+                              <div class="col-sm-9">
+                                <div [ngClass]="(error12=='')?'form-control select2':'form-control select2 is-invalid'">
+                                  <div class="form-check radio" >
+                                    <input class="form-check-input" type="radio" name="applyForRPL" id="applyForRPL1" value="1" [(ngModel)]="applyForRPL">
+                                    <label class="form-check-label">Yes</label>
+                                  </div>
+                                  <div class="form-check radio">
+                                    <input class="form-check-input" type="radio" name="applyForRPL" id="applyForRPL2" value="2" [(ngModel)]="applyForRPL">
+                                    <label class="form-check-label">No</label>
+                                  </div>
                                 </div>
                               </div>
                             </div>
