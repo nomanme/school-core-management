@@ -45,7 +45,7 @@
                                                 <label for="roleName" class="col-sm-3 control-label">Role Name<span class="star">*</span></label>
                                                 <div class="col-sm-9"> 
                                                   <div class="input-group">
-                                                      <input class="form-control" type="text" name="roleName" id="roleName" [(ngModel)]="roleName" placeholder="Enter role name here" required>
+                                                      <input [ngClass]="(error0=='')?'form-control is-invalid':'form-control'" class="form-control" type="text" name="roleName" id="roleName" [(ngModel)]="roleName" placeholder="Enter role name here" required>
                                                   </div>         
                                                 </div>
                                               </div>
@@ -54,7 +54,7 @@
                                             <div class="form-group row">
                                               <label for="roleGroup" class="col-sm-3 col-form-label">Role Group<span class="star">*</span></label>
                                               <div class="col-sm-9">
-                                                <input  type="text" class="form-control" id="roleGroup" name="roleGroup" [(ngModel)]="roleGroup" placeholder="Enter role group here" required>
+                                                <input [ngClass]="(error1=='')?'form-control is-invalid':'form-control'" class="form-control" type="text" name="roleName" id="roleName"  type="text" class="form-control" id="roleGroup" name="roleGroup" [(ngModel)]="roleGroup" placeholder="Enter role group here" required>
                                               </div>
                                             </div>
   
@@ -67,9 +67,7 @@
                                       <div class="submit-button">
                                         <button type="submit" (click)="createRole(f)" class="btn btn-primary" name="submit" id="submit">Submit</button>
                                       </div>
-                                              
-                                                
-                                            
+                             
                                     </div> <!--card-body-->
                                 </form>     
                             </div> <!--card card-primary-->

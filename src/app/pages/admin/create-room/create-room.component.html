@@ -39,7 +39,7 @@
                                                       <label for="venueId" class="col-sm-4 control-label">Venue Id<span class="star">*</span></label> 
                                                         <div class="col-sm-8">   
                                                             <div class="input-group">
-                                                              <input [(ngModel)]="venueId" type="text" class="form-control" name="venueId" id="venueId" placeholder="Enter roon ID here" required>
+                                                              <input [ngClass]="(error3=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="venueId" type="text" class="form-control" name="venueId" id="venueId" placeholder="Enter roon ID here" required>
                                                             </div>       
                                                         </div>
                                                     </div>
