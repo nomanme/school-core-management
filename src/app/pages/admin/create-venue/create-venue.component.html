@@ -28,6 +28,14 @@
                           <div class="card-header">
                               <h4 class="card-title">Create Venue</h4>
                           </div>
+
+                            <div class="col-sm-12" *ngIf="errors==''">
+                              <div class="text-danger">
+                                {{allerrors}}
+                            
+                              </div>
+                            </div>
+
                           <form  #f = "ngForm">
                               <div class="card-body">
                                   <div class="row">
@@ -39,7 +47,7 @@
                                               <label for="venueCode" class="col-sm-4 label">Venue Code<span class="star">*</span></label> 
                                                 <div class="col-sm-8">   
                                                     <div class="input-group">
-                                                      <input [(ngModel)]="venueCode" type="text" class="form-control" name="venueCode" id="venueCode" placeholder="Enter venue code here" required>
+                                                      <input [ngClass]="(error1=='')?'form-control select2':'form-control select2 is-invalid'" [(ngModel)]="venueCode" data-dropdown-css-class="select2-danger" type="text" class="form-control" name="venueCode" id="venueCode" placeholder="Enter venue code here" required>
                                                     </div>       
                                                 </div>
                                             </div>
