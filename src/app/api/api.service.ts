@@ -37,9 +37,9 @@ export class ApiService {
   api_url = 'https://0p8y7okgr2.execute-api.ap-southeast-2.amazonaws.com';
   api_url2 = 'https://2olljr3w8i.execute-api.ap-southeast-2.amazonaws.com'; 
   api_url3 = 'https://9ivnf9l6xc.execute-api.ap-southeast-2.amazonaws.com';
+  redirectUrl: string;
  
   constructor(private httpClient: HttpClient) { }
-
   public getUser(url='dev/getuser') {
     // console.log(`${this.api_url}/${url}`)
     return this.httpClient.get(`${this.api_url}/${url}`);
@@ -111,4 +111,60 @@ export class ApiService {
   public getLocalStorage(key){
     return localStorage.getItem(key);
   }
+
+
+
+  public auth(user) {
+    let username=user.username;
+    return this.httpClient.post(`${this.api_url}/auth`, user)
+    .pipe(map(user => {
+      console.log(user['error']);
+      if(user['error']==false){
+        this.setToken(user['data'][0]['username'], user['data'][0]['role'], user['data'][0]['id']);
+      }
+      return user;
+      }));
+}
+
+
+
+  setToken(token: string, userType, userID) {
+    localStorage.setItem('token', token);
+    localStorage.setItem('userID', userID);
+    if(userType==1){
+      localStorage.setItem('userType', 'Admin');
+    }else{
+      localStorage.setItem('userType', 'User');
+    }
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
+  }
+  getTokenID() {
+    return localStorage.getItem('userID');
+  }
+  getuserType() {
+    return localStorage.getItem('userType');
+  }
+  deleteToken() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userType');
+    localStorage.removeItem('userID');
+  }
+  isLoggedIn() {
+    const usertoken = this.getToken();
+    if (usertoken != null) {
+      return true
+    }
+    return false;
+  }
+  isAdmin() {
+    const userType = this.getuserType();
+    if (userType == 'Admin') {
+      return true;
+    }
+    return false;
+  }
+
 }

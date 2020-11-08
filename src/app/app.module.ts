@@ -129,6 +129,7 @@ import { CourseUnitComponent } from './pages/course/course-unit/course-unit.comp
 import { CreateCourseUnitComponent } from './pages/course/create-course-unit/create-course-unit.component';
 import { EditCourseUnitComponent } from './pages/course/edit-course-unit/edit-course-unit.component';
 import { ViewCourseUnitComponent } from './pages/course/view-course-unit/view-course-unit.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -253,6 +254,7 @@ import { ViewCourseUnitComponent } from './pages/course/view-course-unit/view-co
     CreateCourseUnitComponent,
     EditCourseUnitComponent,
     ViewCourseUnitComponent,
+    LoginComponent,
   ],
 
   imports: [

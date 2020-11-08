@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { AuthGuardService } from './guard/auth-guard.service';
+
 import { HomeComponent } from './pages/home/home.component';
 //Staff
 import { ProfileComponent } from './pages/staff/profile/profile.component';
@@ -150,6 +153,7 @@ import { UseractivityComponent } from './pages/users/useractivity/useractivity.c
 import { CreateUserComponent } from './pages/users/create-user/create-user.component';
 import { ViewUsersComponent } from './pages/users/view-users/view-users.component';
 import { EditUsersComponent } from './pages/users/edit-users/edit-users.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -160,7 +164,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   //Staff
-  { path: 'staff/profile', component: ProfileComponent },
+  { path: 'staff/profile', component: ProfileComponent, canActivate:[AuthGuardService] },
   { path: 'staff/add-staff', component: AddstaffComponent },
   { path: 'staff/documents', component: DocumentsComponent },
   { path: 'staff/email', component: EmailComponent },
@@ -303,6 +307,7 @@ const routes: Routes = [
 { path: 'users/view-user/:id', component: ViewUsersComponent },
 { path: 'users/edit-user/:id', component: EditUsersComponent },
 
+{ path: 'login', component: LoginComponent },
 
   
 ];
