@@ -9,6 +9,10 @@ import { ApiService } from 'src/app/api/api.service';
 })
 export class CreateVenueComponent implements OnInit {
 
+  getstate;
+  getcountry;
+  gettrainingOrg;
+
   venues;
   dataString;
   ABN;
@@ -45,6 +49,18 @@ export class CreateVenueComponent implements OnInit {
   constructor(private apiService: ApiService, private router:Router) { }
 
   ngOnInit(): void {
+
+    this.apiService.getAPI3('dev/getstate').subscribe((data)=>{
+      this.getstate=data;
+    })
+
+    this.apiService.getAPI3('dev/getcountry').subscribe((data)=>{
+      this.getcountry=data;
+    })
+
+    this.apiService.getAPI('dev/gettrainingOrg').subscribe((data)=>{
+      this.gettrainingOrg=data;
+    })
  
   }
 
@@ -78,7 +94,7 @@ export class CreateVenueComponent implements OnInit {
     console.log(this.dataString);
     this.apiService.postAPI('dev/addvenue', this.dataString).subscribe((data)=>{
       console.log(data);
-      //  this.router.navigate(['/admin/list-venue']); 
+       this.router.navigate(['/admin/list-venue']); 
     })
 
   }

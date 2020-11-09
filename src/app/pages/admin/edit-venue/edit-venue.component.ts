@@ -20,10 +20,9 @@ export class EditVenueComponent implements OnInit {
 
 // `dev/user?userId=${}`
 
-    this.apiService.getAPI(`dev/venue?venueId=${this.venueId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getvenue?venueId=${this.venueId}`).subscribe((data)=>{
       console.log(data);
       this.venue=data[0];
-      // this.student=this.getStudentFromList(this.studentID, data);
       console.log(this.venue)
     })
   }
@@ -33,9 +32,9 @@ export class EditVenueComponent implements OnInit {
     console.log(form.value);
     let datajson=`{"venueId":"1","roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}", "venueId":"${form.value.venueId}"}`;
     console.log(datajson);
-    this.apiService.putAPI(`dev/venue?venueId=${this.venueId}`, datajson).subscribe((data)=>{
+    this.apiService.postAPI(`dev/editvenue?venueId=${this.venueId}`, datajson).subscribe((data)=>{
       console.log(data);
-      // this.router.navigate(['/admin/list-venueroom']);
+      this.router.navigate(['/admin/list-venueroom']);
     })
 
 }
