@@ -18,13 +18,13 @@ export class ViewVenueComponent implements OnInit {
   ngOnInit(): void {
     this.venueId= this.activatedRoute.snapshot.paramMap.get('id');
     
-    this.apiService.getAPI(`dev/venue?venueId=${this.venueId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getvenue?venueId=${this.venueId}`).subscribe((data)=>{
       console.log(data);
       this.venues=data;
     })
 
     
   }
-
+ 
 
 }

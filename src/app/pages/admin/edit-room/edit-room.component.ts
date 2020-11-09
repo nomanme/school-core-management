@@ -11,29 +11,25 @@ export class EditRoomComponent implements OnInit {
 
   venueroomId;
   venueroom;
+  venueId;
 
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
-
   ngOnInit(): void {
     this.venueroomId= this.activatedRoute.snapshot.paramMap.get('id');
-
-// `dev/user?userId=${}`
-
-    this.apiService.getAPI(`dev/venueroom?venueroomId=${this.venueroomId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getvenueroom?venueroomId=${this.venueroomId}`).subscribe((data)=>{
       console.log(data);
       this.venueroom=data[0];
-      // this.student=this.getStudentFromList(this.studentID, data);
       console.log(this.venueroom)
     })
   }
-
+  
   editRoom(form){
 
     console.log(form.value);
     let datajson=`{"venueroomId":"1","roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}", "venueId":"${form.value.venueId}"}`;
     console.log(datajson);
-    this.apiService.putAPI(`dev/venueroom?venueroomId=${this.venueroomId}`, datajson).subscribe((data)=>{
+    this.apiService.postAPI(`dev/editvenueroom?venueroomId=${this.venueroomId}`, datajson).subscribe((data)=>{
       console.log(data);
       this.router.navigate(['/admin/list-venueroom']);
     })
