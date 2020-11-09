@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ManagevenueComponent } from './managevenue.component';
 
 describe('ManagevenueComponent', () => {
@@ -8,9 +7,8 @@ describe('ManagevenueComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManagevenueComponent ]
-    })
-    .compileComponents();
+      declarations: [ManagevenueComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

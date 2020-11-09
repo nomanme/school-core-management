@@ -1,247 +1,246 @@
 .main-sidebar {
-    height: 100%;
-    width: 19%;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
+  height: 100%;
+  width: 19%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
 }
 .brand-image {
-    height: 30px;
-    width: 30px;
-    padding-right: 4px;
-    opacity: .8
+  height: 30px;
+  width: 30px;
+  padding-right: 4px;
+  opacity: 0.8;
 }
 .sidenav-heading {
-    text-align: center;
-    font-size: 20px;
-    padding-bottom: 0.82rem!important;
-    padding-right: 1.5rem!important;
-    padding-top: .6rem!important;
-    background-color: #343a40;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 0.82rem !important;
+  padding-right: 1.5rem !important;
+  padding-top: 0.6rem !important;
+  background-color: #343a40;
 }
 .sidenav-heading a {
-    color: #c2c7d0;
-    text-decoration: none;
+  color: #c2c7d0;
+  text-decoration: none;
 }
-.sidenav-heading a:hover{
-    text-decoration: none;
-    color: #e6e6e8;
+.sidenav-heading a:hover {
+  text-decoration: none;
+  color: #e6e6e8;
 }
 .sidebar {
-    height: 100%;
-    width: 19%;
-    position: fixed;
-    left: 0;
-    background-color:#343a40;
-  }
+  height: 100%;
+  width: 19%;
+  position: fixed;
+  left: 0;
+  background-color: #343a40;
+}
 .user-panel {
-    text-align: center;
-    border-top: 1px solid #4f5962;
-    border-bottom: 1px solid #4f5962;
+  text-align: center;
+  border-top: 1px solid #4f5962;
+  border-bottom: 1px solid #4f5962;
 }
 nav.mt-2 {
-    padding: 2px;
+  padding: 2px;
 }
 li.nav-item {
-    margin: 2px 0 2px 0;
+  margin: 2px 0 2px 0;
 }
 .sidebar a.d-block:hover {
-    text-decoration: none;
-    color: #c2c7d0;
+  text-decoration: none;
+  color: #c2c7d0;
 }
 .sidebar a {
-    color:  #c2c7d0;
+  color: #c2c7d0;
 }
 
 i.fas.fa-circle.nav-icon {
-    float: left;
-    font-size: 1.1rem;
-    margin-top: 3px;
-    margin-right: 5px;
-    color:  #c2c7d0;
+  float: left;
+  font-size: 1.1rem;
+  margin-top: 3px;
+  margin-right: 5px;
+  color: #c2c7d0;
 }
 i.nav-icon.fas.fa-edit {
-    float: left;
-    font-size: 1.3rem;
-    margin-top: 5px;
-    margin-right: 5px;
-    color:  #c2c7d0;
+  float: left;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  margin-right: 5px;
+  color: #c2c7d0;
 }
 i.far.fa-circle.nav-icon {
-    float: left;
-    font-size: 1.3rem;
-    margin-right: 5px;
-    padding-top: 4px;
-    color:  #c2c7d0;
+  float: left;
+  font-size: 1.3rem;
+  margin-right: 5px;
+  padding-top: 4px;
+  color: #c2c7d0;
 }
 i.far.fa-dot-circle.nav-icon {
-    float: left;
-    font-size: 1.3rem;
-    margin-right: 5px;
-    padding-top: 4px;
-    color:  #c2c7d0;
+  float: left;
+  font-size: 1.3rem;
+  margin-right: 5px;
+  padding-top: 4px;
+  color: #c2c7d0;
 }
 li.nav-item {
-    width: 100%;
+  width: 100%;
 }
 .nav-link.profile {
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 .nav-link.admin {
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 .nav-link p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 ol.nav-item {
-    margin-left: 0;
-    padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
 i.fas.fa-angle-left.right {
-    float: right;
-    margin-top: 5px;
+  float: right;
+  margin-top: 5px;
 }
 i.fas.fa-angle-left.right:hover {
-    transform: rotate(-90deg);
-    transition: 1s;
+  transform: rotate(-90deg);
+  transition: 1s;
 }
 .dropdown-btn i.fas.fa-angle-left.right:active {
-    transform: rotate(-90deg);
-    transition: 1s;
+  transform: rotate(-90deg);
+  transition: 1s;
 }
 button#dropdownMenuButton {
-    background-color: none;
-    
+  background-color: none;
 }
 .dropdown-toggle::after {
-    
-    margin-left: 115px;
+  margin-left: 115px;
 }
 
-.dropdown-btn:hover{
-    color: #c2c7d0;
-} 
-.dropdown-btn:active{
-    color: #c2c7d0;
-} 
+.dropdown-btn:hover {
+  color: #c2c7d0;
+}
+.dropdown-btn:active {
+  color: #c2c7d0;
+}
 button.dropdown-btn.active i.fas.fa-angle-left.right {
-    transform: rotate(-90deg);
-    transition: 1s;
+  transform: rotate(-90deg);
+  transition: 1s;
 }
-  /* Style the sidenav links and the dropdown button */
-    .nav-sidebar a, .dropdown-btn {
-    padding: 6px 2px 6px 3px;
-    text-decoration: none;
-    font-size: 16px;
-    color:  #c2c7d0;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-    position: relative;
-  }
-  
-  /* On mouse-over */
-  .nav-sidebar a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
-  }
-  
-  
-  /* Add an active class to the active dropdown button */
-  .dropdown-btn:hover:hover {
-    background-color: #4b5157; 
-    border-radius: 5px;
-  }
-  .active {
-    background-color:#4b5157;
-    color: white;
-    width: 100%;
-    border-radius: 5px;
-  }
-  .dropdown-container a:hover {
-    background-color:#4b5157;
-    border-radius: 5px;
-  }
-  
-  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-  .dropdown-container {
-    margin-top: 5px;
-    display: none;
-    padding-left: 2px;
-    position: relative;
-    max-height: 100%;
-  }
+/* Style the sidenav links and the dropdown button */
+.nav-sidebar a,
+.dropdown-btn {
+  padding: 6px 2px 6px 3px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #c2c7d0;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
 
+/* On mouse-over */
+.nav-sidebar a:hover,
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
 
-  .fa-caret-down {
-    float: right;
-    padding-right: 8px;
-  }
-  
-  /* Some media queries for responsiveness */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+/* Add an active class to the active dropdown button */
+.dropdown-btn:hover:hover {
+  background-color: #4b5157;
+  border-radius: 5px;
+}
+.active {
+  background-color: #4b5157;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+}
+.dropdown-container a:hover {
+  background-color: #4b5157;
+  border-radius: 5px;
+}
 
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  margin-top: 5px;
+  display: none;
+  padding-left: 2px;
+  position: relative;
+  max-height: 100%;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
 
 /*Scrollable div*/
 .outer-div {
-    display: inline-block;
-    height: 100vh;
-    overflow: hidden;
+  display: inline-block;
+  height: 100vh;
+  overflow: hidden;
 }
 .scrollable {
-    height: calc(100vh - 8rem);
-    max-height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  height: calc(100vh - 8rem);
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
- 
+
 ::-webkit-scrollbar-track {
-    background-color: transparent;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+  background-color: transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 20px;
-    background: #868e96;
-    height: 20%;
-    transform: translate(0px, 14.512px);
-    opacity: 0.5;
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+  background: #868e96;
+  height: 20%;
+  transform: translate(0px, 14.512px);
+  opacity: 0.5;
 }
 
 button.dropdown-btn.active {
-    background-color: #7d7f82;
+  background-color: #7d7f82;
 }
 button.btn.btn-link.active {
-    background-color: #7d7f82;
+  background-color: #7d7f82;
 }
 
-
-.show{
-    display: block;
+.show {
+  display: block;
 }
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
-
 
 .main-sidebar .sidebar a.sub-item.current {
-    background: #5c6671;
-    color: white;
-    border-radius: 5px;
+  background: #5c6671;
+  color: white;
+  border-radius: 5px;
 }

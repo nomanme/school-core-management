@@ -1,39 +1,39 @@
 .row {
-    margin: 0;
+  margin: 0;
 }
 .app-sidebar {
-    width: 19%;
-    background-color: #343a40;
-    color: #c2c7d0;
-    padding: 0;
+  width: 19%;
+  background-color: #343a40;
+  color: #c2c7d0;
+  padding: 0;
 }
 .content-wrapper {
-    width: 81%;
-    position: relative;
+  width: 81%;
+  position: relative;
 }
 .app-header {
-    width: 81%;
-    position: fixed;
-    top: 0px;
-    right: 0;
-    height: 57px;
-    z-index: 100;
-    background-color: #fff;
+  width: 81%;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  height: 57px;
+  z-index: 100;
+  background-color: #fff;
 }
 .inner-content {
-    width: 100%;
-    background-color: #e9ecef;
-    position: absolute;
-    top: 57px;
-    right: 0;
-    min-height: 560px;
-    max-height: auto;
-    padding-bottom: 55px;
+  width: 100%;
+  background-color: #e9ecef;
+  position: absolute;
+  top: 57px;
+  right: 0;
+  min-height: 560px;
+  max-height: auto;
+  padding-bottom: 55px;
 }
 
 .app-footer {
-    width: 81%;
-    position: fixed;
-    bottom: 0px;
-    height: 50px;
+  width: 81%;
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
 }

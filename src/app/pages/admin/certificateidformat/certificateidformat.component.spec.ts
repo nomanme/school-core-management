@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CertificateidformatComponent } from './certificateidformat.component';
 
 describe('CertificateidformatComponent', () => {
@@ -8,9 +7,8 @@ describe('CertificateidformatComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CertificateidformatComponent ]
-    })
-    .compileComponents();
+      declarations: [CertificateidformatComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
