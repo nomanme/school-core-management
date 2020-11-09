@@ -38,7 +38,11 @@ export class CreateRoomComponent implements OnInit {
   createRoom(form){ 
  
 
-    if(form.value.venueId ==''){
+// <<<<<<< HEAD
+//     // if(form.value.venueId ==''){
+// =======
+      if(form.value.venueId ==''){
+// >>>>>>> 5171fb5077006734ec04e2d16ede2f1424ce8b2b
       this.error1 ='true'; 
       this.errors='true';
      
@@ -48,6 +52,10 @@ export class CreateRoomComponent implements OnInit {
       this.errors='false';
     }
 
+// <<<<<<< HEAD
+// =======
+
+// >>>>>>> 5171fb5077006734ec04e2d16ede2f1424ce8b2b
     if(form.value.roomName ==''){
       this.error2 ='true'; 
       this.errors='true';
@@ -56,7 +64,36 @@ export class CreateRoomComponent implements OnInit {
     else{
       this.error2 ='';
       this.errors='false';
-    }
+// <<<<<<< HEAD
+//     }
+// =======
+     
+//     }
+
+//     if(form.value.roomNumber ==''){
+//       this.error3 ='true'; 
+//       this.errors='true';
+     
+//     }
+//     else{
+//       this.error3 ='';
+//       this.errors='false';
+     
+//     }
+
+//      if(form.value.roomNumber ==''){
+//       this.error3 ='true'; 
+//       this.errors='true';
+     
+//     }
+//     else{
+//       this.error3 ='';
+//       this.errors='false';
+     
+//     }
+
+//     if (this.errors != 'true'){
+// >>>>>>> 5171fb5077006734ec04e2d16ede2f1424ce8b2b
 
     if(form.value.roomNumber ==''){
       this.error3 ='true'; 

@@ -12,6 +12,7 @@ export class SidebarComponent implements OnInit {
   parts;
   active_parent = '';
   active_slug = '';
+  classList='';  
 
   constructor() {
     this.currentURL = window.location.href;
@@ -92,7 +93,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     const current = document. getElementsByClassName(this.active_slug)[0];
-    current. classList. add('current');
+    current.classList.add('current');
   }
 
   getDataForDropDown($event: any) {
