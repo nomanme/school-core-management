@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-agentreg',
   templateUrl: './agentreg.component.html',
-  styleUrls: ['./agentreg.component.css']
+  styleUrls: ['./agentreg.component.css'],
 })
 export class AgentregComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

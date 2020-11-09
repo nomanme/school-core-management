@@ -1,21 +1,24 @@
 <div class="content-wrapper">
-
   <section class="content-header">
     <div class="container-fluid">
       <div class="row m-0 p-0">
         <div class="col-sm-12">
-            <h3 class="page-heading">Checklist Setup</h3>
+          <h3 class="page-heading">Checklist Setup</h3>
         </div>
         <div class="col-sm-12 text-center">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Checklist Setup</li>
-            </ol>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Checklist
+              Setup
+            </li>
+          </ol>
         </div>
         <span class="text-star">Please setup Checklist information below</span>
       </div>
-    </div><!-- container-fluid --> 
-  </section> 
+    </div>
+    <!-- container-fluid -->
+  </section>
 
   <!-- Main content -->
   <section class="content">
@@ -34,38 +37,84 @@
                   <div class="col-md-12 sub-form">
                     <div class="inner-row">
                       <div class="form-group row">
-                        <label for="checkListname" class="col-sm-3 control-label">Mandatory?</label>
+                        <label
+                          for="checkListname"
+                          class="col-sm-3 control-label"
+                          >Mandatory?</label
+                        >
                         <div class="col-sm-9">
                           <div class="form-check radio">
-                            <input class="form-check-input" type="radio" name="mandatory[]" id="mandatoryYes" value="mandatoryYes" checked>
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="mandatory[]"
+                              id="mandatoryYes"
+                              value="mandatoryYes"
+                              checked
+                            />
                             <label class="form-check-label">Yes</label>
                           </div>
                           <div class="form-check radio">
-                            <input class="form-check-input" type="radio" name="mandatory[]" id="mandatoryNo" value="mandatoryNo">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="mandatory[]"
+                              id="mandatoryNo"
+                              value="mandatoryNo"
+                            />
                             <label class="form-check-label">No</label>
                           </div>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="checkListname" class="col-sm-3 control-label">Check List Name<span class="star">*</span></label>
+                        <label
+                          for="checkListname"
+                          class="col-sm-3 control-label"
+                          >Check List Name<span class="star">*</span></label
+                        >
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" name="checkListname" id="checkListname" placeholder="Enter check list name" required>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="checkListname"
+                            id="checkListname"
+                            placeholder="Enter check list name"
+                            required
+                          />
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="description" class="col-sm-3 control-label">Description<span class="star">*</span></label>
+                        <label for="description" class="col-sm-3 control-label"
+                          >Description<span class="star">*</span></label
+                        >
                         <div class="col-sm-9">
                           <div class="input-group">
-                            <textarea class="form-control" rows="3" name="description" id="description" placeholder="Write Description..." required></textarea>
+                            <textarea
+                              class="form-control"
+                              rows="3"
+                              name="description"
+                              id="description"
+                              placeholder="Write Description..."
+                              required
+                            ></textarea>
                           </div>
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="checkListfor" class="col-sm-3 control-label">Checklist For</label>
+                        <label for="checkListfor" class="col-sm-3 control-label"
+                          >Checklist For</label
+                        >
                         <div class="col-sm-9">
                           <div class="input-group">
-                            <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="checkListfor" id="checkListfor">
-                              <option selected="selected">--Select Option----</option>
+                            <select
+                              class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger"
+                              name="checkListfor"
+                              id="checkListfor"
+                            >
+                              <option selected="selected">
+                                --Select Option----
+                              </option>
                               <option>Offer</option>
                               <option>Offer</option>
                               <option>Offer</option>
@@ -74,21 +123,35 @@
                           </div>
                         </div>
                       </div>
-                    </div><!--inner-row-->
-                  </div><!--col-md-12 sub-form-->
-                </div> <!--row-->
+                    </div>
+                    <!--inner-row-->
+                  </div>
+                  <!--col-md-12 sub-form-->
+                </div>
+                <!--row-->
                 <!--submit option-->
                 <div class="submit-button">
-                  <button type="submit" class="btn btn-success" name="adminaddchecklistbtn" id="adminaddchecklistbtn">Add</button>
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    name="adminaddchecklistbtn"
+                    id="adminaddchecklistbtn"
+                  >
+                    Add
+                  </button>
                 </div>
-              </div><!--card-body-->
+              </div>
+              <!--card-body-->
             </form>
-          </div> <!--card card-primary-->
-        </div> <!--col-md-6 offset-md-2-->         
-      </div> <!--row-->
-    </div> <!--container-fluid-->
-  </section> <!--section2-->    
-</div><!--content-wrapper-->
-
-
-   
+          </div>
+          <!--card card-primary-->
+        </div>
+        <!--col-md-6 offset-md-2-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-fluid-->
+  </section>
+  <!--section2-->
+</div>
+<!--content-wrapper-->

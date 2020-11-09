@@ -37,3 +37,4 @@ export class OfferdocumentchecklistComponent implements OnInit {
     }
   }
 }
+console.log();

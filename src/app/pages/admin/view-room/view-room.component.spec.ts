@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ViewRoomComponent } from './view-room.component';
 
 describe('ViewRoomComponent', () => {
@@ -8,9 +7,8 @@ describe('ViewRoomComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewRoomComponent ]
-    })
-    .compileComponents();
+      declarations: [ViewRoomComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

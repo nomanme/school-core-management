@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChecklistsetupComponent } from './checklistsetup.component';
 
 describe('ChecklistsetupComponent', () => {
@@ -8,9 +7,8 @@ describe('ChecklistsetupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChecklistsetupComponent ]
-    })
-    .compileComponents();
+      declarations: [ChecklistsetupComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

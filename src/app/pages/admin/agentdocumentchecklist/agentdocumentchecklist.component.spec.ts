@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AgentdocumentchecklistComponent } from './agentdocumentchecklist.component';
 
 describe('AgentdocumentchecklistComponent', () => {
@@ -8,9 +7,8 @@ describe('AgentdocumentchecklistComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AgentdocumentchecklistComponent ]
-    })
-    .compileComponents();
+      declarations: [AgentdocumentchecklistComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SystemfieldsetupComponent } from './systemfieldsetup.component';
 
 describe('SystemfieldsetupComponent', () => {
@@ -8,9 +7,8 @@ describe('SystemfieldsetupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SystemfieldsetupComponent ]
-    })
-    .compileComponents();
+      declarations: [SystemfieldsetupComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
