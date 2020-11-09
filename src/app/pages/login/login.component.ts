@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const body = document. getElementsByTagName('body')[0];
+    body. classList. add('only_content');
   }
 
 }

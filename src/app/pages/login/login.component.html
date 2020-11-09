@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="login_form_container">
+    <div class="card card-primary mb-0">
+
+        <div class="card-header">
+            <h3 class="card-title">Login Form</h3>
+        </div>
+
+        <div class="card-body">
+
+            <form #f ="ngForm" action="" method="post">
+
+                <div class="container">
+
+                    <div class="form-group">
+                        <!-- <label for="uname"><b>Username</b></label> -->
+                        <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- <label for="psw"><b>Password</b></label> -->
+                        <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                    </div>
+                        
+                    <button type="submit" class="btn btn-info">Login</button>
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+
+                </div>
+
+                <div class="container">
+                    <span class="reg">Don't have an account? <a href="#">Register Now</a></span>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

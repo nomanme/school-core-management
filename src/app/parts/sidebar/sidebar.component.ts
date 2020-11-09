@@ -8,8 +8,44 @@ export class SidebarComponent implements OnInit {
 
   openDropDown = '';
   openSubDropDown = '';
+  currentURL = '';
+  parts;
+  active_parent = '';
 
-  constructor() { }
+  constructor() {
+    this.currentURL = window.location.href;
+    // this.currentURL = this.currentURL.split("/").pop();
+    this.parts = this.currentURL.split("/");
+    this.active_parent = this.parts[3];
+
+    if (this.active_parent == 'profile') {
+      this.openDropDown='profile-container';
+    }
+    else if (this.active_parent == 'admin') {
+      this.openDropDown='admin-container';
+    }
+    else if (this.active_parent == 'staff') {
+      this.openDropDown='staff-container';
+    }
+    else if (this.active_parent == 'compliance') {
+      this.openDropDown='complience-container';
+    }
+    else if (this.active_parent == 'course') {
+      this.openDropDown='course_site-container';
+    }
+    else if (this.active_parent == 'teacher') {
+      this.openDropDown='teacher-container';
+    }
+    else if (this.active_parent == 'timetable') {
+      this.openDropDown='timetable-container';
+    }
+    else if (this.active_parent == 'users') {
+      this.openDropDown='users-container';
+    }
+    else {
+      this.openDropDown='';
+    }
+  }
 
   ngOnInit(): void {
   }

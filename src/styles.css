@@ -8,3 +8,24 @@
 
 
 
+body.only_content .app-sidebar {
+    display: none;
+}
+
+body.only_content .app-header {
+    display: none;
+}
+
+body.only_content .app-footer {
+    display: none;
+}
+
+body.only_content .content-wrapper {
+    width: 100%;
+}
+
+body.only_content .inner-content {
+    top: unset;
+    padding: unset;
+    height: 100vh;
+}
