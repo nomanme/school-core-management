@@ -62,7 +62,6 @@
                             />
                           </div>
                         </div>
-<<<<<<< HEAD
                       </div>
 
                       <div class="form-group row">
@@ -149,63 +148,4 @@
     <!--container-fluid-->
   </section>
   <!--section2-->
-=======
-                        <form role="form" #f = "ngForm">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12 sub-form">
-                                        <div class="inner-row">
-                                             
-                                                    <div class="form-group row">
-                                                      <label for="venueId" class="col-sm-4 control-label">Venue Id<span class="star">*</span></label> 
-                                                        <div class="col-sm-8">   
-                                                            <div class="input-group">
-
-                                                              <input [ngClass]="(error1=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="venueId" type="text" class="form-control" name="venueId" id="venueId" placeholder="Enter roon ID here" required>
-
-                                                            </div>       
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="roomName" class="col-sm-4 control-label">Room Name<span class="star">*</span></label> 
-                                                        <div class="col-sm-8"> 
-                                                            <div class="input-group">
-                                                                <input [ngClass]="(error2=='')?'form-control select2':'form-control select2 is-invalid'" [(ngModel)]="roomName" class="form-control" type="text" name="roomName" id="roomName"  placeholder="Enter Room Name here" required>
-                                                            </div>         
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="roomNumber" class="col-sm-4 control-label">Room Number<span class="star">*</span></label> 
-                                                        <div class="col-sm-8"> 
-                                                            <div class="input-group">
-
-                                                                <input [ngClass]="(error3=='')?'form-control select2':'form-control select2 is-invalid'" [(ngModel)]="roomNumber" class="form-control" type="text" name="roomNumber" id="roomNumber"  placeholder="Enter Room Name here" required>
-                                                            </div>         
-                                                        </div>
-                                                    </div>
-                                        </div>
-                                        <!--inner-row-->
-                                    </div>
-                                    <!--col-md-12 sub-form-->
-                                </div> 
-                                <br>
-                                <div class="submit-button">
-                                    <button type="submit" (click)="createRoom(f)" class="btn btn-success" name="add" id="add">Add New</button>
-                                    <button type="submit" class="btn btn-warning" name="res" id="res">Reset</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div> 
-                    <!--card card-primary-->
-                </div> 
-                <!--col-md-6 offset-md-2-->
-            </div>
-             <!--row-->
-        </div> 
-        <!--container-fluid-->
-    </section>
-     <!--section2-->
->>>>>>> 69cb1f69007d53c66e72ce3d56d809d2e969d4d3
 </div>

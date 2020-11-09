@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UseractivityComponent } from './useractivity.component';
 
 describe('UseractivityComponent', () => {
@@ -8,9 +7,8 @@ describe('UseractivityComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UseractivityComponent ]
-    })
-    .compileComponents();
+      declarations: [UseractivityComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

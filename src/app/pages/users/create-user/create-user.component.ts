@@ -5,31 +5,26 @@ import { ApiService } from 'src/app/api/api.service';
 @Component({
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',
-  styleUrls: ['./create-user.component.css']
+  styleUrls: ['./create-user.component.css'],
 })
 export class CreateUserComponent implements OnInit {
-
   users;
   dataString;
-  email:null;
-  password:null;  
-  constructor(private apiService: ApiService, private router:Router) { }
+  email: null;
+  password: null;
+  constructor(private apiService: ApiService, private router: Router) {}
 
-  ngOnInit(): void {
- 
-  }
+  ngOnInit(): void {}
 
-  createUser(form){
+  createUser(form) {
+    this.dataString = `{"roleId":"1","email":"${form.value.email}", "userpassword":"${form.value.userpassword}"}`;
 
-    this.dataString=`{"roleId":"1","email":"${form.value.email}", "userpassword":"${form.value.userpassword}"}`;
-    
     console.log(this.dataString);
-    this.apiService.postAPI('dev/adduser', this.dataString).subscribe((data)=>{
-      console.log(data);
-      this.router.navigate(['/users/manage-user-account']);
-
-    })
+    this.apiService
+      .postAPI('dev/adduser', this.dataString)
+      .subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['/users/manage-user-account']);
+      });
   }
- 
- 
 }

@@ -1,58 +1,66 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/api/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api/api.service';
 
 @Component({
   selector: 'app-edit-users',
   templateUrl: './edit-users.component.html',
-  styleUrls: ['./edit-users.component.css']
+  styleUrls: ['./edit-users.component.css'],
 })
-export class EditUsersComponent implements OnInit { 
-
+export class EditUsersComponent implements OnInit {
   userId;
-  edituser={email:null, dateCreated:null, roleId:null, userId:null, userpassword:''};
+  edituser = {
+    email: null,
+    dateCreated: null,
+    roleId: null,
+    userId: null,
+    userpassword: '',
+  };
 
-  constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
-
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.userId= this.activatedRoute.snapshot.paramMap.get('id');
+    this.userId = this.activatedRoute.snapshot.paramMap.get('id');
 
-// `dev/user?userId=${}`
+    // `dev/user?userId=${}`
 
-    this.apiService.getAPI(`dev/getuser?userId=${this.userId}`).subscribe((data)=>{
-      console.log(data);
-      this.edituser=data[0];
-      // this.student=this.getStudentFromList(this.studentID, data);
-      console.log(this.edituser)
-    })
+    this.apiService
+      .getAPI(`dev/getuser?userId=${this.userId}`)
+      .subscribe((data) => {
+        console.log(data);
+        this.edituser = data[0];
+        // this.student=this.getStudentFromList(this.studentID, data);
+        console.log(this.edituser);
+      });
   }
 
-  updateUser(form){
-
+  updateUser(form) {
     console.log(form.value);
-    let datajson=`{"userpassword":"${form.value.userpassword }"}`;
+    let datajson = `{"userpassword":"${form.value.userpassword}"}`;
     // let datajson=`{"userpassword":"testkkk"}`;
     console.log(datajson);
-    this.apiService.postAPI(`dev/edituser?userId=${this.userId}`, datajson).subscribe((data)=>{
-    console.log(data);
-    this.router.navigate(['/users/manage-user-account']);
-    })
-
+    this.apiService
+      .postAPI(`dev/edituser?userId=${this.userId}`, datajson)
+      .subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['/users/manage-user-account']);
+      });
   }
- 
-  delUser(form){
 
+  delUser(form) {
     console.log(form.value);
-    let datajson=`{"userpassword":"${form.value.userpassword }"}`;
+    let datajson = `{"userpassword":"${form.value.userpassword}"}`;
     // let datajson=`{"userpassword":"testkkk"}`;
     console.log(datajson);
-    this.apiService.postAPI(`dev/deleteuser?userId=${this.userId}`, datajson).subscribe((data)=>{
-    console.log(data);
-    this.router.navigate(['/users/manage-user-account']);
-    })
-
+    this.apiService
+      .postAPI(`dev/deleteuser?userId=${this.userId}`, datajson)
+      .subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['/users/manage-user-account']);
+      });
   }
-
-
 }

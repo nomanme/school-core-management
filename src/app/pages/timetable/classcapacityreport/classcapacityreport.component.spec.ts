@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ClasscapacityreportComponent } from './classcapacityreport.component';
 
 describe('ClasscapacityreportComponent', () => {
@@ -8,9 +7,8 @@ describe('ClasscapacityreportComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClasscapacityreportComponent ]
-    })
-    .compileComponents();
+      declarations: [ClasscapacityreportComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

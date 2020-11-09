@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-studentapplication',
   templateUrl: './studentapplication.component.html',
-  styleUrls: ['./studentapplication.component.css']
+  styleUrls: ['./studentapplication.component.css'],
 })
 export class StudentapplicationComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

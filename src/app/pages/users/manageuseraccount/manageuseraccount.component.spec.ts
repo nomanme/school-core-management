@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ManageuseraccountComponent } from './manageuseraccount.component';
 
 describe('ManageuseraccountComponent', () => {
@@ -8,9 +7,8 @@ describe('ManageuseraccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManageuseraccountComponent ]
-    })
-    .compileComponents();
+      declarations: [ManageuseraccountComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

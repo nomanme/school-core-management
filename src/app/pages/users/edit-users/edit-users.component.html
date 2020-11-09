@@ -1,97 +1,145 @@
-
 <div class="content-wrapper">
- 
-    <section class="content-header">
-        <div class="container-fluid">
-          <div class="row m-0 p-0">
-            <div class="col-sm-12">
-                <h3 class="page-heading">Edit User</h3>
-            </div>
-            <div class="col-sm-12 text-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Edit User</li>
-                  </ol>
-            </div>
-          </div>
-        </div><!-- container-fluid --> 
-    </section>
-  
-    
-    <!-- Main content -->
-    <div class="row p-0 m-0">
-        <div class="col-md-8 offset-md-2">
-            <div class="row">
-                <div class="col-md-12">
-                    <section class="content">
-                        <div class="container-fluid">
-                        <!-- general form elements -->
-                            <div class="card card-primary mb-0"> 
-                              <div class="card-header">
-                                <h5 class="card-title">Edit User Account</h5>
-                              </div>
-                                <!-- form start -->
-                                <form #f ="ngForm">
-                                    <div class="card-body">
-  
-                                      <div class="row">
-                                        <div class="col-md-12 sub-form">
-                                          <div class="alert alert-success">
-                                            <strong>Success!</strong> Your account is updated.
-                                          </div>
-  
-                                          <div class="inner-row">
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+          <h3 class="page-heading">Edit User</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Edit User
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- container-fluid -->
+  </section>
 
-                                            <div class="form-group row">
-                                              <label for="roleId" class="col-sm-2 col-form-label">Role Id</label>
-                                              <div class="col-sm-10">
-                                                <input  type="text" class="form-control" id="roleId" name="roleId" [(ngModel)]='edituser.roleId' placeholder="roleId" value="{{edituser.roleId}}">
-                                              </div>
-                                            </div>
-  
-                                            <div class="form-group row">
-                                              <label for="exampleInputEmail1" class="col-sm-2 control-label alignStart">Email Address<span class="star">*</span></label>
-                                              <div class="col-sm-10">
-                                                <div class="input-group">
-                                                  <input  type="email" class="form-control" name="email" [(ngModel)]='edituser.email' id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{edituser.email}}" required>
-                                                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  
-                                                </div>
-                                              </div>
-                                            </div>
-  
-                                            <div class="form-group row">
-                                              <label for="inputPassword" class="col-sm-2 col-form-label">Password<span class="star">*</span></label>
-                                              <div class="col-sm-10">
-                                                <input  type="password" class="form-control" id="userpassword" name="userpassword" [(ngModel)]='edituser.userpassword' placeholder="Password" value="{{edituser.userpassword}}" required>
-                                              </div>
-                                            </div>
-  
-                                          </div><!--inner-row-->
-                                        </div><!--col-md-12 sub-form-->
-                                      </div><!-- row1 -->
-  
-                                      <br>
-  
-                                      <div class="submit-button">
-                                        <button type="submit" (click)="updateUser(f)" class="btn btn-primary" name="submit" id="submit">Submit</button>
-                                      </div>
-                                              
-                                                
-                                            
-                                    </div> <!--card-body-->
-                                </form>     
-                            </div> <!--card card-primary-->
-                        </div> <!--container-fluid-->     
-                    </section> <!--section2-->
+  <!-- Main content -->
+  <div class="row p-0 m-0">
+    <div class="col-md-8 offset-md-2">
+      <div class="row">
+        <div class="col-md-12">
+          <section class="content">
+            <div class="container-fluid">
+              <!-- general form elements -->
+              <div class="card card-primary mb-0">
+                <div class="card-header">
+                  <h5 class="card-title">Edit User Account</h5>
                 </div>
-            </div> <!--row1-->
-        </div><!--col-md-10offset-md-1-->
-    </div> <!--main content row-->
-  </div> <!--content-wrapper-->
-  
-  
-  
-  
-  
-   
+                <!-- form start -->
+                <form #f="ngForm">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12 sub-form">
+                        <div class="alert alert-success">
+                          <strong>Success!</strong> Your account is updated.
+                        </div>
+
+                        <div class="inner-row">
+                          <div class="form-group row">
+                            <label for="roleId" class="col-sm-2 col-form-label"
+                              >Role Id</label
+                            >
+                            <div class="col-sm-10">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="roleId"
+                                name="roleId"
+                                [(ngModel)]="edituser.roleId"
+                                placeholder="roleId"
+                                value="{{ edituser.roleId }}"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="exampleInputEmail1"
+                              class="col-sm-2 control-label alignStart"
+                              >Email Address<span class="star">*</span></label
+                            >
+                            <div class="col-sm-10">
+                              <div class="input-group">
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  name="email"
+                                  [(ngModel)]="edituser.email"
+                                  id="email"
+                                  aria-describedby="emailHelp"
+                                  placeholder="Enter email"
+                                  value="{{ edituser.email }}"
+                                  required
+                                />
+                                <small
+                                  id="emailHelp"
+                                  class="form-text text-muted"
+                                  >We'll never share your email with anyone
+                                  else.</small
+                                >
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="inputPassword"
+                              class="col-sm-2 col-form-label"
+                              >Password<span class="star">*</span></label
+                            >
+                            <div class="col-sm-10">
+                              <input
+                                type="password"
+                                class="form-control"
+                                id="userpassword"
+                                name="userpassword"
+                                [(ngModel)]="edituser.userpassword"
+                                placeholder="Password"
+                                value="{{ edituser.userpassword }}"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <!--inner-row-->
+                      </div>
+                      <!--col-md-12 sub-form-->
+                    </div>
+                    <!-- row1 -->
+
+                    <br />
+
+                    <div class="submit-button">
+                      <button
+                        type="submit"
+                        (click)="updateUser(f)"
+                        class="btn btn-primary"
+                        name="submit"
+                        id="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                  <!--card-body-->
+                </form>
+              </div>
+              <!--card card-primary-->
+            </div>
+            <!--container-fluid-->
+          </section>
+          <!--section2-->
+        </div>
+      </div>
+      <!--row1-->
+    </div>
+    <!--col-md-10offset-md-1-->
+  </div>
+  <!--main content row-->
+</div>
+<!--content-wrapper-->
