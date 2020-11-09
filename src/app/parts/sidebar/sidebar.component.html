@@ -27,14 +27,14 @@
           <div class="scrollable">
             <!--Student Application-->
             <li class="nav-item">
-              <a href="student-application"><i class="fas fa-circle nav-icon"></i>Student Online Application</a>
+              <a class="sub-item student-application" href="student-application"><i class="fas fa-circle nav-icon"></i>Student Online Application</a>
             </li> 
             <!--Agent Registration-->
             <li class="nav-item">
-              <a href="agent-registration"><i class="fas fa-circle nav-icon"></i>Agent Registration</a>
+              <a class="sub-item agent-registration" href="agent-registration"><i class="fas fa-circle nav-icon"></i>Agent Registration</a>
             </li> 
             <li class="nav-item">
-              <a href="agent-reg"><i class="fas fa-circle nav-icon"></i>Agent Reg</a>
+              <a class="sub-item agent-reg" href="agent-reg"><i class="fas fa-circle nav-icon"></i>Agent Reg</a>
             </li>
             <!--Profile Start-->
           <li class="nav-item">
@@ -42,9 +42,9 @@
               <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container profile-container" [ngStyle]="{display: openDropDown=='profile-container' ? 'block' : 'none'}">
-              <a href="profile/edit-profile"><i class="far fa-circle nav-icon"></i>Edit Profile</a>
-              <a href="profile/change-password"><i class="far fa-circle nav-icon"></i>Change Password</a>
-              <a href="profile/leave-info"><i class="far fa-circle nav-icon"></i>Leave Info</a>
+              <a class="sub-item edit-profile" href="profile/edit-profile"><i class="far fa-circle nav-icon"></i>Edit Profile</a>
+              <a class="sub-item change-password" href="profile/change-password"><i class="far fa-circle nav-icon"></i>Change Password</a>
+              <a class="sub-item leave-info" href="profile/leave-info"><i class="far fa-circle nav-icon"></i>Leave Info</a>
             </div>          
           </li> 
           <!--Profile End-->
@@ -54,35 +54,35 @@
             <button class="dropdown-btn" [ngClass]="{'active': openDropDown=='admin-container'}" (click)="$event.target.classList.contains('active') ? removeDataForDropDown($event) : getDataForDropDown($event)" data-opener="admin-container"><i class="nav-icon fas fa-edit"></i>Admin <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container" [ngStyle]="{display: openDropDown=='admin-container' ? 'block' : 'none'}">
-              <a href="admin/create-student"><i class="far fa-circle nav-icon"></i>Create Student</a>
-              <a href="admin/student-list"><i class="far fa-circle nav-icon"></i>Student List</a>
-              <a href="admin/create-student-enrolment"><i class="far fa-circle nav-icon"></i>Create Student Enrolment</a>
-              <a href="admin/list-student-enrolment"><i class="far fa-circle nav-icon"></i>Student Enrolment List</a>
-              <a href="admin/list-roles"><i class="far fa-circle nav-icon"></i>Roles</a>
-              <a href="admin/create-role"><i class="far fa-circle nav-icon"></i>Create Role</a>
+              <a class="sub-item create-student" href="admin/create-student"><i class="far fa-circle nav-icon"></i>Create Student</a>
+              <a class="sub-item student-list" href="admin/student-list"><i class="far fa-circle nav-icon"></i>Student List</a>
+              <a class="sub-item create-student-enrolment" href="admin/create-student-enrolment"><i class="far fa-circle nav-icon"></i>Create Student Enrolment</a>
+              <a class="sub-item list-student-enrolment" href="admin/list-student-enrolment"><i class="far fa-circle nav-icon"></i>Student Enrolment List</a>
+              <a class="sub-item list-roles" href="admin/list-roles"><i class="far fa-circle nav-icon"></i>Roles</a>
+              <a class="sub-item create-role" href="admin/create-role"><i class="far fa-circle nav-icon"></i>Create Role</a>
 
               <ol class="nav-item">
                 <!--Configuration Start-->
                 <button class="dropdown-btn" [ngClass]="{'active': openSubDropDown=='admin_configuration-container'}" (click)="$event.target.classList.contains('active') ? removeDataForSubDropDown($event) : getDataForSubDropDown($event)" data-opener="admin_configuration-container"><i class="far fa-circle nav-icon"></i>Configuration & Setup<i class="fas fa-angle-left right"></i>
                 </button>
                 <div class="dropdown-container" [ngStyle]="{display: openSubDropDown=='admin_configuration-container' ? 'block' : 'none'}">
-                  <a class="dropdown-item" href="admin/college-info"><i class="far fa-dot-circle nav-icon"></i>College Info</a>
-                  <a href="admin/list-student-enrolment"><i class="far fa-dot-circle nav-icon"></i>Student Enrollment</a>
-                  <a href="admin/create-student-enrolment"><i class="far fa-dot-circle nav-icon"></i>Create Student Enrollment</a>
-                  <a href="admin/overseas-student-health"><i class="far fa-dot-circle nav-icon"></i>OSHC Info</a>
-                  <a href="admin/offer-document-checklist"><i class="far fa-dot-circle nav-icon"></i>Offer Document Checklist</a>
-                  <a href="admin/agent-document"><i class="far fa-dot-circle nav-icon"></i>Agent Document Checklist</a>
-                  <a href="admin/edit-agent-status"><i class="far fa-dot-circle nav-icon"></i>Agent Status</a>
-                  <a href="admin/country-nationality-info"><i class="far fa-dot-circle nav-icon"></i>Country List Info</a>
-                  <a href="admin/edit-language-info"><i class="far fa-dot-circle nav-icon"></i>Language List Info</a>
-                  <a href="admin/certificateid-format"><i class="far fa-dot-circle nav-icon"></i>Certificate Id Format</a>
-                  <a href="admin/result-grade"><i class="far fa-dot-circle nav-icon"></i>Result Grade</a>
-                  <a href="admin/invention-strategy"><i class="far fa-dot-circle nav-icon"></i>Invention Strategy</a>
-                  <a href="admin/system-field-setup"><i class="far fa-dot-circle nav-icon"></i>System Field Setup</a>
-                  <a href="admin/checklist-setup"><i class="far fa-dot-circle nav-icon"></i>Checklist Setup</a>
-                  <a href="admin/custom-fields"><i class="far fa-dot-circle nav-icon"></i>Custom Fields</a>
-                  <a href="admin/additional-email"><i class="far fa-dot-circle nav-icon"></i>Additional Email Setup</a>
-                  <a href="admin/assessment-due-date"><i class="far fa-dot-circle nav-icon"></i>Assessment Due Date</a>
+                  <a class="sub-item college-info" href="admin/college-info"><i class="far fa-dot-circle nav-icon"></i>College Info</a>
+                  <a class="sub-item list-student-enrolment" href="admin/list-student-enrolment"><i class="far fa-dot-circle nav-icon"></i>Student Enrollment</a>
+                  <a class="sub-item create-student-enrolment" href="admin/create-student-enrolment"><i class="far fa-dot-circle nav-icon"></i>Create Student Enrollment</a>
+                  <a class="sub-item overseas-student-health" href="admin/overseas-student-health"><i class="far fa-dot-circle nav-icon"></i>OSHC Info</a>
+                  <a class="sub-item offer-document-checklist" href="admin/offer-document-checklist"><i class="far fa-dot-circle nav-icon"></i>Offer Document Checklist</a>
+                  <a class="sub-item agent-document" href="admin/agent-document"><i class="far fa-dot-circle nav-icon"></i>Agent Document Checklist</a>
+                  <a class="sub-item edit-agent-status" href="admin/edit-agent-status"><i class="far fa-dot-circle nav-icon"></i>Agent Status</a>
+                  <a class="sub-item country-nationality-info" href="admin/country-nationality-info"><i class="far fa-dot-circle nav-icon"></i>Country List Info</a>
+                  <a class="sub-item edit-language-info" href="admin/edit-language-info"><i class="far fa-dot-circle nav-icon"></i>Language List Info</a>
+                  <a class="sub-item certificateid-format" href="admin/certificateid-format"><i class="far fa-dot-circle nav-icon"></i>Certificate Id Format</a>
+                  <a class="sub-item result-grade" href="admin/result-grade"><i class="far fa-dot-circle nav-icon"></i>Result Grade</a>
+                  <a class="sub-item invention-strategy" href="admin/invention-strategy"><i class="far fa-dot-circle nav-icon"></i>Invention Strategy</a>
+                  <a class="sub-item system-field-setup" href="admin/system-field-setup"><i class="far fa-dot-circle nav-icon"></i>System Field Setup</a>
+                  <a class="sub-item checklist-setup" href="admin/checklist-setup"><i class="far fa-dot-circle nav-icon"></i>Checklist Setup</a>
+                  <a class="sub-item custom-fields" href="admin/custom-fields"><i class="far fa-dot-circle nav-icon"></i>Custom Fields</a>
+                  <a class="sub-item additional-email" href="admin/additional-email"><i class="far fa-dot-circle nav-icon"></i>Additional Email Setup</a>
+                  <a class="sub-item assessment-due-date" href="admin/assessment-due-date"><i class="far fa-dot-circle nav-icon"></i>Assessment Due Date</a>
                 </div>
                 <!--Configuration End-->              
               </ol>
@@ -93,23 +93,23 @@
                   <i class="fas fa-angle-left right"></i>
                 </button>
                 <div class="dropdown-container" [ngStyle]="{display: openSubDropDown=='admin_manage_calender-container' ? 'block' : 'none'}">
-                  <a href="admin/manage-study-periods"><i class="far fa-dot-circle nav-icon"></i>Manage Semester</a>
-                  <a href="admin/manage-semester-division"><i class="far fa-dot-circle nav-icon"></i>Manage Semester Division</a>
-                  <a href="admin/course-calender-type"><i class="far fa-dot-circle nav-icon"></i>Course Calender Type</a>
+                  <a class="sub-item manage-study-periods" href="admin/manage-study-periods"><i class="far fa-dot-circle nav-icon"></i>Manage Semester</a>
+                  <a class="sub-item manage-semester-division" href="admin/manage-semester-division"><i class="far fa-dot-circle nav-icon"></i>Manage Semester Division</a>
+                  <a class="sub-item course-calender-type" href="admin/course-calender-type"><i class="far fa-dot-circle nav-icon"></i>Course Calender Type</a>
                 </div>
                 <!--Manage Calender End-->
               </ol> 
               
-              <a href="admin/view-files-folder"><i class="far fa-circle nav-icon"></i>Manage College Materials</a>
+              <a class="sub-item view-files-folder" href="admin/view-files-folder"><i class="far fa-circle nav-icon"></i>Manage College Materials</a>
               
               <ol class="nav-item">
                 <!--Manage Contract Schedule Start-->
                 <button class="dropdown-btn" [ngClass]="{'active': openSubDropDown=='admin_manage_contact-container'}" (click)="$event.target.classList.contains('active') ? removeDataForSubDropDown($event) : getDataForSubDropDown($event)" data-opener="admin_manage_contact-container"><i class="far fa-circle nav-icon"></i>Manage Contract<i class="fas fa-angle-left right"></i>
                 </button>
                 <div class="dropdown-container" [ngStyle]="{display: openSubDropDown=='admin_manage_contact-container' ? 'block' : 'none'}">
-                  <a href="admin/add-contact"><i class="far fa-dot-circle nav-icon"></i>Add Contract</a>
-                  <a href="admin/manage-contract-schedule"><i class="far fa-dot-circle nav-icon"></i>Manage Contract Schedule</a>
-                  <a href="admin/course-site"><i class="far fa-dot-circle nav-icon"></i>Course Site</a>
+                  <a class="sub-item add-contact" href="admin/add-contact"><i class="far fa-dot-circle nav-icon"></i>Add Contract</a>
+                  <a class="sub-item manage-contract-schedule" href="admin/manage-contract-schedule"><i class="far fa-dot-circle nav-icon"></i>Manage Contract Schedule</a>
+                  <a class="sub-item course-site" href="admin/course-site"><i class="far fa-dot-circle nav-icon"></i>Course Site</a>
                 </div>
                 <!--Manage Contract Schedule End-->
               </ol>
@@ -120,10 +120,10 @@
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{display: openSubDropDown=='admin_training_room-container' ? 'block' : 'none'}">
-                <a href="admin/list-venue"><i class="far fa-dot-circle nav-icon"></i>Venues</a>
-                <a href="admin/create-venue"><i class="far fa-dot-circle nav-icon"></i>Create Venue</a>
-                <a href="admin/list-venueroom"><i class="far fa-dot-circle nav-icon"></i>Manage Room</a>
-                <a href="admin/create-venueroom"><i class="far fa-dot-circle nav-icon"></i>Create Room</a>
+                <a class="sub-item list-venue" href="admin/list-venue"><i class="far fa-dot-circle nav-icon"></i>Venues</a>
+                <a class="sub-item create-venue" href="admin/create-venue"><i class="far fa-dot-circle nav-icon"></i>Create Venue</a>
+                <a class="sub-item list-venueroom" href="admin/list-venueroom"><i class="far fa-dot-circle nav-icon"></i>Manage Room</a>
+                <a class="sub-item create-venueroom" href="admin/create-venueroom"><i class="far fa-dot-circle nav-icon"></i>Create Room</a>
 
               </div>
               <!--Traininf Location Room End-->
@@ -135,14 +135,14 @@
                   <i class="fas fa-angle-left right"></i>
                 </button>
                 <div class="dropdown-container" [ngStyle]="{display: openSubDropDown=='admin_setup_permission-container' ? 'block' : 'none'}">
-                  <a href="admin/create-permission-group"><i class="far fa-dot-circle nav-icon"></i>Create Permission Group</a>
-                  <a href="admin/set-user-permission"><i class="far fa-dot-circle nav-icon"></i>Set User Permission</a>
-                  <a href="admin/page-permission-setup"><i class="far fa-dot-circle nav-icon"></i>Page Permission Setup</a>
+                  <a class="sub-item create-permission-group" href="admin/create-permission-group"><i class="far fa-dot-circle nav-icon"></i>Create Permission Group</a>
+                  <a class="sub-item set-user-permission" href="admin/set-user-permission"><i class="far fa-dot-circle nav-icon"></i>Set User Permission</a>
+                  <a class="sub-item page-permission-setup" href="admin/page-permission-setup"><i class="far fa-dot-circle nav-icon"></i>Page Permission Setup</a>
                 </div>
                 <!--Setup Permission End-->
               </ol> 
               
-              <a href="admin/view-database"><i class="far fa-circle nav-icon"></i>View Log</a>
+              <a class="sub-item view-database" href="admin/view-database"><i class="far fa-circle nav-icon"></i>View Log</a>
     
               <ol class="nav-item">
                 <!--Manage Report Start-->
@@ -150,15 +150,15 @@
                   <i class="fas fa-angle-left right"></i>
                 </button>
                 <div class="dropdown-container" [ngStyle]="{display: openSubDropDown=='admin_manage_report-container' ? 'block' : 'none'}">
-                  <a href="admin/manage-system-reports"><i class="far fa-dot-circle nav-icon"></i>Manage System Report</a>
-                  <a href="admin/update-report"><i class="far fa-dot-circle nav-icon"></i>Update Report</a>
+                  <a class="sub-item manage-system-reports" href="admin/manage-system-reports"><i class="far fa-dot-circle nav-icon"></i>Manage System Report</a>
+                  <a class="sub-item update-report" href="admin/update-report"><i class="far fa-dot-circle nav-icon"></i>Update Report</a>
                 </div>
                 
               </ol> 
               
-              <a href="admin/register-activity-detail"><i class="far fa-circle nav-icon"></i>Improvement Register</a>
-              <a href="admin/prisms-data-validation"><i class="far fa-circle nav-icon"></i>Validate PRISMS</a>
-              <a href="admin/manage-employee"><i class="far fa-circle nav-icon"></i>Manage Employer</a>
+              <a class="sub-item register-activity-detail" href="admin/register-activity-detail"><i class="far fa-circle nav-icon"></i>Improvement Register</a>
+              <a class="sub-item prisms-data-validation" href="admin/prisms-data-validation"><i class="far fa-circle nav-icon"></i>Validate PRISMS</a>
+              <a class="sub-item manage-employee" href="admin/manage-employee"><i class="far fa-circle nav-icon"></i>Manage Employer</a>
     
               <ol class="nav-item">
                 <!--Service Setup Start-->
@@ -166,9 +166,9 @@
                   <i class="fas fa-angle-left right"></i>
                 </button>
                 <div class="dropdown-container" [ngStyle]="{display: openSubDropDown=='admin_service_setup-container' ? 'block' : 'none'}">
-                  <a href="admin/service-facility-setup"><i class="far fa-dot-circle nav-icon"></i>Service Facility Setup</a>
-                  <a href="admin/service-details"><i class="far fa-dot-circle nav-icon"></i>Service Provider Setup</a>
-                  <a href="admin/service-provider"><i class="far fa-dot-circle nav-icon"></i>Service Provider Facility</a>
+                  <a class="sub-item service-facility-setup" href="admin/service-facility-setup"><i class="far fa-dot-circle nav-icon"></i>Service Facility Setup</a>
+                  <a class="sub-item service-details" href="admin/service-details"><i class="far fa-dot-circle nav-icon"></i>Service Provider Setup</a>
+                  <a class="sub-item service-provider" href="admin/service-provider"><i class="far fa-dot-circle nav-icon"></i>Service Provider Facility</a>
                 </div>
                 <!--Service Setup End-->
               </ol> 
@@ -184,14 +184,14 @@
               <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container" [ngStyle]="{display: openDropDown=='staff-container' ? 'block' : 'none'}">
-              <a class="" href="staff/add-staff"><i class="far fa-circle nav-icon"></i>Add Staff</a>
-              <a href="staff/management-home"><i class="far fa-circle nav-icon"></i>Staff List</a>
-              <a href="staff/profile"><i class="far fa-circle nav-icon"></i>Profile</a>
-              <a href="staff/email"><i class="far fa-circle nav-icon"></i>Email</a>
-              <a href="staff/communication-log"><i class="far fa-circle nav-icon"></i>Dairy</a>
-              <a href="staff/documents"><i class="far fa-circle nav-icon"></i>Document</a>
-              <a href="staff/photo"><i class="far fa-circle nav-icon"></i>Photo</a>
-              <a href="staff/professional-development"><i class="far fa-circle nav-icon"></i>PD</a>              
+              <a class="sub-item add-staff" href="staff/add-staff"><i class="far fa-circle nav-icon"></i>Add Staff</a>
+              <a class="sub-item management-home" href="staff/management-home"><i class="far fa-circle nav-icon"></i>Staff List</a>
+              <a class="sub-item profile" href="staff/profile"><i class="far fa-circle nav-icon"></i>Profile</a>
+              <a class="sub-item email" href="staff/email"><i class="far fa-circle nav-icon"></i>Email</a>
+              <a class="sub-item communication-log" href="staff/communication-log"><i class="far fa-circle nav-icon"></i>Dairy</a>
+              <a class="sub-item documents" href="staff/documents"><i class="far fa-circle nav-icon"></i>Document</a>
+              <a class="sub-item photo" href="staff/photo"><i class="far fa-circle nav-icon"></i>Photo</a>
+              <a class="sub-item professional-development" href="staff/professional-development"><i class="far fa-circle nav-icon"></i>PD</a>              
             </div>
           </li>
           <!--Staff End-->
@@ -203,10 +203,10 @@
               <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container" [ngStyle]="{display: openDropDown=='complience-container' ? 'block' : 'none'}">
-              <a href="compliance/add-update-student"><i class="far fa-circle nav-icon"></i>Add Update Student</a>
-              <a href="compliance/attendance-summary"><i class="far fa-circle nav-icon"></i>Attendance Summary</a>
-              <a href="compliance/bulk-update"><i class="far fa-circle nav-icon"></i>Bulk Update</a>
-              <a href="compliance/daily-attendance-roll"><i class="far fa-circle nav-icon"></i>Daily Attendance Roll</a>             
+              <a class="sub-item add-update-student" href="compliance/add-update-student"><i class="far fa-circle nav-icon"></i>Add Update Student</a>
+              <a class="sub-item attendance-summary" href="compliance/attendance-summary"><i class="far fa-circle nav-icon"></i>Attendance Summary</a>
+              <a class="sub-item bulk-update" href="compliance/bulk-update"><i class="far fa-circle nav-icon"></i>Bulk Update</a>
+              <a class="sub-item daily-attendance-roll" href="compliance/daily-attendance-roll"><i class="far fa-circle nav-icon"></i>Daily Attendance Roll</a>             
             </div>
           </li> 
           <!--Compliance End-->
@@ -218,24 +218,24 @@
               <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container" [ngStyle]="{display: openDropDown=='course_site-container' ? 'block' : 'none'}">
-              <a href="course/list-courses"><i class="far fa-circle nav-icon"></i>Courses</a>
-              <a href="course/create-course"><i class="far fa-circle nav-icon"></i>Create Course</a>
-              <a href="course/list-course-units"><i class="far fa-circle nav-icon"></i>Course Unit</a>
-              <a href="course/create-course-unit"><i class="far fa-circle nav-icon"></i>Create Course Unit</a>
-              <a href="course/add-course-template"><i class="far fa-circle nav-icon"></i>Add Course Template</a>
-              <a href="course/add-holidays"><i class="far fa-circle nav-icon"></i>Add Holidays</a>
-              <a href="course/add-new-subject"><i class="far fa-circle nav-icon"></i>Add New Subject</a>
-              <a href="course/add-subject"><i class="far fa-circle nav-icon"></i>Add Subject</a>  
-              <a href="course/intake-dates"><i class="far fa-circle nav-icon"></i>Intake Dates</a>
-              <a href="course/manage"><i class="far fa-circle nav-icon"></i>Manage</a>
-              <a href="course/manage-course-initial"><i class="far fa-circle nav-icon"></i>Manage Course Initial</a>
-              <a href="course/manage-course-structure"><i class="far fa-circle nav-icon"></i>Manage Course Structure</a>
-              <a href="course/manage-subject"><i class="far fa-circle nav-icon"></i>Manage Subject</a>
-              <a href="course/manage-unit"><i class="far fa-circle nav-icon"></i>Manage Unit</a>           
-              <a href="course/nationality-group"><i class="far fa-circle nav-icon"></i>Nationality Group</a>           
-              <a href="course/promotion-activation"><i class="far fa-circle nav-icon"></i>Promotion Activation</a>           
-              <a href="course/promotion-set"><i class="far fa-circle nav-icon"></i>Promotion Set</a>           
-              <a href="course/update-subject"><i class="far fa-circle nav-icon"></i>Update Subject</a>           
+              <a class="sub-item list-courses" href="course/list-courses"><i class="far fa-circle nav-icon"></i>Courses</a>
+              <a class="sub-item create-course" href="course/create-course"><i class="far fa-circle nav-icon"></i>Create Course</a>
+              <a class="sub-item list-course-units" href="course/list-course-units"><i class="far fa-circle nav-icon"></i>Course Unit</a>
+              <a class="sub-item create-course-unit" href="course/create-course-unit"><i class="far fa-circle nav-icon"></i>Create Course Unit</a>
+              <a class="sub-item add-course-template" href="course/add-course-template"><i class="far fa-circle nav-icon"></i>Add Course Template</a>
+              <a class="sub-item add-holidays" href="course/add-holidays"><i class="far fa-circle nav-icon"></i>Add Holidays</a>
+              <a class="sub-item add-new-subject" href="course/add-new-subject"><i class="far fa-circle nav-icon"></i>Add New Subject</a>
+              <a class="sub-item add-subject" href="course/add-subject"><i class="far fa-circle nav-icon"></i>Add Subject</a>  
+              <a class="sub-item intake-dates" href="course/intake-dates"><i class="far fa-circle nav-icon"></i>Intake Dates</a>
+              <a class="sub-item manage" href="course/manage"><i class="far fa-circle nav-icon"></i>Manage</a>
+              <a class="sub-item manage-course-initial" href="course/manage-course-initial"><i class="far fa-circle nav-icon"></i>Manage Course Initial</a>
+              <a class="sub-item manage-course-structure" href="course/manage-course-structure"><i class="far fa-circle nav-icon"></i>Manage Course Structure</a>
+              <a class="sub-item manage-subject" href="course/manage-subject"><i class="far fa-circle nav-icon"></i>Manage Subject</a>
+              <a class="sub-item manage-unit" href="course/manage-unit"><i class="far fa-circle nav-icon"></i>Manage Unit</a>           
+              <a class="sub-item nationality-group" href="course/nationality-group"><i class="far fa-circle nav-icon"></i>Nationality Group</a>           
+              <a class="sub-item promotion-activation" href="course/promotion-activation"><i class="far fa-circle nav-icon"></i>Promotion Activation</a>           
+              <a class="sub-item promotion-set" href="course/promotion-set"><i class="far fa-circle nav-icon"></i>Promotion Set</a>           
+              <a class="sub-item update-subject" href="course/update-subject"><i class="far fa-circle nav-icon"></i>Update Subject</a>           
             </div>
           </li> 
           <!--Course Site End-->
@@ -246,9 +246,9 @@
               <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container" [ngStyle]="{display: openDropDown=='teacher-container' ? 'block' : 'none'}">
-              <a href="teacher/add-teacher"><i class="far fa-circle nav-icon"></i>Add New Teacher</a>
-              <a href="teacher/manage-teacher"><i class="far fa-circle nav-icon"></i>Manage Teacher</a>
-              <a href="teacher/teacher-matric"><i class="far fa-circle nav-icon"></i>Teacher Matric</a>
+              <a class="sub-item add-teacher" href="teacher/add-teacher"><i class="far fa-circle nav-icon"></i>Add New Teacher</a>
+              <a class="sub-item manage-teacher" href="teacher/manage-teacher"><i class="far fa-circle nav-icon"></i>Manage Teacher</a>
+              <a class="sub-item teacher-matric" href="teacher/teacher-matric"><i class="far fa-circle nav-icon"></i>Teacher Matric</a>
             </div>
           </li> 
           <!--Teacher End-->
@@ -259,16 +259,16 @@
               <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container" [ngStyle]="{display: openDropDown=='timetable-container' ? 'block' : 'none'}">
-              <a href="timetable/asign-replace-teacher"><i class="far fa-circle nav-icon"></i>Assign Replace Teacher</a>
-              <a href="timetable/class-capacity-report"><i class="far fa-circle nav-icon"></i>Class Capacity Report</a>
-              <a href="timetable/create-class-timetable"><i class="far fa-circle nav-icon"></i>Create Class Timetable</a>
-              <a href="timetable/generate-class-attendance"><i class="far fa-circle nav-icon"></i>Generate Class Attendance</a>
-              <a href="timetable/manage-class-timetable"><i class="far fa-circle nav-icon"></i>Manage Class Timetable</a>
-              <a href="timetable/print-attendance"><i class="far fa-circle nav-icon"></i>Print Attendance List</a>
-              <a href="timetable/timetable-reports"><i class="far fa-circle nav-icon"></i>Timetable Reports</a>
-              <a href="timetable/view-template"><i class="far fa-circle nav-icon"></i>View Template</a>
-              <a href="timetable/list-schedule"><i class="far fa-circle nav-icon"></i>Schedule</a>
-              <a href="timetable/create-schedule"><i class="far fa-circle nav-icon"></i>Create Schedule</a>
+              <a class="sub-item asign-replace-teacher" href="timetable/asign-replace-teacher"><i class="far fa-circle nav-icon"></i>Assign Replace Teacher</a>
+              <a class="sub-item class-capacity-report" href="timetable/class-capacity-report"><i class="far fa-circle nav-icon"></i>Class Capacity Report</a>
+              <a class="sub-item create-class-timetable" href="timetable/create-class-timetable"><i class="far fa-circle nav-icon"></i>Create Class Timetable</a>
+              <a class="sub-item generate-class-attendance" href="timetable/generate-class-attendance"><i class="far fa-circle nav-icon"></i>Generate Class Attendance</a>
+              <a class="sub-item manage-class-timetable" href="timetable/manage-class-timetable"><i class="far fa-circle nav-icon"></i>Manage Class Timetable</a>
+              <a class="sub-item print-attendance" href="timetable/print-attendance"><i class="far fa-circle nav-icon"></i>Print Attendance List</a>
+              <a class="sub-item timetable-reports" href="timetable/timetable-reports"><i class="far fa-circle nav-icon"></i>Timetable Reports</a>
+              <a class="sub-item view-template" href="timetable/view-template"><i class="far fa-circle nav-icon"></i>View Template</a>
+              <a class="sub-item list-schedule" href="timetable/list-schedule"><i class="far fa-circle nav-icon"></i>Schedule</a>
+              <a class="sub-item create-schedule" href="timetable/create-schedule"><i class="far fa-circle nav-icon"></i>Create Schedule</a>
             </div>          
           </li> 
           <!--Timetable End-->
@@ -279,9 +279,9 @@
               <i class="fas fa-angle-left right"></i>
             </button>
             <div class="dropdown-container" [ngStyle]="{display: openDropDown=='users-container' ? 'block' : 'none'}">
-              <a href="users/create-user"><i class="far fa-circle nav-icon"></i>Create Users</a>
-              <a href="users/manage-user-account"><i class="far fa-circle nav-icon"></i>Manage Users</a>
-              <a href="users/user-activity"><i class="far fa-circle nav-icon"></i>Users Ip Activity Track</a>
+              <a class="sub-item create-user" href="users/create-user"><i class="far fa-circle nav-icon"></i>Create Users</a>
+              <a class="sub-item manage-user-account" href="users/manage-user-account"><i class="far fa-circle nav-icon"></i>Manage Users</a>
+              <a class="sub-item user-activity" href="users/user-activity"><i class="far fa-circle nav-icon"></i>Users Ip Activity Track</a>
             </div>
           </li> 
           <!--Users End-->

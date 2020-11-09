@@ -238,3 +238,10 @@ button.btn.btn-link.active {
 .hide{
     display: none;
 }
+
+
+.main-sidebar .sidebar a.sub-item.current {
+    background: #5c6671;
+    color: white;
+    border-radius: 5px;
+}
