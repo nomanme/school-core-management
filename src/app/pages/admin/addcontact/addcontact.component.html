@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="row m-0 p-0">
         <div class="col-sm-12">
-            <h3 class="page-heading">Add Contract</h3>
+            <h3 class="page-heading">Add Contact</h3>
         </div>
         <div class="col-sm-12 text-center">
             <ol class="breadcrumb">
@@ -25,7 +25,7 @@
                   <!-- general form elements -->
                     <div class="card card-primary">
                       <div class="card-header">
-                        <h5 class="card-title">Contract Details</h5>
+                        <h5 class="card-title">Contact Details</h5>
                       </div>
                         <form role="form">
                             <div class="card-body">
@@ -33,10 +33,10 @@
                                     <div class="col-md-12">
                                       <div class="inner-row">
                                         <div class="form-group row">
-                                          <label for="ContractCode" class="col-sm-4 control-label">Contract Code<span class="star">*</span></label>
+                                          <label for="ContractCode" class="col-sm-4 control-label">Contact Code<span class="star">*</span></label>
                                           <div class="col-sm-8">
                                             <div class="input-group">
-                                              <input class="form-control" type="text" name="ContractCode" id="ContractCode" placeholder="Enter Contract Code here" required>
+                                              <input [ngClass]="(error2=='')?'form-control select2':'form-control select2 is-invalid'" [(ngModel)]='ContractCode' class="form-control" type="text" name="ContractCode" id="ContractCode" placeholder="Enter Contract Code here" required>
                                             </div>
                                           </div>
                                         </div>
@@ -49,13 +49,10 @@
                                             </div>
                                           </div>
                                         </div>
-          
-                                      
                                       </div><!--inner-row-->
                                     </div><!--col-md-12-->
                                 </div><!--row-->
                                  
-                                
                                 <div class="submit-button">
                                     <button type="submit" class="btn btn-success" name="adminaddcontactbtn" id="adminaddcontactbtn">Add New</button>
                                 </div>
@@ -72,8 +69,7 @@
         </div> <!--container-fluid-->
              
     </section> <!--section2-->
-    
-    
+  
 </div>
 
 

@@ -37,7 +37,6 @@ export class CreateRoomComponent implements OnInit {
 
   createRoom(form){ 
 
-
       if(form.value.venueId ==''){
       this.error1 ='true'; 
       this.errors='true';
@@ -45,6 +44,40 @@ export class CreateRoomComponent implements OnInit {
     }
     else{
       this.error1 ='';
+      this.errors='false';
+     
+    }
+
+
+    if(form.value.roomName ==''){
+      this.error2 ='true'; 
+      this.errors='true';
+     
+    }
+    else{
+      this.error2 ='';
+      this.errors='false';
+     
+    }
+
+    if(form.value.roomNumber ==''){
+      this.error3 ='true'; 
+      this.errors='true';
+     
+    }
+    else{
+      this.error3 ='';
+      this.errors='false';
+     
+    }
+
+     if(form.value.roomNumber ==''){
+      this.error3 ='true'; 
+      this.errors='true';
+     
+    }
+    else{
+      this.error3 ='';
       this.errors='false';
      
     }

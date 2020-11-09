@@ -15,7 +15,8 @@
             <span class="text-star">In order to setup Rooms, you must first setup training location/venue. There must be at least one room in order to setup a timable.</span>
 
           </div>
-        </div><!-- container-fluid -->
+        </div>
+        <!-- container-fluid -->
     </section> 
 
     <!-- Main content -->
@@ -39,7 +40,7 @@
                                                       <label for="venueId" class="col-sm-4 control-label">Venue Id<span class="star">*</span></label> 
                                                         <div class="col-sm-8">   
                                                             <div class="input-group">
-                                                              <input [ngClass]="(error3=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="venueId" type="text" class="form-control" name="venueId" id="venueId" placeholder="Enter roon ID here" required>
+                                                              <input [ngClass]="(error1=='')?'form-control select2':'form-control select2 is-invalid'"  [(ngModel)]="venueId" type="text" class="form-control" name="venueId" id="venueId" placeholder="Enter roon ID here" required>
                                                             </div>       
                                                         </div>
                                                     </div>
@@ -48,7 +49,7 @@
                                                         <label for="roomName" class="col-sm-4 control-label">Room Name<span class="star">*</span></label> 
                                                         <div class="col-sm-8"> 
                                                             <div class="input-group">
-                                                                <input [(ngModel)]="roomName" class="form-control" type="text" name="roomName" id="roomName"  placeholder="Enter Room Name here" required>
+                                                                <input [ngClass]="(error2=='')?'form-control select2':'form-control select2 is-invalid'" [(ngModel)]="roomName" class="form-control" type="text" name="roomName" id="roomName"  placeholder="Enter Room Name here" required>
                                                             </div>         
                                                         </div>
                                                     </div>
@@ -57,36 +58,32 @@
                                                         <label for="roomNumber" class="col-sm-4 control-label">Room Number<span class="star">*</span></label> 
                                                         <div class="col-sm-8"> 
                                                             <div class="input-group">
-                                                                <input [(ngModel)]="roomNumber" class="form-control" type="text" name="roomNumber" id="roomNumber"  placeholder="Enter Room Name here" required>
+                                                                <input [ngClass]="(error3=='')?'form-control select2':'form-control select2 is-invalid'" [(ngModel)]="roomNumber" class="form-control" type="text" name="roomNumber" id="roomNumber"  placeholder="Enter Room Name here" required>
                                                             </div>         
                                                         </div>
                                                     </div>
-
-                                            
-                                        </div><!--inner-row-->
-                                    </div><!--col-md-12 sub-form-->
-                                    
+                                        </div>
+                                        <!--inner-row-->
+                                    </div>
+                                    <!--col-md-12 sub-form-->
                                 </div> 
-                                 
                                 <br>
                                 <div class="submit-button">
                                     <button type="submit" (click)="createRoom(f)" class="btn btn-success" name="add" id="add">Add New</button>
                                     <button type="submit" class="btn btn-warning" name="res" id="res">Reset</button>
                                 </div>
-                            
                             </div>
                         </form>
-                      
-                    </div> <!--card card-primary-->
-                   
-                </div> <!--col-md-6 offset-md-2-->
-               
-            </div> <!--row-->
-           
-        </div> <!--container-fluid-->
-             
-    </section> <!--section2-->
-    
+                    </div> 
+                    <!--card card-primary-->
+                </div> 
+                <!--col-md-6 offset-md-2-->
+            </div>
+             <!--row-->
+        </div> 
+        <!--container-fluid-->
+    </section>
+     <!--section2-->
 </div>
 
 
