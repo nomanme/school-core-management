@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ResultgradeComponent } from './resultgrade.component';
+
 
 describe('ResultgradeComponent', () => {
   let component: ResultgradeComponent;

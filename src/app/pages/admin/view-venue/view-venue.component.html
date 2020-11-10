@@ -1,156 +1,188 @@
+<div class="content-wrapper">
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+          <h3 class="page-heading">View Venue</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View
+              Venue
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- container-fluid -->
+  </section>
 
-<div class="content-wrapper"> 
- 
-    <section class="content-header">
-        <div class="container-fluid">
-          <div class="row m-0 p-0">
-            <div class="col-sm-12">
-                <h3 class="page-heading">View Venue</h3>
-            </div>
-            <div class="col-sm-12 text-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View Venue</li>
-                  </ol>
-            </div>
-          </div>
-        </div><!-- container-fluid -->
-    </section>
-  
-    
-    <!-- Main content -->
-    <div class="row p-0 m-0">
-        <div class="col-md-10 offset-md-1">
-            <div class="row">
-                <div class="col-md-12">
-                    <section class="content">
-                        <div class="container-fluid">
-                        <!-- general form elements -->
-                            <div class="card card-primary mb-0"> 
-                              <div class="card-header">
-                                <h5 class="card-title">View Venue</h5>
-                              </div>
-                                <!-- form start -->
-                                <form method="post" action="" enctype="multipart/form-data" *ngFor="let venue of venues">
-                                    <div class="card-body">
-  
-                                      <div class="row">
-                                        <div class="col-md-12 sub-form">
-  
-                                            <div class="inner-row">
-                                                <div class="form-group row">
-                                                    <label for="venueId" class="col-sm-3 label">Venue Id<span class="star">*</span></label> 
-                                                    <div class="col-sm-9">   
-                                                        {{ venue.venueId }}
-                                                    </div>
-                                                </div>
- 
-                                                <div class="form-group row">
-                                                    <label for="venueCode" class="col-sm-3 label">Venue Code<span class="star">*</span></label> 
-                                                     <div class="col-sm-9">   
-                                                        {{ venue.venueCode }}
-                                                    </div>
-                                                </div>
-                            
-                                                <div class="form-group row">
-                                                    <label for="address1" class="col-sm-3 label flstart">Address</label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.address1 }}
-                                                    </div>
-                                                </div>
-                                                    
-                                                <div class="form-group row">
-                                                    <label for="suburb" class="col-sm-3 label">Suburb<span class="star">*</span></label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.suburb }}
-                                                    </div>
-                                                </div>
-                            
-                                                <div class="form-group row">
-                                                    <label for="stateId" class="col-sm-3 label">State</label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.stateId }}
-                                                    </div>
-                                                </div>
-                            
-                                                <div class="form-group row">
-                                                    <label for="ABN" class="col-sm-3 label">ABN</label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.ABN }}
-                                                    </div>
-                                                </div>
-                            
-                                                <div class="form-group row">
-                                                    <label for="effectiveDateFrom" class="col-sm-3 label">Venue Effective From Date</label> 
-                                                    <div class="col-sm-9">   
-                                                        {{ venue.effectiveDateFrom }}
-                                                    </div>
-                                                </div>
-                                                    
-                                                <div class="form-group row">
-                                                    <label for="venueName" class="col-sm-3 label">Venue Name/ Description</label> 
-                                                    <div class="col-sm-9"> 
-                                                        {{ venue.venueName }}
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="form-group row">
-                                                    <label for="trainingOrgId" class="col-sm-3 label">Training Organization</label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.trainingOrgId }}
-                                                    </div>
-                                                </div>
-                                        
-                                                <div class="form-group row">
-                                                    <label for="countryId" class="col-sm-3 label">Country</label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.countryId }}
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="form-group row">
-                                                    <label for="contactNo" class="col-sm-3 label">Contact No.<span class="star">*</span></label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.contactNo }}
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="form-group row">
-                                                    <label for="postCode" class="col-sm-3 label">Postcode<span class="star">*</span></label>
-                                                     <div class="col-sm-9">
-                                                        {{ venue.postCode }}
-                                                    </div>
-                                                </div>
-                                                    
-                                                <div class="form-group row">
-                                                    <label for="effectiveDateTo" class="col-sm-3 label">Venue Effective To Date</label>
-                                                    <div class="col-sm-9">
-                                                        {{ venue.effectiveDateTo }}
-                                                    </div>
-                                                </div>
-    
-                                            </div><!--inner-row-->
-                                        </div><!--col-md-12 sub-form-->
+  <!-- Main content -->
+  <div class="row p-0 m-0">
+    <div class="col-md-10 offset-md-1">
+      <div class="row">
+        <div class="col-md-12">
+          <section class="content">
+            <div class="container-fluid">
+              <!-- general form elements -->
+              <div class="card card-primary mb-0">
+                <div class="card-header">
+                  <h5 class="card-title">View Venue</h5>
+                </div>
+                <!-- form start -->
+                <form
+                  method="post"
+                  action=""
+                  enctype="multipart/form-data"
+                  *ngFor="let venue of venues"
+                >
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12 sub-form">
+                        <div class="inner-row">
+                          <div class="form-group row">
+                            <label for="venueId" class="col-sm-3 label"
+                              >Venue Id<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.venueId }}
+                            </div>
+                          </div>
 
-                                      </div><!-- row1 -->
-  
-                                      <!-- <div class="submit-button">
+                          <div class="form-group row">
+                            <label for="venueCode" class="col-sm-3 label"
+                              >Venue Code<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.venueCode }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="address1" class="col-sm-3 label flstart"
+                              >Address</label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.address1 }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="suburb" class="col-sm-3 label"
+                              >Suburb<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.suburb }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="stateId" class="col-sm-3 label"
+                              >State</label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.stateId }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="ABN" class="col-sm-3 label">ABN</label>
+                            <div class="col-sm-9">
+                              {{ venue.ABN }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="effectiveDateFrom"
+                              class="col-sm-3 label"
+                              >Venue Effective From Date</label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.effectiveDateFrom }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="venueName" class="col-sm-3 label"
+                              >Venue Name/ Description</label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.venueName }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="trainingOrgId" class="col-sm-3 label"
+                              >Training Organization</label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.trainingOrgId }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="countryId" class="col-sm-3 label"
+                              >Country</label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.countryId }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="contactNo" class="col-sm-3 label"
+                              >Contact No.<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.contactNo }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="postCode" class="col-sm-3 label"
+                              >Postcode<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.postCode }}
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="effectiveDateTo" class="col-sm-3 label"
+                              >Venue Effective To Date</label
+                            >
+                            <div class="col-sm-9">
+                              {{ venue.effectiveDateTo }}
+                            </div>
+                          </div>
+                        </div>
+                        <!--inner-row-->
+                      </div>
+                      <!--col-md-12 sub-form-->
+                    </div>
+                    <!-- row1 -->
+
+                    <!-- <div class="submit-button">
                                         <button type="submit" (click)="createUser(f)" class="btn btn-primary" name="submit" id="submit">Submit</button>
                                       </div> -->
-                                            
-                                    </div> <!--card-body-->
-                                </form>     
-                            </div> <!--card card-primary-->
-                        </div> <!--container-fluid-->     
-                    </section> <!--section2-->
-                </div>
-            </div> <!--row1-->
-        </div><!--col-md-10offset-md-1-->
-    </div> <!--main content row-->
-  </div> <!--content-wrapper-->
-  
-  
-  
-  
-  
-   
+                  </div>
+                  <!--card-body-->
+                </form>
+              </div>
+              <!--card card-primary-->
+            </div>
+            <!--container-fluid-->
+          </section>
+          <!--section2-->
+        </div>
+      </div>
+      <!--row1-->
+    </div>
+    <!--col-md-10offset-md-1-->
+  </div>
+  <!--main content row-->
+</div>
+<!--content-wrapper-->

@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RegisteractivitydetailComponent } from './registeractivitydetail.component';
 
 describe('RegisteractivitydetailComponent', () => {
@@ -8,9 +7,8 @@ describe('RegisteractivitydetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegisteractivitydetailComponent ]
-    })
-    .compileComponents();
+      declarations: [RegisteractivitydetailComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
