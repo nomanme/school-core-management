@@ -33,9 +33,7 @@ export class EditRoomComponent implements OnInit {
     console.log(form.value);
     let datajson = `{"venueroomId":"1","roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}", "venueId":"${form.value.venueId}"}`;
     console.log(datajson);
-    this.apiService
-      .postAPI(`dev/editvenueroom?venueroomId=${this.venueroomId}`, datajson)
-      .subscribe((data) => {
+    this.apiService.postAPI(`dev/editvenueroom?venueroomId=${this.venueroomId}`, datajson).subscribe((data) => {
         console.log(data);
         this.router.navigate(['/admin/list-venueroom']);
       });

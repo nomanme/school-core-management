@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/api/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api/api.service';
 
 @Component({
   selector: 'app-view-venue',
@@ -11,7 +11,6 @@ export class ViewVenueComponent implements OnInit {
 
   venueId;
   venues;
-  venue;
 
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
@@ -21,10 +20,6 @@ export class ViewVenueComponent implements OnInit {
     this.apiService.getAPI(`dev/getvenue?venueId=${this.venueId}`).subscribe((data)=>{
       console.log(data);
       this.venues=data;
-    })
-
-    
+    }) 
   }
- 
-
 }

@@ -57,9 +57,7 @@ export class EditStudentenrolmentComponent implements OnInit {
       this.getdeliverymode = data;
     });
 
-    this.apiService
-      .getAPI3('dev/getfundingsourcenational')
-      .subscribe((data) => {
+    this.apiService.getAPI3('dev/getfundingsourcenational').subscribe((data) => {
         console.log(data);
         this.getfundingsourcenational = data;
       });
@@ -106,11 +104,7 @@ export class EditStudentenrolmentComponent implements OnInit {
 
     this.studentEnrolmentId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService
-      .getAPI2(
-        `dev/getstudentenrolment?studentEnrolmentId=${this.studentEnrolmentId}`
-      )
-      .subscribe((data) => {
+    this.apiService.getAPI2(`dev/getstudentenrolment?studentEnrolmentId=${this.studentEnrolmentId}`).subscribe((data) => {
         console.log(data);
         this.editstudentenrolment = data[0];
         console.log(this.editstudentenrolment);
@@ -121,12 +115,8 @@ export class EditStudentenrolmentComponent implements OnInit {
     console.log(form.value);
     let datajson = `{"userId":"1", "studentId":"${form.value.studentId}", "studentOriginId":"${form.value.studentOriginId}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId}", "courseIntakeDateId":"${form.value.courseIntakeDateId}", "applicationStatusId":"${form.value.applicationStatusId}", "deliveryModeId":"${form.value.deliveryModeId}", "fundingSourceNationalId":"${form.value.fundingSourceNationalId}", "fundingSourceStateId":"${form.value.fundingSourceStateId}", "commencingProgramId":"${form.value.commencingProgramId}", "trainingContractid":"${form.value.trainingContractid}", "reasonTakingCourseId":"${form.value.reasonTakingCourseId}", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee}"}`;
     console.log(datajson);
-    this.apiService
-      .postAPI2(
-        `dev/editstudentenrolment?studentEnrolmentId=${this.studentEnrolmentId}`,
-        datajson
-      )
-      .subscribe((data) => {
+    this.apiService.postAPI2(`dev/editstudentenrolment?studentEnrolmentId=${this.studentEnrolmentId}`,datajson).subscribe((data)=> 
+    {
         console.log(data);
         this.router.navigate(['/admin/list-student-enrolment']);
       });

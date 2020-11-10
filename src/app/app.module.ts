@@ -125,6 +125,10 @@ import { ViewUsersComponent } from './pages/users/view-users/view-users.componen
 import { FooterComponent } from './parts/footer/footer.component';
 import { HeaderComponent } from './parts/header/header.component';
 import { SidebarComponent } from './parts/sidebar/sidebar.component';
+import { UnitsComponent } from './pages/admin/units/units.component';
+import { CreateUnitComponent } from './pages/admin/create-unit/create-unit.component';
+import { ViewUnitComponent } from './pages/admin/view-unit/view-unit.component';
+import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
 
 @NgModule({
   declarations: [
@@ -248,6 +252,10 @@ import { SidebarComponent } from './parts/sidebar/sidebar.component';
     EditCourseUnitComponent,
     ViewCourseUnitComponent,
     LoginComponent,
+    UnitsComponent,
+    CreateUnitComponent,
+    ViewUnitComponent,
+    EditUnitComponent,
   ],
 
   imports: [

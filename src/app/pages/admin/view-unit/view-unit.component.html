@@ -1,26 +1,27 @@
 <div class="content-wrapper">
-
     <section class="content-header">
         <div class="container-fluid">
             <div class="row m-0 p-0">
                 <div class="col-sm-12">
-                    <h3 class="page-heading">View Venue</h3>
+                    <h3 class="page-heading">View Unit</h3>
                 </div>
                 <div class="col-sm-12 text-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View
-                            Venue</li>
+                        <li class="breadcrumb-item active">
+                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View
+                            Unit
+                        </li>
                     </ol>
                 </div>
             </div>
-        </div><!-- container-fluid -->
+        </div>
+        <!-- container-fluid -->
     </section>
-
 
     <!-- Main content -->
     <div class="row p-0 m-0">
-        <div class="col-md-10 offset-md-1">
+        <div class="col-md-8 offset-md-2">
             <div class="row">
                 <div class="col-md-12">
                     <section class="content">
@@ -28,111 +29,107 @@
                             <!-- general form elements -->
                             <div class="card card-primary mb-0">
                                 <div class="card-header">
-                                    <h5 class="card-title">View Venue</h5>
+                                    <h5 class="card-title">View Unit</h5>
                                 </div>
                                 <!-- form start -->
-                                <form method="post" action="" enctype="multipart/form-data"
-                                    *ngFor="let venue of venues">
+                                <form method="post" action="" enctype="multipart/form-data" *ngFor="let unit of units">
                                     <div class="card-body">
-
                                         <div class="row">
                                             <div class="col-md-12 sub-form">
-
                                                 <div class="inner-row">
                                                     <div class="form-group row">
-                                                        <label for="venueId" class="col-sm-3 label">Venue Id</label>
+                                                        <label for="unitId" class="col-sm-3 control-label">Unit
+                                                            Id
+                                                        </label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.venueId }}
+                                                            {{ unit.unitId }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="venueCode" class="col-sm-3 label">Venue Code</label>
+                                                        <label for="unitCode" class="col-sm-3 control-label">Unit
+                                                            Code
+                                                        </label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.venueCode }}
+                                                            {{ unit.unitCode }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="address1"
-                                                            class="col-sm-3 label flstart">Address</label>
+                                                        <label for="vetUnitCode" class="col-sm-3 control-label">VET Unit
+                                                            Code</label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.address1 }}
+                                                            {{ unit.vetUnitCode }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="suburb" class="col-sm-3 label">Suburb</label>
+                                                        <label for="unitName" class="col-sm-3 control-label">Unit
+                                                            Name</label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.suburb }}
+                                                            {{ unit.unitName }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="stateId" class="col-sm-3 label">State</label>
+                                                        <label for="deliveryMode"
+                                                            class="col-sm-3 control-label">Delivery Mode
+                                                        </label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.stateId }}
+                                                            {{ unit.deliveryMode }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="ABN" class="col-sm-3 label">ABN</label>
+                                                        <label for="scheduledNominalHours"
+                                                            class="col-sm-3 control-label">Schedule Nominal Hours
+                                                            Name</label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.ABN }}
+                                                            {{ unit.scheduledNominalHours }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="effectiveDateFrom" class="col-sm-3 label">Venue
-                                                            Effective From Date</label>
+                                                        <label for="tuitionFee" class="col-sm-3 control-label">Tuition
+                                                            Fee
+                                                        </label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.effectiveDateFrom }}
+                                                            {{ unit.tuitionFee }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="venueName" class="col-sm-3 label">Venue Name/
-                                                            Description</label>
+                                                        <label for="fieldofEducationId"
+                                                            class="col-sm-3 control-label">Field Of Education
+                                                        </label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.venueName }}
+                                                            {{ unit.fieldOfEducationCode }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="vetFlag" class="col-sm-3 control-label">Vet Flag
+                                                        </label>
+                                                        <div class="col-sm-9">
+                                                            {{ unit.vetFlag }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="trainingOrgId" class="col-sm-3 label">Training
-                                                            Organization</label>
+                                                        <label for="schoolTypeId" class="col-sm-3 control-label">School
+                                                            Type
+                                                        </label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.trainingOrgId }}
+                                                            {{ unit.schoolTypeCode }} - {{ unit.schoolTypeName }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="countryId" class="col-sm-3 label">Country</label>
+                                                        <label for="specificFundingId"
+                                                            class="col-sm-3 control-label">Specific Funding
+                                                        </label>
                                                         <div class="col-sm-9">
-                                                            {{ venue.countryId }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="contactNo" class="col-sm-3 label">Contact
-                                                            No.</label>
-                                                        <div class="col-sm-9">
-                                                            {{ venue.contactNo }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="postCode" class="col-sm-3 label">Postcode</label>
-                                                        <div class="col-sm-9">
-                                                            {{ venue.postCode }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="effectiveDateTo" class="col-sm-3 label">Venue
-                                                            Effective To Date</label>
-                                                        <div class="col-sm-9">
-                                                            {{ venue.effectiveDateTo }}
+                                                            {{ unit.specificFundingCode }} -
+                                                            {{ unit.specificFundingName }}
                                                         </div>
                                                     </div>
 
@@ -140,10 +137,12 @@
                                                 <!--inner-row-->
                                             </div>
                                             <!--col-md-12 sub-form-->
+                                        </div>
+                                        <!-- row1 -->
 
-                                        </div><!-- row1 -->
-
-
+                                        <!-- <div class="submit-button">
+                                          <button type="submit" (click)="createUser(f)" class="btn btn-primary" name="submit" id="submit">Submit</button>
+                                        </div> -->
                                     </div>
                                     <!--card-body-->
                                 </form>

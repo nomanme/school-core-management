@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/api/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api/api.service';
 
 @Component({
   selector: 'app-view-schedule',
@@ -15,20 +15,12 @@ export class ViewScheduleComponent implements OnInit {
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.scheduleId= this.activatedRoute.snapshot.paramMap.get('id');
+    this.scheduleId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService.getAPI('dev/schedule').subscribe((data)=>{
-      // console.log(data);
-      // this.students=data;
-      this.schedules=this.getStudentFromList(this.scheduleId, data);
-      // console.log(this.student)
-    })
-  }
-
-  getStudentFromList(id, data){
-    // console.log(this.studentID)
-    // console.log(data)
-    return data.filter(x => x.scheduleId == id);
+    this.apiService.getAPI(`dev/getschedule?scheduleId=${this.scheduleId}`).subscribe((data) => {
+        console.log(data);
+        this.schedules = data;
+      });
   }
 
 }

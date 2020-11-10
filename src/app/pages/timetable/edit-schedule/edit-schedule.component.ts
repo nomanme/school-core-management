@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/api/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api/api.service';
 
 @Component({
   selector: 'app-edit-schedule',
@@ -10,7 +10,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditScheduleComponent implements OnInit {
 
   scheduleId;
-  schedule;
+  schedule = {
+    semisterId: null,
+    termId: null, 
+    weekId: null,
+    startDate: null,
+  };
 
   constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
@@ -18,14 +23,11 @@ export class EditScheduleComponent implements OnInit {
   ngOnInit(): void {
     this.scheduleId= this.activatedRoute.snapshot.paramMap.get('id');
 
-// `dev/user?userId=${}`
-
-    this.apiService.getAPI(`dev/schedule?scheduleId=${this.scheduleId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getschedule?scheduleId=${this.scheduleId}`).subscribe((data)=>{
       console.log(data);
       this.schedule=data[0];
-      // this.student=this.getStudentFromList(this.studentID, data);
       console.log(this.schedule)
-    })
+    });
   }
 
   editSchedule(form){
@@ -33,10 +35,11 @@ export class EditScheduleComponent implements OnInit {
     console.log(form.value);
     let datajson=`{"scheduleId":"1","semisterId":"${form.value.semisterId}", "termId":"${form.value.termId}", "weekId":"${form.value.weekId}","startDate":"${form.value.startDate}" }`;
     console.log(datajson);
-    this.apiService.putAPI(`dev/schedule?scheduleId=${this.scheduleId}`, datajson).subscribe((data)=>{
+    this.apiService.postAPI(`dev/editschedule?scheduleId=${this.scheduleId}`, datajson).subscribe((data)=>
+    {
       console.log(data);
       this.router.navigate(['/timetable/list-schedule']);
-    })
+    });
 
   }
 

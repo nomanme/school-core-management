@@ -39,16 +39,16 @@
                                                         <th class="rowid">ID</th>
                                                         <th class="name">Semester ID</th>
                                                         <th class="start-date">Start Date</th>
-                                                        <th class="term-id">Term ID</th>
-                                                        <th class="week-id">Week ID</th>
+                                                        <!-- <th class="term-id">Term ID</th>
+                                                        <th class="week-id">Week ID</th> -->
                                                         <th class="action">Action</th>
                                                     </tr>
                                     
                                                     <tr *ngFor="let schedule of schedules">
                                                         <td class="rowid">{{schedule.scheduleId}}</td>
                                                         <td class="name">{{schedule.semisterId}}</td>
-                                                        <td class="start-date">{{schedule.startDate}}</td>
-                                                        <td class="term-id">{{schedule.termId}}</td>
+                                                        <!-- <td class="start-date">{{schedule.startDate}}</td>
+                                                        <td class="term-id">{{schedule.termId}}</td> -->
                                                         <td class="week-id">{{schedule.weekId}}</td>
 
                                                         <td class="action"><a href="timetable/view-schedule/{{schedule.scheduleId}}">View</a> | <a href="timetable/edit-schedule/{{schedule.scheduleId}}">Edit</a></td>

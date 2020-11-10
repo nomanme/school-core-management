@@ -94,13 +94,13 @@ export class CreateVenueComponent implements OnInit {
     console.log(this.dataString);
     this.apiService.postAPI('dev/addvenue', this.dataString).subscribe((data)=>{
       console.log(data);
+      console.log(this.contactNo);
        this.router.navigate(['/admin/list-venue']); 
     })
-
   }
 
     else{
-    console.log('submit the form')
+    console.log('submit the form');
   }
 
   }
