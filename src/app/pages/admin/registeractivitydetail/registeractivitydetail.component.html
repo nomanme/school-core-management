@@ -1,263 +1,450 @@
 <div class="content-wrapper">
-
   <section class="content-header">
     <div class="container-fluid">
       <div class="row m-0 p-0">
         <div class="col-sm-12">
-            <h3 class="page-heading">Register Activity Detail</h3>
+          <h3 class="page-heading">Register Activity Detail</h3>
         </div>
         <div class="col-sm-12 text-center">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Register Activity Detail</li>
-              </ol>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Register
+              Activity Detail
+            </li>
+          </ol>
         </div>
       </div>
-    </div><!-- container-fluid -->
-</section> 
+    </div>
+    <!-- container-fluid -->
+  </section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row m-0 p-0">
-                <!-- left column -->
-                <div class="col-md-10 offset-md-1">
-                  <!-- general form elements -->
-                    <div class="card card-primary mb-0">
-                        <div class="card-header">
-                            <h5 class="card-title">Add New Case</h5>
-                        </div>
-                        <form role="form">
-                            <div class="card-body">
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <div class="row">
-                                      <div class="col-md-12 sub-form">
-                                        <div class="inner-row">
-                                          <div class="form-group row">
-                                            <label for="date" class="col-sm-3 control-label">Date</label>
-                                              <div class="col-sm-9">                                          
-                                              </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="lodgeddate" class="col-sm-3 control-label">Lodged Date</label> 
-                                            <div class="col-sm-9" id="lodgeddate" data-target-input="nearest">          
-                                              <input type="date" class="form-control datetimepicker-input" name="lodgeddate" id="lodgeddate" data-target="#reservationdate" placeholder="3/8/2020">
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="usertype" class="col-sm-3 control-label">User type</label>
-                                            <div class="col-sm-9">
-                                              <select class="form-control" name="usertype" id="usertype">
-                                                <option selected="selected" value="Staff">Staff</option>
-                                                <option value="America">America</option>
-                                                <option value="Europe">Europe</option>
-                                                <option value="Brazil">Brazil</option>
-                                                <option value="500">500</option>
-                                                <option value="600">600</option>
-                                                <option value="700">700</option>
-                                                <option value="800">800</option>
-                                                <option value="900">900</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                                        </div><!--inner-row-->
-                                      </div> <!--col-md-12 sub-form-->
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-md-12 sub-form">
-                                        <div class="card-header">
-                                          <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Staff Detail</h3>
-                                        </div>
-                                        <div class="inner-row">
-  
-                                          <div class="form-group row">
-                                            <label for="staffrole" class="col-sm-3 control-label">Staff role</label>
-                                            <div class="col-sm-9">
-                                              <select class="form-control" name="staffrole" id="staffrole" >
-                                                <option selected="selected" value="Agent">Agent</option>
-                                                <option value="Adelie Land (France)">Adelie Land (France)</option>
-                                                <option value="Afghanistan">Afghanistan</option>
-                                                <option value="Aland Islands">Aland Islands</option>
-                                                <option value="Albania">Albania</option>
-                                                <option value="Algeria">Algeria</option>
-                                                <option value="Andorra">Andorra</option>
-                                                <option value="Angola">Angola</option>
-                                                <option value="Anguilla">Anguilla</option>
-                                                <option value="Yemen">Yemen</option>
-                                                <option value="Zambia">Zambia</option>
-                                                <option value="Zimbabwe">Zimbabwe</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                    
-                    
-                                          <div class="form-group row">
-                                            <label for="requestedby" class="col-sm-3 control-label">Requested by<span class="star">*</span></label>
-                                            <div class="col-sm-9">
-                                              <select class="form-control" name="requestedby" id="requestedby" required>
-                                                <option selected="selected" value="No Staff">No Staff</option>
-                                                <option value="Afghanistan">Afghanistan</option>
-                                                <option value="Aland Islands">Aland Islands</option>
-                                                <option value="Albania">Albania</option>
-                                                <option value="Algeria">Algeria</option>
-                                                <option value="Andorra">Andorra</option>
-                                                <option value="Angola">Angola</option>
-                                                <option value="Anguilla">Anguilla</option>
-                                                <option value="Yemen">Yemen</option>
-                                                <option value="Zambia">Zambia</option>
-                                                <option value="Zimbabwe">Zimbabwe</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                                                    
-                                          <div class="form-group row">
-                                            <label for="loggedby" class="col-sm-3 control-label">Logged by</label>
-                                            <div class="col-sm-9">
-                                              <p> Mr. Chandra Mohan Sareen (skillsinternational)</p>
-                                            </div>
-                                          </div>
-                                                
-                                          <div class="form-group row">
-                                            <label for="category" class="col-sm-3 control-label alignStart">Categoy<span class="star">*</span></label>
-                                            <div class="col-sm-9">
-                                              <input class="form-control" type="text" name="category" id="category" placeholder=" Enter company address" required>
-                                              <a href="#"><u> Refresh Category?</u></a>
-  
-                                            </div>
-                                          </div>
-                                            
-                                          <div class="form-group row">
-                                            <label for="casedetail" class="col-sm-3 label alignStart">Case Detail<span class="star">*</span></label>
-                                            <div class="col-sm-9">
-                                              <textarea class="form-control" rows="3" placeholder="Enter case detail" name="casedetail" id="casedetail" required></textarea>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="escalatedto" class="col-sm-3 control-label">Escalated to<span class="star">*</span></label>
-                                            <div class="col-sm-9">
-                                              <select class="form-control" name="escalatedto" id="escalatedto" required>
-                                                <option selected="selected" value="--Select Escalated To--">--Select Escalated To--</option>
-                                                <option value="America">America</option>
-                                                <option value="Europe">Europe</option>
-                                                <option value="Brazil">Brazil</option>
-                                                <option value="500">500</option>
-                                                <option value="600">600</option>
-                                                <option value="700">700</option>
-                                                <option value="800">800</option>
-                                                <option value="900">900</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="actiontaken" class="col-sm-3 control-label alignStart">Action Taken<span class="star">*</span></label>
-                                            <div class="col-sm-9">
-                                              <textarea class="form-control" rows="3" placeholder="Enter action" name="actiontaken" id="actiontaken" required></textarea>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="action" class="col-sm-3 control-label alignStart">Action taken to prevent reoccurance</label>
-                                            <div class="col-sm-9">
-                                              <textarea class="form-control" rows="3" placeholder="Enter other details" name="action" id="action" ></textarea>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="status" class="col-sm-3 control-label">Status<span class="star">*</span></label>
-                                            <div class="col-sm-9">
-                                              <select class="form-control" name="status" id="status" required>
-                                                <option selected="selected" value="--Select Escalated To--">--Select Status--</option>
-                                                <option value="America">America</option>
-                                                <option value="Europe">Europe</option>
-                                                <option value="Brazil">Brazil</option>
-                                                <option value="500">500</option>
-                                                <option value="600">600</option>
-                                                <option value="700">700</option>
-                                                <option value="800">800</option>
-                                                <option value="900">900</option>
-                                              </select>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="file1" class="col-sm-3 control-label">File Attachment 1</label>
-                                            <div class="col-sm-9">
-                                              <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="file1" name="file1"  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx">
-                                                <label class="custom-file-label" for="customFile"></label>
-                                              </div>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="file2" class="col-sm-3 control-label">File Attachment 2</label>
-                                            <div class="col-sm-9">
-                                              <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="file2" name="file2"  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx">
-                                                <label class="custom-file-label" for="customFile"></label>
-                                              </div>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="file3" class="col-sm-3 control-label">File Attachment 3</label>
-                                            <div class="col-sm-9">                         
-                                              <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="file3" name="file3"  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx">
-                                                <label class="custom-file-label" for="customFile"></label>
-                                              </div>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="file4" class="col-sm-3 control-label">File Attachment 4</label>
-                                            <div class="col-sm-9">
-                                              <div class="custom-file">
-                                                <input type="file" class="custom-file-input"  name="file4" id="file4" accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx">
-                                                <label class="custom-file-label" for="customFile"></label>
-                                              </div>
-                                            </div>
-                                          </div>
-                    
-                                          <div class="form-group row">
-                                            <label for="file5" class="col-sm-3 control-label">File Attachment 5</label>
-                                              <div class="col-sm-9">
-                                                <div class="custom-file">
-                                                  <input type="file" class="custom-file-input" id="file5" name="file5"  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx">
-                                                  <label class="custom-file-label" for="customFile"></label>
-                                                </div>
-                                            </div>
-                                          </div>
-                                        </div><!--inner-row-->
-                                      </div><!--col-md-12 sub-form-->
-                                    </div>
-                                  </div>
-                                    
-                                </div> 
-                                <br>
-                                <div class="submit-button">
-                                  <button type="submit" class="btn btn-success" name="record" id="record">Record</button>
-                              </div> 
-                                                             
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <!-- left column -->
+        <div class="col-md-10 offset-md-1">
+          <!-- general form elements -->
+          <div class="card card-primary mb-0">
+            <div class="card-header">
+              <h5 class="card-title">Add New Case</h5>
+            </div>
+            <form role="form">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-12 sub-form">
+                        <div class="inner-row">
+                          <div class="form-group row">
+                            <label for="date" class="col-sm-3 control-label"
+                              >Date</label
+                            >
+                            <div class="col-sm-9"></div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="lodgeddate"
+                              class="col-sm-3 control-label"
+                              >Lodged Date</label
+                            >
+                            <div
+                              class="col-sm-9"
+                              id="lodgeddate"
+                              data-target-input="nearest"
+                            >
+                              <input
+                                type="date"
+                                class="form-control datetimepicker-input"
+                                name="lodgeddate"
+                                id="lodgeddate"
+                                data-target="#reservationdate"
+                                placeholder="3/8/2020"
+                              />
                             </div>
-                        </form>
-                      
-                    </div> <!--card card-primary-->
-                   
-                </div> <!--col-md-6 offset-md-2-->
-               
-            </div> <!--row-->
-           
-        </div> <!--container-fluid-->
-             
-    </section> <!--section2-->
-    
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="usertype" class="col-sm-3 control-label"
+                              >User type</label
+                            >
+                            <div class="col-sm-9">
+                              <select
+                                class="form-control"
+                                name="usertype"
+                                id="usertype"
+                              >
+                                <option selected="selected" value="Staff">
+                                  Staff
+                                </option>
+                                <option value="America">America</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="500">500</option>
+                                <option value="600">600</option>
+                                <option value="700">700</option>
+                                <option value="800">800</option>
+                                <option value="900">900</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <!--inner-row-->
+                      </div>
+                      <!--col-md-12 sub-form-->
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 sub-form">
+                        <div class="card-header">
+                          <h3 class="card-title Title2">
+                            <i class="fa fa-bars pr-1" aria-hidden="true"></i
+                            >Staff Detail
+                          </h3>
+                        </div>
+                        <div class="inner-row">
+                          <div class="form-group row">
+                            <label
+                              for="staffrole"
+                              class="col-sm-3 control-label"
+                              >Staff role</label
+                            >
+                            <div class="col-sm-9">
+                              <select
+                                class="form-control"
+                                name="staffrole"
+                                id="staffrole"
+                              >
+                                <option selected="selected" value="Agent">
+                                  Agent
+                                </option>
+                                <option value="Adelie Land (France)">
+                                  Adelie Land (France)
+                                </option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Aland Islands">
+                                  Aland Islands
+                                </option>
+                                <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="Angola">Angola</option>
+                                <option value="Anguilla">Anguilla</option>
+                                <option value="Yemen">Yemen</option>
+                                <option value="Zambia">Zambia</option>
+                                <option value="Zimbabwe">Zimbabwe</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="requestedby"
+                              class="col-sm-3 control-label"
+                              >Requested by<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              <select
+                                class="form-control"
+                                name="requestedby"
+                                id="requestedby"
+                                required
+                              >
+                                <option selected="selected" value="No Staff">
+                                  No Staff
+                                </option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="Aland Islands">
+                                  Aland Islands
+                                </option>
+                                <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="Angola">Angola</option>
+                                <option value="Anguilla">Anguilla</option>
+                                <option value="Yemen">Yemen</option>
+                                <option value="Zambia">Zambia</option>
+                                <option value="Zimbabwe">Zimbabwe</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="loggedby" class="col-sm-3 control-label"
+                              >Logged by</label
+                            >
+                            <div class="col-sm-9">
+                              <p>
+                                Mr. Chandra Mohan Sareen (skillsinternational)
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="category"
+                              class="col-sm-3 control-label alignStart"
+                              >Categoy<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              <input
+                                class="form-control"
+                                type="text"
+                                name="category"
+                                id="category"
+                                placeholder=" Enter company address"
+                                required
+                              />
+                              <a href="#"><u> Refresh Category?</u></a>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="casedetail"
+                              class="col-sm-3 label alignStart"
+                              >Case Detail<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              <textarea
+                                class="form-control"
+                                rows="3"
+                                placeholder="Enter case detail"
+                                name="casedetail"
+                                id="casedetail"
+                                required
+                              ></textarea>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="escalatedto"
+                              class="col-sm-3 control-label"
+                              >Escalated to<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              <select
+                                class="form-control"
+                                name="escalatedto"
+                                id="escalatedto"
+                                required
+                              >
+                                <option
+                                  selected="selected"
+                                  value="--Select Escalated To--"
+                                >
+                                  --Select Escalated To--
+                                </option>
+                                <option value="America">America</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="500">500</option>
+                                <option value="600">600</option>
+                                <option value="700">700</option>
+                                <option value="800">800</option>
+                                <option value="900">900</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="actiontaken"
+                              class="col-sm-3 control-label alignStart"
+                              >Action Taken<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              <textarea
+                                class="form-control"
+                                rows="3"
+                                placeholder="Enter action"
+                                name="actiontaken"
+                                id="actiontaken"
+                                required
+                              ></textarea>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label
+                              for="action"
+                              class="col-sm-3 control-label alignStart"
+                              >Action taken to prevent reoccurance</label
+                            >
+                            <div class="col-sm-9">
+                              <textarea
+                                class="form-control"
+                                rows="3"
+                                placeholder="Enter other details"
+                                name="action"
+                                id="action"
+                              ></textarea>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="status" class="col-sm-3 control-label"
+                              >Status<span class="star">*</span></label
+                            >
+                            <div class="col-sm-9">
+                              <select
+                                class="form-control"
+                                name="status"
+                                id="status"
+                                required
+                              >
+                                <option
+                                  selected="selected"
+                                  value="--Select Escalated To--"
+                                >
+                                  --Select Status--
+                                </option>
+                                <option value="America">America</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="500">500</option>
+                                <option value="600">600</option>
+                                <option value="700">700</option>
+                                <option value="800">800</option>
+                                <option value="900">900</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="file1" class="col-sm-3 control-label"
+                              >File Attachment 1</label
+                            >
+                            <div class="col-sm-9">
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  id="file1"
+                                  name="file1"
+                                  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="customFile"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="file2" class="col-sm-3 control-label"
+                              >File Attachment 2</label
+                            >
+                            <div class="col-sm-9">
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  id="file2"
+                                  name="file2"
+                                  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="customFile"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="file3" class="col-sm-3 control-label"
+                              >File Attachment 3</label
+                            >
+                            <div class="col-sm-9">
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  id="file3"
+                                  name="file3"
+                                  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="customFile"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="file4" class="col-sm-3 control-label"
+                              >File Attachment 4</label
+                            >
+                            <div class="col-sm-9">
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  name="file4"
+                                  id="file4"
+                                  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="customFile"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="file5" class="col-sm-3 control-label"
+                              >File Attachment 5</label
+                            >
+                            <div class="col-sm-9">
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  id="file5"
+                                  name="file5"
+                                  accept=".xls,.xlsx,.txt,.doc,.pdf,.pptx"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="customFile"
+                                ></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--inner-row-->
+                      </div>
+                      <!--col-md-12 sub-form-->
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="submit-button">
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    name="record"
+                    id="record"
+                  >
+                    Record
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!--card card-primary-->
+        </div>
+        <!--col-md-6 offset-md-2-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-fluid-->
+  </section>
+  <!--section2-->
 </div>
-
-
-   
