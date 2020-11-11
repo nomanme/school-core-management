@@ -34,9 +34,10 @@ export class ApiService {
   api_url = 'https://0p8y7okgr2.execute-api.ap-southeast-2.amazonaws.com';
   api_url2 = 'https://2olljr3w8i.execute-api.ap-southeast-2.amazonaws.com';
   api_url3 = 'https://9ivnf9l6xc.execute-api.ap-southeast-2.amazonaws.com';
+
   redirectUrl: string;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
   public getUser(url = 'dev/getuser') {
     // console.log(`${this.api_url}/${url}`)
     return this.httpClient.get(`${this.api_url}/${url}`);

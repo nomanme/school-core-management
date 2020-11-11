@@ -129,6 +129,7 @@ import { UnitsComponent } from './pages/admin/units/units.component';
 import { CreateUnitComponent } from './pages/admin/create-unit/create-unit.component';
 import { ViewUnitComponent } from './pages/admin/view-unit/view-unit.component';
 import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
+import { TrainingOrganizationsComponent } from './pages/admin/training-organizations/training-organizations.component';
 
 @NgModule({
   declarations: [
@@ -256,6 +257,7 @@ import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
     CreateUnitComponent,
     ViewUnitComponent,
     EditUnitComponent,
+    TrainingOrganizationsComponent,
   ],
 
   imports: [

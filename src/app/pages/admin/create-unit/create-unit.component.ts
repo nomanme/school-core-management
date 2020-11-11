@@ -9,6 +9,11 @@ import { ApiService } from 'src/app/api/api.service';
 })
 export class CreateUnitComponent implements OnInit {
 
+  getfieldofeducation;
+  getschooltype;
+  getspecificfunding;
+
+
 
   dataString
   units;
@@ -38,9 +43,17 @@ export class CreateUnitComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.apiService.getAPI3('dev/getstate').subscribe((data) => {
-    //   this.getstate = data;
-    // })
+    this.apiService.getAPI3('dev/getfieldofeducation').subscribe((data) => {
+      this.getfieldofeducation = data;
+    })
+
+    this.apiService.getAPI3('dev/getschooltype=').subscribe((data) => {
+      this.getschooltype = data;
+    })
+
+    this.apiService.getAPI3('dev/getspecificfunding').subscribe((data) => {
+      this.getspecificfunding = data;
+    })
 
   }
 

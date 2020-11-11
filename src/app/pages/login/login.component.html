@@ -7,23 +7,25 @@
 
         <div class="card-body">
 
-            <form #f ="ngForm" action="" method="post">
+            <form #f="ngForm" action="" method="post">
 
                 <div class="container">
 
                     <div class="form-group">
                         <!-- <label for="uname"><b>Username</b></label> -->
-                        <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+                        <input [(ngModel)]="email" type="text" class="form-control" placeholder="Enter Username"
+                            name="uname" required>
                     </div>
 
                     <div class="form-group">
                         <!-- <label for="psw"><b>Password</b></label> -->
-                        <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                        <input [(ngModel)]="userpassword" type="password" class="form-control"
+                            placeholder="Enter Password" name="psw" required>
                     </div>
-                        
-                    <button type="submit" class="btn btn-info">Login</button>
+
+                    <button (click)="logIn(f)" type="submit" class="btn btn-info">Login</button>
                     <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>
 
                 </div>
