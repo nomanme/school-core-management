@@ -1,1 +1,495 @@
-<p>create-training-organization works!</p>
+<div class="content-wrapper">
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+          <h3 class="page-heading">Create Training Organization</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Create
+              Training Organization
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <!-- left column -->
+        <div class="col-md-8 offset-md-2">
+          <!-- general form elements -->
+          <div class="card card-primary mb-0">
+            <div class="card-header">
+              <h4 class="card-title">Add Unit</h4>
+            </div>
+            <form role="form" #f="ngForm">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 sub-form">
+                    <div class="inner-row">
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgId"
+                          class="col-sm-4 control-label"
+                          >Training Organization Id<span class="star"
+                            >*</span
+                          ></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="trainingOrgId"
+                              type="text"
+                              class="form-control"
+                              name="trainingOrgId"
+                              id="trainingOrgId"
+                              placeholder="Enter Training Id here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="RTOCode " class="col-sm-4 control-label"
+                          >RTO Code<span class="star">*</span></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="RTOCode"
+                              class="form-control"
+                              type="text"
+                              name="RTOCode "
+                              id="RTOCode "
+                              placeholder="Enter RTO Code here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="CRICOSCode " class="col-sm-4 control-label"
+                          >CRICOS Code <span class="star"></span
+                        ></label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="CRICOSCode"
+                              class="form-control"
+                              type="text"
+                              name="CRICOSCode "
+                              id="CRICOSCode "
+                              placeholder="Enter Cricos Code here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgName "
+                          class="col-sm-4 control-label"
+                          >Training Organization Name
+                        </label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="trainingOrgName"
+                              class="form-control"
+                              type="text"
+                              name="trainingOrgName "
+                              id="trainingOrgName "
+                              placeholder="Enter Training Organization Name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="address1 " class="col-sm-4 control-label"
+                          >Address <span class="star">*</span></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="address1"
+                              class="form-control"
+                              type="text"
+                              name="address1 "
+                              id="address1 "
+                              placeholder="Enter Address"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="suburb " class="col-sm-4 control-label"
+                          >Suburb
+                        </label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="suburb"
+                              class="form-control"
+                              type="text"
+                              name="suburb "
+                              id="suburb "
+                              placeholder="Enter Suburb"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="postCode " class="col-sm-4 control-label"
+                          >Post Code
+                        </label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <select
+                              [(ngModel)]="postCode"
+                              class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger"
+                              name="postCode "
+                              id="postCode "
+                            >
+                              <!-- <option
+                                *ngFor="let fieldedu of getfieldofeducation"
+                                [value]="fieldedu.postCode "
+                                selected="selected"
+                              >
+                                {{ fieldedu.fieldOfEducationCode }} -
+                                {{ fieldedu.Descriptions }}
+                              </option> -->
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="contactPerson "
+                          class="col-sm-4 control-label"
+                          >Contact Person <span class="star">*</span></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="contactPerson"
+                              class="form-control"
+                              type="text"
+                              name="contactPerson "
+                              id="contactPerson "
+                              placeholder="Enter Contact Person"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="RTOType " class="col-sm-4 control-label"
+                          >RTO Type</label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <select
+                              [(ngModel)]="RTOType"
+                              class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger"
+                              name="RTOType "
+                              id="RTOType "
+                              required
+                            >
+                              <!-- <option
+                                *ngFor="let schooltype of getschooltype"
+                                [value]="schooltype.RTOType "
+                                selected="selected"
+                              >
+                                {{ schooltype.schoolTypeCode }} -
+                                {{ schooltype.schoolTypeName }}
+                              </option> -->
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgTypeCode "
+                          class="col-sm-4 control-label"
+                          >Training Organization TypeCode
+                        </label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <select
+                              [(ngModel)]="trainingOrgTypeCode"
+                              class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger"
+                              name="trainingOrgTypeCode "
+                              id="trainingOrgTypeCode "
+                            >
+                              <!-- <option
+                                *ngFor="let specificfund of getspecificfunding"
+                                [value]="specificfund.trainingOrgTypeCode "
+                                selected="selected"
+                              >
+                                {{ specificfund.specificFundingCode }} -
+                                {{ specificfund.specificFundingName }}
+                              </option> -->
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="stateId" class="col-sm-4 label"
+                          >State Id</label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <select
+                              [(ngModel)]="stateId"
+                              class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger"
+                              name="stateId"
+                              id="stateId"
+                            >
+                              <!-- <option
+                                    *ngFor="let state of getstate"
+                                    [value]="state.stateId"
+                                    selected="selected"
+                                  >
+                                    {{ state.stateCode }} -
+                                    {{ state.stateName }}
+                                  </option> -->
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="contactPerson "
+                          class="col-sm-4 control-label"
+                          >Contact Person <span class="star">*</span></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="contactPerson"
+                              class="form-control"
+                              type="text"
+                              name="contactPerson "
+                              id="contactPerson "
+                              placeholder="Enter Contact Person"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="telephone  " class="col-sm-4 control-label"
+                          >Telephone <span class="star">*</span></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="telephone"
+                              class="form-control"
+                              type="text"
+                              name="telephone  "
+                              id="telephone  "
+                              placeholder="Enter Telephone here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="ABN" class="col-sm-4 control-label"
+                          >ABN<span class="star">*</span></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="ABN"
+                              class="form-control"
+                              type="text"
+                              name="ABN   "
+                              id="ABN   "
+                              placeholder="Enter ABN here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="contactEmail    "
+                          class="col-sm-4 control-label"
+                          >Contact Email <span class="star">*</span></label
+                        >
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="contactEmail"
+                              class="form-control"
+                              type="text"
+                              name="contactEmail"
+                              id="contactEmail"
+                              placeholder="Enter Contact Email here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="ITEmail     " class="col-sm-4 control-label"
+                          >IT Email <span class="star"></span
+                        ></label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="ITEmail"
+                              class="form-control"
+                              type="text"
+                              name="ITEmail "
+                              id="ITEmail "
+                              placeholder="Enter IT Email here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="academicEmail      "
+                          class="col-sm-4 control-label"
+                          >Academic Email <span class="star"></span
+                        ></label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="academicEmail"
+                              class="form-control"
+                              type="text"
+                              name="academicEmail  "
+                              id="academicEmail  "
+                              placeholder="Enter Academic Email here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="accountsEmail"
+                          class="col-sm-4 control-label"
+                          >Accounts Email <span class="star"></span
+                        ></label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="accountsEmail"
+                              class="form-control"
+                              type="text"
+                              name="accountsEmail   "
+                              id="accountsEmail   "
+                              placeholder="Enter Accounts Email here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgURL "
+                          class="col-sm-4 control-label"
+                          >Training Organization URL <span class="star"></span
+                        ></label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="trainingOrgURL"
+                              class="form-control"
+                              type="text"
+                              name="trainingOrgURL    "
+                              id="trainingOrgURL    "
+                              placeholder="Enter Training URL here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="typeOfIndustryCode  "
+                          class="col-sm-4 control-label"
+                          >Type Of Industry Code <span class="star"></span
+                        ></label>
+                        <div class="col-sm-8">
+                          <div class="input-group">
+                            <input
+                              [(ngModel)]="typeOfIndustryCode"
+                              class="form-control"
+                              type="text"
+                              name="typeOfIndustryCode     "
+                              id="typeOfIndustryCode     "
+                              placeholder="Enter Industry Code here"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--inner-row-->
+                  </div>
+                  <!--col-md-12 sub-form-->
+                </div>
+                <br />
+                <div class="submit-button">
+                  <button
+                    type="submit"
+                    (click)="createUnit(f)"
+                    class="btn btn-success"
+                    name="add"
+                    id="add"
+                  >
+                    Add New
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!--card card-primary-->
+        </div>
+        <!--col-md-6 offset-md-2-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-fluid-->
+  </section>
+  <!--section2-->
+</div>
