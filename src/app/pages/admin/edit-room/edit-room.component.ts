@@ -12,11 +12,7 @@ export class EditRoomComponent implements OnInit {
   venueroom;
   venueId;
 
-  constructor(
-    private apiService: ApiService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.venueroomId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -34,8 +30,8 @@ export class EditRoomComponent implements OnInit {
     let datajson = `{"venueroomId":"1","roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}", "venueId":"${form.value.venueId}"}`;
     console.log(datajson);
     this.apiService.postAPI(`dev/editvenueroom?venueroomId=${this.venueroomId}`, datajson).subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/admin/list-venueroom']);
-      });
+      console.log(data);
+      this.router.navigate(['/admin/list-venueroom']);
+    });
   }
 }

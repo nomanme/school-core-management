@@ -40,9 +40,7 @@
                                                         class="star">*</span></label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input
-                                                            [ngClass]="error1 == ''? 'form-control select2': 'form-control select2 is-invalid'"
-                                                            [(ngModel)]="unitCode" type="text" class="form-control"
+                                                        <input [(ngModel)]="unitCode" type="text" class="form-control"
                                                             name="unitCode" id="unitCode"
                                                             placeholder="Enter Unit Code here" required />
                                                     </div>
@@ -54,10 +52,8 @@
                                                     Code<span class="star">*</span></label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input
-                                                            [ngClass]="error2 == ''? 'form-control select2': 'form-control select2 is-invalid'"
-                                                            [(ngModel)]="vetUnitCode" class="form-control" type="text"
-                                                            name="vetUnitCode" id="vetUnitCode"
+                                                        <input [(ngModel)]="vetUnitCode" class="form-control"
+                                                            type="text" name="vetUnitCode" id="vetUnitCode"
                                                             placeholder="Enter Vet Unit Code here" required />
                                                     </div>
                                                 </div>
@@ -68,9 +64,7 @@
                                                         class="star">*</span></label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input
-                                                            [ngClass]="error3 == ''? 'form-control select2': 'form-control select2 is-invalid'"
-                                                            [(ngModel)]="unitName" class="form-control" type="text"
+                                                        <input [(ngModel)]="unitName" class="form-control" type="text"
                                                             name="unitName" id="unitName"
                                                             placeholder="Enter Unit Name here" required />
                                                     </div>
@@ -82,10 +76,8 @@
                                                     Mode</label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input
-                                                            [ngClass]="error3 == ''? 'form-control select2': 'form-control select2 is-invalid'"
-                                                            [(ngModel)]="deliveryMode" class="form-control" type="text"
-                                                            name="deliveryMode" id="deliveryMode"
+                                                        <input [(ngModel)]="deliveryMode" class="form-control"
+                                                            type="text" name="deliveryMode" id="deliveryMode"
                                                             placeholder="Enter Delivery Mode here" />
                                                     </div>
                                                 </div>
@@ -97,9 +89,7 @@
                                                     Hours<span class="star">*</span></label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input
-                                                            [ngClass]="error3 == ''? 'form-control select2': 'form-control select2 is-invalid'"
-                                                            [(ngModel)]="scheduledNominalHours" class="form-control"
+                                                        <input [(ngModel)]="scheduledNominalHours" class="form-control"
                                                             type="text" name="scheduledNominalHours"
                                                             id="scheduledNominalHours"
                                                             placeholder="Enter nominal hours here" required />
@@ -112,9 +102,7 @@
                                                     Fee</label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input
-                                                            [ngClass]="error3 == ''? 'form-control select2': 'form-control select2 is-invalid'"
-                                                            [(ngModel)]="tuitionFee" class="form-control" type="text"
+                                                        <input [(ngModel)]="tuitionFee" class="form-control" type="text"
                                                             name="tuitionFee" id="tuitionFee"
                                                             placeholder="Enter tuition fee here" />
                                                     </div>
@@ -133,8 +121,10 @@
                                                             data-dropdown-css-class="select2-danger"
                                                             name="fieldofEducationId" id="fieldofEducationId">
                                                             <option *ngFor="let fieldedu of getfieldofeducation"
-                                                                [value]="fieldedu.trainingOrgId" selected="selected">
-                                                                {{ fieldedu.trainingOrgName }}
+                                                                [value]="fieldedu.fieldofEducationId"
+                                                                selected="selected">
+                                                                {{ fieldedu.fieldOfEducationCode }} -
+                                                                {{ fieldedu.Descriptions }}
                                                             </option>
                                                         </select>
                                                     </div>
@@ -147,9 +137,7 @@
                                                         class="star">*</span></label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input
-                                                            [ngClass]="error3 == ''? 'form-control select2': 'form-control select2 is-invalid'"
-                                                            [(ngModel)]="vetFlag" class="form-control" type="text"
+                                                        <input [(ngModel)]="vetFlag" class="form-control" type="text"
                                                             name="vetFlag" id="vetFlag"
                                                             placeholder="Enter vet flag here" required />
                                                     </div>

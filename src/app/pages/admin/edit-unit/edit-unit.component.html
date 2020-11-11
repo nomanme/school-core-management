@@ -1,1 +1,212 @@
-<p>edit-unit works!</p>
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <div class="col-sm-12">
+                    <h3 class="page-heading">Create Unit</h3>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">
+                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Create
+                            Unit
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                    <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h4 class="card-title">Add Unit</h4>
+                        </div>
+                        <form role="form" #f="ngForm">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+                                            <div class="form-group row">
+                                                <label for="unitCode" class="col-sm-4 control-label">Unit Code<span
+                                                        class="star">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="unit.unitCode" type="text"
+                                                            class="form-control" name="unitCode" id="unitCode"
+                                                            placeholder="Enter Unit Code here" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="vetUnitCode" class="col-sm-4 control-label">Vet Unit
+                                                    Code<span class="star">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="unit.vetUnitCode" class="form-control"
+                                                            type="text" name="vetUnitCode" id="vetUnitCode"
+                                                            placeholder="Enter Vet Unit Code here" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="unitName" class="col-sm-4 control-label">Unit Name<span
+                                                        class="star">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="unit.unitName" class="form-control"
+                                                            type="text" name="unitName" id="unitName"
+                                                            placeholder="Enter Unit Name here" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="deliveryMode" class="col-sm-4 control-label">Delivery
+                                                    Mode</label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="unit.deliveryMode" class="form-control"
+                                                            type="text" name="deliveryMode" id="deliveryMode"
+                                                            placeholder="Enter Delivery Mode here" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="scheduledNominalHours"
+                                                    class="col-sm-4 control-label">Scheduled Nominal
+                                                    Hours<span class="star">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="unit.scheduledNominalHours"
+                                                            class="form-control" type="text"
+                                                            name="scheduledNominalHours" id="scheduledNominalHours"
+                                                            placeholder="Enter nominal hours here" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="tuitionFee" class="col-sm-4 control-label">Tuition
+                                                    Fee</label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="unit.tuitionFee" class="form-control"
+                                                            type="text" name="tuitionFee" id="tuitionFee"
+                                                            placeholder="Enter tuition fee here" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="form-group row">
+                                                <label for="fieldofEducationId" class="col-sm-4 control-label">Field of
+                                                    Education</label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <select [(ngModel)]="unit.fieldofEducationId"
+                                                            class="form-control select2 select2-danger"
+                                                            data-dropdown-css-class="select2-danger"
+                                                            name="fieldofEducationId" id="fieldofEducationId">
+                                                            <option *ngFor="let fieldedu of getfieldofeducation"
+                                                                [value]="fieldedu.fieldofEducationId"
+                                                                selected="selected">
+                                                                {{ fieldedu.fieldOfEducationCode }} -
+                                                                {{ fieldedu.Descriptions }}
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label for="vetFlag" class="col-sm-4 control-label">vetFlag<span
+                                                        class="star">*</span></label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="unit.vetFlag" class="form-control"
+                                                            type="text" name="vetFlag" id="vetFlag"
+                                                            placeholder="Enter vet flag here" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label for="schoolTypeId" class="col-sm-4 control-label">School
+                                                    Type</label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <select [(ngModel)]="unit.schoolTypeId"
+                                                            class="form-control select2 select2-danger"
+                                                            data-dropdown-css-class="select2-danger" name="schoolTypeId"
+                                                            id="schoolTypeId" required>
+                                                            <option *ngFor="let schooltype of getschooltype"
+                                                                [value]="schooltype.schoolTypeId" selected="selected">
+                                                                {{ schooltype.schoolTypeCode }} -
+                                                                {{ schooltype.schoolTypeName }}
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="specificFundingId" class="col-sm-4 control-label">Specific
+                                                    Funding</label>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group">
+                                                        <select [(ngModel)]="unit.specificFundingId"
+                                                            class="form-control select2 select2-danger"
+                                                            data-dropdown-css-class="select2-danger"
+                                                            name="specificFundingId" id="specificFundingId">
+                                                            <option *ngFor="let specificfund of getspecificfunding"
+                                                                [value]="specificfund.specificFundingId"
+                                                                selected="selected">
+                                                                {{ specificfund.specificFundingCode }} -
+                                                                {{ specificfund.specificFundingName }}
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <!--inner-row-->
+                                    </div>
+                                    <!--col-md-12 sub-form-->
+                                </div>
+                                <br />
+                                <div class="submit-button">
+                                    <button type="submit" (click)="editUnit(f)" class="btn btn-success" name="update"
+                                        id="update">
+                                        Update
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--card card-primary-->
+                </div>
+                <!--col-md-6 offset-md-2-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-fluid-->
+    </section>
+    <!--section2-->
+</div>
