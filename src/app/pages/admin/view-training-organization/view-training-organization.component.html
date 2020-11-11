@@ -1,1 +1,237 @@
 <p>view-training-organization works!</p>
+
+<div class="content-wrapper">
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+          <h3 class="page-heading">Training Organization</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View
+              Enrolment Fee
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <!-- left column -->
+        <div class="col-md-10 offset-md-1">
+          <!-- general form elements -->
+          <div class="card card-primary mb-0">
+            <div class="card-header">
+              <h5 class="card-title">Setup Enrolment Fee Information</h5>
+            </div>
+            <form
+              method="post"
+              action=""
+              enctype="multipart/form-data"
+              *ngFor=""
+            >
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="inner-row">
+                      <!-- <div class="form-group row">
+                                <label for="studentId" class="col-sm-3 control-label">Student Id</label> 
+                                <div class="col-sm-9">   
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="studentOriginId" class="col-sm-3 control-label">Student Origin Id</label> 
+                                <div class="col-sm-9">
+                              </div>
+                            </div> -->
+
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgId "
+                          class="col-sm-3 control-label"
+                          >Course</label
+                        >
+                        <div class="col-sm-9"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="RTOCode " class="col-sm-3 control-label"
+                          >RTO Code
+                        </label>
+                        <div class="col-sm-9"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="CRICOSCode " class="col-sm-4 control-label"
+                          >Cricos Code
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgName "
+                          class="col-sm-3 control-label"
+                          >Training Organization Name</label
+                        >
+                        <div
+                          class="col-sm-9"
+                          *ngFor="let appstatus of getapplicationstatus"
+                          [value]="appstatus.applicationStatusId"
+                        ></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="address1 " class="col-sm-4 control-label"
+                          >Address</label
+                        >
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="suburb " class="col-sm-4 control-label"
+                          >Suburb</label
+                        >
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="stateId " class="col-sm-4 control-label"
+                          >State Id</label
+                        >
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="postCode " class="col-sm-4 control-label">
+                          Post Code</label
+                        >
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="RTOType " class="col-sm-4 control-label">
+                          RTO Type
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgTypeCode "
+                          class="col-sm-4 control-label"
+                          >Training Organization Type Code
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="contactPerson "
+                          class="col-sm-4 control-label"
+                          >Contact Person
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="telephone " class="col-sm-4 control-label"
+                          >Telephone
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="ABN  " class="col-sm-4 control-label"
+                          >ABN
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="contactEmail   "
+                          class="col-sm-4 control-label"
+                          >Contact Email
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="ITEmail    " class="col-sm-4 control-label"
+                          >IT Email
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="academicEmail     "
+                          class="col-sm-4 control-label"
+                          >Academic Email
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="ITEmail    " class="col-sm-4 control-label"
+                          >IT Email
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="accountsEmail     "
+                          class="col-sm-4 control-label"
+                          >Accounts Email
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="trainingOrgURL      "
+                          class="col-sm-4 control-label"
+                          >Training URL
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label
+                          for="typeOfIndustryCode      "
+                          class="col-sm-4 control-label"
+                          >Type Of Industry Code
+                        </label>
+                        <div class="col-sm-8"></div>
+                      </div>
+                    </div>
+                    <!--inner-row-->
+                  </div>
+                  <!--col-md-12-->
+                </div>
+                <!--row-->
+              </div>
+            </form>
+          </div>
+          <!--card card-primary-->
+        </div>
+        <!--col-md-6 offset-md-2-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-fluid-->
+  </section>
+  <!--section2-->
+</div>
+<!--content-wrapper-->
