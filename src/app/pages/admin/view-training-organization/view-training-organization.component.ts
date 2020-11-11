@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from 'src/app/api/api.service';
 
 @Component({
   selector: 'app-view-training-organization',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewTrainingOrganizationComponent implements OnInit {
 
-  constructor() { }
+  trainingOrgId;
+  trainingOrgs;
+
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.trainingOrgId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    this.apiService.getAPI(`dev/gettrainingOrg?trainingOrgId=${this.trainingOrgId}`).subscribe((data) => {
+      console.log(data);
+      this.trainingOrgs = data;
+    });
   }
 
 }

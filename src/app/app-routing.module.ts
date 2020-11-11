@@ -65,6 +65,7 @@ import { ViewRoleComponent } from './pages/admin/view-role/view-role.component';
 import { ViewRoomComponent } from './pages/admin/view-room/view-room.component';
 import { ViewStudentenrolmentComponent } from './pages/admin/view-studentenrolment/view-studentenrolment.component';
 import { ViewTrainingOrganizationComponent } from './pages/admin/view-training-organization/view-training-organization.component';
+import { TrainingOrganizationsComponent } from './pages/admin/training-organizations/training-organizations.component';
 import { ViewUnitComponent } from './pages/admin/view-unit/view-unit.component';
 import { ViewVenueComponent } from './pages/admin/view-venue/view-venue.component';
 import { ViewdatabaseComponent } from './pages/admin/viewdatabase/viewdatabase.component';
@@ -163,23 +164,14 @@ const routes: Routes = [
   },
 
   //Admin
-  {
-    path: 'admin/create-training-organization',
-    component: CreateTrainingOrganizationComponent,
-    canActivate: [AuthGuardService],
-  },
 
-  {
-    path: 'admin/edit-training-organization-type',
-    component: EditTrainingOrganizationTypeComponent,
-    canActivate: [AuthGuardService],
-  },
+  { path: 'admin/list-training-organization', component: TrainingOrganizationsComponent, canActivate: [AuthGuardService], },
 
-  {
-    path: 'admin/view-training-organization',
-    component: ViewTrainingOrganizationComponent,
-    canActivate: [AuthGuardService],
-  },
+  { path: 'admin/create-training-organization', component: CreateTrainingOrganizationComponent, canActivate: [AuthGuardService], },
+
+  { path: 'admin/edit-training-organization-type', component: EditTrainingOrganizationTypeComponent, canActivate: [AuthGuardService], },
+
+  { path: 'admin/view-training-organization/:id', component: ViewTrainingOrganizationComponent, canActivate: [AuthGuardService] },
 
   { path: 'admin/create-student', component: StudentcreateComponent, canActivate: [AuthGuardService], },
   { path: 'admin/student-list', component: StudentListComponent, canActivate: [AuthGuardService], },
@@ -439,4 +431,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

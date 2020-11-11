@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api/api.service';
 
 @Component({
   selector: 'app-training-organizations',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainingOrganizationsComponent implements OnInit {
 
-  constructor() { }
+  trainingOrgs;
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
+    this.apiService.getAPI('dev/gettrainingOrg').subscribe((data) => {
+      console.log(data);
+      this.trainingOrgs = data;
+    });
   }
 
 }
