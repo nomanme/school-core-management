@@ -3,13 +3,13 @@
         <div class="container-fluid">
             <div class="row m-0 p-0">
                 <div class="col-sm-12">
-                    <h3 class="page-heading">Create Unit</h3>
+                    <h3 class="page-heading">Edit Unit</h3>
                 </div>
                 <div class="col-sm-12 text-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">
-                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Create
+                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Edit
                             Unit
                         </li>
                     </ol>
@@ -71,7 +71,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group row">
+                                            <!-- <div class="form-group row">
                                                 <label for="deliveryMode" class="col-sm-4 control-label">Delivery
                                                     Mode</label>
                                                 <div class="col-sm-8">
@@ -79,6 +79,29 @@
                                                         <input [(ngModel)]="unit.deliveryMode" class="form-control"
                                                             type="text" name="deliveryMode" id="deliveryMode"
                                                             placeholder="Enter Delivery Mode here" />
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+                                            <div class="form-group row">
+                                                <label for="deliveryMode" class="col-sm-4 col-form-label">Delivery
+                                                    Mode</label>
+                                                <div class="col-sm-8">
+                                                    <div class="form-check radio">
+                                                        <input class="form-check-input" type="radio" name="deliveryMode"
+                                                            id="deliveryMode" value="I" [(ngModel)]="unit.deliveryMode"
+                                                            checked>
+                                                        <label class="form-check-label">Internal only</label>
+                                                    </div>
+                                                    <div class="form-check radio">
+                                                        <input class="form-check-input" type="radio" name="deliveryMode"
+                                                            id="deliveryMode" value="E" [(ngModel)]="unit.deliveryMode">
+                                                        <label class="form-check-label">External only</label>
+                                                    </div>
+                                                    <div class="form-check radio">
+                                                        <input class="form-check-input" type="radio" name="deliveryMode"
+                                                            id="deliveryMode" value="W" [(ngModel)]="unit.deliveryMode">
+                                                        <label class="form-check-label">Workplace-based only</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,7 +144,7 @@
                                                             data-dropdown-css-class="select2-danger"
                                                             name="fieldofEducationId" id="fieldofEducationId">
                                                             <option *ngFor="let fieldedu of getfieldofeducation"
-                                                                [value]="fieldedu.fieldofEducationId"
+                                                                [value]="fieldedu.fieldOfEducationId"
                                                                 selected="selected">
                                                                 {{ fieldedu.fieldOfEducationCode }} -
                                                                 {{ fieldedu.Descriptions }}
