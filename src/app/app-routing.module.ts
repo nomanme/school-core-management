@@ -13,6 +13,7 @@ import { CoursesiteComponent } from './pages/admin/coursesite/coursesite.compone
 import { CreateRoleComponent } from './pages/admin/create-role/create-role.component';
 import { CreateRoomComponent } from './pages/admin/create-room/create-room.component';
 import { CreateStudentenrolmentComponent } from './pages/admin/create-studentenrolment/create-studentenrolment.component';
+import { CreateTrainingOrganizationComponent } from './pages/admin/create-training-organization/create-training-organization.component';
 import { CreateUnitComponent } from './pages/admin/create-unit/create-unit.component';
 import { CreateVenueComponent } from './pages/admin/create-venue/create-venue.component';
 import { CreatepermissiongroupComponent } from './pages/admin/createpermissiongroup/createpermissiongroup.component';
@@ -20,6 +21,8 @@ import { CustomfieldsComponent } from './pages/admin/customfields/customfields.c
 import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
+//noman
+import { EditTrainingOrganizationTypeComponent } from './pages/admin/edit-training-organization-type/edit-training-organization-type.component';
 import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
 import { EditVenueComponent } from './pages/admin/edit-venue/edit-venue.component';
 import { EditagentstatusComponent } from './pages/admin/editagentstatus/editagentstatus.component';
@@ -61,6 +64,7 @@ import { UpdatereportComponent } from './pages/admin/updatereport/updatereport.c
 import { ViewRoleComponent } from './pages/admin/view-role/view-role.component';
 import { ViewRoomComponent } from './pages/admin/view-room/view-room.component';
 import { ViewStudentenrolmentComponent } from './pages/admin/view-studentenrolment/view-studentenrolment.component';
+import { ViewTrainingOrganizationComponent } from './pages/admin/view-training-organization/view-training-organization.component';
 import { ViewUnitComponent } from './pages/admin/view-unit/view-unit.component';
 import { ViewVenueComponent } from './pages/admin/view-venue/view-venue.component';
 import { ViewdatabaseComponent } from './pages/admin/viewdatabase/viewdatabase.component';
@@ -137,28 +141,14 @@ import { ManageuseraccountComponent } from './pages/users/manageuseraccount/mana
 import { UseractivityComponent } from './pages/users/useractivity/useractivity.component';
 import { ViewUsersComponent } from './pages/users/view-users/view-users.component';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   //Staff
   {
-    path: 'staff/profile', component: ProfileComponent, canActivate: [AuthGuardService],
+    path: 'staff/profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuardService],
   },
   { path: 'staff/add-staff', component: AddstaffComponent },
   { path: 'staff/documents', component: DocumentsComponent },
@@ -166,9 +156,27 @@ const routes: Routes = [
   { path: 'staff/photo', component: PhotoComponent },
   { path: 'staff/communication-log', component: CommunicationlogComponent },
   { path: 'staff/management-home', component: ManagementhomeComponent },
-  { path: 'staff/professional-development', component: ProfessionaldevelopmentComponent, },
+  {
+    path: 'staff/professional-development',
+    component: ProfessionaldevelopmentComponent,
+  },
 
   //Admin
+  {
+    path: 'admin/create-training-organization',
+    component: CreateTrainingOrganizationComponent,
+  },
+
+  {
+    path: 'admin/edit-training-organization-type',
+    component: EditTrainingOrganizationTypeComponent,
+  },
+
+  {
+    path: 'admin/view-training-organization',
+    component: ViewTrainingOrganizationComponent,
+  },
+
   { path: 'admin/create-student', component: StudentcreateComponent },
   { path: 'admin/student-list', component: StudentListComponent },
   { path: 'admin/edit-student/:id', component: StudentupdateComponent },
@@ -178,39 +186,81 @@ const routes: Routes = [
   { path: 'admin/additional-email', component: AdditionalemailsetupComponent },
   { path: 'admin/assessment-due-date', component: AssessmentduedateComponent },
   { path: 'admin/add-contact', component: AddcontactComponent },
-  { path: 'admin/certificateid-format', component: CertificateidformatComponent, },
+  {
+    path: 'admin/certificateid-format',
+    component: CertificateidformatComponent,
+  },
   { path: 'admin/checklist-setup', component: ChecklistsetupComponent },
-  { path: 'admin/offer-document-checklist', component: OfferdocumentchecklistComponent, },
-  { path: 'admin/overseas-student-health', component: OverseasstudenthealthComponent, },
-  { path: 'admin/course-calender-type', component: CoursecalendertypeComponent, },
+  {
+    path: 'admin/offer-document-checklist',
+    component: OfferdocumentchecklistComponent,
+  },
+  {
+    path: 'admin/overseas-student-health',
+    component: OverseasstudenthealthComponent,
+  },
+  {
+    path: 'admin/course-calender-type',
+    component: CoursecalendertypeComponent,
+  },
   { path: 'admin/course-site', component: CoursesiteComponent },
-  { path: 'admin/create-permission-group', component: CreatepermissiongroupComponent, },
+  {
+    path: 'admin/create-permission-group',
+    component: CreatepermissiongroupComponent,
+  },
   { path: 'admin/custom-fields', component: CustomfieldsComponent },
   { path: 'admin/edit-language-info', component: EditlanguageinfoComponent },
   { path: 'admin/college-info', component: CollegeinfoComponent },
-  { path: 'admin/country-nationality-info', component: EditcountryNationalityinfoComponent, },
+  {
+    path: 'admin/country-nationality-info',
+    component: EditcountryNationalityinfoComponent,
+  },
   { path: 'admin/invention-strategy', component: InventionstrategyComponent },
-  { path: 'admin/manage-contract-schedule', component: ManagecontractscheduleComponent, },
+  {
+    path: 'admin/manage-contract-schedule',
+    component: ManagecontractscheduleComponent,
+  },
   { path: 'admin/manage-employee', component: ManageemployeeComponent },
-  { path: 'admin/manage-semester-division', component: ManagesemesterdivisionComponent, },
-  { path: 'admin/manage-study-periods', component: ManagestudyperiodsComponent, },
-  { path: 'admin/manage-system-reports', component: ManagesystemreportComponent, },
-  { path: 'admin/page-permission-setup', component: PagepermissionsetupComponent, },
+  {
+    path: 'admin/manage-semester-division',
+    component: ManagesemesterdivisionComponent,
+  },
+  {
+    path: 'admin/manage-study-periods',
+    component: ManagestudyperiodsComponent,
+  },
+  {
+    path: 'admin/manage-system-reports',
+    component: ManagesystemreportComponent,
+  },
+  {
+    path: 'admin/page-permission-setup',
+    component: PagepermissionsetupComponent,
+  },
   { path: 'admin/view-database', component: ViewdatabaseComponent },
   { path: 'admin/system-field-setup', component: SystemfieldsetupComponent },
   { path: 'admin/set-user-permission', component: SetuserpermissionComponent },
   { path: 'admin/view-files-folder', component: ViewfielsfolderComponent },
-  { path: 'admin/prisms-data-validation', component: PrismsdatavalidationComponent, },
-  { path: 'admin/register-activity-detail', component: RegisteractivitydetailComponent, },
+  {
+    path: 'admin/prisms-data-validation',
+    component: PrismsdatavalidationComponent,
+  },
+  {
+    path: 'admin/register-activity-detail',
+    component: RegisteractivitydetailComponent,
+  },
   { path: 'admin/result-grade', component: ResultgradeComponent },
   { path: 'admin/service-details', component: ServicedetailsComponent },
-  { path: 'admin/service-facility-setup', component: ServicefacilitysetupComponent, },
+  {
+    path: 'admin/service-facility-setup',
+    component: ServicefacilitysetupComponent,
+  },
   { path: 'admin/service-provider', component: ServiceproviderComponent },
   { path: 'admin/update-report', component: UpdatereportComponent },
 
   //UNIT
   { path: 'admin/unit-list', component: UnitsComponent },
-  { path: 'admin/create-unit', component: CreateUnitComponent, },
+  { path: 'admin/create-unit', component: CreateUnitComponent },
   { path: 'admin/view-unit/:id', component: ViewUnitComponent },
   { path: 'admin/edit-unit/:id', component: EditUnitComponent },
 
@@ -356,4 +406,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

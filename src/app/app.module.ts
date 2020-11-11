@@ -18,12 +18,16 @@ import { CoursesiteComponent } from './pages/admin/coursesite/coursesite.compone
 import { CreateRoleComponent } from './pages/admin/create-role/create-role.component';
 import { CreateRoomComponent } from './pages/admin/create-room/create-room.component';
 import { CreateStudentenrolmentComponent } from './pages/admin/create-studentenrolment/create-studentenrolment.component';
+import { CreateTrainingOrganizationComponent } from './pages/admin/create-training-organization/create-training-organization.component';
+import { CreateUnitComponent } from './pages/admin/create-unit/create-unit.component';
 import { CreateVenueComponent } from './pages/admin/create-venue/create-venue.component';
 import { CreatepermissiongroupComponent } from './pages/admin/createpermissiongroup/createpermissiongroup.component';
 import { CustomfieldsComponent } from './pages/admin/customfields/customfields.component';
 import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
+import { EditTrainingOrganizationTypeComponent } from './pages/admin/edit-training-organization-type/edit-training-organization-type.component';
+import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
 import { EditVenueComponent } from './pages/admin/edit-venue/edit-venue.component';
 import { EditagentstatusComponent } from './pages/admin/editagentstatus/editagentstatus.component';
 import { EditcountryNationalityinfoComponent } from './pages/admin/editcountry-nationalityinfo/editcountry-nationalityinfo.component';
@@ -53,10 +57,14 @@ import { StudentenrolmentComponent } from './pages/admin/studentenrolment/studen
 import { StudentupdateComponent } from './pages/admin/studentupdate/studentupdate.component';
 import { StudentviewComponent } from './pages/admin/studentview/studentview.component';
 import { SystemfieldsetupComponent } from './pages/admin/systemfieldsetup/systemfieldsetup.component';
+import { TrainingOrganizationsComponent } from './pages/admin/training-organizations/training-organizations.component';
+import { UnitsComponent } from './pages/admin/units/units.component';
 import { UpdatereportComponent } from './pages/admin/updatereport/updatereport.component';
 import { ViewRoleComponent } from './pages/admin/view-role/view-role.component';
 import { ViewRoomComponent } from './pages/admin/view-room/view-room.component';
 import { ViewStudentenrolmentComponent } from './pages/admin/view-studentenrolment/view-studentenrolment.component';
+import { ViewTrainingOrganizationComponent } from './pages/admin/view-training-organization/view-training-organization.component';
+import { ViewUnitComponent } from './pages/admin/view-unit/view-unit.component';
 import { ViewVenueComponent } from './pages/admin/view-venue/view-venue.component';
 import { ViewdatabaseComponent } from './pages/admin/viewdatabase/viewdatabase.component';
 import { ViewfielsfolderComponent } from './pages/admin/viewfielsfolder/viewfielsfolder.component';
@@ -125,11 +133,6 @@ import { ViewUsersComponent } from './pages/users/view-users/view-users.componen
 import { FooterComponent } from './parts/footer/footer.component';
 import { HeaderComponent } from './parts/header/header.component';
 import { SidebarComponent } from './parts/sidebar/sidebar.component';
-import { UnitsComponent } from './pages/admin/units/units.component';
-import { CreateUnitComponent } from './pages/admin/create-unit/create-unit.component';
-import { ViewUnitComponent } from './pages/admin/view-unit/view-unit.component';
-import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
-import { TrainingOrganizationsComponent } from './pages/admin/training-organizations/training-organizations.component';
 
 @NgModule({
   declarations: [
@@ -258,6 +261,9 @@ import { TrainingOrganizationsComponent } from './pages/admin/training-organizat
     ViewUnitComponent,
     EditUnitComponent,
     TrainingOrganizationsComponent,
+    CreateTrainingOrganizationComponent,
+    ViewTrainingOrganizationComponent,
+    EditTrainingOrganizationTypeComponent,
   ],
 
   imports: [
