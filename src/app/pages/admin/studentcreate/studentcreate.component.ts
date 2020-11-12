@@ -33,43 +33,43 @@ export class StudentcreateComponent implements OnInit {
   students;
   dataString;
 
-  PriorEducationalAchievementFlag;
+  PriorEducationalAchievementFlag = '';
   altEmail;
-  australianPr;
-  birthcountryId;
+  australianPr = '';
+  birthcountryId = '';
   buildingName;
   clientId;
-  completedSchoolLevelId;
+  completedSchoolLevelId = '';
   dateModified;
-  differentPostalAddress;
-  disability;
-  dob;
-  email;
-  employmentStatusId;
+  differentPostalAddress = '';
+  disability = '';
+  dob = '';
+  email = '';
+  employmentStatusId = '';
   englishSpeakingStatusId;
   firstName = '';
   flatUnitDetails;
-  gender;
-  homeLanguageId;
-  indigenousStatusId;
+  gender = '';
+  homeLanguageId = '';
+  indigenousStatusId = '';
   lastName;
   middleName;
   mobile;
   nationalityId;
   passportExpdate;
-  passportNo;
-  postCode;
+  passportNo = '';
+  postCode = '';
   schoolTypeId;
   signatoryText;
-  stateId;
+  stateId = '';
   statisticalAreaLevel1Id;
   statisticalAreaLevel2Id;
   stillInSecSchool;
-  streetName;
-  streetNumber;
+  streetName = '';
+  streetNumber = '';
   studentId;
-  suburb;
-  surveyContactStatusId;
+  suburb = '';
+  surveyContactStatusId = '';
   telHome;
   telWork;
   title;
@@ -104,6 +104,7 @@ export class StudentcreateComponent implements OnInit {
   errorstreetName = '';
   errorsuburb = '';
   errorpostcode = '';
+  errordifferentPostalAddress = '';
 
   errorMessage = '';
 
@@ -229,7 +230,7 @@ export class StudentcreateComponent implements OnInit {
       this.errorfirstname = '';
       this.errors = 'false';
     }
-
+    console.log(form.value.dob);
     if (form.value.dob == '') {
       this.errordob = 'true';
       this.errors = 'true';
@@ -369,6 +370,13 @@ export class StudentcreateComponent implements OnInit {
       this.errors = 'false';
     }
 
+    if (form.value.differentPostalAddress == '') {
+      this.errordifferentPostalAddress = 'true';
+      this.errors = 'true';
+    } else {
+      this.errordifferentPostalAddress = '';
+      this.errors = 'false';
+    }
     if (this.errors != 'true') {
       this.dataString = `{
       "userId":"1", "clientId": ${this.getclientid}, "PriorEducationalAchievementFlag":"${form.value.PriorEducationalAchievementFlag}", "altEmail":"${form.value.altEmail}", "australianPr":"${form.value.australianPr}", "birthcountryId": "${form.value.birthcountryId}", "buildingName": "${form.value.buildingName}",  "completedSchoolLevelId": "${form.value.completedSchoolLevelId}", "differentPostalAddress": "${form.value.differentPostalAddress}", "disability": "${form.value.disability}", "dob": "${form.value.dob}", "email":"${form.value.email}", "employmentStatusId": "${form.value.employmentStatusId}", "englishSpeakingStatusId": "${form.value.englishSpeakingStatusId}", "firstName": "${form.value.firstName}", "flatUnitDetails": "${form.value.flatUnitDetails}", "gender": "${form.value.gender}", "homeLanguageId": "${form.value.homeLanguageId}", "indigenousStatusId": "${form.value.indigenousStatusId}", "lastName": "${form.value.lastName}", "middleName": "${form.value.middleName}", "mobile": "${form.value.mobile}", "nationalityId": "${form.value.nationalityId}", "passportExpdate": "${form.value.passportExpdate}", "passportNo": "${form.value.passportNo}", "postCode": "${form.value.postCode}", "schoolTypeId": "${form.value.schoolTypeId}", "signatoryText": "${form.value.signatoryText}", "stateId": "${form.value.stateId}", "statisticalAreaLevel1Id": "${form.value.statisticalAreaLevel1Id}", "statisticalAreaLevel2Id": "${form.value.statisticalAreaLevel2Id}", "stillInSecSchool": "${form.value.stillInSecSchool}", "streetName": "${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.suburb}", "surveyContactStatusId": "${form.value.surveyContactStatusId}", "telHome": "${form.value.telHome}", "telWork": "${form.value.telWork}", "title": "${form.value.title}", "usiNo": "${form.value.usiNo}", "visaExpdate": "${form.value.visaExpdate}", "visaNo": "${form.value.visaNo}", "visaStatusId": "${form.value.visaStatusId}"
