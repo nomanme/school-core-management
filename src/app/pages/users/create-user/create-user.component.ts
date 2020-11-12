@@ -10,21 +10,50 @@ import { ApiService } from 'src/app/api/api.service';
 export class CreateUserComponent implements OnInit {
   users;
   dataString;
-  email: null;
-  password: null;
+  email;
+  password;
+
+  allerrors = '';
+
+  error0;
+  error1;
+  error2;
+  error3;
+
+  errors;
   constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {}
 
   createUser(form) {
-    this.dataString = `{"roleId":"1","email":"${form.value.email}", "userpassword":"${form.value.userpassword}"}`;
+    if (form.value.email == '') {
+      this.error0 = 'true';
+      this.errors = 'true';
+    } else {
+      this.error0 = '';
+      this.errors = 'false';
+    }
 
-    console.log(this.dataString);
-    this.apiService
-      .postAPI('dev/adduser', this.dataString)
-      .subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/users/manage-user-account']);
-      });
+    if (form.value.password == '') {
+      this.error1 = 'true';
+      this.errors = 'true';
+    } else {
+      this.error1 = '';
+      this.errors = 'false';
+    }
+
+    if (this.errors != 'true') {
+      this.dataString = `{"roleId":"1","email":"${form.value.email}", "userpassword":"${form.value.userpassword}"}`;
+
+      console.log(this.dataString);
+      this.apiService
+        .postAPI('dev/adduser', this.dataString)
+        .subscribe((data) => {
+          console.log(data);
+          this.router.navigate(['/users/manage-user-account']);
+        });
+    } else {
+      console.log('There is error');
+    }
   }
 }

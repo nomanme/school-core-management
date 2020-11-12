@@ -10,12 +10,24 @@ import { ApiService } from 'src/app/api/api.service';
 export class EditUsersComponent implements OnInit {
   userId;
   edituser = {
-    email: null,
-    dateCreated: null,
-    roleId: null,
-    userId: null,
+    email: '',
+    dateCreated: '',
+    roleId: '',
+    userId: '',
     userpassword: '',
   };
+
+  allerrors = '';
+
+  error0;
+  error1;
+  error2;
+  error3;
+  error4;
+  error5;
+  error6;
+
+  errors;
 
   constructor(
     private apiService: ApiService,
@@ -39,28 +51,58 @@ export class EditUsersComponent implements OnInit {
   }
 
   updateUser(form) {
-    console.log(form.value);
-    let datajson = `{"userpassword":"${form.value.userpassword}"}`;
-    // let datajson=`{"userpassword":"testkkk"}`;
-    console.log(datajson);
-    this.apiService
-      .postAPI(`dev/edituser?userId=${this.userId}`, datajson)
-      .subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/users/manage-user-account']);
-      });
+    if (form.value.roleId == '') {
+      this.error0 = 'true';
+      this.errors = 'true';
+    } else {
+      this.error0 = '';
+      this.errors = 'false';
+    }
+
+    if (form.value.email == '') {
+      this.error1 = 'true';
+      this.errors = 'true';
+    } else {
+      this.error1 = '';
+      this.errors = 'false';
+    }
+
+    if (form.value.userpassword == '') {
+      this.error2 = 'true';
+      this.errors = 'true';
+    } else {
+      this.error2 = '';
+      this.errors = 'false';
+    }
+
+    if (this.errors != 'true') {
+      console.log(form.value);
+      let datajson = `{"userpassword":"${form.value.userpassword}"}`;
+      // let datajson=`{"userpassword":"testkkk"}`;
+      console.log(datajson);
+      this.apiService
+        .postAPI(`dev/edituser?userId=${this.userId}`, datajson)
+        .subscribe((data) => {
+          console.log(data);
+          this.router.navigate(['/users/manage-user-account']);
+        });
+    } else {
+      ('this is error');
+    }
   }
 
   delUser(form) {
-    console.log(form.value);
-    let datajson = `{"userpassword":"${form.value.userpassword}"}`;
-    // let datajson=`{"userpassword":"testkkk"}`;
-    console.log(datajson);
-    this.apiService
-      .postAPI(`dev/deleteuser?userId=${this.userId}`, datajson)
-      .subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/users/manage-user-account']);
-      });
+    if (this.errors != 'true') {
+      console.log(form.value);
+      let datajson = `{"userpassword":"${form.value.userpassword}"}`;
+      // let datajson=`{"userpassword":"testkkk"}`;
+      console.log(datajson);
+      this.apiService
+        .postAPI(`dev/deleteuser?userId=${this.userId}`, datajson)
+        .subscribe((data) => {
+          console.log(data);
+          this.router.navigate(['/users/manage-user-account']);
+        });
+    }
   }
 }
