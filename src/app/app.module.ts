@@ -26,7 +26,6 @@ import { CustomfieldsComponent } from './pages/admin/customfields/customfields.c
 import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
-import { EditTrainingOrganizationTypeComponent } from './pages/admin/edit-training-organization-type/edit-training-organization-type.component';
 import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
 import { EditVenueComponent } from './pages/admin/edit-venue/edit-venue.component';
 import { EditagentstatusComponent } from './pages/admin/editagentstatus/editagentstatus.component';
@@ -133,6 +132,7 @@ import { ViewUsersComponent } from './pages/users/view-users/view-users.componen
 import { FooterComponent } from './parts/footer/footer.component';
 import { HeaderComponent } from './parts/header/header.component';
 import { SidebarComponent } from './parts/sidebar/sidebar.component';
+import { EditTrainingOrganizationComponent } from './pages/admin/edit-training-organization/edit-training-organization.component';
 
 @NgModule({
   declarations: [
@@ -263,7 +263,7 @@ import { SidebarComponent } from './parts/sidebar/sidebar.component';
     TrainingOrganizationsComponent,
     CreateTrainingOrganizationComponent,
     ViewTrainingOrganizationComponent,
-    EditTrainingOrganizationTypeComponent,
+    EditTrainingOrganizationComponent,
   ],
 
   imports: [
@@ -277,4 +277,4 @@ import { SidebarComponent } from './parts/sidebar/sidebar.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

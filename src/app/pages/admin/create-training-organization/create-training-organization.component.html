@@ -28,23 +28,14 @@
           <!-- general form elements -->
           <div class="card card-primary mb-0">
             <div class="card-header">
-              <h4 class="card-title">Add Unit</h4>
+              <h4 class="card-title">Create Training Organization</h4>
             </div>
             <form role="form" #f="ngForm">
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12 sub-form">
                     <div class="inner-row">
-                      <!-- <div class="form-group row">
-                        <label for="trainingOrgId" class="col-sm-4 control-label">Training Organization Id<span
-                            class="star">*</span></label>
-                        <div class="col-sm-8">
-                          <div class="input-group">
-                            <input [(ngModel)]="trainingOrgId" type="text" class="form-control" name="trainingOrgId"
-                              id="trainingOrgId" placeholder="Enter Training Id here" required />
-                          </div>
-                        </div>
-                      </div> -->
+
 
                       <div class="form-group row">
                         <label for="RTOCode" class="col-sm-4 control-label">RTO Code<span class="star">*</span></label>
@@ -122,11 +113,17 @@
                       </div>
 
                       <div class="form-group row">
-                        <label for="RTOType" class="col-sm-4 control-label">RTO Type</label>
+                        <label for="RTOType" class="col-sm-4 col-form-label">RTO Type</label>
                         <div class="col-sm-8">
-                          <div class="input-group">
-                            <input [(ngModel)]="RTOType" class="form-control" type="text" name="RTOType" id="RTOType"
-                              placeholder="Enter RTOType here" />
+                          <div class="form-check radio">
+                            <input class="form-check-input" type="radio" name="RTOType" id="RTOType" value="P"
+                              [(ngModel)]="RTOType" checked />
+                            <label class="form-check-label">Public</label>
+                          </div>
+                          <div class="form-check radio">
+                            <input class="form-check-input" type="radio" name="RTOType" id="RTOType" value="R"
+                              [(ngModel)]="RTOType" />
+                            <label class="form-check-label">Registered</label>
                           </div>
                         </div>
                       </div>

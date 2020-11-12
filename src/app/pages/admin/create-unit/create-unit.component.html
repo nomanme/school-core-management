@@ -36,178 +36,94 @@
                   <div class="col-md-12 sub-form">
                     <div class="inner-row">
                       <div class="form-group row">
-                        <label for="unitCode" class="col-sm-4 control-label"
-                          >Unit Code<span class="star">*</span></label
-                        >
+                        <label for="unitCode" class="col-sm-4 control-label">Unit Code<span
+                            class="star">*</span></label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input
-                              [ngClass]="
+                            <input [ngClass]="
                                 error0 == ''
                                   ? 'form-control'
                                   : 'form-control is-invalid'
-                              "
-                              [(ngModel)]="unitCode"
-                              type="text"
-                              class="form-control"
-                              name="unitCode"
-                              id="unitCode"
-                              placeholder="Enter Unit Code here"
-                              required
-                            />
+                              " [(ngModel)]="unitCode" type="text" class="form-control" name="unitCode" id="unitCode"
+                              placeholder="Enter Unit Code here" required />
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label for="vetUnitCode" class="col-sm-4 control-label"
-                          >Vet Unit Code<span class="star">*</span></label
-                        >
+                        <label for="vetUnitCode" class="col-sm-4 control-label">Vet Unit Code<span
+                            class="star">*</span></label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input
-                              [(ngModel)]="vetUnitCode"
-                              class="form-control"
-                              type="text"
-                              name="vetUnitCode"
-                              id="vetUnitCode"
-                              placeholder="Enter Vet Unit Code here"
-                              required
-                            />
+                            <input [(ngModel)]="vetUnitCode" class="form-control" type="text" name="vetUnitCode"
+                              id="vetUnitCode" placeholder="Enter Vet Unit Code here" required />
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label for="unitName" class="col-sm-4 control-label"
-                          >Unit Name<span class="star">*</span></label
-                        >
+                        <label for="unitName" class="col-sm-4 control-label">Unit Name<span
+                            class="star">*</span></label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input
-                              [(ngModel)]="unitName"
-                              class="form-control"
-                              type="text"
-                              name="unitName"
-                              id="unitName"
-                              placeholder="Enter Unit Name here"
-                              required
-                            />
+                            <input [(ngModel)]="unitName" class="form-control" type="text" name="unitName" id="unitName"
+                              placeholder="Enter Unit Name here" required />
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="deliveryMode"
-                          class="col-sm-4 col-form-label"
-                          >Delivery Mode</label
-                        >
+                        <label for="deliveryMode" class="col-sm-4 col-form-label">Delivery Mode</label>
                         <div class="col-sm-8">
                           <div class="form-check radio">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="deliveryMode"
-                              id="deliveryMode"
-                              value="I"
-                              [(ngModel)]="deliveryMode"
-                              checked
-                            />
-                            <label class="form-check-label"
-                              >Internal only</label
-                            >
+                            <input class="form-check-input" type="radio" name="deliveryMode" id="deliveryMode" value="I"
+                              [(ngModel)]="deliveryMode" checked />
+                            <label class="form-check-label">Internal Only</label>
                           </div>
                           <div class="form-check radio">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="deliveryMode"
-                              id="deliveryMode"
-                              value="E"
-                              [(ngModel)]="deliveryMode"
-                            />
-                            <label class="form-check-label"
-                              >External only</label
-                            >
+                            <input class="form-check-input" type="radio" name="deliveryMode" id="deliveryMode" value="E"
+                              [(ngModel)]="deliveryMode" />
+                            <label class="form-check-label">External Only</label>
                           </div>
                           <div class="form-check radio">
-                            <input
-                              class="form-check-input"
-                              type="radio"
-                              name="deliveryMode"
-                              id="deliveryMode"
-                              value="W"
-                              [(ngModel)]="deliveryMode"
-                            />
-                            <label class="form-check-label"
-                              >Workplace-based only</label
-                            >
+                            <input class="form-check-input" type="radio" name="deliveryMode" id="deliveryMode" value="W"
+                              [(ngModel)]="deliveryMode" />
+                            <label class="form-check-label">Workplace-based Only</label>
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="scheduledNominalHours"
-                          class="col-sm-4 control-label"
-                          >Scheduled Nominal Hours<span class="star"
-                            >*</span
-                          ></label
-                        >
+                        <label for="scheduledNominalHours" class="col-sm-4 control-label">Scheduled Nominal Hours<span
+                            class="star">*</span></label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input
-                              [(ngModel)]="scheduledNominalHours"
-                              class="form-control"
-                              type="text"
-                              name="scheduledNominalHours"
-                              id="scheduledNominalHours"
-                              placeholder="Enter nominal hours here"
-                              required
-                            />
+                            <input [(ngModel)]="scheduledNominalHours" class="form-control" type="text"
+                              name="scheduledNominalHours" id="scheduledNominalHours"
+                              placeholder="Enter nominal hours here" required />
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label for="tuitionFee" class="col-sm-4 control-label"
-                          >Tuition Fee</label
-                        >
+                        <label for="tuitionFee" class="col-sm-4 control-label">Tuition Fee</label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input
-                              [(ngModel)]="tuitionFee"
-                              class="form-control"
-                              type="text"
-                              name="tuitionFee"
-                              id="tuitionFee"
-                              placeholder="Enter tuition fee here"
-                            />
+                            <input [(ngModel)]="tuitionFee" class="form-control" type="text" name="tuitionFee"
+                              id="tuitionFee" placeholder="Enter tuition fee here" />
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="fieldofEducationId"
-                          class="col-sm-4 control-label"
-                          >Field of Education</label
-                        >
+                        <label for="fieldofEducationId" class="col-sm-4 control-label">Field of Education</label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <select
-                              [(ngModel)]="fieldofEducationId"
-                              class="form-control select2 select2-danger"
-                              data-dropdown-css-class="select2-danger"
-                              name="fieldofEducationId"
-                              id="fieldofEducationId"
-                            >
-                              <option
-                                *ngFor="let fieldedu of getfieldofeducation"
-                                [value]="fieldedu.fieldOfEducationId"
-                                selected="selected"
-                              >
+                            <select [(ngModel)]="fieldofEducationId" class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger" name="fieldofEducationId"
+                              id="fieldofEducationId">
+                              <option *ngFor="let fieldedu of getfieldofeducation" [value]="fieldedu.fieldOfEducationId"
+                                selected="selected">
                                 {{ fieldedu.fieldOfEducationCode }} -
                                 {{ fieldedu.Descriptions }}
                               </option>
@@ -217,43 +133,23 @@
                       </div>
 
                       <div class="form-group row">
-                        <label for="vetFlag" class="col-sm-4 control-label"
-                          >vetFlag<span class="star">*</span></label
-                        >
+                        <label for="vetFlag" class="col-sm-4 control-label">vetFlag<span class="star">*</span></label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input
-                              [(ngModel)]="vetFlag"
-                              class="form-control"
-                              type="text"
-                              name="vetFlag"
-                              id="vetFlag"
-                              placeholder="Enter vet flag here"
-                              required
-                            />
+                            <input [(ngModel)]="vetFlag" class="form-control" type="text" name="vetFlag" id="vetFlag"
+                              placeholder="Enter vet flag here" required />
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label for="schoolTypeId" class="col-sm-4 control-label"
-                          >School Type</label
-                        >
+                        <label for="schoolTypeId" class="col-sm-4 control-label">School Type</label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <select
-                              [(ngModel)]="schoolTypeId"
-                              class="form-control select2 select2-danger"
-                              data-dropdown-css-class="select2-danger"
-                              name="schoolTypeId"
-                              id="schoolTypeId"
-                              required
-                            >
-                              <option
-                                *ngFor="let schooltype of getschooltype"
-                                [value]="schooltype.schoolTypeId"
-                                selected="selected"
-                              >
+                            <select [(ngModel)]="schoolTypeId" class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger" name="schoolTypeId" id="schoolTypeId" required>
+                              <option *ngFor="let schooltype of getschooltype" [value]="schooltype.schoolTypeId"
+                                selected="selected">
                                 {{ schooltype.schoolTypeCode }} -
                                 {{ schooltype.schoolTypeName }}
                               </option>
@@ -263,25 +159,13 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="specificFundingId"
-                          class="col-sm-4 control-label"
-                          >Specific Funding</label
-                        >
+                        <label for="specificFundingId" class="col-sm-4 control-label">Specific Funding</label>
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <select
-                              [(ngModel)]="specificFundingId"
-                              class="form-control select2 select2-danger"
-                              data-dropdown-css-class="select2-danger"
-                              name="specificFundingId"
-                              id="specificFundingId"
-                            >
-                              <option
-                                *ngFor="let specificfund of getspecificfunding"
-                                [value]="specificfund.specificFundingId"
-                                selected="selected"
-                              >
+                            <select [(ngModel)]="specificFundingId" class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger" name="specificFundingId" id="specificFundingId">
+                              <option *ngFor="let specificfund of getspecificfunding"
+                                [value]="specificfund.specificFundingId" selected="selected">
                                 {{ specificfund.specificFundingCode }} -
                                 {{ specificfund.specificFundingName }}
                               </option>
@@ -296,13 +180,7 @@
                 </div>
                 <br />
                 <div class="submit-button">
-                  <button
-                    type="submit"
-                    (click)="createUnit(f)"
-                    class="btn btn-success"
-                    name="add"
-                    id="add"
-                  >
+                  <button type="submit" (click)="createUnit(f)" class="btn btn-success" name="add" id="add">
                     Add New
                   </button>
                 </div>

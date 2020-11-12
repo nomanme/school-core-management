@@ -10,14 +10,13 @@ import { Router } from '@angular/router';
 export class CoursesComponent implements OnInit {
 
   courses;
-  constructor(private apiService: ApiService, private router:Router) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-
-    this.apiService.getUser('dev/course').subscribe((data)=>{
+    this.apiService.getAPI('dev/getcourse').subscribe((data) => {
       console.log(data);
-      this.courses=data;
-    })
+      this.courses = data;
+    });
   }
 
 }

@@ -1,144 +1,161 @@
-
 <div class="content-wrapper">
- 
-    <section class="content-header">
-        <div class="container-fluid">
-          <div class="row m-0 p-0">
-            <div class="col-sm-12">
-                <h3 class="page-heading">Create Course Unit</h3>
-            </div>
-            <div class="col-sm-12 text-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Create Course Unit</li>
-                  </ol>
-            </div>
-          </div>
-        </div><!-- container-fluid -->
-    </section>
-  
-    
-    <!-- Main content -->
-    <div class="row p-0 m-0">
-        <div class="col-md-8 offset-md-2">
-            <div class="row">
-                <div class="col-md-12">
-                    <section class="content">
-                        <div class="container-fluid">
-                        <!-- general form elements -->
-                            <div class="card card-primary mb-0"> 
-                              <div class="card-header">
-                                <h5 class="card-title">Create Course Unit</h5>
-                              </div>
-                                <!-- form start -->
-                                <form role="form" #f = "ngForm">
-                                    <div class="card-body">
-  
-                                      <div class="row">
-                                        <div class="col-md-12 sub-form">
-                                          <div class="alert alert-success">
-                                            <strong>Success!</strong>
-                                          </div>
-  
-                                          <div class="inner-row">
-  
-                                            <div class="form-group row">
-                                              <label for="courseId" class="col-sm-2 control-label alignStart">Course Id<span class="star">*</span></label>
-                                              <div class="col-sm-10">
-                                                <div class="input-group">
-                                                    <select [(ngModel)]="courseId" class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" name="courseId" id="courseId" required>
-                                                      <option *ngFor="let course of getcourse" [value]="course.courseId" selected="selected">{{course.courseCode}} - {{course.courseName}}</option>
-                                                    </select>
-                                                  </div>
-                                              </div>
-                                            </div>
 
-                                            <div class="form-group row">
-                                                <label for="unitId" class="col-sm-2 control-label alignStart">Unit Id<span class="star">*</span></label>
-                                                <div class="col-sm-10">
-                                                    <div class="input-group">
-                                                      <!-- <select multiple [(ngModel)]="unitId" name="unitId" class="dropdown" >
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+          <h3 class="page-heading">Create Course Unit</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Create Course
+              Unit</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- container-fluid -->
+  </section>
+
+
+  <!-- Main content -->
+  <div class="row p-0 m-0">
+    <div class="col-md-8 offset-md-2">
+      <div class="row">
+        <div class="col-md-12">
+          <section class="content">
+            <div class="container-fluid">
+              <!-- general form elements -->
+              <div class="card card-primary mb-0">
+                <div class="card-header">
+                  <h5 class="card-title">Create Course Unit</h5>
+                </div>
+                <!-- form start -->
+                <form role="form" #f="ngForm">
+                  <div class="card-body">
+
+                    <div class="row">
+                      <div class="col-md-12 sub-form">
+                        <div class="alert alert-success">
+                          <strong>Success!</strong>
+                        </div>
+
+                        <div class="inner-row">
+
+                          <div class="form-group row">
+                            <label for="courseId" class="col-sm-2 control-label alignStart">Course Id<span
+                                class="star">*</span></label>
+                            <div class="col-sm-10">
+                              <div class="input-group">
+                                <select [(ngModel)]="courseId" class="form-control select2 select2-danger"
+                                  data-dropdown-css-class="select2-danger" name="courseId" id="courseId" required>
+                                  <option *ngFor="let course of getcourse" [value]="course.courseId"
+                                    selected="selected">{{course.courseCode}} - {{course.courseName}}</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="unitId" class="col-sm-2 control-label alignStart">Unit Id<span
+                                class="star">*</span></label>
+                            <div class="col-sm-10">
+                              <div class="input-group">
+                                <!-- <select multiple [(ngModel)]="unitId" name="unitId" class="dropdown" >
                                                         <option *ngFor="let unit of getunit" [value]="unit.unitId"  selected="selected">{{unit.unitCode}} - {{unit.unitName}}</option>
                                                      </select> -->
-                                                        <ng-select [(ngModel)]="unitId" name="unitId" class="dropdown" [multiple]="true">
-                                                          <ng-option *ngFor="let unit of getunit" [value]="unit.unitId"  selected="selected">{{unit.unitCode}} - {{unit.unitName}}</ng-option>
-                                                       </ng-select>
-                                                    </div>
-                                                </div>
-                                              </div>
-  
-                                            <div class="form-group row">
-                                              <label for="descriptions" class="col-sm-2 col-form-label">Description</label>
-                                              <div class="col-sm-10">
-                                                <input [(ngModel)]="descriptions" type="text" class="form-control" id="descriptions" name="descriptions" placeholder="Write description">
-                                              </div>
-                                            </div>
+                                <ng-select [(ngModel)]="unitId" name="unitId" class="dropdown" [multiple]="true">
+                                  <ng-option *ngFor="let unit of getunit" [value]="unit.unitId" selected="selected">
+                                    {{unit.unitCode}} - {{unit.unitName}}</ng-option>
+                                </ng-select>
+                              </div>
+                            </div>
+                          </div>
 
-                                            <div class="form-group row">
-                                                <label for="unitType" class="col-sm-2 col-form-label">Unit Type</label>
-                                                <div class="col-sm-10">
-                                                    <div class="form-check radio">
-                                                      <input class="form-check-input" type="radio" name="unitType" id="unitType" value="c" [(ngModel)]="unitType">
-                                                      <label class="form-check-label">Core</label>
-                                                    </div>
-                                                    <div class="form-check radio">
-                                                      <input class="form-check-input" type="radio" name="unitType" id="unitType" value="E" [(ngModel)]="unitType">
-                                                      <label class="form-check-label">Elective</label>
-                                                    </div>
-                                                  </div>
-                                              </div>
+                          <div class="form-group row">
+                            <label for="descriptions" class="col-sm-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                              <input [(ngModel)]="descriptions" type="text" class="form-control" id="descriptions"
+                                name="descriptions" placeholder="Write description">
+                            </div>
+                          </div>
 
-                                              <div class="form-group row">
-                                                <label for="vetFlag" class="col-sm-2 col-form-label">Vet Flag</label>
-                                                <div class="col-sm-10">
-                                                    <div class="form-check radio">
-                                                      <input class="form-check-input" type="radio" name="vetFlag" id="vetFlag" value="true" [(ngModel)]="vetFlag">
-                                                      <label class="form-check-label">Yes</label>
-                                                    </div>
-                                                    <div class="form-check radio">
-                                                      <input class="form-check-input" type="radio" name="vetFlag" id="vetFlag" value="false" [(ngModel)]="vetFlag" >
-                                                      <label class="form-check-label">No</label>
-                                                    </div>
-                                                  </div>
-                                              </div>
+                          <div class="form-group row">
+                            <label for="unitType" class="col-sm-2 col-form-label">Unit Type</label>
+                            <div class="col-sm-10">
+                              <div class="form-check radio">
+                                <input class="form-check-input" type="radio" name="unitType" id="unitType" value="c"
+                                  [(ngModel)]="unitType">
+                                <label class="form-check-label">Core</label>
+                              </div>
+                              <div class="form-check radio">
+                                <input class="form-check-input" type="radio" name="unitType" id="unitType" value="E"
+                                  [(ngModel)]="unitType">
+                                <label class="form-check-label">Elective</label>
+                              </div>
+                            </div>
+                          </div>
 
-                                              <div class="form-group row">
-                                                <label for="AVETMISS" class="col-sm-2 col-form-label">AVETMISS</label>
-                                                <div class="col-sm-10">
-                                                    <div class="form-check radio">
-                                                      <input class="form-check-input" type="radio" name="AVETMISS" id="AVETMISS" value="true" [(ngModel)]="AVETMISS">
-                                                      <label class="form-check-label">Yes</label>
-                                                    </div>
-                                                    <div class="form-check radio">
-                                                      <input class="form-check-input" type="radio" name="AVETMISS" id="AVETMISS" value="false" [(ngModel)]="AVETMISS" >
-                                                      <label class="form-check-label">No</label>
-                                                    </div>
-                                                  </div>
-                                              </div>
-  
-                                          </div><!--inner-row-->
-                                        </div><!--col-md-12 sub-form-->
-                                      </div><!-- row1 -->
-  
-                                      <br>
+                          <div class="form-group row">
+                            <label for="vetFlag" class="col-sm-2 col-form-label">Vet Flag</label>
+                            <div class="col-sm-10">
+                              <div class="form-check radio">
+                                <input class="form-check-input" type="radio" name="vetFlag" id="vetFlag" value="true"
+                                  [(ngModel)]="vetFlag">
+                                <label class="form-check-label">Yes</label>
+                              </div>
+                              <div class="form-check radio">
+                                <input class="form-check-input" type="radio" name="vetFlag" id="vetFlag" value="false"
+                                  [(ngModel)]="vetFlag">
+                                <label class="form-check-label">No</label>
+                              </div>
+                            </div>
+                          </div>
 
-                                      <div class="submit-button">
-                                        <button type="submit" (click)="createCourseUnit(f)" class="btn btn-primary" name="submit" id="submit">Submit</button>
-                                      </div>
-                                                                                          
-                                    </div> <!--card-body-->
-                                </form>     
-                            </div> <!--card card-primary-->
-                        </div> <!--container-fluid-->     
-                    </section> <!--section2-->
-                </div>
-            </div> <!--row1-->
-        </div><!--col-md-10offset-md-1-->
-    </div> <!--main content row-->
-  </div> <!--content-wrapper-->
-  
-  
-  
-  
-  
-   
+                          <div class="form-group row">
+                            <label for="AVETMISS" class="col-sm-2 col-form-label">AVETMISS</label>
+                            <div class="col-sm-10">
+                              <div class="form-check radio">
+                                <input class="form-check-input" type="radio" name="AVETMISS" id="AVETMISS" value="true"
+                                  [(ngModel)]="AVETMISS">
+                                <label class="form-check-label">Yes</label>
+                              </div>
+                              <div class="form-check radio">
+                                <input class="form-check-input" type="radio" name="AVETMISS" id="AVETMISS" value="false"
+                                  [(ngModel)]="AVETMISS">
+                                <label class="form-check-label">No</label>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <!--inner-row-->
+                      </div>
+                      <!--col-md-12 sub-form-->
+                    </div><!-- row1 -->
+
+                    <br>
+
+                    <div class="submit-button">
+                      <button type="submit" (click)="createCourseUnit(f)" class="btn btn-primary" name="submit"
+                        id="submit">Submit</button>
+                    </div>
+
+                  </div>
+                  <!--card-body-->
+                </form>
+              </div>
+              <!--card card-primary-->
+            </div>
+            <!--container-fluid-->
+          </section>
+          <!--section2-->
+        </div>
+      </div>
+      <!--row1-->
+    </div>
+    <!--col-md-10offset-md-1-->
+  </div>
+  <!--main content row-->
+</div>
+<!--content-wrapper-->

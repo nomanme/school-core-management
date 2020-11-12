@@ -12,31 +12,30 @@ export class EditScheduleComponent implements OnInit {
   scheduleId;
   schedule = {
     semisterId: null,
-    termId: null, 
+    termId: null,
     weekId: null,
     startDate: null,
   };
 
-  constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
 
   ngOnInit(): void {
-    this.scheduleId= this.activatedRoute.snapshot.paramMap.get('id');
+    this.scheduleId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService.getAPI(`dev/getschedule?scheduleId=${this.scheduleId}`).subscribe((data)=>{
+    this.apiService.getAPI(`dev/getschedule?scheduleId=${this.scheduleId}`).subscribe((data) => {
       console.log(data);
-      this.schedule=data[0];
+      this.schedule = data[0];
       console.log(this.schedule)
     });
   }
 
-  editSchedule(form){
+  editSchedule(form) {
 
     console.log(form.value);
-    let datajson=`{"scheduleId":"1","semisterId":"${form.value.semisterId}", "termId":"${form.value.termId}", "weekId":"${form.value.weekId}","startDate":"${form.value.startDate}" }`;
+    let datajson = `{"scheduleId":"1","semisterId":"${form.value.semisterId}", "termId":"${form.value.termId}", "weekId":"${form.value.weekId}","startDate":"${form.value.startDate}" }`;
     console.log(datajson);
-    this.apiService.postAPI(`dev/editschedule?scheduleId=${this.scheduleId}`, datajson).subscribe((data)=>
-    {
+    this.apiService.postAPI(`dev/editschedule?scheduleId=${this.scheduleId}`, datajson).subscribe((data) => {
       console.log(data);
       this.router.navigate(['/timetable/list-schedule']);
     });

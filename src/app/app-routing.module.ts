@@ -21,8 +21,9 @@ import { CustomfieldsComponent } from './pages/admin/customfields/customfields.c
 import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
-//noman
-import { EditTrainingOrganizationTypeComponent } from './pages/admin/edit-training-organization-type/edit-training-organization-type.component';
+
+import { EditTrainingOrganizationComponent } from './pages/admin/edit-training-organization/edit-training-organization.component';
+
 import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
 import { EditVenueComponent } from './pages/admin/edit-venue/edit-venue.component';
 import { EditagentstatusComponent } from './pages/admin/editagentstatus/editagentstatus.component';
@@ -169,7 +170,10 @@ const routes: Routes = [
 
   { path: 'admin/create-training-organization', component: CreateTrainingOrganizationComponent, canActivate: [AuthGuardService], },
 
-  { path: 'admin/edit-training-organization-type', component: EditTrainingOrganizationTypeComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/edit-training-organization-type', component: EditTrainingOrganizationTypeComponent, canActivate: [AuthGuardService], },
+
+  { path: 'admin/edit-training-organization/:id', component: EditTrainingOrganizationComponent, canActivate: [AuthGuardService], },
+
 
   { path: 'admin/view-training-organization/:id', component: ViewTrainingOrganizationComponent, canActivate: [AuthGuardService] },
 
@@ -408,6 +412,8 @@ const routes: Routes = [
   },
   { path: 'timetable/timetable-reports', component: TimetablereportsComponent, canActivate: [AuthGuardService], },
 
+
+  //Schedule
   { path: 'timetable/list-schedule', component: ScheduleComponent, canActivate: [AuthGuardService], },
   { path: 'timetable/create-schedule', component: CreateScheduleComponent, canActivate: [AuthGuardService], },
   { path: 'timetable/view-schedule/:id', component: ViewScheduleComponent, canActivate: [AuthGuardService], },

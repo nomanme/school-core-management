@@ -60,9 +60,9 @@ export class CreateTrainingOrganizationComponent implements OnInit {
 
     console.log(this.dataString);
 
-    this.apiService.postAPI('dev/addunit', this.dataString).subscribe((data) => {
+    this.apiService.postAPI('dev/addtrainingOrg', this.dataString).subscribe((data) => {
       console.log(data);
-      // this.router.navigate(['/admin/unit-list']);
+      this.router.navigate(['/admin/list-training-organization']);
     });
 
 
