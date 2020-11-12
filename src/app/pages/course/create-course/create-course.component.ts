@@ -17,38 +17,38 @@ export class CreateCourseComponent implements OnInit {
 
   course;
   dataString;
-  activatedNow;
-  avetmissANZSCOId;
-  avetmissCourseRecognitionId;
-  avetmissFieldOfEducationId;
-  avetmissLevelOfEducationId;
-  avetmissReport;
+  activatedNow = "";
+  avetmissANZSCOId = "";
+  avetmissCourseRecognitionId = "";
+  avetmissFieldOfEducationId = "";
+  avetmissLevelOfEducationId = "";
+  avetmissReport = "";
   avetmissTotalNominalHours;
   courseCode;
-  courseDescriptin;
-  courseEndDate;
-  courseId;
-  courseLevel;
+  courseDescriptin = "";
+  courseEndDate = "";
+  courseId = "";
+  courseLevel = "";
   courseName;
-  courseStartDate;
-  cricosCode;
-  dateCreated;
-  deliveryTarget;
-  department;
-  domesticTutionFees;
+  courseStartDate = "";
+  cricosCode = "";
+  dateCreated = "";
+  deliveryTarget = "";
+  department = "";
+  domesticTutionFees = "";
   duration;
   durationUnit;
-  faculty;
-  flexibleTimetable;
-  hasWorkPlacement;
-  internationTutionFees;
-  isSuperseded;
-  major;
-  maximumWeeklyStudy;
-  moduleDelivery;
-  nationalCode;
-  qualificationPrerequisite;
-  resultCalculationMethod;
+  faculty = "";
+  flexibleTimetable = "";
+  hasWorkPlacement = "";
+  internationTutionFees = "";
+  isSuperseded = "";
+  major = "";
+  maximumWeeklyStudy = "";
+  moduleDelivery = "";
+  nationalCode = "";
+  qualificationPrerequisite = "";
+  resultCalculationMethod = "";
 
   constructor(private apiService: ApiService, private router: Router) { }
 
@@ -69,6 +69,8 @@ export class CreateCourseComponent implements OnInit {
     this.apiService.getAPI3('dev/getavetmissanzsco').subscribe((data) => {
       this.getavetmissanzsco = data;
     });
+
+
 
   }
 

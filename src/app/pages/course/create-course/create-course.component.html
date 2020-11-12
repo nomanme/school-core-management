@@ -439,15 +439,9 @@
                               <div class="form-group row">
                                 <label for="avetmissReport" class="col-sm-4 control-label">AVETMISS Report</label>
                                 <div class="col-sm-8">
-                                  <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="avetmissReport"
-                                      id="avetmissReport" value="Y" [(ngModel)]='avetmissReport'>
-                                    <label class="form-check-label">Yes</label>
-                                  </div>
-                                  <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="avetmissReport"
-                                      id="avetmissReport" value="N" [(ngModel)]='avetmissReport'>
-                                    <label class="form-check-label">No</label>
+                                  <div class="input-group">
+                                    <input class="form-control" type="text" name="avetmissReport" id="avetmissReport"
+                                      [(ngModel)]='avetmissReport' placeholder="Enter AVETMISS report">
                                   </div>
                                 </div>
                               </div>
