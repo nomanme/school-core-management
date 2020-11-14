@@ -16,16 +16,14 @@ export class ViewRoleComponent implements OnInit {
     private apiService: ApiService,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.roleId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService
-      .getAPI(`dev/getroles?roleId=${this.roleId}`)
-      .subscribe((data) => {
-        console.log(data);
-        this.roles = data;
-      });
+    this.apiService.getAPI(`dev/getroles?roleId=${this.roleId}`).subscribe((data) => {
+      console.log(data);
+      this.roles = data;
+    });
   }
 }

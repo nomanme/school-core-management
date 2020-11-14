@@ -16,6 +16,7 @@ export class CoursesComponent implements OnInit {
     this.apiService.getAPI('dev/getcourse').subscribe((data) => {
       console.log(data);
       this.courses = data;
+      // this.courses = JSON.parse(this.courses);
     });
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api/api.service';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-list',
@@ -11,17 +11,18 @@ export class StudentListComponent implements OnInit {
 
   student;
   outputD;
-  constructor(private apiService: ApiService, private router:Router) { }
+
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
 
-    this.outputD=this.apiService.getLocalStorage('studentId');
+    this.outputD = this.apiService.getLocalStorage('studentId');
     console.log(this.outputD);
 
-    this.apiService.getAPI('dev/getstudent').subscribe((data)=>{
+    this.apiService.getAPI('dev/getstudent').subscribe((data) => {
       console.log(data);
-      this.student=data;
-      this.student=JSON.parse(this.student);
+      this.student = data;
+      this.student = JSON.parse(this.student);
     })
 
 
@@ -30,7 +31,7 @@ export class StudentListComponent implements OnInit {
 
 
 
-    
+
   }
 
 
@@ -48,6 +49,6 @@ export class StudentListComponent implements OnInit {
   //   })
 
   // }
- 
+
 
 }

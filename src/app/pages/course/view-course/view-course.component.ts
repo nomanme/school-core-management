@@ -17,10 +17,11 @@ export class ViewCourseComponent implements OnInit {
     this.courseId = this.activatedRoute.snapshot.paramMap.get('id');
 
     this.apiService.getAPI('dev/getcourse').subscribe((data) => {
-      // console.log(data);
-      // this.students=data;
+      console.log(data);
+      this.courses = data;
       this.courses = this.getStudentFromList(this.courseId, data);
       // console.log(this.student)
+      // this.courses = JSON.parse(this.courses);
     })
   }
 
