@@ -39,12 +39,12 @@
                       <div class="col-md-12 p-0 m-0">
                         <table class="table table-stripe">
                           <tr class="heading">
-                            <th class="rowid">ID</th>
+                            <th class="rowid">Course Code</th>
                             <th class="email">Course Name</th>
                             <th class="action">Action</th>
                           </tr>
                           <tr *ngFor="let course of courses">
-                            <td class="rowid">{{ course.courseId }}</td>
+                            <td class="rowid">{{ course.courseCode }}</td>
                             <td class="email">{{ course.courseName }}</td>
                             <td class="action">
                               <a href="course/view-course/{{ course.courseId }}">View</a>

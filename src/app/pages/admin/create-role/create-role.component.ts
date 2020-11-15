@@ -17,8 +17,8 @@ export class CreateRoleComponent implements OnInit {
   error0;
   error1;
 
-  constructor(private apiService: ApiService, private router: Router) {}
-  ngOnInit(): void {}
+  constructor(private apiService: ApiService, private router: Router) { }
+  ngOnInit(): void { }
 
   createRole(form) {
     if (form.value.roleName == '') {
@@ -38,14 +38,14 @@ export class CreateRoleComponent implements OnInit {
     }
 
     if (this.errors != 'true') {
-      this.dataString = `{"roleId":"${form.value.roleId}", "roleName":"${form.value.roleName}", "roleGroup":"${form.value.roleGroup}"}`;
+      this.dataString = `{"roleId":"1", "roleName":"${form.value.roleName}", "roleGroup":"${form.value.roleGroup}"}`;
 
       console.log(this.dataString);
       this.apiService
         .postAPI('dev/addroles', this.dataString)
         .subscribe((data) => {
           console.log(data);
-          // this.router.navigate(['/admin/list-roles']);
+          this.router.navigate(['/admin/list-roles']);
         });
     } else {
       console.log('fill the form');

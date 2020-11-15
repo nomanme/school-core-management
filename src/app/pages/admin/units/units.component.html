@@ -39,12 +39,12 @@
                       <div class="col-md-12 p-0 m-0">
                         <table class="table table-stripe">
                           <tr class="heading">
-                            <th class="rowid">ID</th>
+                            <th class="rowid">Unit Code</th>
                             <th class="email">Unit Name</th>
                             <th class="action">Action</th>
                           </tr>
                           <tr *ngFor="let unit of units">
-                            <td class="rowid">{{ unit.unitId }}</td>
+                            <td class="rowid">{{ unit.unitCode }}</td>
                             <td class="email">{{ unit.unitName }}</td>
                             <td class="action">
                               <a href="admin/view-unit/{{ unit.unitId }}">View</a>

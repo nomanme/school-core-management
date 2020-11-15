@@ -45,7 +45,7 @@ export class CreateUnitComponent implements OnInit {
   error13 = '';
   errors = '';
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.apiService.getAPI3('dev/getfieldofeducation').subscribe((data) => {
@@ -80,7 +80,7 @@ export class CreateUnitComponent implements OnInit {
         .postAPI('dev/addunit', this.dataString)
         .subscribe((data) => {
           console.log(data);
-          // this.router.navigate(['/admin/unit-list']);
+          this.router.navigate(['/admin/unit-list']);
         });
     } else {
       console.log('submit the form');

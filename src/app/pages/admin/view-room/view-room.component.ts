@@ -16,14 +16,14 @@ export class ViewRoomComponent implements OnInit {
     private apiService: ApiService,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.venueroomId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService.getAPI(`dev/venueroom?venueroomId=${this.venueroomId}`).subscribe((data) => {
-        console.log(data);
-        this.venuerooms = data;
-      });
-  } 
+    this.apiService.getAPI(`dev/getvenueroom?venueroomId=${this.venueroomId}`).subscribe((data) => {
+      console.log(data);
+      this.venuerooms = data;
+    });
+  }
 }

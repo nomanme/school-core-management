@@ -1,23 +1,23 @@
-
 <div class="content-wrapper">
- 
+
     <section class="content-header">
         <div class="container-fluid">
-          <div class="row m-0 p-0">
-            <div class="col-sm-12">
-                <h3 class="page-heading">View Schedule</h3>
+            <div class="row m-0 p-0">
+                <div class="col-sm-12">
+                    <h3 class="page-heading">View Schedule</h3>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View
+                            Schedule</li>
+                    </ol>
+                </div>
             </div>
-            <div class="col-sm-12 text-center">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View Schedule</li>
-                  </ol>
-            </div>
-          </div>
         </div><!-- container-fluid -->
     </section>
-  
-    
+
+
     <!-- Main content -->
     <div class="row p-0 m-0">
         <div class="col-md-8 offset-md-2">
@@ -25,76 +25,86 @@
                 <div class="col-md-12">
                     <section class="content">
                         <div class="container-fluid">
-                        <!-- general form elements -->
-                            <div class="card card-primary mb-0"> 
-                              <div class="card-header">
-                                <h5 class="card-title">View Schedule</h5>
-                              </div>
+                            <!-- general form elements -->
+                            <div class="card card-primary mb-0">
+                                <div class="card-header">
+                                    <h5 class="card-title">View Schedule</h5>
+                                </div>
                                 <!-- form start -->
-                                <form method="post" action="" enctype="multipart/form-data" *ngFor="let schedule of schedules">
+                                <form method="post" action="" enctype="multipart/form-data"
+                                    *ngFor="let schedule of schedules">
                                     <div class="card-body">
-  
-                                      <div class="row">
-                                        <div class="col-md-12 sub-form">
-  
-                                          <div class="inner-row">
-  
-                                            <div class="form-group row">
-                                                <label for="scheduleId" class="col-sm-3 control-label">Schedule Id</label>
-                                                <div class="col-sm-9">
-                                                    {{ schedule.scheduleId }}
-                                                </div>
-                                            </div>
 
-                                            <div class="form-group row">
-                                                <label for="semisterId" class="col-sm-3 control-label">Semester Id</label>
-                                                <div class="col-sm-9">
-                                                    {{ schedule.semisterId }}
-                                                </div>
-                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-12 sub-form">
 
-                                            <div class="form-group row">
-                                                <label for="startDate" class="col-sm-3 control-label">Term Id</label>
-                                                <div class="col-sm-9">
-                                                    {{ schedule.startDate }}
-                                                </div>
-                                            </div>
+                                                <div class="inner-row">
 
-                                            <div class="form-group row">
-                                                <label for="termId" class="col-sm-3 control-label">Week Id</label>
-                                                <div class="col-sm-9">
-                                                    {{ schedule.termId }}
-                                                </div>
-                                            </div>
+                                                    <div class="form-group row">
+                                                        <label for="scheduleId" class="col-sm-3 control-label">Schedule
+                                                            Id</label>
+                                                        <div class="col-sm-9">
+                                                            {{ schedule.scheduleId }}
+                                                        </div>
+                                                    </div>
 
-                                            <div class="form-group row">
-                                                <label for="weekId" class="col-sm-3 control-label">Start Date</label>
-                                                <div class="col-sm-9">
-                                                    {{ schedule.weekId }}
+                                                    <div class="form-group row">
+                                                        <label for="semisterId" class="col-sm-3 control-label">Semester
+                                                            Id</label>
+                                                        <div class="col-sm-9">
+                                                            {{ schedule.semisterId }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="startDate" class="col-sm-3 control-label">Term
+                                                            Id</label>
+                                                        <div class="col-sm-9">
+                                                            {{ schedule.termId }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="termId" class="col-sm-3 control-label">Week
+                                                            Id</label>
+                                                        <div class="col-sm-9">
+                                                            {{ schedule.weekId}}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="weekId" class="col-sm-3 control-label">Start
+                                                            Date</label>
+                                                        <div class="col-sm-9">
+                                                            {{ schedule.startDate }}
+                                                        </div>
+                                                    </div>
+
                                                 </div>
+                                                <!--inner-row-->
                                             </div>
-  
-                                          </div><!--inner-row-->
-                                        </div><!--col-md-12 sub-form-->
-                                      </div><!-- row1 -->
-  
-                                      <!-- <div class="submit-button">
+                                            <!--col-md-12 sub-form-->
+                                        </div><!-- row1 -->
+
+                                        <!-- <div class="submit-button">
                                         <button type="submit" (click)="createUser(f)" class="btn btn-primary" name="submit" id="submit">Submit</button>
                                       </div> -->
-                                            
-                                    </div> <!--card-body-->
-                                </form>     
-                            </div> <!--card card-primary-->
-                        </div> <!--container-fluid-->     
-                    </section> <!--section2-->
+
+                                    </div>
+                                    <!--card-body-->
+                                </form>
+                            </div>
+                            <!--card card-primary-->
+                        </div>
+                        <!--container-fluid-->
+                    </section>
+                    <!--section2-->
                 </div>
-            </div> <!--row1-->
-        </div><!--col-md-10offset-md-1-->
-    </div> <!--main content row-->
-  </div> <!--content-wrapper-->
-  
-  
-  
-  
-  
-   
+            </div>
+            <!--row1-->
+        </div>
+        <!--col-md-10offset-md-1-->
+    </div>
+    <!--main content row-->
+</div>
+<!--content-wrapper-->
