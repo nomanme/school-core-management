@@ -12,14 +12,15 @@ export class ViewVenueComponent implements OnInit {
   venueId;
   venues;
 
-  constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.venueId= this.activatedRoute.snapshot.paramMap.get('id');
-    
-    this.apiService.getAPI(`dev/getvenue?venueId=${this.venueId}`).subscribe((data)=>{
+    this.venueId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    this.apiService.getAPI(`dev/getvenue?venueId=${this.venueId}`).subscribe((data) => {
       console.log(data);
-      this.venues=data;
-    }) 
+      this.venues = data;
+      // this.venues = JSON.parse(this.venues);
+    })
   }
 }

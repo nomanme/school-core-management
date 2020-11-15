@@ -25,15 +25,15 @@ export class EditVenueComponent implements OnInit {
     suburb: null,
     trainingOrgId: null,
     venueCode: null,
-    venueName: null,
+    venueName: "",
   }
 
   constructor(
     private apiService: ApiService,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) {}
-  
+  ) { }
+
 
   ngOnInit(): void {
     this.apiService.getAPI3('dev/getstate').subscribe((data) => {
@@ -51,13 +51,13 @@ export class EditVenueComponent implements OnInit {
     this.venueId = this.activatedRoute.snapshot.paramMap.get('id');
 
     this.apiService.getAPI(`dev/getvenue?venueId=${this.venueId}`).subscribe((data) => {
-        console.log(data);
-        this.venue = data[0];
-        console.log(this.venue);
-      });
+      console.log(data);
+      this.venue = data[0];
+      console.log(this.venue);
+    });
   }
 
-  
+
 
   editVenue(form) {
     console.log(form.value);
@@ -66,8 +66,8 @@ export class EditVenueComponent implements OnInit {
     console.log(datajson);
 
     this.apiService.postAPI(`dev/editvenue?venueId=${this.venueId}`, datajson).subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/admin/list-venue']);
-      });
+      console.log(data);
+      this.router.navigate(['/admin/list-venue']);
+    });
   }
 }

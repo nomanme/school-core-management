@@ -8,6 +8,8 @@ import { ApiService } from 'src/app/api/api.service';
   styleUrls: ['./create-room.component.css'],
 })
 export class CreateRoomComponent implements OnInit {
+  getvenue;
+
   venuerooms;
   dataString;
   roomName = "";
@@ -17,13 +19,17 @@ export class CreateRoomComponent implements OnInit {
   error0 = '';
   error1 = '';
 
-
-
   errors = '';
 
   constructor(private apiService: ApiService, private router: Router) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+    this.apiService.getAPI('dev/getvenue').subscribe((data) => {
+      this.getvenue = data;
+    });
+
+  }
 
   createRoom(form) {
     if (form.value.venueId == '') {
