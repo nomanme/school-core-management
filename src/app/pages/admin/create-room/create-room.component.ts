@@ -16,8 +16,7 @@ export class CreateRoomComponent implements OnInit {
 
   error0 = '';
   error1 = '';
-  error2 = '';
-  error3 = '';
+
 
 
   errors = '';
@@ -35,27 +34,12 @@ export class CreateRoomComponent implements OnInit {
       this.errors = 'false';
     }
 
-    if (form.value.roomName == '') {
-      this.error2 = 'true';
-      this.errors = 'true';
-    } else {
-      this.error2 = '';
-      this.errors = 'false';
-    }
-
-    if (form.value.roomNumber == '') {
-      this.error3 = 'true';
-      this.errors = 'true';
-    } else {
-      this.error3 = '';
-      this.errors = 'false';
-    }
 
     if (this.errors != 'true') {
       // console.log(form.value);
-      this.dataString = `{"venueroomId":"1", "venueId":"${form.value.venueId}", "roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}"}`;
-      // this.dataString=`{"roomNumber":517,"roomName":"roomnumber2","venueId":1}`;
+      this.dataString = `{"venueId":"${form.value.venueId}", "roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}"}`;
       console.log(this.dataString);
+
       this.apiService.postAPI('dev/addvenueroom', this.dataString).subscribe((data) => {
         console.log(data);
         this.router.navigate(['/admin/list-venueroom']);

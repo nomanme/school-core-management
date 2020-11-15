@@ -76,12 +76,10 @@ export class CreateUnitComponent implements OnInit {
 
       console.log(this.dataString);
 
-      this.apiService
-        .postAPI('dev/addunit', this.dataString)
-        .subscribe((data) => {
-          console.log(data);
-          this.router.navigate(['/admin/unit-list']);
-        });
+      this.apiService.postAPI('dev/addunit', this.dataString).subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['/admin/unit-list']);
+      });
     } else {
       console.log('submit the form');
     }
