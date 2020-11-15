@@ -1,5 +1,4 @@
 <div class="content-wrapper">
-
   <section class="content-header">
     <div class="container-fluid">
       <div class="row m-0 p-0">
@@ -9,12 +8,15 @@
         <div class="col-sm-12 text-center">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Edit Course
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Edit
+              Course
             </li>
           </ol>
         </div>
       </div>
-    </div><!-- container-fluid -->
+    </div>
+    <!-- container-fluid -->
   </section>
 
   <!-- Main content -->
@@ -35,114 +37,221 @@
                     <div class="row">
                       <div class="col-md-12 sub-form">
                         <div class="card-header">
-                          <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Course
-                            Information</h3>
+                          <h3 class="card-title Title2">
+                            <i class="fa fa-bars pr-1" aria-hidden="true"></i
+                            >Course Information
+                          </h3>
                         </div>
                         <div class="inner-row">
                           <div class="row">
                             <div class="col-md-6">
-
                               <div class="form-group row">
-                                <label for="courseName" class="col-sm-4 control-label">Course Name<span
-                                    class="star">*</span></label>
+                                <label
+                                  for="courseName"
+                                  class="col-sm-4 control-label"
+                                  >Course Name<span class="star">*</span></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="courseName" id="courseName"
-                                      [(ngModel)]='course.courseName' placeholder="Enter course name here" required>
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="courseName"
+                                      id="courseName"
+                                      [ngClass]="
+                                        error0 == ''
+                                          ? 'form-control'
+                                          : 'form-control is-invalid'
+                                      "
+                                      [(ngModel)]="course.courseName"
+                                      placeholder="Enter course name here"
+                                      required
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="courseCode" class="col-sm-4 control-label">Course Code<span
-                                    class="star">*</span></label>
+                                <label
+                                  for="courseCode"
+                                  class="col-sm-4 control-label"
+                                  >Course Code<span class="star">*</span></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="courseCode" id="courseCode"
-                                      [(ngModel)]='course.courseCode' placeholder="Enter course code here" required>
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="courseCode"
+                                      id="courseCode"
+                                      [ngClass]="
+                                        error1 == ''
+                                          ? 'form-control select2'
+                                          : 'form-control select2 is-invalid'
+                                      "
+                                      [(ngModel)]="course.courseCode"
+                                      placeholder="Enter course code here"
+                                      required
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="nationalCode" class="col-sm-4 control-label">National Code</label>
+                                <label
+                                  for="nationalCode"
+                                  class="col-sm-4 control-label"
+                                  >National Code</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="nationalCode" id="nationalCode"
-                                      [(ngModel)]='course.nationalCode' placeholder="Enter national code here">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="nationalCode"
+                                      id="nationalCode"
+                                      [(ngModel)]="course.nationalCode"
+                                      placeholder="Enter national code here"
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="duration" class="col-sm-4 control-label">Duration<span
-                                    class="star">*</span></label>
+                                <label
+                                  for="duration"
+                                  class="col-sm-4 control-label"
+                                  >Duration<span class="star">*</span></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="duration" id="duration"
-                                      [(ngModel)]='course.duration' placeholder="Enter Course Duration" required>
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="duration"
+                                      id="duration"
+                                      [(ngModel)]="course.duration"
+                                      placeholder="Enter Course Duration"
+                                      required
+                                    />
                                   </div>
                                 </div>
                               </div>
-
                             </div>
                             <!--col-md-6-->
 
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label for="moduleDelivery" class="col-sm-4 control-label">Module Delivery?</label>
+                                <label
+                                  for="moduleDelivery"
+                                  class="col-sm-4 control-label"
+                                  >Module Delivery?</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="moduleDelivery"
-                                      id="moduleDelivery1" value="1" [(ngModel)]='course.moduleDelivery'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="moduleDelivery"
+                                      id="moduleDelivery1"
+                                      value="1"
+                                      [(ngModel)]="course.moduleDelivery"
+                                    />
                                     <label class="form-check-label">Yes</label>
                                   </div>
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="moduleDelivery"
-                                      id="moduleDelivery2" value="0" [(ngModel)]='course.moduleDelivery'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="moduleDelivery"
+                                      id="moduleDelivery2"
+                                      value="0"
+                                      [(ngModel)]="course.moduleDelivery"
+                                    />
                                     <label class="form-check-label">No</label>
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="isSuperseded" class="col-sm-4 control-label alignStart">Is
-                                  Superseded?</label>
+                                <label
+                                  for="isSuperseded"
+                                  class="col-sm-4 control-label alignStart"
+                                  >Is Superseded?</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="isSuperseded" id="isSuperseded1"
-                                      value="1" [(ngModel)]='course.isSuperseded'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="isSuperseded"
+                                      id="isSuperseded1"
+                                      value="1"
+                                      [(ngModel)]="course.isSuperseded"
+                                    />
                                     <label class="form-check-label">Yes</label>
                                   </div>
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="isSuperseded" id="isSuperseded2"
-                                      value="0" [(ngModel)]='course.isSuperseded'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="isSuperseded"
+                                      id="isSuperseded2"
+                                      value="0"
+                                      [(ngModel)]="course.isSuperseded"
+                                    />
                                     <label class="form-check-label">No</label>
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="cricosCode" class="col-sm-4 control-label alignStart">Crisco Code</label>
+                                <label
+                                  for="cricosCode"
+                                  class="col-sm-4 control-label alignStart"
+                                  >Crisco Code</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="cricosCode" id="cricosCode"
-                                      [(ngModel)]='course.cricosCode' placeholder="Enter crisco code here">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="cricosCode"
+                                      id="cricosCode"
+                                      [(ngModel)]="course.cricosCode"
+                                      placeholder="Enter crisco code here"
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="courseduration" class="col-sm-4 control-label">Duration Unit<span
-                                    class="star">*</span></label>
+                                <label
+                                  for="courseduration"
+                                  class="col-sm-4 control-label"
+                                  >Duration Unit<span class="star"
+                                    >*</span
+                                  ></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="durationUnit" id="durationUnit"
-                                      [(ngModel)]='course.durationUnit' placeholder="Enter Course Duration" required>
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="durationUnit"
+                                      id="durationUnit"
+                                      [ngClass]="
+                                        error3 == ''
+                                          ? 'form-control select2'
+                                          : 'form-control select2 is-invalid'
+                                      "
+                                      [(ngModel)]="course.durationUnit"
+                                      placeholder="Enter Course Duration"
+                                      required
+                                    />
                                   </div>
                                 </div>
                               </div>
-
                             </div>
                             <!--col-md-6-->
                           </div>
@@ -151,53 +260,103 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label for="deliveryTarget" class="col-sm-4 control-label">Delivery Target</label>
+                                <label
+                                  for="deliveryTarget"
+                                  class="col-sm-4 control-label"
+                                  >Delivery Target</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="deliveryTarget" id="deliveryTarget"
-                                      [(ngModel)]='course.deliveryTarget' placeholder="Enter delivery target">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="deliveryTarget"
+                                      id="deliveryTarget"
+                                      [(ngModel)]="course.deliveryTarget"
+                                      placeholder="Enter delivery target"
+                                    />
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row bottomzero">
-                                <label for="internationTutionFees" class="col-sm-4 control-label">International Tution
-                                  Fee</label>
+                                <label
+                                  for="internationTutionFees"
+                                  class="col-sm-4 control-label"
+                                  >International Tution Fee</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="internationTutionFees"
-                                      id="internationTutionFees" [(ngModel)]='course.internationTutionFees'
-                                      placeholder="0.00">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="internationTutionFees"
+                                      id="internationTutionFees"
+                                      [(ngModel)]="course.internationTutionFees"
+                                      placeholder="0.00"
+                                    />
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="faculty" class="col-sm-4 control-label alignStart">Faculty</label>
+                                <label
+                                  for="faculty"
+                                  class="col-sm-4 control-label alignStart"
+                                  >Faculty</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="faculty" id="faculty"
-                                      [(ngModel)]='course.faculty' placeholder="Enter Faculty">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="faculty"
+                                      id="faculty"
+                                      [(ngModel)]="course.faculty"
+                                      placeholder="Enter Faculty"
+                                    />
                                   </div>
                                 </div>
-
                               </div>
                               <div class="form-group row bottomzero">
-                                <label for="qualificationPrerequisite" class="col-sm-4 control-label">Qualification
-                                  Prerequisite</label>
+                                <label
+                                  for="qualificationPrerequisite"
+                                  class="col-sm-4 control-label"
+                                  >Qualification Prerequisite</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="qualificationPrerequisite"
-                                      id="qualificationPrerequisite" [(ngModel)]='course.qualificationPrerequisite'
-                                      placeholder="Enter Qualification Prerequisite">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="qualificationPrerequisite"
+                                      id="qualificationPrerequisite"
+                                      [(ngModel)]="
+                                        course.qualificationPrerequisite
+                                      "
+                                      placeholder="Enter Qualification Prerequisite"
+                                    />
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="courseStartDate" class="col-sm-4 control-label">Course Start
-                                  Date</label>
-                                <div class="col-sm-8" id="reservationdate" data-target-input="nearest">
-                                  <input type="date" class="form-control datetimepicker-input" name="courseStartDate"
-                                    id="courseStartDate" [(ngModel)]='course.courseStartDate'
-                                    data-target="#reservationdate" placeholder="2020/7/27">
+                                <label
+                                  for="courseStartDate"
+                                  class="col-sm-4 control-label"
+                                  >Course Start Date</label
+                                >
+                                <div
+                                  class="col-sm-8"
+                                  id="reservationdate"
+                                  data-target-input="nearest"
+                                >
+                                  <input
+                                    type="date"
+                                    class="form-control datetimepicker-input"
+                                    name="courseStartDate"
+                                    id="courseStartDate"
+                                    [(ngModel)]="course.courseStartDate"
+                                    data-target="#reservationdate"
+                                    placeholder="2020/7/27"
+                                  />
                                 </div>
                               </div>
                             </div>
@@ -205,52 +364,101 @@
 
                             <div class="col-md-6">
                               <div class="form-group row bottomzero">
-                                <label for="maximumWeeklyStudy" class="col-sm-4 control-label">Maximum Weekly
-                                  Study</label>
+                                <label
+                                  for="maximumWeeklyStudy"
+                                  class="col-sm-4 control-label"
+                                  >Maximum Weekly Study</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="maximumWeeklyStudy"
-                                      id="maximumWeeklyStudy" [(ngModel)]='course.maximumWeeklyStudy'
-                                      placeholder="Enter maximum weekly study">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="maximumWeeklyStudy"
+                                      id="maximumWeeklyStudy"
+                                      [(ngModel)]="course.maximumWeeklyStudy"
+                                      placeholder="Enter maximum weekly study"
+                                    />
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row bottomzero">
-                                <label for="domesticTutionFees" class="col-sm-4 control-label">Domestic Tution
-                                  Fee</label>
+                                <label
+                                  for="domesticTutionFees"
+                                  class="col-sm-4 control-label"
+                                  >Domestic Tution Fee</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="domesticTutionFees"
-                                      id="domesticTutionFees" [(ngModel)]='course.domesticTutionFees'
-                                      placeholder="Enter domestic tuition fee">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="domesticTutionFees"
+                                      id="domesticTutionFees"
+                                      [(ngModel)]="course.domesticTutionFees"
+                                      placeholder="Enter domestic tuition fee"
+                                    />
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="department" class="col-sm-4 control-label alignStart">Department</label>
+                                <label
+                                  for="department"
+                                  class="col-sm-4 control-label alignStart"
+                                  >Department</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="department" id="department"
-                                      [(ngModel)]='course.department' placeholder="Enter department">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="department"
+                                      id="department"
+                                      [(ngModel)]="course.department"
+                                      placeholder="Enter department"
+                                    />
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="major" class="col-sm-4 control-label">Major</label>
+                                <label
+                                  for="major"
+                                  class="col-sm-4 control-label"
+                                  >Major</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="major" id="major"
-                                      [(ngModel)]='course.major' placeholder="Enter Major Course Name">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="major"
+                                      id="major"
+                                      [(ngModel)]="course.major"
+                                      placeholder="Enter Major Course Name"
+                                    />
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="courseEndDate" class="col-sm-4 control-label">Course End
-                                  Date</label>
-                                <div class="col-sm-8" id="reservationdate" data-target-input="nearest">
-                                  <input type="date" class="form-control datetimepicker-input" name="courseEndDate"
-                                    id="courseEndDate" [(ngModel)]='course.courseEndDate' data-target="#reservationdate"
-                                    placeholder="27/7/2020">
+                                <label
+                                  for="courseEndDate"
+                                  class="col-sm-4 control-label"
+                                  >Course End Date</label
+                                >
+                                <div
+                                  class="col-sm-8"
+                                  id="reservationdate"
+                                  data-target-input="nearest"
+                                >
+                                  <input
+                                    type="date"
+                                    class="form-control datetimepicker-input"
+                                    name="courseEndDate"
+                                    id="courseEndDate"
+                                    [(ngModel)]="course.courseEndDate"
+                                    data-target="#reservationdate"
+                                    placeholder="27/7/2020"
+                                  />
                                 </div>
                               </div>
                             </div>
@@ -266,18 +474,28 @@
                     <div class="row">
                       <div class="col-md-12 sub-form">
                         <div class="card-header">
-                          <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Specific
-                            Information</h3>
+                          <h3 class="card-title Title2">
+                            <i class="fa fa-bars pr-1" aria-hidden="true"></i
+                            >Specific Information
+                          </h3>
                         </div>
                         <div class="inner-row">
                           <div class="form-group row">
-                            <label for="resultCalculationMethod" class="col-sm-3 control-label">Results Calculation
-                              Method</label>
+                            <label
+                              for="resultCalculationMethod"
+                              class="col-sm-3 control-label"
+                              >Results Calculation Method</label
+                            >
                             <div class="col-sm-9">
                               <div class="input-group">
-                                <input class="form-control" type="text" name="resultCalculationMethod"
-                                  id="resultCalculationMethod" [(ngModel)]='course.resultCalculationMethod'
-                                  placeholder="Enter result calculation method">
+                                <input
+                                  class="form-control"
+                                  type="text"
+                                  name="resultCalculationMethod"
+                                  id="resultCalculationMethod"
+                                  [(ngModel)]="course.resultCalculationMethod"
+                                  placeholder="Enter result calculation method"
+                                />
                               </div>
                             </div>
                           </div>
@@ -285,31 +503,63 @@
                           <div class="row">
                             <div class="col-md-7">
                               <div class="form-group row">
-                                <label for="hasWorkPlacement" class="col-sm-4 control-label">Has Work Placement</label>
+                                <label
+                                  for="hasWorkPlacement"
+                                  class="col-sm-4 control-label"
+                                  >Has Work Placement</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="hasWorkPlacement"
-                                      id="hasWorkPlacement1" value="1" [(ngModel)]='course.hasWorkPlacement'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="hasWorkPlacement"
+                                      id="hasWorkPlacement1"
+                                      value="1"
+                                      [(ngModel)]="course.hasWorkPlacement"
+                                    />
                                     <label class="form-check-label">Yes</label>
                                   </div>
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="hasWorkPlacement"
-                                      id="hasWorkPlacement2" value="0" [(ngModel)]='course.hasWorkPlacement'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="hasWorkPlacement"
+                                      id="hasWorkPlacement2"
+                                      value="0"
+                                      [(ngModel)]="course.hasWorkPlacement"
+                                    />
                                     <label class="form-check-label">No</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="flexibleTimetable" class="col-sm-4 control-label">Flexible Timetable</label>
+                                <label
+                                  for="flexibleTimetable"
+                                  class="col-sm-4 control-label"
+                                  >Flexible Timetable</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="flexibleTimetable"
-                                      id="flexibleTimetable1" value="1" [(ngModel)]='course.flexibleTimetable'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexibleTimetable"
+                                      id="flexibleTimetable1"
+                                      value="1"
+                                      [(ngModel)]="course.flexibleTimetable"
+                                    />
                                     <label class="form-check-label">Yes</label>
                                   </div>
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="flexibleTimetable"
-                                      id="flexibleTimetable2" value="0" [(ngModel)]='course.flexibleTimetable'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexibleTimetable"
+                                      id="flexibleTimetable2"
+                                      value="0"
+                                      [(ngModel)]="course.flexibleTimetable"
+                                    />
                                     <label class="form-check-label">No</label>
                                   </div>
                                 </div>
@@ -317,31 +567,63 @@
                             </div>
                             <div class="col-md-5">
                               <div class="form-group row">
-                                <label for="courseLevel" class="col-sm-4 control-label">Course Level</label>
+                                <label
+                                  for="courseLevel"
+                                  class="col-sm-4 control-label"
+                                  >Course Level</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="courseLevel" id="courseLevel1"
-                                      value="1" [(ngModel)]='course.courseLevel'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="courseLevel"
+                                      id="courseLevel1"
+                                      value="1"
+                                      [(ngModel)]="course.courseLevel"
+                                    />
                                     <label class="form-check-label">Yes</label>
                                   </div>
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="courseLevel" id="courseLevel2"
-                                      value="0" [(ngModel)]='course.courseLevel'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="courseLevel"
+                                      id="courseLevel2"
+                                      value="0"
+                                      [(ngModel)]="course.courseLevel"
+                                    />
                                     <label class="form-check-label">No</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="activatedNow" class="col-sm-4 control-label">Activated Now</label>
+                                <label
+                                  for="activatedNow"
+                                  class="col-sm-4 control-label"
+                                  >Activated Now</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="activatedNow" id="activatedNow1"
-                                      value="1" [(ngModel)]='course.activatedNow'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="activatedNow"
+                                      id="activatedNow1"
+                                      value="1"
+                                      [(ngModel)]="course.activatedNow"
+                                    />
                                     <label class="form-check-label">Yes</label>
                                   </div>
                                   <div class="form-check radio">
-                                    <input class="form-check-input" type="radio" name="activatedNow" id="activatedNow2"
-                                      value="0" [(ngModel)]='course.activatedNow'>
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="activatedNow"
+                                      id="activatedNow2"
+                                      value="0"
+                                      [(ngModel)]="course.activatedNow"
+                                    />
                                     <label class="form-check-label">No</label>
                                   </div>
                                 </div>
@@ -358,51 +640,105 @@
                     <div class="row">
                       <div class="col-md-12 sub-form">
                         <div class="card-header">
-                          <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>AVETMISS
-                            Information</h3>
+                          <h3 class="card-title Title2">
+                            <i class="fa fa-bars pr-1" aria-hidden="true"></i
+                            >AVETMISS Information
+                          </h3>
                         </div>
                         <div class="inner-row">
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label for="avetmissCourseRecognitionId" class="col-sm-4 control-label">Course
-                                  Recognition</label>
+                                <label
+                                  for="avetmissCourseRecognitionId"
+                                  class="col-sm-4 control-label"
+                                  >Course Recognition</label
+                                >
                                 <div class="col-sm-8">
-                                  <select [(ngModel)]="course.avetmissCourseRecognitionId"
-                                    class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger"
-                                    name="avetmissCourseRecognitionId" id="avetmissCourseRecognitionId">
-                                    <option *ngFor="let avetcourserecog of getavetmisscourserecognition"
-                                      [value]="avetcourserecog.avetmissCourseRecognitionId" selected="selected">
-                                      {{ avetcourserecog.avetmissCourseRecognitionDesc }}
+                                  <select
+                                    [(ngModel)]="
+                                      course.avetmissCourseRecognitionId
+                                    "
+                                    class="form-control select2 select2-danger"
+                                    data-dropdown-css-class="select2-danger"
+                                    name="avetmissCourseRecognitionId"
+                                    id="avetmissCourseRecognitionId"
+                                  >
+                                    <option
+                                      *ngFor="
+                                        let avetcourserecog of getavetmisscourserecognition
+                                      "
+                                      [value]="
+                                        avetcourserecog.avetmissCourseRecognitionId
+                                      "
+                                      selected="selected"
+                                    >
+                                      {{
+                                        avetcourserecog.avetmissCourseRecognitionDesc
+                                      }}
                                     </option>
                                   </select>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="avetmissLevelOfEducationId" class="col-sm-4 control-label">Level of
-                                  Education</label>
+                                <label
+                                  for="avetmissLevelOfEducationId"
+                                  class="col-sm-4 control-label"
+                                  >Level of Education</label
+                                >
                                 <div class="col-sm-8">
-                                  <select [(ngModel)]="course.avetmissLevelOfEducationId"
-                                    class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger"
-                                    name="avetmissLevelOfEducationId" id="avetmissLevelOfEducationId">
-                                    <option *ngFor="let avetlevelofedu of getavetmisslevelofeducation"
-                                      [value]="avetlevelofedu.avetmissLevelOfEducationId" selected="selected">
-                                      {{ avetlevelofedu.avetmissLevelOfEducationDesc }}
+                                  <select
+                                    [(ngModel)]="
+                                      course.avetmissLevelOfEducationId
+                                    "
+                                    class="form-control select2 select2-danger"
+                                    data-dropdown-css-class="select2-danger"
+                                    name="avetmissLevelOfEducationId"
+                                    id="avetmissLevelOfEducationId"
+                                  >
+                                    <option
+                                      *ngFor="
+                                        let avetlevelofedu of getavetmisslevelofeducation
+                                      "
+                                      [value]="
+                                        avetlevelofedu.avetmissLevelOfEducationId
+                                      "
+                                      selected="selected"
+                                    >
+                                      {{
+                                        avetlevelofedu.avetmissLevelOfEducationDesc
+                                      }}
                                     </option>
                                   </select>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="avetmissFieldOfEducationId" class="col-sm-4 control-label">Field of
-                                  Education</label>
+                                <label
+                                  for="avetmissFieldOfEducationId"
+                                  class="col-sm-4 control-label"
+                                  >Field of Education</label
+                                >
                                 <div class="col-sm-8">
-                                  <select [(ngModel)]="course.avetmissFieldOfEducationId"
-                                    class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger"
-                                    name="avetmissFieldOfEducationId" id="avetmissFieldOfEducationId">
-                                    <option *ngFor="let avetfieldofedu of getavetmissfieldofeducation"
-                                      [value]="avetfieldofedu.avetmissfieldOfEducationId" selected="selected">
+                                  <select
+                                    [(ngModel)]="
+                                      course.avetmissFieldOfEducationId
+                                    "
+                                    class="form-control select2 select2-danger"
+                                    data-dropdown-css-class="select2-danger"
+                                    name="avetmissFieldOfEducationId"
+                                    id="avetmissFieldOfEducationId"
+                                  >
+                                    <option
+                                      *ngFor="
+                                        let avetfieldofedu of getavetmissfieldofeducation
+                                      "
+                                      [value]="
+                                        avetfieldofedu.avetmissfieldOfEducationId
+                                      "
+                                      selected="selected"
+                                    >
                                       {{ avetfieldofedu.Descriptions }}
                                     </option>
                                   </select>
@@ -412,37 +748,71 @@
                             <!--col-md-6-->
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label for="avetmissANZSCOId" class="col-sm-4 control-label">ANZSCO Code</label>
+                                <label
+                                  for="avetmissANZSCOId"
+                                  class="col-sm-4 control-label"
+                                  >ANZSCO Code</label
+                                >
                                 <div class="col-sm-8">
-                                  <select [(ngModel)]="course.avetmissANZSCOId"
-                                    class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger"
-                                    name="avetmissANZSCOId" id="avetmissANZSCOId">
-                                    <option *ngFor="let avetanzco of getavetmissanzsco"
-                                      [value]="avetanzco.avetmissANZSCOId" selected="selected">
-                                      {{ avetanzco.avetmissANZSCOCode }} - {{ avetanzco.Descriptions }}
+                                  <select
+                                    [(ngModel)]="course.avetmissANZSCOId"
+                                    class="form-control select2 select2-danger"
+                                    data-dropdown-css-class="select2-danger"
+                                    name="avetmissANZSCOId"
+                                    id="avetmissANZSCOId"
+                                  >
+                                    <option
+                                      *ngFor="
+                                        let avetanzco of getavetmissanzsco
+                                      "
+                                      [value]="avetanzco.avetmissANZSCOId"
+                                      selected="selected"
+                                    >
+                                      {{ avetanzco.avetmissANZSCOCode }} -
+                                      {{ avetanzco.Descriptions }}
                                     </option>
                                   </select>
                                 </div>
                               </div>
 
                               <div class="form-group row bottomzero">
-                                <label for="avetmissTotalNominalHours" class="col-sm-4 control-label">Total Nominal
-                                  Hours</label>
+                                <label
+                                  for="avetmissTotalNominalHours"
+                                  class="col-sm-4 control-label"
+                                  >Total Nominal Hours</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="avetmissTotalNominalHours"
-                                      id="avetmissTotalNominalHours" [(ngModel)]='course.avetmissTotalNominalHours'
-                                      placeholder="Enter nominal hours">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="avetmissTotalNominalHours"
+                                      id="avetmissTotalNominalHours"
+                                      [(ngModel)]="
+                                        course.avetmissTotalNominalHours
+                                      "
+                                      placeholder="Enter nominal hours"
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="avetmissReport" class="col-sm-4 control-label">AVETMISS Report</label>
+                                <label
+                                  for="avetmissReport"
+                                  class="col-sm-4 control-label"
+                                  >AVETMISS Report</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input class="form-control" type="text" name="avetmissReport" id="avetmissReport"
-                                      [(ngModel)]='course.avetmissReport' placeholder="Enter AVETMISS report">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      name="avetmissReport"
+                                      id="avetmissReport"
+                                      [(ngModel)]="course.avetmissReport"
+                                      placeholder="Enter AVETMISS report"
+                                    />
                                   </div>
                                 </div>
                               </div>
@@ -456,12 +826,13 @@
                     </div>
                     <!--row3-->
 
-
                     <div class="row">
                       <div class="col-md-12 sub-form">
                         <div class="card-header">
-                          <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Additional
-                            Information</h3>
+                          <h3 class="card-title Title2">
+                            <i class="fa fa-bars pr-1" aria-hidden="true"></i
+                            >Additional Information
+                          </h3>
                         </div>
                         <div class="inner-row">
                           <span class="text-star">NO OTHER DETAILS FOUND</span>
@@ -475,48 +846,54 @@
                     <div class="row">
                       <div class="col-md-12 sub-form">
                         <div class="card-header">
-                          <h3 class="card-title Title2"><i class="fa fa-bars pr-1" aria-hidden="true"></i>Course
-                            Description</h3>
+                          <h3 class="card-title Title2">
+                            <i class="fa fa-bars pr-1" aria-hidden="true"></i
+                            >Course Description
+                          </h3>
                         </div>
                         <div class="inner-row">
-                          <textarea class="form-control" rows="3" placeholder="Enter course description"
-                            name="courseDescriptin" id="courseDescriptin"
-                            [(ngModel)]='course.courseDescriptin'></textarea>
+                          <textarea
+                            class="form-control"
+                            rows="3"
+                            placeholder="Enter course description"
+                            name="courseDescriptin"
+                            id="courseDescriptin"
+                            [(ngModel)]="course.courseDescriptin"
+                          ></textarea>
                         </div>
                         <!--inner-row-->
                       </div>
                       <!--col-md-12 sub-form-->
                     </div>
                     <!--row5-->
-
                   </div>
                   <!--main-column-->
                 </div>
                 <!--main-row-->
 
-                <br>
+                <br />
                 <div class="submit-button">
-                  <button type="submit" (click)="editCourse(f)" class="btn btn-success" name="update"
-                    id="update">Update</button>
+                  <button
+                    type="submit"
+                    (click)="editCourse(f)"
+                    class="btn btn-success"
+                    name="update"
+                    id="update"
+                  >
+                    Update
+                  </button>
                 </div>
-
               </div>
             </form>
-
           </div>
           <!--card card-primary-->
-
         </div>
         <!--col-md-6 offset-md-2-->
-
       </div>
       <!--row-->
-
     </div>
     <!--container-fluid-->
-
   </section>
   <!--section2-->
-
 </div>
 <!--content-wrapper-->

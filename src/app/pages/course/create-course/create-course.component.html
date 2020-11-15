@@ -54,6 +54,11 @@
                                 <div class="col-sm-8">
                                   <div class="input-group">
                                     <input
+                                      [ngClass]="
+                                        error0 == ''
+                                          ? 'form-control select2'
+                                          : 'form-control select2 is-invalid'
+                                      "
                                       class="form-control"
                                       type="text"
                                       name="courseName"
@@ -75,6 +80,11 @@
                                 <div class="col-sm-8">
                                   <div class="input-group">
                                     <input
+                                      [ngClass]="
+                                        error1 == ''
+                                          ? 'form-control select2'
+                                          : 'form-control select2 is-invalid'
+                                      "
                                       class="form-control"
                                       type="text"
                                       name="courseCode"
@@ -116,6 +126,11 @@
                                 <div class="col-sm-8">
                                   <div class="input-group">
                                     <input
+                                      [ngClass]="
+                                        error2 == ''
+                                          ? 'form-control select2'
+                                          : 'form-control select2 is-invalid'
+                                      "
                                       class="form-control"
                                       type="text"
                                       name="duration"
@@ -226,6 +241,11 @@
                                 <div class="col-sm-8">
                                   <div class="input-group">
                                     <input
+                                      [ngClass]="
+                                        error3 == ''
+                                          ? 'form-control select2'
+                                          : 'form-control select2 is-invalid'
+                                      "
                                       class="form-control"
                                       type="text"
                                       name="durationUnit"
@@ -635,10 +655,17 @@
                                 <label
                                   for="avetmissCourseRecognitionId"
                                   class="col-sm-4 control-label"
-                                  >Course Recognition</label
+                                  >Course Recognition<span class="star"
+                                    >*</span
+                                  ></label
                                 >
                                 <div class="col-sm-8">
                                   <select
+                                    [ngClass]="
+                                      error4 == ''
+                                        ? 'form-control select2'
+                                        : 'form-control select2 is-invalid'
+                                    "
                                     [(ngModel)]="avetmissCourseRecognitionId"
                                     class="form-control select2 select2-danger"
                                     data-dropdown-css-class="select2-danger"
@@ -666,10 +693,16 @@
                                 <label
                                   for="avetmissLevelOfEducationId"
                                   class="col-sm-4 control-label"
-                                  >Level of Education</label
+                                  >Level of Education
+                                  <span class="star">*</span></label
                                 >
                                 <div class="col-sm-8">
                                   <select
+                                    [ngClass]="
+                                      error5 == ''
+                                        ? 'form-control select2'
+                                        : 'form-control select2 is-invalid'
+                                    "
                                     [(ngModel)]="avetmissLevelOfEducationId"
                                     class="form-control select2 select2-danger"
                                     data-dropdown-css-class="select2-danger"
@@ -697,10 +730,16 @@
                                 <label
                                   for="avetmissFieldOfEducationId"
                                   class="col-sm-4 control-label"
-                                  >Field of Education</label
+                                  >Field of Education
+                                  <span class="star">*</span></label
                                 >
                                 <div class="col-sm-8">
                                   <select
+                                    [ngClass]="
+                                      error6 == ''
+                                        ? 'form-control select2'
+                                        : 'form-control select2 is-invalid'
+                                    "
                                     [(ngModel)]="avetmissFieldOfEducationId"
                                     class="form-control select2 select2-danger"
                                     data-dropdown-css-class="select2-danger"
@@ -728,10 +767,16 @@
                                 <label
                                   for="avetmissANZSCOId"
                                   class="col-sm-4 control-label"
-                                  >ANZSCO Code</label
+                                  >ANZSCO Code
+                                  <span class="star">*</span></label
                                 >
                                 <div class="col-sm-8">
                                   <select
+                                    [ngClass]="
+                                      error7 == ''
+                                        ? 'form-control select2'
+                                        : 'form-control select2 is-invalid'
+                                    "
                                     [(ngModel)]="avetmissANZSCOId"
                                     class="form-control select2 select2-danger"
                                     data-dropdown-css-class="select2-danger"
@@ -756,7 +801,7 @@
                                 <label
                                   for="avetmissTotalNominalHours"
                                   class="col-sm-4 control-label"
-                                  >Total Nominal Hours</label
+                                  >Total Nominal Hours ></label
                                 >
                                 <div class="col-sm-8">
                                   <div class="input-group">
@@ -776,8 +821,8 @@
                                 <label
                                   for="avetmissReport"
                                   class="col-sm-4 control-label"
-                                  >AVETMISS Report</label
-                                >
+                                  >AVETMISS Report
+                                </label>
                                 <div class="col-sm-8">
                                   <div class="input-group">
                                     <input
