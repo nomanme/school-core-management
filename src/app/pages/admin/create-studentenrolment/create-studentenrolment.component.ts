@@ -60,7 +60,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
   errors = '';
   errorCodes: { studentOriginId: '' };
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.outputD = this.apiService.getLocalStorage('studentId');
@@ -252,38 +252,26 @@ export class CreateStudentenrolmentComponent implements OnInit {
     if (this.errors != 'true') {
       this.dataString = `{"userId":"1", "studentId":"${this.apiService.getLocalStorage(
         'studentId'
-      )}", "courseId":"${form.value.courseId}", "agentId":"${
-        form.value.agentId
-      }", "courseIntakeDateId":"${
-        form.value.courseIntakeDateId
-      }", "applicationStatusId":"${
-        form.value.applicationStatusId
-      }",  "applicationStatusId":"${
-        form.value.applicationStatusId
-      }","studentOriginId":"${
-        form.value.studentOriginId
-      }", "fundingSourceNationalId":"${
-        form.value.fundingSourceNationalId
-      }", "fundingSourceStateId":"${
-        form.value.fundingSourceStateId
-      }", "commencingProgramId":"${
-        form.value.commencingProgramId
-      }", "trainingContractid":"${
-        form.value.trainingContractid
-      }", "deliveryModeId":"${
-        form.value.deliveryModeId
-      }", "reasonTakingCourseId":"${
-        form.value.reasonTakingCourseId
-      }", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${
-        form.value.TuitionFee
-      }"}`;
+      )}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId
+        }", "courseIntakeDateId":"${form.value.courseIntakeDateId
+        }", "applicationStatusId":"${form.value.applicationStatusId
+        }",  "applicationStatusId":"${form.value.applicationStatusId
+        }","studentOriginId":"${form.value.studentOriginId
+        }", "fundingSourceNationalId":"${form.value.fundingSourceNationalId
+        }", "fundingSourceStateId":"${form.value.fundingSourceStateId
+        }", "commencingProgramId":"${form.value.commencingProgramId
+        }", "trainingContractid":"${form.value.trainingContractid
+        }", "deliveryModeId":"${form.value.deliveryModeId
+        }", "reasonTakingCourseId":"${form.value.reasonTakingCourseId
+        }", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee
+        }"}`;
 
       console.log(this.dataString);
       this.apiService
         .postAPI2('dev/addstudentenrolment', this.dataString)
         .subscribe((data) => {
-          // console.log(data);
-          // this.router.navigate(['/admin/list-student-enrolment']);
+          console.log(data);
+          this.router.navigate(['/admin/student-list']);
         });
     } else {
       console.log('submit the form');

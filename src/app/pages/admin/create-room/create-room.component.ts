@@ -10,19 +10,15 @@ import { ApiService } from 'src/app/api/api.service';
 export class CreateRoomComponent implements OnInit {
   venuerooms;
   dataString;
-  roomName;
-  roomNumber;
-  venueId;
+  roomName = "";
+  roomNumber = "";
+  venueId = "";
 
   error0 = '';
   error1 = '';
   error2 = '';
   error3 = '';
-  error4 = '';
-  error5 = '';
-  error6 = '';
-  error7 = '';
-  error8 = '';
+
 
   errors = '';
 
@@ -55,17 +51,9 @@ export class CreateRoomComponent implements OnInit {
       this.errors = 'false';
     }
 
-    if (form.value.roomNumber == '') {
-      this.error3 = 'true';
-      this.errors = 'true';
-    } else {
-      this.error3 = '';
-      this.errors = 'false';
-    }
-
     if (this.errors != 'true') {
       // console.log(form.value);
-      this.dataString = `{"venueroomId":"1","roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}", "venueId":"${form.value.venueId}"}`;
+      this.dataString = `{"venueroomId":"1", "venueId":"${form.value.venueId}", "roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}"}`;
       // this.dataString=`{"roomNumber":517,"roomName":"roomnumber2","venueId":1}`;
       console.log(this.dataString);
       this.apiService.postAPI('dev/addvenueroom', this.dataString).subscribe((data) => {

@@ -8,38 +8,38 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./studentview.component.css']
 })
 export class StudentviewComponent implements OnInit {
- 
+
   studentID;
   students;
   getstudent;
   getclientid;
   outputD;
 
-  
-  constructor(private apiService: ApiService, private router:Router, private activatedRoute:ActivatedRoute) { }
+
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.outputD=this.apiService.getLocalStorage('studentId');
+    this.outputD = this.apiService.getLocalStorage('studentId');
     console.log(this.outputD);
 
-    this.apiService.getAPI('dev/getclientid').subscribe((data)=>{
-      this.getclientid=data;
+    this.apiService.getAPI('dev/getclientid').subscribe((data) => {
+      this.getclientid = data;
       console.log(`getClinetIDdata ${this.getclientid}`)
     })
 
-    
 
-    this.studentID= this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService.getAPI(`dev/getstudent?studentId=${this.studentID}`).subscribe((data)=>{
+    this.studentID = this.activatedRoute.snapshot.paramMap.get('id');
+
+    this.apiService.getAPI(`dev/getstudent?studentId=${this.studentID}`).subscribe((data) => {
       console.log(data);
-      this.students=data;
-      this.students=JSON.parse(this.students);
+      this.students = data;
+      this.students = JSON.parse(this.students);
 
     })
 
-    
+
   }
 
 

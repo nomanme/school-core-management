@@ -3,14 +3,14 @@
     <div class="container-fluid">
       <div class="row m-0 p-0">
         <div class="col-sm-12">
-          <h3 class="page-heading">Create Course Unit</h3>
+          <h3 class="page-heading">Create User</h3>
         </div>
         <div class="col-sm-12 text-center">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active">
               <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Create
-              Course Unit
+              User
             </li>
           </ol>
         </div>
@@ -29,7 +29,7 @@
               <!-- general form elements -->
               <div class="card card-primary mb-0">
                 <div class="card-header">
-                  <h5 class="card-title">Create Course Unit</h5>
+                  <h5 class="card-title">Create User</h5>
                 </div>
                 <!-- form start -->
                 <form role="form" #f="ngForm">
@@ -42,59 +42,33 @@
 
                         <div class="inner-row">
                           <div class="form-group row">
-                            <label
-                              for="exampleInputEmail1"
-                              class="col-sm-2 control-label alignStart"
-                              >Email Address<span class="star">*</span></label
-                            >
+                            <label for="exampleInputEmail1" class="col-sm-2 control-label alignStart">Email Address<span
+                                class="star">*</span></label>
                             <div class="col-sm-10">
                               <div class="input-group">
-                                <input
-                                  [ngClass]="
+                                <input [ngClass]="
                                     error0 == ''
                                       ? 'form-control'
                                       : 'form-control is-invalid'
-                                  "
-                                  [(ngModel)]="email"
-                                  type="email"
-                                  class="form-control"
-                                  name="email"
-                                  id="email"
-                                  aria-describedby="emailHelp"
-                                  placeholder="Enter email"
-                                  required
-                                />
-                                <small
-                                  id="emailHelp"
-                                  class="form-text text-muted"
-                                  >We'll never share your email with anyone
-                                  else.</small
-                                >
+                                  " [(ngModel)]="email" type="email" class="form-control" name="email" id="email"
+                                  aria-describedby="emailHelp" placeholder="Enter email" required />
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                  anyone
+                                  else.</small>
                               </div>
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label
-                              for="inputPassword"
-                              class="col-sm-2 col-form-label"
-                              >Password<span class="star">*</span></label
-                            >
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Password<span
+                                class="star">*</span></label>
                             <div class="col-sm-10">
-                              <input
-                                [ngClass]="
+                              <input [ngClass]="
                                   error1 == ''
                                     ? 'form-control'
                                     : 'form-control is-invalid'
-                                "
-                                [(ngModel)]="password"
-                                type="password"
-                                class="form-control"
-                                id="userpassword"
-                                name="userpassword"
-                                placeholder="Password"
-                                required
-                              />
+                                " [(ngModel)]="password" type="password" class="form-control" id="userpassword"
+                                name="userpassword" placeholder="Password" required />
                             </div>
                           </div>
                         </div>
@@ -107,13 +81,7 @@
                     <br />
 
                     <div class="submit-button">
-                      <button
-                        type="submit"
-                        (click)="createUser(f)"
-                        class="btn btn-primary"
-                        name="submit"
-                        id="submit"
-                      >
+                      <button type="submit" (click)="createUser(f)" class="btn btn-primary" name="submit" id="submit">
                         Submit
                       </button>
                     </div>
