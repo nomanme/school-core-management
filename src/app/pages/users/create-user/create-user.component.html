@@ -42,33 +42,61 @@
 
                         <div class="inner-row">
                           <div class="form-group row">
-                            <label for="exampleInputEmail1" class="col-sm-2 control-label alignStart">Email Address<span
-                                class="star">*</span></label>
+                            <label
+                              for="exampleInputEmail1"
+                              class="col-sm-2 control-label alignStart"
+                              >Email Address<span class="star">*</span></label
+                            >
                             <div class="col-sm-10">
                               <div class="input-group">
-                                <input [ngClass]="
+                                <!-- {{ error0 }} -->
+                                <input
+                                  [ngClass]="
                                     error0 == ''
                                       ? 'form-control'
                                       : 'form-control is-invalid'
-                                  " [(ngModel)]="email" type="email" class="form-control" name="email" id="email"
-                                  aria-describedby="emailHelp" placeholder="Enter email" required />
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                  anyone
-                                  else.</small>
+                                  "
+                                  [(ngModel)]="email"
+                                  type="email"
+                                  class="form-control"
+                                  name="email"
+                                  id="email"
+                                  aria-describedby="emailHelp"
+                                  placeholder="Enter email"
+                                  required
+                                />
+                                <small
+                                  id="emailHelp"
+                                  class="form-text text-muted"
+                                  >We'll never share your email with anyone
+                                  else.</small
+                                >
                               </div>
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Password<span
-                                class="star">*</span></label>
+                            <label
+                              for="inputPassword"
+                              class="col-sm-2 col-form-label"
+                              >Password<span class="star">*</span></label
+                            >
                             <div class="col-sm-10">
-                              <input [ngClass]="
+                              <!-- {{ error1 }} -->
+                              <input
+                                [ngClass]="
                                   error1 == ''
                                     ? 'form-control'
                                     : 'form-control is-invalid'
-                                " [(ngModel)]="password" type="password" class="form-control" id="userpassword"
-                                name="userpassword" placeholder="Password" required />
+                                "
+                                [(ngModel)]="userpassword"
+                                type="password"
+                                class="form-control"
+                                id="userpassword"
+                                name="userpassword"
+                                placeholder="Password"
+                                required
+                              />
                             </div>
                           </div>
                         </div>
@@ -81,7 +109,13 @@
                     <br />
 
                     <div class="submit-button">
-                      <button type="submit" (click)="createUser(f)" class="btn btn-primary" name="submit" id="submit">
+                      <button
+                        type="submit"
+                        (click)="createUser(f)"
+                        class="btn btn-primary"
+                        name="submit"
+                        id="submit"
+                      >
                         Submit
                       </button>
                     </div>

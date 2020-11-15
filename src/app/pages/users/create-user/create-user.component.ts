@@ -10,15 +10,12 @@ import { ApiService } from 'src/app/api/api.service';
 export class CreateUserComponent implements OnInit {
   users;
   dataString;
-  email;
-  password;
+  email = '';
+  // password;
+  userpassword = '';
 
-  allerrors = '';
-
-  error0;
-  error1;
-  error2;
-  error3;
+  error0: string = '';
+  error1: string = '';
 
   errors;
   constructor(private apiService: ApiService, private router: Router) {}
@@ -29,14 +26,18 @@ export class CreateUserComponent implements OnInit {
     if (form.value.email == '') {
       this.error0 = 'true';
       this.errors = 'true';
+      console.log(form.value.email);
     } else {
       this.error0 = '';
       this.errors = 'false';
     }
+    console.log(form.value.userpassword);
 
-    if (form.value.password == '') {
+    if (form.value.userpassword == '') {
+      console.log(this.error1);
       this.error1 = 'true';
       this.errors = 'true';
+      console.log(form.value.userpassword);
     } else {
       this.error1 = '';
       this.errors = 'false';
