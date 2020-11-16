@@ -73,7 +73,9 @@ export class EditTrainingOrganizationComponent implements OnInit {
       });
   }
 
+  // tslint:disable-next-line: typedef
   editTrainingOrg(form) {
+    // tslint:disable-next-line: triple-equals
     if (form.value.RTOCode == '') {
       this.error0 = 'true';
       this.errors = 'true';
@@ -82,6 +84,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
+    // tslint:disable-next-line: triple-equals
     if (form.value.address1 == '') {
       this.error1 = 'true';
       this.errors = 'true';
@@ -90,6 +93,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
+    // tslint:disable-next-line: triple-equals
     if (form.value.contactPerson == '') {
       this.error2 = 'true';
       this.errors = 'true';
@@ -98,6 +102,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
+    // tslint:disable-next-line: triple-equals
     if (form.value.telephone == '') {
       this.error3 = 'true';
       this.errors = 'true';
@@ -106,6 +111,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
+    // tslint:disable-next-line: triple-equals
     if (form.value.ABN == '') {
       this.error4 = 'true';
       this.errors = 'true';
@@ -114,6 +120,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
+    // tslint:disable-next-line: triple-equals
     if (form.value.contactEmail == '') {
       this.error5 = 'true';
       this.errors = 'true';
@@ -124,8 +131,9 @@ export class EditTrainingOrganizationComponent implements OnInit {
 
     console.log(form.value);
 
+    // tslint:disable-next-line: triple-equals
     if (this.errors != 'true') {
-      let datajson = `{"trainingOrgId":"1","RTOCode":"${form.value.RTOCode}", "CRICOSCode":"${form.value.CRICOSCode}", "trainingOrgName":"${form.value.trainingOrgName}", "address1":"${form.value.address1}", "suburb":"${form.value.suburb}", "postCode":"${form.value.postCode}", "contactPerson":"${form.value.contactPerson}","RTOType":"${form.value.RTOType}", "trainingOrgTypeCode":"${form.value.trainingOrgTypeCode}", "stateId":"${form.value.stateId}", "contactPerson":"${form.value.contactPerson}", "telephone":"${form.value.telephone}", "ABN":"${form.value.ABN}", "contactEmail":"${form.value.contactEmail}", "ITEmail":"${form.value.ITEmail}", "academicEmail":"${form.value.academicEmail}", "accountsEmail":"${form.value.accountsEmail}", "trainingOrgURL":"${form.value.trainingOrgURL}", "typeOfIndustryCode":"${form.value.typeOfIndustryCode}", "trainingOrgURL":"${form.value.trainingOrgURL}", "TOID":"${form.value.TOID}"}`;
+      const datajson = `{"trainingOrgId":"1","RTOCode":"${form.value.RTOCode}", "CRICOSCode":"${form.value.CRICOSCode}", "trainingOrgName":"${form.value.trainingOrgName}", "address1":"${form.value.address1}", "suburb":"${form.value.suburb}", "postCode":"${form.value.postCode}", "contactPerson":"${form.value.contactPerson}","RTOType":"${form.value.RTOType}", "trainingOrgTypeCode":"${form.value.trainingOrgTypeCode}", "stateId":"${form.value.stateId}", "contactPerson":"${form.value.contactPerson}", "telephone":"${form.value.telephone}", "ABN":"${form.value.ABN}", "contactEmail":"${form.value.contactEmail}", "ITEmail":"${form.value.ITEmail}", "academicEmail":"${form.value.academicEmail}", "accountsEmail":"${form.value.accountsEmail}", "trainingOrgURL":"${form.value.trainingOrgURL}", "typeOfIndustryCode":"${form.value.typeOfIndustryCode}", "trainingOrgURL":"${form.value.trainingOrgURL}", "TOID":"${form.value.TOID}"}`;
       console.log(datajson);
       this.apiService
         .postAPI(
@@ -137,6 +145,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
           // this.router.navigate(['/admin/list-training-organization']);
         });
     } else {
+      // tslint:disable-next-line: no-unused-expression
       ('There is a error');
     }
   }
