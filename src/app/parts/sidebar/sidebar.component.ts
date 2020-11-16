@@ -107,13 +107,21 @@ export class SidebarComponent implements OnInit {
   getDataForDropDown($event: any) {
     // $event.target.classList.add('active');
     // console.log($event.target.getAttribute('data-opener'));
-    this.openDropDown = $event.target.getAttribute('data-opener');
+    if (this.openDropDown && $event.target.parentElement.classList.contains('active')) {
+      this.openDropDown = '';
+      $event.target.parentElement.classList.remove('active');
+    }
+    else {
+      this.openDropDown = $event.currentTarget.getAttribute('data-opener');
+    }
     this.openSubDropDown = '';
     // get data for table since we are opening the div to show the body
+    console.log('here');
+    
   }
 
   removeDataForDropDown($event: any) {
-    $event.target.classList.remove('active');
+    $event.currentTarget.classList.remove('active');
     this.openDropDown = '';
     this.openSubDropDown = '';
     // this.openDropDown = 'hide';
@@ -123,14 +131,27 @@ export class SidebarComponent implements OnInit {
   getDataForSubDropDown($event: any) {
     // $event.target.classList.add('active');
     // console.log($event.target.getAttribute('data-opener'));
-    this.openSubDropDown = $event.target.getAttribute('data-opener');
+    
+    if (this.openSubDropDown && $event.target.parentElement.classList.contains('active')) {
+      this.openSubDropDown = '';
+      $event.target.parentElement.classList.remove('active');
+    }
+    else {
+      this.openSubDropDown = $event.currentTarget.getAttribute('data-opener');
+    }
     // get data for table since we are opening the div to show the body
   }
 
   removeDataForSubDropDown($event: any) {
-    $event.target.classList.remove('active');
+    $event.currentTarget.classList.remove('active');
     this.openSubDropDown = '';
     // this.openDropDown = 'hide';
     // remove data for table since we are closing the div to hide the body
   }
+
+  // sidebarOpener($event: any) {
+  //   this.openDropDown = $event.target.getAttribute('data-opener');
+  //   this.openSubDropDown = '';
+  //   // console.log(this.drops.nativeElement.html);
+  // }
 }

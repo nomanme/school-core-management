@@ -29,3 +29,57 @@ body.only_content .inner-content {
     padding: unset;
     height: 100vh;
 }
+
+
+body.sidebar-collapse aside.main-sidebar {
+    width: 5%;
+    overflow: hidden !important;
+}
+  
+body.sidebar-collapse aside.main-sidebar .sidebar {
+    width: 5%;
+    overflow: hidden;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar .user-panel {
+    display: none;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item a, body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item button {
+    height: 40px;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item i {
+    width: 100%;
+    text-align: center;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item span, body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item i.fa-angle-left {
+    display: none;
+}
+
+body.sidebar-collapse .main-sidebar .sidenav-heading {
+    padding-right: unset !important;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+body.sidebar-collapse .main-sidebar .sidenav-heading span.brand-text {
+    display: none;
+}
+
+body.sidebar-collapse app-header.app-header {
+    width: 95%;
+}
+
+body.sidebar-collapse app-footer.app-footer {
+    width: 95%;
+    left: 5%;
+}
+
+body.sidebar-collapse .content-wrapper {
+    width: 95%;
+}
+
+body.sidebar-collapse .inner-content {
+    left: 5%;
+}

@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+
+  body;
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
@@ -17,4 +20,17 @@ export class HeaderComponent implements OnInit {
 
     this.router.navigate(['login']);
   }
+
+  sidebarCollapse() {
+    this.body = document.getElementsByTagName('body')[0];
+
+    if ( this.body.classList.contains('sidebar-collapse') ) {
+      this.body.classList.remove('sidebar-collapse');
+    }
+    else {
+      this.body.classList.add('sidebar-collapse');
+    }
+    
+  }
+
 }

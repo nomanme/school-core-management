@@ -244,3 +244,33 @@ button.btn.btn-link.active {
   color: white;
   border-radius: 5px;
 }
+
+
+
+
+/* body.sidebar-collapse aside.main-sidebar {
+  width: 5%;
+  overflow: hidden !important;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar {
+  width: 5%;
+  overflow: hidden;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar .user-panel {
+  display: none;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item a, body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item button {
+  height: 40px;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item i {
+  width: 100%;
+  text-align: center;
+}
+
+body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item span, body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item i.fa-angle-left {
+  display: none;
+} */

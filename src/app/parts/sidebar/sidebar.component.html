@@ -2,8 +2,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <div class="sidenav-heading">
-    <img src="assets/image/school1.png" alt="SchMsystem" class="brand-image" />
     <a href="#" class="brand-link">
+      <img src="assets/image/school1.png" alt="SchMsystem" class="brand-image" />
       <span class="brand-text">SchMsystem</span>
     </a>
   </div>
@@ -26,16 +26,16 @@
             <!--Student Application-->
             <li class="nav-item">
               <a class="sub-item student-application" href="student-application"><i
-                  class="fas fa-circle nav-icon"></i>Student Online
-                Application</a>
+                  class="fas fa-circle nav-icon"></i><span>Student Online
+                Application</span></a>
             </li>
             <!--Agent Registration-->
             <li class="nav-item">
               <a class="sub-item agent-registration" href="agent-registration"><i
-                  class="fas fa-circle nav-icon"></i>Agent Registration</a>
+                  class="fas fa-circle nav-icon"></i><span>Agent Registration</span></a>
             </li>
             <li class="nav-item">
-              <a class="sub-item agent-reg" href="agent-reg"><i class="fas fa-circle nav-icon"></i>Agent Reg</a>
+              <a class="sub-item agent-reg" href="agent-reg"><i class="fas fa-circle nav-icon"></i><span>Agent Reg</span></a>
             </li>
             <!--Profile Start-->
             <li class="nav-item">
@@ -44,19 +44,19 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="profile-container">
-                <i class="nav-icon fas fa-edit"></i>Profile
+                <i class="nav-icon fas fa-edit"></i><span>Profile</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container profile-container" [ngStyle]="{
                   display:
                     openDropDown == 'profile-container' ? 'block' : 'none'
                 }">
-                <a class="sub-item edit-profile" href="profile/edit-profile"><i class="far fa-circle nav-icon"></i>Edit
-                  Profile</a>
+                <a class="sub-item edit-profile" href="profile/edit-profile"><i class="far fa-circle nav-icon"></i><span>Edit
+                Profile</span></a>
                 <a class="sub-item change-password" href="profile/change-password"><i
-                    class="far fa-circle nav-icon"></i>Change Password</a>
-                <a class="sub-item leave-info" href="profile/leave-info"><i class="far fa-circle nav-icon"></i>Leave
-                  Info</a>
+                    class="far fa-circle nav-icon"></i><span>Change Password</span></a>
+                <a class="sub-item leave-info" href="profile/leave-info"><i class="far fa-circle nav-icon"></i><span>Leave
+                  Info</span></a>
               </div>
             </li>
             <!--Profile End-->
@@ -68,36 +68,36 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="admin-container">
-                <i class="nav-icon fas fa-edit"></i>Admin
+                <i class="nav-icon fas fa-edit"></i><span>Admin</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{
                   display: openDropDown == 'admin-container' ? 'block' : 'none'
                 }">
                 <a class="sub-item create-student" href="admin/create-student"><i
-                    class="far fa-circle nav-icon"></i>Create Student</a>
-                <a class="sub-item student-list" href="admin/student-list"><i class="far fa-circle nav-icon"></i>Student
-                  List</a>
+                    class="far fa-circle nav-icon"></i><span>Create Student</span></a>
+                <a class="sub-item student-list" href="admin/student-list"><i class="far fa-circle nav-icon"></i><span>Student
+                  List</span></a>
                 <a class="sub-item create-student-enrolment" href="admin/create-student-enrolment"><i
-                    class="far fa-circle nav-icon"></i>Create Student
-                  Enrolment</a>
+                    class="far fa-circle nav-icon"></i><span>Create Student
+                  Enrolment</span></a>
                 <a class="sub-item list-student-enrolment" href="admin/list-student-enrolment"><i
-                    class="far fa-circle nav-icon"></i>Student Enrolment
-                  List</a>
-                <a class="sub-item list-roles" href="admin/list-roles"><i class="far fa-circle nav-icon"></i>Roles</a>
-                <a class="sub-item create-role" href="admin/create-role"><i class="far fa-circle nav-icon"></i>Create
-                  Role</a>
+                    class="far fa-circle nav-icon"></i><span>Student Enrolment
+                  List</span></a>
+                <a class="sub-item list-roles" href="admin/list-roles"><i class="far fa-circle nav-icon"></i><span>Roles</span></a>
+                <a class="sub-item create-role" href="admin/create-role"><i class="far fa-circle nav-icon"></i><span>Create
+                  Role</span></a>
 
-                <a class="sub-item list-roles" href="admin/unit-list"><i class="far fa-circle nav-icon"></i>Units</a>
-                <a class="sub-item create-role" href="admin/create-unit"><i class="far fa-circle nav-icon"></i>Create
-                  Unit</a>
+                <a class="sub-item list-roles" href="admin/unit-list"><i class="far fa-circle nav-icon"></i><span>Units</span></a>
+                <a class="sub-item create-role" href="admin/create-unit"><i class="far fa-circle nav-icon"></i><span>Create
+                  Unit</span></a>
 
                 <a class="sub-item list-roles" href="admin/list-training-organization"><i
-                    class="far fa-circle nav-icon"></i>Training
-                  Organizations</a>
+                    class="far fa-circle nav-icon"></i><span>Training
+                  Organizations</span></a>
                 <a class="sub-item create-role" href="admin/create-training-organization"><i
-                    class="far fa-circle nav-icon"></i>Create Training
-                  Organization</a>
+                    class="far fa-circle nav-icon"></i><span>Create Training
+                  Organization</span></a>
 
                 <ol class="nav-item">
                   <!--Configuration Start-->
@@ -108,8 +108,8 @@
                         ? removeDataForSubDropDown($event)
                         : getDataForSubDropDown($event)
                     " data-opener="admin_configuration-container">
-                    <i class="far fa-circle nav-icon"></i>Configuration &
-                    Setup<i class="fas fa-angle-left right"></i>
+                    <i class="far fa-circle nav-icon"></i><span>Configuration &
+                    Setup</span><i class="fas fa-angle-left right"></i>
                   </button>
                   <div class="dropdown-container" [ngStyle]="{
                       display:
@@ -118,52 +118,52 @@
                           : 'none'
                     }">
                     <a class="sub-item college-info" href="admin/college-info"><i
-                        class="far fa-dot-circle nav-icon"></i>College Info</a>
+                        class="far fa-dot-circle nav-icon"></i><span>College Info</span></a>
                     <a class="sub-item list-student-enrolment" href="admin/list-student-enrolment"><i
-                        class="far fa-dot-circle nav-icon"></i>Student
-                      Enrollment</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Student
+                      Enrollment</span></a>
                     <a class="sub-item create-student-enrolment" href="admin/create-student-enrolment"><i
-                        class="far fa-dot-circle nav-icon"></i>Create Student
-                      Enrollment</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Create Student
+                      Enrollment</span></a>
                     <a class="sub-item overseas-student-health" href="admin/overseas-student-health"><i
-                        class="far fa-dot-circle nav-icon"></i>OSHC Info</a>
+                        class="far fa-dot-circle nav-icon"></i><span>OSHC Info</span></a>
                     <a class="sub-item offer-document-checklist" href="admin/offer-document-checklist"><i
-                        class="far fa-dot-circle nav-icon"></i>Offer Document
-                      Checklist</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Offer Document
+                      Checklist</span></a>
                     <a class="sub-item agent-document" href="admin/agent-document"><i
-                        class="far fa-dot-circle nav-icon"></i>Agent Document
-                      Checklist</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Agent Document
+                      Checklist</span></a>
                     <a class="sub-item edit-agent-status" href="admin/edit-agent-status"><i
-                        class="far fa-dot-circle nav-icon"></i>Agent Status</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Agent Status</span></a>
                     <a class="sub-item country-nationality-info" href="admin/country-nationality-info"><i
-                        class="far fa-dot-circle nav-icon"></i>Country List
-                      Info</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Country List
+                      Info</span></a>
                     <a class="sub-item edit-language-info" href="admin/edit-language-info"><i
-                        class="far fa-dot-circle nav-icon"></i>Language List
-                      Info</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Language List
+                      Info</span></a>
                     <a class="sub-item certificateid-format" href="admin/certificateid-format"><i
-                        class="far fa-dot-circle nav-icon"></i>Certificate Id
-                      Format</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Certificate Id
+                      Format</span></a>
                     <a class="sub-item result-grade" href="admin/result-grade"><i
-                        class="far fa-dot-circle nav-icon"></i>Result Grade</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Result Grade</span></a>
                     <a class="sub-item invention-strategy" href="admin/invention-strategy"><i
-                        class="far fa-dot-circle nav-icon"></i>Invention
-                      Strategy</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Invention
+                      Strategy</span></a>
                     <a class="sub-item system-field-setup" href="admin/system-field-setup"><i
-                        class="far fa-dot-circle nav-icon"></i>System Field
-                      Setup</a>
+                        class="far fa-dot-circle nav-icon"></i><span>System Field
+                      Setup</span></a>
                     <a class="sub-item checklist-setup" href="admin/checklist-setup"><i
-                        class="far fa-dot-circle nav-icon"></i>Checklist
-                      Setup</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Checklist
+                      Setup</span></a>
                     <a class="sub-item custom-fields" href="admin/custom-fields"><i
-                        class="far fa-dot-circle nav-icon"></i>Custom
-                      Fields</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Custom
+                      Fields</span></a>
                     <a class="sub-item additional-email" href="admin/additional-email"><i
-                        class="far fa-dot-circle nav-icon"></i>Additional
-                      Email Setup</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Additional
+                      Email Setup</span></a>
                     <a class="sub-item assessment-due-date" href="admin/assessment-due-date"><i
-                        class="far fa-dot-circle nav-icon"></i>Assessment Due
-                      Date</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Assessment Due
+                      Date</span></a>
                   </div>
                   <!--Configuration End-->
                 </ol>
@@ -178,7 +178,7 @@
                         ? removeDataForSubDropDown($event)
                         : getDataForSubDropDown($event)
                     " data-opener="admin_manage_calender-container">
-                    <i class="far fa-circle nav-icon"></i>Manage Calender
+                    <i class="far fa-circle nav-icon"></i><span>Manage Calender</span>
                     <i class="fas fa-angle-left right"></i>
                   </button>
                   <div class="dropdown-container" [ngStyle]="{
@@ -188,21 +188,21 @@
                           : 'none'
                     }">
                     <a class="sub-item manage-study-periods" href="admin/manage-study-periods"><i
-                        class="far fa-dot-circle nav-icon"></i>Manage
-                      Semester</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Manage
+                      Semester</span></a>
                     <a class="sub-item manage-semester-division" href="admin/manage-semester-division"><i
-                        class="far fa-dot-circle nav-icon"></i>Manage Semester
-                      Division</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Manage Semester
+                      Division</span></a>
                     <a class="sub-item course-calender-type" href="admin/course-calender-type"><i
-                        class="far fa-dot-circle nav-icon"></i>Course Calender
-                      Type</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Course Calender
+                      Type</span></a>
                   </div>
                   <!--Manage Calender End-->
                 </ol>
 
                 <a class="sub-item view-files-folder" href="admin/view-files-folder"><i
-                    class="far fa-circle nav-icon"></i>Manage College
-                  Materials</a>
+                    class="far fa-circle nav-icon"></i><span>Manage College
+                  Materials</span></a>
 
                 <ol class="nav-item">
                   <!--Manage Contract Schedule Start-->
@@ -214,7 +214,7 @@
                         ? removeDataForSubDropDown($event)
                         : getDataForSubDropDown($event)
                     " data-opener="admin_manage_contact-container">
-                    <i class="far fa-circle nav-icon"></i>Manage Contract<i class="fas fa-angle-left right"></i>
+                    <i class="far fa-circle nav-icon"></i><span>Manage Contract</span><i class="fas fa-angle-left right"></i>
                   </button>
                   <div class="dropdown-container" [ngStyle]="{
                       display:
@@ -223,12 +223,12 @@
                           : 'none'
                     }">
                     <a class="sub-item add-contact" href="admin/add-contact"><i
-                        class="far fa-dot-circle nav-icon"></i>Add Contract</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Add Contract</span></a>
                     <a class="sub-item manage-contract-schedule" href="admin/manage-contract-schedule"><i
-                        class="far fa-dot-circle nav-icon"></i>Manage Contract
-                      Schedule</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Manage Contract
+                      Schedule</span></a>
                     <a class="sub-item course-site" href="admin/course-site"><i
-                        class="far fa-dot-circle nav-icon"></i>Course Site</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Course Site</span></a>
                   </div>
                   <!--Manage Contract Schedule End-->
                 </ol>
@@ -242,7 +242,7 @@
                         ? removeDataForSubDropDown($event)
                         : getDataForSubDropDown($event)
                     " data-opener="admin_training_room-container">
-                    <i class="far fa-circle nav-icon"></i>Training Location/Room
+                    <i class="far fa-circle nav-icon"></i><span>Training Location/Room</span>
                     <i class="fas fa-angle-left right"></i>
                   </button>
                   <div class="dropdown-container" [ngStyle]="{
@@ -252,13 +252,13 @@
                           : 'none'
                     }">
                     <a class="sub-item list-venue" href="admin/list-venue"><i
-                        class="far fa-dot-circle nav-icon"></i>Venues</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Venues</span></a>
                     <a class="sub-item create-venue" href="admin/create-venue"><i
-                        class="far fa-dot-circle nav-icon"></i>Create Venue</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Create Venue</span></a>
                     <a class="sub-item list-venueroom" href="admin/list-venueroom"><i
-                        class="far fa-dot-circle nav-icon"></i>Manage Room</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Manage Room</span></a>
                     <a class="sub-item create-venueroom" href="admin/create-venueroom"><i
-                        class="far fa-dot-circle nav-icon"></i>Create Room</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Create Room</span></a>
                   </div>
                   <!--Traininf Location Room End-->
                 </ol>
@@ -273,7 +273,7 @@
                         ? removeDataForSubDropDown($event)
                         : getDataForSubDropDown($event)
                     " data-opener="admin_setup_permission-container">
-                    <i class="far fa-circle nav-icon"></i>Setup Permission
+                    <i class="far fa-circle nav-icon"></i><span>Setup Permission</span>
                     <i class="fas fa-angle-left right"></i>
                   </button>
                   <div class="dropdown-container" [ngStyle]="{
@@ -283,20 +283,20 @@
                           : 'none'
                     }">
                     <a class="sub-item create-permission-group" href="admin/create-permission-group"><i
-                        class="far fa-dot-circle nav-icon"></i>Create
-                      Permission Group</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Create
+                      Permission Group</span></a>
                     <a class="sub-item set-user-permission" href="admin/set-user-permission"><i
-                        class="far fa-dot-circle nav-icon"></i>Set User
-                      Permission</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Set User
+                      Permission</span></a>
                     <a class="sub-item page-permission-setup" href="admin/page-permission-setup"><i
-                        class="far fa-dot-circle nav-icon"></i>Page Permission
-                      Setup</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Page Permission
+                      Setup</span></a>
                   </div>
                   <!--Setup Permission End-->
                 </ol>
 
-                <a class="sub-item view-database" href="admin/view-database"><i class="far fa-circle nav-icon"></i>View
-                  Log</a>
+                <a class="sub-item view-database" href="admin/view-database"><i class="far fa-circle nav-icon"></i><span>View
+                  Log</span></a>
 
                 <ol class="nav-item">
                   <!--Manage Report Start-->
@@ -307,7 +307,7 @@
                         ? removeDataForSubDropDown($event)
                         : getDataForSubDropDown($event)
                     " data-opener="admin_manage_report-container">
-                    <i class="far fa-circle nav-icon"></i>Manage Report
+                    <i class="far fa-circle nav-icon"></i><span>Manage Report</span>
                     <i class="fas fa-angle-left right"></i>
                   </button>
                   <div class="dropdown-container" [ngStyle]="{
@@ -317,20 +317,20 @@
                           : 'none'
                     }">
                     <a class="sub-item manage-system-reports" href="admin/manage-system-reports"><i
-                        class="far fa-dot-circle nav-icon"></i>Manage System
-                      Report</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Manage System
+                      Report</span></a>
                     <a class="sub-item update-report" href="admin/update-report"><i
-                        class="far fa-dot-circle nav-icon"></i>Update
-                      Report</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Update
+                      Report</span></a>
                   </div>
                 </ol>
 
                 <a class="sub-item register-activity-detail" href="admin/register-activity-detail"><i
-                    class="far fa-circle nav-icon"></i>Improvement Register</a>
+                    class="far fa-circle nav-icon"></i><span>Improvement Register</span></a>
                 <a class="sub-item prisms-data-validation" href="admin/prisms-data-validation"><i
-                    class="far fa-circle nav-icon"></i>Validate PRISMS</a>
+                    class="far fa-circle nav-icon"></i><span>Validate PRISMS</span></a>
                 <a class="sub-item manage-employee" href="admin/manage-employee"><i
-                    class="far fa-circle nav-icon"></i>Manage Employer</a>
+                    class="far fa-circle nav-icon"></i><span>Manage Employer</span></a>
 
                 <ol class="nav-item">
                   <!--Service Setup Start-->
@@ -341,7 +341,7 @@
                         ? removeDataForSubDropDown($event)
                         : getDataForSubDropDown($event)
                     " data-opener="admin_service_setup-container">
-                    <i class="far fa-circle nav-icon"></i>Service Setup
+                    <i class="far fa-circle nav-icon"></i><span>Service Setup</span>
                     <i class="fas fa-angle-left right"></i>
                   </button>
                   <div class="dropdown-container" [ngStyle]="{
@@ -351,14 +351,14 @@
                           : 'none'
                     }">
                     <a class="sub-item service-facility-setup" href="admin/service-facility-setup"><i
-                        class="far fa-dot-circle nav-icon"></i>Service
-                      Facility Setup</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Service
+                      Facility Setup</span></a>
                     <a class="sub-item service-details" href="admin/service-details"><i
-                        class="far fa-dot-circle nav-icon"></i>Service
-                      Provider Setup</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Service
+                      Provider Setup</span></a>
                     <a class="sub-item service-provider" href="admin/service-provider"><i
-                        class="far fa-dot-circle nav-icon"></i>Service
-                      Provider Facility</a>
+                        class="far fa-dot-circle nav-icon"></i><span>Service
+                      Provider Facility</span></a>
                   </div>
                   <!--Service Setup End-->
                 </ol>
@@ -373,23 +373,23 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="staff-container">
-                <i class="nav-icon fas fa-edit"></i>Staff
+                <i class="nav-icon fas fa-edit"></i><span>Staff</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{
                   display: openDropDown == 'staff-container' ? 'block' : 'none'
                 }">
-                <a class="sub-item add-staff" href="staff/add-staff"><i class="far fa-circle nav-icon"></i>Add Staff</a>
+                <a class="sub-item add-staff" href="staff/add-staff"><i class="far fa-circle nav-icon"></i><span>Add Staff</span></a>
                 <a class="sub-item management-home" href="staff/management-home"><i
-                    class="far fa-circle nav-icon"></i>Staff List</a>
-                <a class="sub-item profile" href="staff/profile"><i class="far fa-circle nav-icon"></i>Profile</a>
-                <a class="sub-item email" href="staff/email"><i class="far fa-circle nav-icon"></i>Email</a>
+                    class="far fa-circle nav-icon"></i><span>Staff List</span></a>
+                <a class="sub-item profile" href="staff/profile"><i class="far fa-circle nav-icon"></i><span>Profile</span></a>
+                <a class="sub-item email" href="staff/email"><i class="far fa-circle nav-icon"></i><span>Email</span></a>
                 <a class="sub-item communication-log" href="staff/communication-log"><i
-                    class="far fa-circle nav-icon"></i>Dairy</a>
-                <a class="sub-item documents" href="staff/documents"><i class="far fa-circle nav-icon"></i>Document</a>
-                <a class="sub-item photo" href="staff/photo"><i class="far fa-circle nav-icon"></i>Photo</a>
+                    class="far fa-circle nav-icon"></i><span>Dairy</span></a>
+                <a class="sub-item documents" href="staff/documents"><i class="far fa-circle nav-icon"></i><span>Document</span></a>
+                <a class="sub-item photo" href="staff/photo"><i class="far fa-circle nav-icon"></i><span>Photo</span></a>
                 <a class="sub-item professional-development" href="staff/professional-development"><i
-                    class="far fa-circle nav-icon"></i>PD</a>
+                    class="far fa-circle nav-icon"></i><span>PD</span></a>
               </div>
             </li>
             <!--Staff End-->
@@ -401,7 +401,7 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="complience-container">
-                <i class="nav-icon fas fa-edit"></i>Compliance
+                <i class="nav-icon fas fa-edit"></i><span>Compliance</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{
@@ -409,14 +409,14 @@
                     openDropDown == 'complience-container' ? 'block' : 'none'
                 }">
                 <a class="sub-item add-update-student" href="compliance/add-update-student"><i
-                    class="far fa-circle nav-icon"></i>Add Update Student</a>
+                    class="far fa-circle nav-icon"></i><span>Add Update Student</span></a>
                 <a class="sub-item attendance-summary" href="compliance/attendance-summary"><i
-                    class="far fa-circle nav-icon"></i>Attendance Summary</a>
-                <a class="sub-item bulk-update" href="compliance/bulk-update"><i class="far fa-circle nav-icon"></i>Bulk
-                  Update</a>
+                    class="far fa-circle nav-icon"></i><span>Attendance Summary</span></a>
+                <a class="sub-item bulk-update" href="compliance/bulk-update"><i class="far fa-circle nav-icon"></i><span>Bulk
+                  Update</span></a>
                 <a class="sub-item daily-attendance-roll" href="compliance/daily-attendance-roll"><i
-                    class="far fa-circle nav-icon"></i>Daily Attendance
-                  Roll</a>
+                    class="far fa-circle nav-icon"></i><span>Daily Attendance
+                  Roll</span></a>
               </div>
             </li>
             <!--Compliance End-->
@@ -428,7 +428,7 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="course_site-container">
-                <i class="nav-icon fas fa-edit"></i>Course Site
+                <i class="nav-icon fas fa-edit"></i><span>Course Site</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{
@@ -436,42 +436,42 @@
                     openDropDown == 'course_site-container' ? 'block' : 'none'
                 }">
                 <a class="sub-item list-courses" href="course/list-courses"><i
-                    class="far fa-circle nav-icon"></i>Courses</a>
+                    class="far fa-circle nav-icon"></i><span>Courses</span></a>
                 <a class="sub-item create-course" href="course/create-course"><i
-                    class="far fa-circle nav-icon"></i>Create Course</a>
+                    class="far fa-circle nav-icon"></i><span>Create Course</span></a>
                 <a class="sub-item list-course-units" href="course/list-course-units"><i
-                    class="far fa-circle nav-icon"></i>Course Unit</a>
+                    class="far fa-circle nav-icon"></i><span>Course Unit</span></a>
                 <a class="sub-item create-course-unit" href="course/create-course-unit"><i
-                    class="far fa-circle nav-icon"></i>Create Course Unit</a>
+                    class="far fa-circle nav-icon"></i><span>Create Course Unit</span></a>
                 <a class="sub-item add-course-template" href="course/add-course-template"><i
-                    class="far fa-circle nav-icon"></i>Add Course Template</a>
-                <a class="sub-item add-holidays" href="course/add-holidays"><i class="far fa-circle nav-icon"></i>Add
-                  Holidays</a>
+                    class="far fa-circle nav-icon"></i><span>Add Course Template</span></a>
+                <a class="sub-item add-holidays" href="course/add-holidays"><i class="far fa-circle nav-icon"></i><span>Add
+                  Holidays</span></a>
                 <a class="sub-item add-new-subject" href="course/add-new-subject"><i
-                    class="far fa-circle nav-icon"></i>Add New Subject</a>
-                <a class="sub-item add-subject" href="course/add-subject"><i class="far fa-circle nav-icon"></i>Add
-                  Subject</a>
-                <a class="sub-item intake-dates" href="course/intake-dates"><i class="far fa-circle nav-icon"></i>Intake
-                  Dates</a>
-                <a class="sub-item manage" href="course/manage"><i class="far fa-circle nav-icon"></i>Manage</a>
+                    class="far fa-circle nav-icon"></i><span>Add New Subject</span></a>
+                <a class="sub-item add-subject" href="course/add-subject"><i class="far fa-circle nav-icon"></i><span>Add
+                  Subject</span></a>
+                <a class="sub-item intake-dates" href="course/intake-dates"><i class="far fa-circle nav-icon"></i><span>Intake
+                  Dates</span></a>
+                <a class="sub-item manage" href="course/manage"><i class="far fa-circle nav-icon"></i><span>Manage</span></a>
                 <a class="sub-item manage-course-initial" href="course/manage-course-initial"><i
-                    class="far fa-circle nav-icon"></i>Manage Course
-                  Initial</a>
+                    class="far fa-circle nav-icon"></i><span>Manage Course
+                  Initial</span></a>
                 <a class="sub-item manage-course-structure" href="course/manage-course-structure"><i
-                    class="far fa-circle nav-icon"></i>Manage Course
-                  Structure</a>
+                    class="far fa-circle nav-icon"></i><span>Manage Course
+                  Structure</span></a>
                 <a class="sub-item manage-subject" href="course/manage-subject"><i
-                    class="far fa-circle nav-icon"></i>Manage Subject</a>
-                <a class="sub-item manage-unit" href="course/manage-unit"><i class="far fa-circle nav-icon"></i>Manage
-                  Unit</a>
+                    class="far fa-circle nav-icon"></i><span>Manage Subject</span></a>
+                <a class="sub-item manage-unit" href="course/manage-unit"><i class="far fa-circle nav-icon"></i><span>Manage
+                  Unit</span></a>
                 <a class="sub-item nationality-group" href="course/nationality-group"><i
-                    class="far fa-circle nav-icon"></i>Nationality Group</a>
+                    class="far fa-circle nav-icon"></i><span>Nationality Group</span></a>
                 <a class="sub-item promotion-activation" href="course/promotion-activation"><i
-                    class="far fa-circle nav-icon"></i>Promotion Activation</a>
+                    class="far fa-circle nav-icon"></i><span>Promotion Activation</span></a>
                 <a class="sub-item promotion-set" href="course/promotion-set"><i
-                    class="far fa-circle nav-icon"></i>Promotion Set</a>
+                    class="far fa-circle nav-icon"></i><span>Promotion Set</span></a>
                 <a class="sub-item update-subject" href="course/update-subject"><i
-                    class="far fa-circle nav-icon"></i>Update Subject</a>
+                    class="far fa-circle nav-icon"></i><span>Update Subject</span></a>
               </div>
             </li>
             <!--Course Site End-->
@@ -483,19 +483,19 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="teacher-container">
-                <i class="nav-icon fas fa-edit"></i>Teacher
+                <i class="nav-icon fas fa-edit"></i><span>Teacher</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{
                   display:
                     openDropDown == 'teacher-container' ? 'block' : 'none'
                 }">
-                <a class="sub-item add-teacher" href="teacher/add-teacher"><i class="far fa-circle nav-icon"></i>Add New
-                  Teacher</a>
+                <a class="sub-item add-teacher" href="teacher/add-teacher"><i class="far fa-circle nav-icon"></i><span>Add New
+                  Teacher</span></a>
                 <a class="sub-item manage-teacher" href="teacher/manage-teacher"><i
-                    class="far fa-circle nav-icon"></i>Manage Teacher</a>
+                    class="far fa-circle nav-icon"></i><span>Manage Teacher</span></a>
                 <a class="sub-item teacher-matric" href="teacher/teacher-matric"><i
-                    class="far fa-circle nav-icon"></i>Teacher Matric</a>
+                    class="far fa-circle nav-icon"></i><span>Teacher Matric</span></a>
               </div>
             </li>
             <!--Teacher End-->
@@ -507,7 +507,7 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="timetable-container">
-                <i class="nav-icon fas fa-edit"></i>Timetable
+                <i class="nav-icon fas fa-edit"></i><span>Timetable</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{
@@ -515,31 +515,31 @@
                     openDropDown == 'timetable-container' ? 'block' : 'none'
                 }">
                 <a class="sub-item asign-replace-teacher" href="timetable/asign-replace-teacher"><i
-                    class="far fa-circle nav-icon"></i>Assign Replace
-                  Teacher</a>
+                    class="far fa-circle nav-icon"></i><span>Assign Replace
+                  Teacher</span></a>
                 <a class="sub-item class-capacity-report" href="timetable/class-capacity-report"><i
-                    class="far fa-circle nav-icon"></i>Class Capacity
-                  Report</a>
+                    class="far fa-circle nav-icon"></i><span>Class Capacity
+                  Report</span></a>
                 <a class="sub-item create-class-timetable" href="timetable/create-class-timetable"><i
-                    class="far fa-circle nav-icon"></i>Create Class
-                  Timetable</a>
+                    class="far fa-circle nav-icon"></i><span>Create Class
+                  Timetable</span></a>
                 <a class="sub-item generate-class-attendance" href="timetable/generate-class-attendance"><i
-                    class="far fa-circle nav-icon"></i>Generate Class
-                  Attendance</a>
+                    class="far fa-circle nav-icon"></i><span>Generate Class
+                  Attendance</span></a>
                 <a class="sub-item manage-class-timetable" href="timetable/manage-class-timetable"><i
-                    class="far fa-circle nav-icon"></i>Manage Class
-                  Timetable</a>
+                    class="far fa-circle nav-icon"></i><span>Manage Class
+                  Timetable</span></a>
                 <a class="sub-item print-attendance" href="timetable/print-attendance"><i
-                    class="far fa-circle nav-icon"></i>Print Attendance
-                  List</a>
+                    class="far fa-circle nav-icon"></i><span>Print Attendance
+                  List</span></a>
                 <a class="sub-item timetable-reports" href="timetable/timetable-reports"><i
-                    class="far fa-circle nav-icon"></i>Timetable Reports</a>
+                    class="far fa-circle nav-icon"></i><span>Timetable Reports</span></a>
                 <a class="sub-item view-template" href="timetable/view-template"><i
-                    class="far fa-circle nav-icon"></i>View Template</a>
+                    class="far fa-circle nav-icon"></i><span>View Template</span></a>
                 <a class="sub-item list-schedule" href="timetable/list-schedule"><i
-                    class="far fa-circle nav-icon"></i>Schedule</a>
+                    class="far fa-circle nav-icon"></i><span>Schedule</span></a>
                 <a class="sub-item create-schedule" href="timetable/create-schedule"><i
-                    class="far fa-circle nav-icon"></i>Create Schedule</a>
+                    class="far fa-circle nav-icon"></i><span>Create Schedule</span></a>
               </div>
             </li>
             <!--Timetable End-->
@@ -551,19 +551,19 @@
                     ? removeDataForDropDown($event)
                     : getDataForDropDown($event)
                 " data-opener="users-container">
-                <i class="nav-icon fas fa-edit"></i>Users
+                <i class="nav-icon fas fa-edit"></i><span>Users</span>
                 <i class="fas fa-angle-left right"></i>
               </button>
               <div class="dropdown-container" [ngStyle]="{
                   display: openDropDown == 'users-container' ? 'block' : 'none'
                 }">
-                <a class="sub-item create-user" href="users/create-user"><i class="far fa-circle nav-icon"></i>Create
-                  Users</a>
+                <a class="sub-item create-user" href="users/create-user"><i class="far fa-circle nav-icon"></i><span>Create
+                  Users</span></a>
                 <a class="sub-item manage-user-account" href="users/manage-user-account"><i
-                    class="far fa-circle nav-icon"></i>Manage Users</a>
-                <a class="sub-item user-activity" href="users/user-activity"><i class="far fa-circle nav-icon"></i>Users
+                    class="far fa-circle nav-icon"></i><span>Manage Users</span></a>
+                <a class="sub-item user-activity" href="users/user-activity"><i class="far fa-circle nav-icon"></i><span>Users
                   Ip Activity
-                  Track</a>
+                  Track</span></a>
               </div>
             </li>
             <!--Users End-->
