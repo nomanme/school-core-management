@@ -1,79 +1,90 @@
 <div class="content-wrapper">
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row m-0 p-0">
-                <div class="col-sm-12">
-                    <h3 class="page-heading">Training Organization List</h3>
-                </div>
-                <div class="col-sm-12 text-center">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">
-                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>
-                            Training Organization List
-                        </li>
-                    </ol>
-                </div>
-            </div>
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <div class="col-sm-12">
+          <h3 class="page-heading">Training Organization List</h3>
         </div>
-        <!-- container-fluid -->
-    </section>
+        <div class="col-sm-12 text-center">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>
+              Training Organization List
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- container-fluid -->
+  </section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row m-0 p-0">
-                <!-- left column -->
-                <div class="col-md-10 offset-md-1">
-                    <!-- general form elements -->
-                    <div class="card card-primary mb-0 shadow-lg bg-white rounded">
-                        <div class="card-header">
-                            <h5 class="card-title">Training Organization List Table</h5>
-                        </div>
-                        <form role="form">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12 sub-form">
-                                        <div class="inner-row">
-
-                                            <div class="col-md-12 p-0 m-0">
-                                                <table class="table table-stripe">
-                                                    <tr class="heading">
-                                                        <th class="rowid">ID</th>
-                                                        <th class="email">Training Organization Name</th>
-                                                        <th class="action">Action</th>
-                                                    </tr>
-                                                    <tr *ngFor="let trainingOrg of trainingOrgs">
-                                                        <td class="rowid">{{ trainingOrg.trainingOrgId }}</td>
-                                                        <td class="email">{{ trainingOrg.trainingOrgName }}</td>
-                                                        <td class="action">
-                                                            <a
-                                                                href="admin/view-training-organization/{{ trainingOrg.trainingOrgId }}">View</a>
-                                                            |
-                                                            <a
-                                                                href="admin/edit-training-organization/{{ trainingOrg.trainingOrgId }}">Edit</a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <!--inner-row-->
-                                    </div>
-                                    <!--col-md-12 sub-form-->
-                                </div>
-                                <!--row1-->
-                            </div>
-                            <!--card-body-->
-                        </form>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row m-0 p-0">
+        <!-- left column -->
+        <div class="col-md-10 offset-md-1">
+          <!-- general form elements -->
+          <div class="card card-primary mb-0 shadow-lg bg-white rounded">
+            <div class="card-header">
+              <h5 class="card-title">Training Organization List Table</h5>
+            </div>
+            <form role="form">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 sub-form">
+                    <div class="inner-row">
+                      <div class="col-md-12 p-0 m-0">
+                        <table class="table table-stripe">
+                          <tr class="heading">
+                            <th class="rowid">ID</th>
+                            <th class="email">Training Organization Name</th>
+                            <th class="action">Action</th>
+                          </tr>
+                          <tr *ngFor="let trainingOrg of trainingOrgs">
+                            <td class="rowid">
+                              {{ trainingOrg.trainingOrgId }}
+                            </td>
+                            <td class="email">
+                              {{ trainingOrg.trainingOrgName }}
+                            </td>
+                            <td class="action">
+                              <a
+                                href="admin/view-training-organization/{{
+                                  trainingOrg.trainingOrgId
+                                }}"
+                                >View</a
+                              >
+                              |
+                              <a
+                                href="admin/edit-training-organization/{{
+                                  trainingOrg.trainingOrgId
+                                }}"
+                                >Edit</a
+                              >
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
                     </div>
-                    <!--card card-primary-->
+                    <!--inner-row-->
+                  </div>
+                  <!--col-md-12 sub-form-->
                 </div>
-                <!--col-md-6 offset-md-2-->
-            </div>
-            <!--row-->
+                <!--row1-->
+              </div>
+              <!--card-body-->
+            </form>
+          </div>
+          <!--card card-primary-->
         </div>
-        <!--container-fluid-->
-    </section>
-    <!--section2-->
+        <!--col-md-6 offset-md-2-->
+      </div>
+      <!--row-->
+    </div>
+    <!--container-fluid-->
+  </section>
+  <!--section2-->
 </div>
 <!--content-wrapper-->
