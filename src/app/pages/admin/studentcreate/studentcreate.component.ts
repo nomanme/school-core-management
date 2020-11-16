@@ -12,6 +12,8 @@ export class StudentcreateComponent implements OnInit {
   Visa = false;
   disable = false;
   PostalDetail = false;
+  // auspr =false;
+  // visaStatus = null;
 
   Users;
   getvisastatus;
@@ -34,50 +36,50 @@ export class StudentcreateComponent implements OnInit {
   dataString;
 
   PriorEducationalAchievementFlag = '';
-  altEmail;
+  altEmail = '';
   australianPr = '';
   birthcountryId = '';
-  buildingName;
-  clientId;
+  buildingName = '';
+  clientId = '';
   completedSchoolLevelId = '';
-  dateModified;
+  dateModified = '';
   differentPostalAddress = '';
   disability = '';
   dob = '';
   email = '';
   employmentStatusId = '';
-  englishSpeakingStatusId;
+  englishSpeakingStatusId = '';
   firstName = '';
-  flatUnitDetails;
+  flatUnitDetails = '';
   gender = '';
   homeLanguageId = '';
   indigenousStatusId = '';
-  lastName;
-  middleName;
-  mobile;
-  nationalityId;
-  passportExpdate;
+  lastName = '';
+  middleName = '';
+  mobile = '';
+  nationalityId = '';
+  passportExpdate = '';
   passportNo = '';
   postCode = '';
-  schoolTypeId;
-  signatoryText;
+  schoolTypeId = '';
+  signatoryText = '';
   stateId = '';
-  statisticalAreaLevel1Id;
-  statisticalAreaLevel2Id;
-  stillInSecSchool;
+  statisticalAreaLevel1Id = '';
+  statisticalAreaLevel2Id = '';
+  stillInSecSchool = '';
   streetName = '';
   streetNumber = '';
-  studentId;
+  studentId = '';
   suburb = '';
   surveyContactStatusId = '';
-  telHome;
-  telWork;
-  title;
-  userId;
-  usiNo;
-  visaExpdate;
-  visaNo;
-  visaStatusId;
+  telHome = '';
+  telWork = '';
+  title = '';
+  userId = '';
+  usiNo = '';
+  visaExpdate = '';
+  visaNo = '';
+  visaStatusId = 0;
   dataString2;
   outputD;
   outputD2;
@@ -109,7 +111,7 @@ export class StudentcreateComponent implements OnInit {
   errorMessage = '';
 
   errorCodes: { firstName: null };
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.outputD = this.apiService.getLocalStorage('studentId');
@@ -122,7 +124,6 @@ export class StudentcreateComponent implements OnInit {
     });
 
     this.apiService.getAPI3('dev/getvisastatus').subscribe((data) => {
-      console.log(data);
       this.getvisastatus = data;
     });
 
@@ -206,6 +207,13 @@ export class StudentcreateComponent implements OnInit {
   HideStudentPostal() {
     this.PostalDetail = false;
   }
+
+  // auspr(){
+  //   this.auspr = true;
+  // }
+
+
+
 
   createStudent(form) {
     // this.errorMessage='Fields are required'
@@ -377,6 +385,14 @@ export class StudentcreateComponent implements OnInit {
       this.errordifferentPostalAddress = '';
       this.errors = 'false';
     }
+
+    // if (form.value.australianPr == 'Y') {
+    //   this.visaStatusId = " ";
+
+    //   console.log(this.visaStatusId);
+    // }
+
+
     if (this.errors != 'true') {
       this.dataString = `{
       "userId":"1", "clientId": ${this.getclientid}, "PriorEducationalAchievementFlag":"${form.value.PriorEducationalAchievementFlag}", "altEmail":"${form.value.altEmail}", "australianPr":"${form.value.australianPr}", "birthcountryId": "${form.value.birthcountryId}", "buildingName": "${form.value.buildingName}",  "completedSchoolLevelId": "${form.value.completedSchoolLevelId}", "differentPostalAddress": "${form.value.differentPostalAddress}", "disability": "${form.value.disability}", "dob": "${form.value.dob}", "email":"${form.value.email}", "employmentStatusId": "${form.value.employmentStatusId}", "englishSpeakingStatusId": "${form.value.englishSpeakingStatusId}", "firstName": "${form.value.firstName}", "flatUnitDetails": "${form.value.flatUnitDetails}", "gender": "${form.value.gender}", "homeLanguageId": "${form.value.homeLanguageId}", "indigenousStatusId": "${form.value.indigenousStatusId}", "lastName": "${form.value.lastName}", "middleName": "${form.value.middleName}", "mobile": "${form.value.mobile}", "nationalityId": "${form.value.nationalityId}", "passportExpdate": "${form.value.passportExpdate}", "passportNo": "${form.value.passportNo}", "postCode": "${form.value.postCode}", "schoolTypeId": "${form.value.schoolTypeId}", "signatoryText": "${form.value.signatoryText}", "stateId": "${form.value.stateId}", "statisticalAreaLevel1Id": "${form.value.statisticalAreaLevel1Id}", "statisticalAreaLevel2Id": "${form.value.statisticalAreaLevel2Id}", "stillInSecSchool": "${form.value.stillInSecSchool}", "streetName": "${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.suburb}", "surveyContactStatusId": "${form.value.surveyContactStatusId}", "telHome": "${form.value.telHome}", "telWork": "${form.value.telWork}", "title": "${form.value.title}", "usiNo": "${form.value.usiNo}", "visaExpdate": "${form.value.visaExpdate}", "visaNo": "${form.value.visaNo}", "visaStatusId": "${form.value.visaStatusId}"
@@ -395,6 +411,8 @@ export class StudentcreateComponent implements OnInit {
           // console.log(data);
 
           console.log(this.outputD);
+
+
           this.dataString2 = `{"userId":"1", "studentId":"${this.outputD}",  "buildingName":"${form.value.buildingName}", "flatUnitDetails":"${form.value.flatUnitDetails}", "streetName":"${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.suburb}", "stateId": "${form.value.stateId}", "postCode": "${form.value.postCode}", "pobox": "${form.value.pobox}", "stateId": "${form.value.stateId}"}`;
           console.log(this.dataString2);
           // console.log(this.outputD);
@@ -413,7 +431,8 @@ export class StudentcreateComponent implements OnInit {
               this.router.navigate(['/admin/create-student-enrolment']);
             });
         });
-    } else {
+    }
+    else {
       console.log('There are error');
     }
   }

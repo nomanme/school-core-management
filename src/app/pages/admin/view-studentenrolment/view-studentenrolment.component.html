@@ -1,147 +1,167 @@
 <div class="content-wrapper">
- 
+
     <section class="content-header">
-      <div class="container-fluid">
-        <div class="row m-0 p-0">
-          <div class="col-sm-12">
-              <h3 class="page-heading">View Student Enrolment</h3>
-          </div>
-          <div class="col-sm-12 text-center">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View Enrolment Fee</li>
-              </ol>
-          </div>
-        </div>
-      </div><!-- container-fluid -->
-    </section> 
-  
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <div class="col-sm-12">
+                    <h3 class="page-heading">View Student Enrolment</h3>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View
+                            Enrolment Fee</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- container-fluid -->
+    </section>
+
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="row m-0 p-0">
-          <!-- left column -->
-          <div class="col-md-10 offset-md-1">
-            <!-- general form elements -->
-              <div class="card card-primary mb-0">
-                <div class="card-header">
-                  <h5 class="card-title">Setup Enrolment Fee Information</h5>
-                </div>
-                <form method="post" action="" enctype="multipart/form-data" *ngFor="let getstudentenrolment of StudentEnrolments">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12"> 
-                        <div class="inner-row">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-10 offset-md-1">
+                    <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h5 class="card-title">Setup Enrolment Fee Information</h5>
+                        </div>
+                        <form method="post" action="" enctype="multipart/form-data"
+                            *ngFor="let enrolment of StudentEnrolments">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="inner-row">
+                                            <!-- 
+                                            <div class="form-group row">
+                                                <label for="studentId" class="col-sm-3 control-label">Student Id</label>
+                                                <div class="col-sm-9">
+                                                    {{ studentenrolment.studentId }}
+                                                </div>
+                                            </div> -->
 
-                            <!-- <div class="form-group row">
-                                <label for="studentId" class="col-sm-3 control-label">Student Id</label> 
-                                <div class="col-sm-9">   
-                                    {{ studentenrolment.studentId }}
+                                            <div class="form-group row">
+                                                <label for="studentOriginId" class="col-sm-3 control-label">Student
+                                                    Origin Id</label>
+                                                <div class="col-sm-9">
+                                                    {{ enrolment.originName }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="courseId" class="col-sm-3 control-label">Course</label>
+                                                <div class="col-sm-9">
+                                                    {{courseCode}}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="agentId" class="col-sm-3 control-label">Agent Id</label>
+                                                <div class="col-sm-9">
+                                                    {{ enrolment.agentId }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="courseIntakeDateId" class="col-sm-4 control-label">Course
+                                                    Intake Date</label>
+                                                <div class="col-sm-8">
+                                                    {{enrolment.startDate}} - {{enrolment.endDate}}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="applicationStatusId"
+                                                    class="col-sm-3 control-label">Application Status</label>
+                                                <div class="col-sm-9">
+                                                    {{ enrolment.applicationStatusId }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="deliveryModeId" class="col-sm-4 control-label">Delivery
+                                                    Mode</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.deliveryModeName }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="fundingSourceNationalId"
+                                                    class="col-sm-4 control-label">Funding Source National</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.fundingSourceNationalName }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="fundingSourceStateId" class="col-sm-4 control-label">Funding
+                                                    Source State</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.fundingSourceStateName }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="commencingProgramId"
+                                                    class="col-sm-4 control-label">Commencing Program</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.commencingProgramName }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="trainingContractid" class="col-sm-4 control-label">Training
+                                                    Contract</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.trainingContractCode }} -
+                                                    {{ enrolment.trainingContractName }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="reasonTakingCourseId" class="col-sm-4 control-label">Reason
+                                                    Taking Course</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.reasonTakingCour }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="applyForRPL" class="col-sm-4 control-label">Apply For
+                                                    RPL</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.applyForRPL }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="TuitionFee" class="col-sm-4 control-label">Tuition
+                                                    Fee</label>
+                                                <div class="col-sm-8">
+                                                    {{ enrolment.TuitionFee }}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--inner-row-->
+                                    </div>
+                                    <!--col-md-12-->
                                 </div>
+                                <!--row-->
                             </div>
-
-                            <div class="form-group row">
-                                <label for="studentOriginId" class="col-sm-3 control-label">Student Origin Id</label> 
-                                <div class="col-sm-9">
-                                    {{ studentenrolment.originName }}
-                              </div>
-                            </div> -->
-
-                            <div class="form-group row">
-                                <label for="courseId" class="col-sm-3 control-label">Course</label> 
-                                <div class="col-sm-9">
-                                    {{getstudentenrolment.courseCode}} - {{getstudentenrolment.courseName}}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="agentId" class="col-sm-3 control-label">Agent Id</label> 
-                                <div class="col-sm-9">
-                                    {{ getstudentenrolment.agentId }}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="courseIntakeDateId" class="col-sm-4 control-label">Course Intake Date</label> 
-                                <div class="col-sm-8">
-                                    {{getstudentenrolment.startDate}} - {{getstudentenrolment.endDate}}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="applicationStatusId" class="col-sm-3 control-label">Application Status</label> 
-                                <div class="col-sm-9" *ngFor="let appstatus of getapplicationstatus" [value]="appstatus.applicationStatusId">
-                                    {{ getstudentenrolment.applicationStatusName }}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="deliveryModeId" class="col-sm-4 control-label">Delivery Mode</label> 
-                                <div class="col-sm-8">
-                                    {{ getstudentenrolment.deliveryModeName }}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="fundingSourceNationalId" class="col-sm-4 control-label">Funding Source National</label> 
-                                <div class="col-sm-8">
-                                    {{ getstudentenrolment.fundingSourceNationalName }}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="fundingSourceStateId" class="col-sm-4 control-label">Funding Source State</label> 
-                                <div class="col-sm-8">
-                                    {{ getstudentenrolment.fundingSourceStateName }}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="commencingProgramId" class="col-sm-4 control-label">Commencing Program</label> 
-                                <div class="col-sm-8">
-                                    {{ getstudentenrolment.commencingProgramName }}
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="trainingContractid" class="col-sm-4 control-label">Training Contract</label> 
-                                <div class="col-sm-8">
-                                    {{ getstudentenrolment.trainingContractCode }} - {{ getstudentenrolment.trainingContractName }} 
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="reasonTakingCourseId" class="col-sm-4 control-label">Reason Taking Course</label> 
-                                <div class="col-sm-8">
-                                    {{ getstudentenrolment.reasonTakingCour }}
-                                </div>
-                            </div> 
-
-                            <div class="form-group row">
-                                <label for="applyForRPL" class="col-sm-4 control-label">Apply For RPL</label> 
-                                <div class="col-sm-8">   
-                                    {{ getstudentenrolment.applyForRPL }}    
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="TuitionFee" class="col-sm-4 control-label">Tuition Fee</label> 
-                                <div class="col-sm-8">   
-                                    {{ getstudentenrolment.TuitionFee }}    
-                                </div>
-                            </div>
-
-                        </div><!--inner-row-->
-                      </div> <!--col-md-12-->
-                    </div> <!--row-->
+                        </form>
                     </div>
-                </form>
-              </div> <!--card card-primary-->
-          </div> <!--col-md-6 offset-md-2-->
-        </div> <!--row-->
-      </div> <!--container-fluid-->
-    </section> <!--section2-->
-  </div> <!--content-wrapper-->
-  
-  
-     
+                    <!--card card-primary-->
+                </div>
+                <!--col-md-6 offset-md-2-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-fluid-->
+    </section>
+    <!--section2-->
+</div>
+<!--content-wrapper-->

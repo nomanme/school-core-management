@@ -33,42 +33,16 @@
                   <div class="form-group row">
                     <div class="col-sm-12 p-0">
                       <div class="form-check radio pr-1">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name=""
-                          id="OverseasStudent"
-                          value="1"
-                        />
-                        <label class="form-check-label"
-                          >Overseas Student<b>(<u>Offshore</u>)</b></label
-                        >
+                        <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="1" />
+                        <label class="form-check-label">Overseas Student<b>(<u>Offshore</u>)</b></label>
                       </div>
                       <div class="form-check radio pr-1">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name=""
-                          id="OverseasStudent"
-                          value="2"
-                        />
-                        <label class="form-check-label"
-                          >Overseas Student in Australia<b
-                            >(<u>Onshore</u>)</b
-                          ></label
-                        >
+                        <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="2" />
+                        <label class="form-check-label">Overseas Student in Australia<b>(<u>Onshore</u>)</b></label>
                       </div>
                       <div class="form-check radio">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name=""
-                          id="ResidentStudent"
-                          value="3"
-                        />
-                        <label class="form-check-label"
-                          >Resident Student<b>(<u>Domestic</u>)</b></label
-                        >
+                        <input class="form-check-input" type="radio" name="" id="ResidentStudent" value="3" />
+                        <label class="form-check-label">Resident Student<b>(<u>Domestic</u>)</b></label>
                       </div>
                     </div>
                   </div>
@@ -118,32 +92,21 @@
                           <div class="col-md-12 sub-form">
                             <div class="card-header">
                               <h3 class="card-title Title2">
-                                <i
-                                  class="fa fa-bars pr-1"
-                                  aria-hidden="true"
-                                ></i
-                                >Personal Information
+                                <i class="fa fa-bars pr-1" aria-hidden="true"></i>Personal Information
                               </h3>
                             </div>
                             <div class="inner-row">
                               <div class="col-md-12">
                                 <div class="form-group row">
-                                  <label
-                                    for="forFullName"
-                                    class="col-sm-2 control-label"
-                                    >Full Name</label
-                                  >
+                                  <label for="forFullName" class="col-sm-2 control-label">Full Name</label>
                                   <div class="input-group col-sm-2">
-                                    <select
-                                      class="form-control select2 select2-danger"
-                                      data-dropdown-css-class="select2-danger"
-                                      name="title"
-                                      id="title"
-                                      [(ngModel)]="title"
-                                    >
-                                      <option value="Mr" selected="selected">
-                                        Mr
+                                    <select class="form-control select2 select2-danger"
+                                      data-dropdown-css-class="select2-danger" name="title" id="title"
+                                      [(ngModel)]="title">
+                                      <option value="" selected>
+                                        Please Select a Option
                                       </option>
+                                      <option value="Mr">Mr</option>
                                       <option value="Mrs">Mrs</option>
                                       <option value="Miss">Miss</option>
                                       <option value="Ms">Ms</option>
@@ -157,40 +120,21 @@
                                     </select>
                                   </div>
                                   <div class="input group col-sm-3">
-                                    <input
-                                      [ngClass]="
+                                    <input [ngClass]="
                                         errorfirstname == ''
                                           ? 'form-control'
                                           : 'form-control is-invalid'
-                                      "
-                                      class="form-control"
-                                      type="text"
-                                      name="firstName"
-                                      id="firstName"
-                                      placeholder="First Name"
-                                      [(ngModel)]="firstName"
-                                      required
-                                    /><span class="star">*</span>
+                                      " class="form-control" type="text" name="firstName" id="firstName"
+                                      placeholder="First Name" [(ngModel)]="firstName" required /><span
+                                      class="star">*</span>
                                   </div>
                                   <div class="input-group col-sm-3">
-                                    <input
-                                      class="form-control"
-                                      type="text"
-                                      name="middleName"
-                                      id="middleName"
-                                      placeholder="Middle Name"
-                                      [(ngModel)]="middleName"
-                                    />
+                                    <input class="form-control" type="text" name="middleName" id="middleName"
+                                      placeholder="Middle Name" [(ngModel)]="middleName" />
                                   </div>
                                   <div class="input-group col-sm-2">
-                                    <input
-                                      class="form-control"
-                                      type="text"
-                                      name="lastName"
-                                      id="lastName"
-                                      placeholder="Last Name"
-                                      [(ngModel)]="lastName"
-                                    />
+                                    <input class="form-control" type="text" name="lastName" id="lastName"
+                                      placeholder="Last Name" [(ngModel)]="lastName" />
                                   </div>
                                 </div>
 
@@ -206,174 +150,90 @@
                                                         </div> -->
 
                                     <div class="form-group row">
-                                      <label
-                                        for="dob"
-                                        class="col-sm-4 control-label"
-                                        >Date of Birth<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
-                                      <div
-                                        class="col-sm-8"
-                                        id="DateofBirth"
-                                        data-target-input="nearest"
-                                      >
-                                        <input
-                                          [ngClass]="
+                                      <label for="dob" class="col-sm-4 control-label">Date of Birth<span
+                                          class="star">*</span></label>
+                                      <div class="col-sm-8" id="DateofBirth" data-target-input="nearest">
+                                        <input [ngClass]="
                                             errordob == ''
                                               ? 'form-control'
                                               : 'form-control is-invalid'
-                                          "
-                                          type="date"
-                                          class="form-control datetimepicker-input"
-                                          name="dob"
-                                          id="dob"
-                                          data-target="#reservationdate"
-                                          placeholder="17/9/1999"
-                                          [(ngModel)]="dob"
-                                          required
-                                        />
+                                          " type="date" class="form-control datetimepicker-input" name="dob" id="dob"
+                                          data-target="#reservationdate" placeholder="17/9/1999" [(ngModel)]="dob"
+                                          required />
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="passportNo"
-                                        class="col-sm-4 control-label"
-                                        >Passport No.</label
-                                      >
+                                      <label for="passportNo" class="col-sm-4 control-label">Passport No.</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            pattern="[0-9]"
-                                            name="passportNo"
-                                            id="passportNo"
-                                            placeholder="Enter your Passport number here"
-                                            [(ngModel)]="passportNo"
-                                          />
+                                          <input class="form-control" type="text" pattern="[0-9]" name="passportNo"
+                                            id="passportNo" placeholder="Enter your Passport number here"
+                                            [(ngModel)]="passportNo" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="passportExpdate"
-                                        class="col-sm-4 control-label"
-                                        >Passport Expiry Date</label
-                                      >
-                                      <div
-                                        class="col-sm-8"
-                                        id="DateofBirth"
-                                        data-target-input="nearest"
-                                      >
-                                        <input
-                                          type="date"
-                                          class="form-control datetimepicker-input"
-                                          name="passportExpdate"
-                                          id="passportExpdate"
-                                          data-target="#reservationdate"
-                                          placeholder="17/9/2024"
-                                          [(ngModel)]="passportExpdate"
-                                        />
+                                      <label for="passportExpdate" class="col-sm-4 control-label">Passport Expiry
+                                        Date</label>
+                                      <div class="col-sm-8" id="DateofBirth" data-target-input="nearest">
+                                        <input type="date" class="form-control datetimepicker-input"
+                                          name="passportExpdate" id="passportExpdate" data-target="#reservationdate"
+                                          placeholder="17/9/2024" [(ngModel)]="passportExpdate" />
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="gender"
-                                        class="col-sm-4 control-label alignstart"
-                                        >Gender<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="gender" class="col-sm-4 control-label alignstart">Gender<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="form-check">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorgender == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="gender"
-                                            id="Male"
-                                            value="M"
-                                            [(ngModel)]="gender"
-                                            checked
-                                          />
-                                          <label class="form-check-label"
-                                            >Male</label
-                                          >
+                                            " class="form-check-input" type="radio" name="gender" id="Male" value="M"
+                                            [(ngModel)]="gender" checked />
+                                          <label class="form-check-label">Male</label>
                                         </div>
                                         <div class="form-check">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorgender == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="gender"
-                                            id="Female"
-                                            value="F"
-                                            [(ngModel)]="gender"
-                                          />
-                                          <label class="form-check-label"
-                                            >Female</label
-                                          >
+                                            " class="form-check-input" type="radio" name="gender" id="Female" value="F"
+                                            [(ngModel)]="gender" />
+                                          <label class="form-check-label">Female</label>
                                         </div>
                                         <div class="form-check">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorgender == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="gender"
-                                            id="Others"
-                                            value="O"
-                                            [(ngModel)]="gender"
-                                          />
-                                          <label class="form-check-label"
-                                            >Others/ Not Specified</label
-                                          >
+                                            " class="form-check-input" type="radio" name="gender" id="Others" value="O"
+                                            [(ngModel)]="gender" />
+                                          <label class="form-check-label">Others/ Not Specified</label>
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="homeLanguageId"
-                                        class="col-sm-4 control-label"
-                                        >Home Language<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="homeLanguageId" class="col-sm-4 control-label">Home Language<span
+                                          class="star">*</span></label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [ngClass]="
+                                        <select [ngClass]="
                                             errorhomelang == ''
                                               ? 'form-control'
                                               : 'form-control is-invalid'
-                                          "
-                                          [(ngModel)]="homeLanguageId"
-                                          class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="homeLanguageId"
-                                          id="homeLanguageId"
-                                          required
-                                        >
-                                          <option
-                                            *ngFor="let lang of getlanguage"
-                                            [value]="lang.languageId"
-                                            selected="selected"
-                                          >
+                                          " [(ngModel)]="homeLanguageId" class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="homeLanguageId"
+                                          id="homeLanguageId" required>
+                                          <option value="" selected>
+                                            Please Select a Option
+                                          </option>
+                                          <option *ngFor="let lang of getlanguage" [value]="lang.languageId"
+                                            selected="selected">
                                             {{ lang.languageName }}
                                           </option>
                                         </select>
@@ -381,31 +241,18 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="englishSpeakingStatusId"
-                                        class="col-sm-4 control-label alignstart"
-                                        >English Spoken Status</label
-                                      >
+                                      <label for="englishSpeakingStatusId"
+                                        class="col-sm-4 control-label alignstart">English Spoken Status</label>
                                       <div class="col-sm-8">
-                                        <div
-                                          class="form-check radio pr-1"
-                                          *ngFor="
+                                        <div class="form-check radio pr-1" *ngFor="
                                             let engspoken of getenglishspeakingstatus
-                                          "
-                                        >
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="englishSpeakingStatusId"
-                                            id="englishSpeakingStatusId"
-                                            [value]="
+                                          ">
+                                          <input class="form-check-input" type="radio" name="englishSpeakingStatusId"
+                                            id="englishSpeakingStatusId" [value]="
                                               engspoken.englishSpeakingStatusId
-                                            "
-                                            [(ngModel)]="
+                                            " [(ngModel)]="
                                               englishSpeakingStatusId
-                                            "
-                                            checked="checked"
-                                          />
+                                            " checked="checked" />
                                           <label class="form-check-label">{{
                                             engspoken.englishSpeakingStatus
                                           }}</label>
@@ -414,68 +261,32 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="stillInSecSchool"
-                                        class="col-sm-4 control-label"
-                                        >Still In Secondery School</label
-                                      >
+                                      <label for="stillInSecSchool" class="col-sm-4 control-label">Still In Secondery
+                                        School</label>
                                       <div class="col-sm-8">
                                         <div class="form-check radio pr-1">
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="stillInSecSchool"
-                                            id="yes"
-                                            value="yes"
-                                            [(ngModel)]="stillInSecSchool"
-                                            (click)="showschltype()"
-                                          />
-                                          <label class="form-check-label"
-                                            >Yes</label
-                                          >
+                                          <input class="form-check-input" type="radio" name="stillInSecSchool" id="yes"
+                                            value="yes" [(ngModel)]="stillInSecSchool" (click)="showschltype()" />
+                                          <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio pr-1">
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="stillInSecSchool"
-                                            id="no"
-                                            value="no"
-                                            [(ngModel)]="stillInSecSchool"
-                                            (click)="hideschltype()"
-                                          />
-                                          <label class="form-check-label"
-                                            >No</label
-                                          >
+                                          <input class="form-check-input" type="radio" name="stillInSecSchool" id="no"
+                                            value="no" [(ngModel)]="stillInSecSchool" (click)="hideschltype()" />
+                                          <label class="form-check-label">No</label>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <div
-                                      class="form-group row"
-                                      *ngIf="schltype"
-                                    >
-                                      <label
-                                        for="schoolTypeId"
-                                        class="col-sm-4 control-label alignstart"
-                                        >School Type</label
-                                      >
+                                    <div class="form-group row" *ngIf="schltype">
+                                      <label for="schoolTypeId" class="col-sm-4 control-label alignstart">School
+                                        Type</label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [(ngModel)]="schoolTypeId"
-                                          class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="schoolTypeId"
-                                          id="schoolTypeId"
-                                          required
-                                        >
-                                          <option
-                                            *ngFor="
+                                        <select [(ngModel)]="schoolTypeId" class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="schoolTypeId" id="schoolTypeId"
+                                          required>
+                                          <option *ngFor="
                                               let schooltype of getschooltype
-                                            "
-                                            [value]="schooltype.schoolTypeId"
-                                            selected="selected"
-                                          >
+                                            " [value]="schooltype.schoolTypeId" selected="selected">
                                             {{ schooltype.schoolTypeCode }} -
                                             {{ schooltype.schoolTypeName }}
                                           </option>
@@ -484,214 +295,117 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="disability"
-                                        class="col-sm-4 control-label alignstart"
-                                        >Any Disability<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="disability" class="col-sm-4 control-label alignstart">Any
+                                        Disability<span class="star">*</span></label>
                                       <div class="input-group col-sm-8">
                                         <div class="form-check radio pr-5">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errordisability == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="disability"
-                                            id="yes"
-                                            value="yes"
-                                            (click)="ShowDisablity()"
-                                          />
-                                          <label class="form-check-label"
-                                            >Yes</label
-                                          >
+                                            " class="form-check-input" type="radio" name="disability" id="yes"
+                                            value="yes" (click)="ShowDisablity()" />
+                                          <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errordisability == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="disability"
-                                            id="no"
-                                            value="no"
-                                            (click)="HideDisablity()"
-                                          />
-                                          <label class="form-check-label"
-                                            >No</label
-                                          >
+                                            " class="form-check-input" type="radio" name="disability" id="no"
+                                            value="no" (click)="HideDisablity()" />
+                                          <label class="form-check-label">No</label>
                                         </div>
 
-                                        <div
-                                          class="input-group"
-                                          *ngIf="disable"
-                                        >
-                                          <ng-select
-                                            [(ngModel)]="
+                                        <div class="input-group" *ngIf="disable">
+                                          <ng-select [(ngModel)]="
                                               getdisability.disabilityId
-                                            "
-                                            name="disabilityId"
-                                            class="dropdown"
-                                            multiple="true"
-                                          >
-                                            <ng-option
-                                              *ngFor="
+                                            " name="disabilityId" class="dropdown" multiple="true">
+                                            <ng-option value="" selected>Please Select Options</ng-option>
+                                            <ng-option *ngFor="
                                                 let disable of getdisability
-                                              "
-                                              [value]="disable.disabilityId"
-                                              >{{ disable.disabilityCode }} -
+                                              " [value]="disable.disabilityId">{{ disable.disabilityCode }} -
                                               {{
                                                 disable.disabilityName
-                                              }}</ng-option
-                                            >
+                                              }}</ng-option>
                                           </ng-select>
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="statisticalAreaLevel1Id"
-                                        class="col-sm-4 control-label"
-                                        >Statistical Area Level 1</label
-                                      >
+                                      <label for="statisticalAreaLevel1Id" class="col-sm-4 control-label">Statistical
+                                        Area Level 1</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="statisticalAreaLevel1Id"
-                                            id="statisticalAreaLevel1Id"
-                                            placeholder="Enter area level 1"
-                                            [(ngModel)]="
+                                          <input class="form-control" type="text" name="statisticalAreaLevel1Id"
+                                            id="statisticalAreaLevel1Id" placeholder="Enter area level 1" [(ngModel)]="
                                               statisticalAreaLevel1Id
-                                            "
-                                          />
+                                            " />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="statisticalAreaLevel2Id"
-                                        class="col-sm-4 control-label"
-                                        >Statistical Area Level 2</label
-                                      >
+                                      <label for="statisticalAreaLevel2Id" class="col-sm-4 control-label">Statistical
+                                        Area Level 2</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="statisticalAreaLevel2Id"
-                                            id="statisticalAreaLevel2Id"
-                                            placeholder="Enter area level 2"
-                                            [(ngModel)]="
+                                          <input class="form-control" type="text" name="statisticalAreaLevel2Id"
+                                            id="statisticalAreaLevel2Id" placeholder="Enter area level 2" [(ngModel)]="
                                               statisticalAreaLevel2Id
-                                            "
-                                          />
+                                            " />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="australianPr"
-                                        class="col-sm-4 control-label"
-                                        >Australian Permanent Resident<span
-                                          class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="australianPr" class="col-sm-4 control-label">Australian Permanent
+                                        Resident<span class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="form-check radio">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               erroraustralianPr == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="australianPr"
-                                            id="OverseasStudent"
-                                            value="0"
-                                            [(ngModel)]="australianPr"
-                                            ng-value="australianPr"
-                                            (click)="HideVisa()"
-                                          />
-                                          <label class="form-check-label"
-                                            >Yes</label
-                                          >
+                                            " class="form-check-input" type="radio" name="australianPr"
+                                            id="OverseasStudent" value="Y" [(ngModel)]="australianPr"
+                                            ng-value="australianPr" (click)="HideVisa()" />
+                                          <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               erroraustralianPr == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="australianPr"
-                                            id="OverseasStudent"
-                                            value="1"
-                                            [(ngModel)]="australianPr"
-                                            (click)="ShowVisa()"
-                                          />
-                                          <label class="form-check-label"
-                                            >No</label
-                                          >
+                                            " class="form-check-input" type="radio" name="australianPr"
+                                            id="OverseasStudent" value="N" [(ngModel)]="australianPr"
+                                            (click)="ShowVisa()" />
+                                          <label class="form-check-label">No</label>
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row" *ngIf="Visa">
-                                      <label
-                                        for="visaNo"
-                                        class="col-sm-4 control-label"
-                                        >Visa Number</label
-                                      >
+                                      <label for="visaNo" class="col-sm-4 control-label">Visa Number</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            pattern="[0-9]"
-                                            name="visaNo"
-                                            id="visaNo"
-                                            placeholder="Enter your  Visa number here"
-                                            [(ngModel)]="visaNo"
-                                          />
+                                          <input class="form-control" type="text" pattern="[0-9]" name="visaNo"
+                                            id="visaNo" placeholder="Enter your  Visa number here"
+                                            [(ngModel)]="visaNo" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row" *ngIf="Visa">
-                                      <label
-                                        for="visaStatusId"
-                                        class="col-sm-4 control-label"
-                                        >Visa Status</label
-                                      >
+                                      <label for="visaStatusId" class="col-sm-4 control-label">Visa Status</label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [(ngModel)]="visaStatusId"
-                                          class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="visaStatusId"
-                                          id="visaStatusId"
-                                        >
-                                          <option
-                                            *ngFor="let visa of getvisastatus"
-                                            [value]="visa.visaStatusId"
-                                            selected="selected"
-                                          >
+                                        <select [(ngModel)]="visaStatusId" class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="visaStatusId"
+                                          id="visaStatusId">
+                                          <option value="0" selected>Please Select a Options</option>
+                                          <option *ngFor="let visa of getvisastatus" [value]="visa.visaStatusId"
+                                            selected="selected">
                                             {{ visa.visaStatusName }}
                                           </option>
                                         </select>
@@ -699,104 +413,54 @@
                                     </div>
 
                                     <div class="form-group row" *ngIf="Visa">
-                                      <label
-                                        for="visaExpdate"
-                                        class="col-sm-4 control-label"
-                                        >Visa Expiry Date</label
-                                      >
-                                      <div
-                                        class="col-sm-8"
-                                        id="visaExpirydate"
-                                        data-target-input="nearest"
-                                      >
-                                        <input
-                                          type="date"
-                                          class="form-control datetimepicker-input"
-                                          name="visaExpdate"
-                                          id="visaExpdate"
-                                          data-target="#reservationdate"
-                                          placeholder="17/10/2024"
-                                          [(ngModel)]="visaExpdate"
-                                        />
+                                      <label for="visaExpdate" class="col-sm-4 control-label">Visa Expiry Date</label>
+                                      <div class="col-sm-8" id="visaExpirydate" data-target-input="nearest">
+                                        <input type="date" class="form-control datetimepicker-input" name="visaExpdate"
+                                          id="visaExpdate" data-target="#reservationdate" placeholder="17/10/2024"
+                                          [(ngModel)]="visaExpdate" />
                                       </div>
                                     </div>
                                   </div>
 
                                   <div class="col-md-6">
                                     <div class="form-group row">
-                                      <label
-                                        for="email"
-                                        class="col-sm-4 control-label"
-                                        >Email Address<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="email" class="col-sm-4 control-label">Email Address<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               erroremail == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            type="email"
-                                            class="form-control"
-                                            name="email"
-                                            id="email"
-                                            placeholder="Enter email"
-                                            [(ngModel)]="email"
-                                            required
-                                          />
+                                            " type="email" class="form-control" name="email" id="email"
+                                            placeholder="Enter email" [(ngModel)]="email" required />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="altEmail"
-                                        class="col-sm-4 control-label"
-                                        >Alter Email Address</label
-                                      >
+                                      <label for="altEmail" class="col-sm-4 control-label">Alter Email Address</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            type="email"
-                                            class="form-control"
-                                            name="altEmail"
-                                            id="altEmail"
-                                            placeholder="Enter email"
-                                            [(ngModel)]="altEmail"
-                                          />
+                                          <input type="email" class="form-control" name="altEmail" id="altEmail"
+                                            placeholder="Enter email" [(ngModel)]="altEmail" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="birthcountryId"
-                                        class="col-sm-4 control-label"
-                                        >Country of Birth<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="birthcountryId" class="col-sm-4 control-label">Country of Birth<span
+                                          class="star">*</span></label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [ngClass]="
+                                        <select [ngClass]="
                                             errorbirthcountry == ''
                                               ? 'form-control'
                                               : 'form-control is-invalid'
-                                          "
-                                          data-dropdown-css-class="select2-danger"
-                                          name="birthcountryId"
-                                          id="birthcountryId"
-                                          [(ngModel)]="birthcountryId"
-                                          required
-                                        >
-                                          <option
-                                            *ngFor="let countries of getcountry"
-                                            [value]="countries.countryId"
-                                            selected="selected"
-                                          >
+                                          " data-dropdown-css-class="select2-danger" name="birthcountryId"
+                                          id="birthcountryId" [(ngModel)]="birthcountryId" required>
+                                          <option value="" selected>Please Select a Option</option>
+                                          <option *ngFor="let countries of getcountry" [value]="countries.countryId"
+                                            selected="selected">
                                             {{ countries.countryName }}
                                           </option>
                                         </select>
@@ -804,25 +468,15 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="nationalityId"
-                                        class="col-sm-4 control-label"
-                                        >Nationality</label
-                                      >
+                                      <label for="nationalityId" class="col-sm-4 control-label">Nationality</label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="nationalityId"
-                                          id="nationalityId"
-                                          [(ngModel)]="nationalityId"
-                                        >
-                                          <option
-                                            *ngFor="
+                                        <select class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="nationalityId"
+                                          id="nationalityId" [(ngModel)]="nationalityId">
+                                          <option value="" selected>Please Select a Option</option>
+                                          <option *ngFor="
                                               let nationality of getnationality
-                                            "
-                                            [value]="nationality.nationalityId"
-                                          >
+                                            " [value]="nationality.nationalityId">
                                             {{ nationality.nationalityName }}
                                           </option>
                                         </select>
@@ -830,34 +484,22 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="indigenousStatusId"
-                                        class="col-sm-4 control-label alignstart"
-                                        >Indigenous Status<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="indigenousStatusId"
+                                        class="col-sm-4 control-label alignstart">Indigenous Status<span
+                                          class="star">*</span></label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [ngClass]="
+                                        <select [ngClass]="
                                             errorindigenousStatus == ''
                                               ? 'form-control'
                                               : 'form-control is-invalid'
-                                          "
-                                          [(ngModel)]="indigenousStatusId"
+                                          " [(ngModel)]="indigenousStatusId"
                                           class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="indigenousStatusId"
-                                          id="indigenousStatusId"
-                                          required
-                                        >
-                                          <option
-                                            *ngFor="
+                                          data-dropdown-css-class="select2-danger" name="indigenousStatusId"
+                                          id="indigenousStatusId" required>
+                                          <option value="" selected>Please Select a Option</option>
+                                          <option *ngFor="
                                               let indig of getindigenousstatus
-                                            "
-                                            [value]="indig.indigenousStatusId"
-                                            selected="selected"
-                                          >
+                                            " [value]="indig.indigenousStatusId" selected="selected">
                                             {{ indig.indigenousStatusName }}
                                           </option>
                                         </select>
@@ -865,36 +507,24 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="employmentStatusId"
-                                        class="col-sm-4 control-label alignstart"
-                                        >Employment Status<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="employmentStatusId"
+                                        class="col-sm-4 control-label alignstart">Employment Status<span
+                                          class="star">*</span></label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [ngClass]="
+                                        <select [ngClass]="
                                             erroremploymentStatus == ''
                                               ? 'form-control'
                                               : 'form-control is-invalid'
-                                          "
-                                          [(ngModel)]="employmentStatusId"
+                                          " [(ngModel)]="employmentStatusId"
                                           class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="employmentStatusId"
-                                          id="employmentStatusId"
-                                          required
-                                        >
-                                          <option
-                                            *ngFor="
+                                          data-dropdown-css-class="select2-danger" name="employmentStatusId"
+                                          id="employmentStatusId" required>
+                                          <option value="" selected>Please Select a Option</option>
+                                          <option *ngFor="
                                               let empstatus of getemploymentstatus
-                                            "
-                                            [value]="
+                                            " [value]="
                                               empstatus.employmentStatusId
-                                            "
-                                            selected="selected"
-                                          >
+                                            " selected="selected">
                                             {{ empstatus.EmploymentStatusName }}
                                           </option>
                                         </select>
@@ -902,35 +532,20 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="completedSchoolLevelId"
-                                        class="col-sm-4 control-label alignstart"
-                                        >Completed School Level<span
-                                          class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="completedSchoolLevelId"
+                                        class="col-sm-4 control-label alignstart">Completed School Level<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
-                                        <div
-                                          class="form-check radio pr-1"
-                                          *ngFor="
+                                        <div class="form-check radio pr-1" *ngFor="
                                             let schlevel of getschoollevel
-                                          "
-                                        >
-                                          <input
-                                            [ngClass]="
+                                          ">
+                                          <input [ngClass]="
                                               errorschoolLevel == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="completedSchoolLevelId"
-                                            id="completedSchoolLevelId"
-                                            [value]="schlevel.schoolLevelId"
-                                            [(ngModel)]="completedSchoolLevelId"
-                                            checked="checked"
-                                          />
+                                            " class="form-check-input" type="radio" name="completedSchoolLevelId"
+                                            id="completedSchoolLevelId" [value]="schlevel.schoolLevelId"
+                                            [(ngModel)]="completedSchoolLevelId" checked="checked" />
                                           <label class="form-check-label">{{
                                             schlevel.SchoolLevelName
                                           }}</label>
@@ -939,89 +554,51 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="PriorEducationalAchievementFlag"
-                                        class="col-sm-4 control-label alignstart"
-                                        >Prior Educatioal Achievement Flag<span
-                                          class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="PriorEducationalAchievementFlag"
+                                        class="col-sm-4 control-label alignstart">Prior Educatioal Achievement Flag<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="form-check radio pr-5">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorpriorEducation == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="PriorEducationalAchievementFlag"
-                                            id="yes"
-                                            value="yes"
-                                            [(ngModel)]="
+                                            " class="form-check-input" type="radio"
+                                            name="PriorEducationalAchievementFlag" id="yes" value="yes" [(ngModel)]="
                                               PriorEducationalAchievementFlag
-                                            "
-                                          />
-                                          <label class="form-check-label"
-                                            >Yes</label
-                                          >
+                                            " />
+                                          <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorpriorEducation == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="PriorEducationalAchievementFlag"
-                                            id="no"
-                                            value="no"
-                                            [(ngModel)]="
+                                            " class="form-check-input" type="radio"
+                                            name="PriorEducationalAchievementFlag" id="no" value="no" [(ngModel)]="
                                               PriorEducationalAchievementFlag
-                                            "
-                                          />
-                                          <label class="form-check-label"
-                                            >No</label
-                                          >
+                                            " />
+                                          <label class="form-check-label">No</label>
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="surveyContactStatusId"
-                                        class="col-sm-4 control-label alignstart"
-                                        >Survey Contact Status<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="surveyContactStatusId"
+                                        class="col-sm-4 control-label alignstart">Survey Contact Status<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
-                                        <div
-                                          class="form-check radio pr-1"
-                                          *ngFor="
+                                        <div class="form-check radio pr-1" *ngFor="
                                             let survey of getsurveycontactstatus
-                                          "
-                                        >
-                                          <input
-                                            [ngClass]="
+                                          ">
+                                          <input [ngClass]="
                                               errorsurvey == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="surveyContactStatusId"
-                                            id="surveyContactStatusId"
-                                            [value]="
+                                            " class="form-check-input" type="radio" name="surveyContactStatusId"
+                                            id="surveyContactStatusId" [value]="
                                               survey.surveyContactStatusId
-                                            "
-                                            [(ngModel)]="surveyContactStatusId"
-                                            checked="checked"
-                                          />
+                                            " [(ngModel)]="surveyContactStatusId" checked="checked" />
                                           <label class="form-check-label">{{
                                             survey.surveyContactStatusName
                                           }}</label>
@@ -1030,21 +607,12 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="signatoryText"
-                                        class="col-sm-4 control-label"
-                                        >Signatory Text</label
-                                      >
+                                      <label for="signatoryText" class="col-sm-4 control-label">Signatory Text</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="signatoryText"
-                                            id="signatoryText"
-                                            placeholder="Enter signatory text"
-                                            [(ngModel)]="signatoryText"
-                                          />
+                                          <input class="form-control" type="text" name="signatoryText"
+                                            id="signatoryText" placeholder="Enter signatory text"
+                                            [(ngModel)]="signatoryText" />
                                         </div>
                                       </div>
                                     </div>
@@ -1063,51 +631,32 @@
                           <div class="col-md-12 sub-form">
                             <div class="card-header">
                               <h3 class="card-title Title2">
-                                <i
-                                  class="fa fa-bars pr-1"
-                                  aria-hidden="true"
-                                ></i
-                                >USI: Unique Student Identifier
+                                <i class="fa fa-bars pr-1" aria-hidden="true"></i>USI: Unique Student Identifier
                               </h3>
                             </div>
                             <div class="inner-row">
                               <div class="col-md-12">
                                 <div class="form-group row">
-                                  <label
-                                    for="usiNo"
-                                    class="col-sm-4 control-label"
-                                    >Do you have your USI number available
-                                    now?</label
-                                  >
+                                  <label for="usiNo" class="col-sm-4 control-label">Do you have your USI number
+                                    available
+                                    now?</label>
                                   <div class="col-sm-4 usiinputfield">
                                     <div class="input-group">
-                                      <input
-                                        class="form-control"
-                                        type="number"
-                                        min="0"
-                                        name="usiNo"
-                                        id="usiNo"
-                                        placeholder="Enter your valid USI here"
-                                        [(ngModel)]="usiNo"
-                                      />
+                                      <input class="form-control" type="number" min="0" name="usiNo" id="usiNo"
+                                        placeholder="Enter your valid USI here" [(ngModel)]="usiNo" />
                                     </div>
                                   </div>
 
                                   <div class="col-sm-4 usitextfield">
                                     <div class="input-group">
-                                      <span
-                                        ><a href="#">What is USI?</a> |
-                                        <a href="#"
-                                          >Steps to Create your own USI</a
-                                        ></span
-                                      >
+                                      <span><a href="#">What is USI?</a> |
+                                        <a href="#">Steps to Create your own USI</a></span>
                                     </div>
                                   </div>
                                   <span class="text-star">
                                     ***You can leave this field blank if you
                                     don't have the USI or can't recall at this
-                                    stage.***</span
-                                  >
+                                    stage.***</span>
                                 </div>
                               </div>
                               <!--col-md-12-->
@@ -1122,11 +671,7 @@
                           <div class="col-md-12 sub-form">
                             <div class="card-header">
                               <h3 class="card-title Title2">
-                                <i
-                                  class="fa fa-bars pr-1"
-                                  aria-hidden="true"
-                                ></i
-                                >Current Street Address
+                                <i class="fa fa-bars pr-1" aria-hidden="true"></i>Current Street Address
                               </h3>
                             </div>
                             <div class="inner-row">
@@ -1134,125 +679,71 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group row">
-                                      <label
-                                        for="flatUnitDetails"
-                                        class="col-sm-4 control-label"
-                                        >Flat/ Unit Details</label
-                                      >
+                                      <label for="flatUnitDetails" class="col-sm-4 control-label">Flat/ Unit
+                                        Details</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="flatUnitDetails"
-                                            id="flatUnitDetails"
-                                            placeholder="Enter your Flat/ Unit details here"
-                                            [(ngModel)]="flatUnitDetails"
-                                          />
+                                          <input class="form-control" type="text" name="flatUnitDetails"
+                                            id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here"
+                                            [(ngModel)]="flatUnitDetails" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="streetNumber"
-                                        class="col-sm-4 control-label"
-                                        >Street Number<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="streetNumber" class="col-sm-4 control-label">Street Number<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorstreetNumber == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-control"
-                                            type="text"
-                                            name="streetNumber"
-                                            id="streetNumber"
-                                            placeholder="(e.g. 205 or Lot 118)"
-                                            [(ngModel)]="streetNumber"
-                                            required
-                                          />
+                                            " class="form-control" type="text" name="streetNumber" id="streetNumber"
+                                            placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="streetNumber" required />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="streetName"
-                                        class="col-sm-4 control-label"
-                                        >Street Name<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="streetName" class="col-sm-4 control-label">Street Name<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorstreetName == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-control"
-                                            type="text"
-                                            name="streetName"
-                                            id="streetName"
-                                            placeholder="Enter your Street Name here"
-                                            [(ngModel)]="streetName"
-                                            required
-                                          />
+                                            " class="form-control" type="text" name="streetName" id="streetName"
+                                            placeholder="Enter your Street Name here" [(ngModel)]="streetName"
+                                            required />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="suburb"
-                                        class="col-sm-4 control-label"
-                                        >City/ Town/ Suburb<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="suburb" class="col-sm-4 control-label">City/ Town/ Suburb<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorsuburb == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-control"
-                                            type="text"
-                                            name="suburb"
-                                            id="suburb"
-                                            placeholder="Enter your City/ Town/ Suburb here"
-                                            [(ngModel)]="suburb"
-                                            required
-                                          />
+                                            " class="form-control" type="text" name="suburb" id="suburb"
+                                            placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="suburb"
+                                            required />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="buildingName"
-                                        class="col-sm-4 control-label"
-                                        >Building/ Property Name</label
-                                      >
+                                      <label for="buildingName" class="col-sm-4 control-label">Building/ Property
+                                        Name</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="buildingName"
-                                            id="buildingName"
-                                            placeholder="Enter your Building Name here"
-                                            [(ngModel)]="buildingName"
-                                          />
+                                          <input class="form-control" type="text" name="buildingName" id="buildingName"
+                                            placeholder="Enter your Building Name here" [(ngModel)]="buildingName" />
                                         </div>
                                       </div>
                                     </div>
@@ -1260,30 +751,18 @@
 
                                   <div class="col-md-6">
                                     <div class="form-group row">
-                                      <label
-                                        for="stateId"
-                                        class="col-sm-4 control-label"
-                                        >State<span class="star">*</span></label
-                                      >
+                                      <label for="stateId" class="col-sm-4 control-label">State<span
+                                          class="star">*</span></label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [ngClass]="
+                                        <select [ngClass]="
                                             errorstate == ''
                                               ? 'form-control'
                                               : 'form-control is-invalid'
-                                          "
-                                          [(ngModel)]="stateId"
-                                          class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="stateId"
-                                          id="stateId"
-                                          required
-                                        >
-                                          <option
-                                            *ngFor="let state of getstate"
-                                            [value]="state.stateId"
-                                            selected="selected"
-                                          >
+                                          " [(ngModel)]="stateId" class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
+                                          <option value="" selected>Please Select a Option</option>
+                                          <option *ngFor="let state of getstate" [value]="state.stateId"
+                                            selected="selected">
                                             {{ state.stateCode }} -
                                             {{ state.stateName }}
                                           </option>
@@ -1292,90 +771,47 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="postCode"
-                                        class="col-sm-4 control-label"
-                                        >Postcode<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="postCode" class="col-sm-4 control-label">Postcode<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errorpostcode == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-control"
-                                            type="text"
-                                            pattern="[0-9]{5}"
-                                            name="postCode"
-                                            id="postCode"
-                                            placeholder="Enter your Postcode here"
-                                            [(ngModel)]="postCode"
-                                            required
-                                          />
+                                            " class="form-control" type="text" pattern="[0-9]{5}" name="postCode"
+                                            id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="postCode"
+                                            required />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="telHome"
-                                        class="col-sm-4 control-label"
-                                        >Home Phone</label
-                                      >
+                                      <label for="telHome" class="col-sm-4 control-label">Home Phone</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="tel"
-                                            name="telHome"
-                                            id="telHome"
-                                            placeholder="Enter your Home Phone here"
-                                            [(ngModel)]="telHome"
-                                          />
+                                          <input class="form-control" type="tel" name="telHome" id="telHome"
+                                            placeholder="Enter your Home Phone here" [(ngModel)]="telHome" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="telWork"
-                                        class="col-sm-4 control-label"
-                                        >Work Phone</label
-                                      >
+                                      <label for="telWork" class="col-sm-4 control-label">Work Phone</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="tel"
-                                            name="telWork"
-                                            id="telWork"
-                                            placeholder="Enter your Work Phone here"
-                                            [(ngModel)]="telWork"
-                                          />
+                                          <input class="form-control" type="tel" name="telWork" id="telWork"
+                                            placeholder="Enter your Work Phone here" [(ngModel)]="telWork" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="mobile"
-                                        class="col-sm-4 control-label"
-                                        >Mobile Phone</label
-                                      >
+                                      <label for="mobile" class="col-sm-4 control-label">Mobile Phone</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="tel"
-                                            name="mobile"
-                                            id="mobile"
-                                            placeholder="Enter your Mobile Phone here"
-                                            [(ngModel)]="mobile"
-                                          />
+                                          <input class="form-control" type="tel" name="mobile" id="mobile"
+                                            placeholder="Enter your Mobile Phone here" [(ngModel)]="mobile" />
                                         </div>
                                       </div>
                                     </div>
@@ -1385,46 +821,25 @@
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="form-group row">
-                                      <label
-                                        for="differentPostalAddress"
-                                        class="col-sm-3 control-label"
-                                        ><b>Different Postal Address</b
-                                        ><span class="star">*</span></label
-                                      >
+                                      <label for="differentPostalAddress" class="col-sm-3 control-label"><b>Different
+                                          Postal Address</b><span class="star">*</span></label>
 
                                       <div class="col-sm-9">
                                         <div class="form-check radio">
-                                          <input
-                                            [ngClass]="
+                                          <input [ngClass]="
                                               errordifferentPostalAddress == ''
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
-                                            "
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="differentPostalAddress"
-                                            id="on"
-                                            value="0"
-                                            [(ngModel)]="differentPostalAddress"
-                                            (click)="ShowStudentPostal()"
-                                          />
-                                          <label class="form-check-label"
-                                            >Yes</label
-                                          >
+                                            " class="form-check-input" type="radio" name="differentPostalAddress"
+                                            id="on" value="Y" [(ngModel)]="differentPostalAddress"
+                                            (click)="ShowStudentPostal()" />
+                                          <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
-                                          <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="differentPostalAddress"
-                                            id="off"
-                                            value="1"
-                                            [(ngModel)]="differentPostalAddress"
-                                            (click)="HideStudentPostal()"
-                                          />
-                                          <label class="form-check-label"
-                                            >No</label
-                                          >
+                                          <input class="form-check-input" type="radio" name="differentPostalAddress"
+                                            id="off" value="N" [(ngModel)]="differentPostalAddress"
+                                            (click)="HideStudentPostal()" />
+                                          <label class="form-check-label">No</label>
                                         </div>
                                       </div>
                                     </div>
@@ -1443,11 +858,7 @@
                           <div class="col-md-12 sub-form">
                             <div class="card-header">
                               <h3 class="card-title Title2">
-                                <i
-                                  class="fa fa-bars pr-1"
-                                  aria-hidden="true"
-                                ></i
-                                >Student Postal Detail
+                                <i class="fa fa-bars pr-1" aria-hidden="true"></i>Student Postal Detail
                               </h3>
                             </div>
                             <div class="inner-row">
@@ -1455,87 +866,47 @@
                                 <div class="row">
                                   <div class="col-md-6">
                                     <div class="form-group row">
-                                      <label
-                                        for="buildingName"
-                                        class="col-sm-4 control-label"
-                                        >Building/ Property Name</label
-                                      >
+                                      <label for="buildingName" class="col-sm-4 control-label">Building/ Property
+                                        Name</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="buildingName"
-                                            id="buildingName"
-                                            placeholder="Enter your Building Name here"
-                                            [(ngModel)]="buildingName"
-                                          />
+                                          <input class="form-control" type="text" name="buildingName" id="buildingName"
+                                            placeholder="Enter your Building Name here" [(ngModel)]="buildingName" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="flatUnitDetails"
-                                        class="col-sm-4 control-label"
-                                        >Flat/ Unit Details</label
-                                      >
+                                      <label for="flatUnitDetails" class="col-sm-4 control-label">Flat/ Unit
+                                        Details</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="flatUnitDetails"
-                                            id="flatUnitDetails"
-                                            placeholder="Enter your Flat/ Unit details here"
-                                            [(ngModel)]="flatUnitDetails"
-                                          />
+                                          <input class="form-control" type="text" name="flatUnitDetails"
+                                            id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here"
+                                            [(ngModel)]="flatUnitDetails" />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="streetNumber"
-                                        class="col-sm-4 control-label"
-                                        >Street Number<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="streetNumber" class="col-sm-4 control-label">Street Number<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="streetNumber"
-                                            id="streetNumber"
-                                            placeholder="(e.g. 205 or Lot 118)"
-                                            [(ngModel)]="streetNumber"
-                                            required
-                                          />
+                                          <input class="form-control" type="text" name="streetNumber" id="streetNumber"
+                                            placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="streetNumber" required />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="streetName"
-                                        class="col-sm-4 control-label"
-                                        >Street Name<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="streetName" class="col-sm-4 control-label">Street Name<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="streetName"
-                                            id="streetName"
-                                            placeholder="Enter your Street Name here"
-                                            [(ngModel)]="streetName"
-                                            required
-                                          />
+                                          <input class="form-control" type="text" name="streetName" id="streetName"
+                                            placeholder="Enter your Street Name here" [(ngModel)]="streetName"
+                                            required />
                                         </div>
                                       </div>
                                     </div>
@@ -1543,47 +914,25 @@
 
                                   <div class="col-md-6">
                                     <div class="form-group row">
-                                      <label
-                                        for="suburb"
-                                        class="col-sm-4 control-label"
-                                        >City/ Town/ Suburb<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="suburb" class="col-sm-4 control-label">City/ Town/ Suburb<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="suburb"
-                                            id="suburb"
-                                            placeholder="Enter your City/ Town/ Suburb here"
-                                            [(ngModel)]="suburb"
-                                            required
-                                          />
+                                          <input class="form-control" type="text" name="suburb" id="suburb"
+                                            placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="suburb"
+                                            required />
                                         </div>
                                       </div>
                                     </div>
                                     <div class="form-group row">
-                                      <label
-                                        for="stateId"
-                                        class="col-sm-4 control-label"
-                                        >State<span class="star">*</span></label
-                                      >
+                                      <label for="stateId" class="col-sm-4 control-label">State<span
+                                          class="star">*</span></label>
                                       <div class="input-group col-sm-8">
-                                        <select
-                                          [(ngModel)]="stateId"
-                                          class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger"
-                                          name="stateId"
-                                          id="stateId"
-                                          required
-                                        >
-                                          <option
-                                            *ngFor="let state of getstate"
-                                            [value]="state.stateId"
-                                            selected="selected"
-                                          >
+                                        <select [(ngModel)]="stateId" class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
+                                          <option value="" selected>Please Select a Option</option>
+                                          <option *ngFor="let state of getstate" [value]="state.stateId"
+                                            selected="selected">
                                             {{ state.stateCode }} -
                                             {{ state.stateName }}
                                           </option>
@@ -1592,45 +941,23 @@
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="postCode"
-                                        class="col-sm-4 control-label"
-                                        >Postcode<span class="star"
-                                          >*</span
-                                        ></label
-                                      >
+                                      <label for="postCode" class="col-sm-4 control-label">Postcode<span
+                                          class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            pattern="[0-9]{5}"
-                                            name="postCode"
-                                            id="postCode"
-                                            placeholder="Enter your Postcode here"
-                                            [(ngModel)]="postCode"
-                                            required
-                                          />
+                                          <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode"
+                                            id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="postCode"
+                                            required />
                                         </div>
                                       </div>
                                     </div>
 
                                     <div class="form-group row">
-                                      <label
-                                        for="pobox"
-                                        class="col-sm-4 control-label"
-                                        >Post Box</label
-                                      >
+                                      <label for="pobox" class="col-sm-4 control-label">Post Box</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input
-                                            class="form-control"
-                                            type="text"
-                                            name="pobox"
-                                            id="pobox"
-                                            placeholder="Enter post box here"
-                                            [(ngModel)]="pobox"
-                                          />
+                                          <input class="form-control" type="text" name="pobox" id="pobox"
+                                            placeholder="Enter post box here" [(ngModel)]="pobox" />
                                         </div>
                                       </div>
                                     </div>
@@ -1646,14 +973,8 @@
                         <!-- row5 -->
 
                         <div class="submit-button">
-                          <button
-                            type="submit"
-                            (click)="createStudent(f)"
-                            class="btn btn-primary"
-                            name="create"
-                            id="create"
-                            ng-disabled="validateForm.$invalid"
-                          >
+                          <button type="submit" (click)="createStudent(f)" class="btn btn-primary" name="create"
+                            id="create" ng-disabled="validateForm.$invalid">
                             Create & Go
                           </button>
                         </div>

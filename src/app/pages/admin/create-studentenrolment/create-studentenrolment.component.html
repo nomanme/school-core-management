@@ -14,10 +14,8 @@
             </li>
           </ol>
         </div>
-        <span class="text-star"
-          >Please setup initial enrolment fee information for your institute
-          before using the System.</span
-        >
+        <span class="text-star">Please setup initial enrolment fee information for your institute
+          before using the System.</span>
       </div>
     </div>
     <!-- container-fluid -->
@@ -47,38 +45,25 @@
                   <div class="col-md-12">
                     <div class="inner-row">
                       <div class="form-group row">
-                        <label for="studentId" class="col-sm-3 control-label"
-                          >Student Id<span class="star">*</span></label
-                        >
+                        <label for="studentId" class="col-sm-3 control-label">Student Id<span
+                            class="star">*</span></label>
                         <div class="col-sm-9">
                           {{ outputD }}
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="studentOriginId"
-                          class="col-sm-3 control-label"
-                          >Student Origin Id<span class="star">*</span></label
-                        >
+                        <label for="studentOriginId" class="col-sm-3 control-label">Student Origin Id<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error1 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="studentOriginId"
-                            data-dropdown-css-class="select2-danger"
-                            name="studentOriginId"
-                            id="studentOriginId"
-                            required
-                          >
-                            <option
-                              *ngFor="let studentorigin of getstudentorigin"
-                              [value]="studentorigin.studentOriginId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="studentOriginId" data-dropdown-css-class="select2-danger"
+                            name="studentOriginId" id="studentOriginId" required>
+                            <option *ngFor="let studentorigin of getstudentorigin"
+                              [value]="studentorigin.studentOriginId" selected="selected">
                               {{ studentorigin.originName }}
                             </option>
                           </select>
@@ -86,28 +71,15 @@
                       </div>
 
                       <div class="form-group row">
-                        <label for="courseId" class="col-sm-3 control-label"
-                          >Course<span class="star">*</span></label
-                        >
+                        <label for="courseId" class="col-sm-3 control-label">Course<span class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error2 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="courseId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="courseId"
-                            id="courseId"
-                            required
-                          >
-                            <option
-                              *ngFor="let course of getcourse"
-                              [value]="course.courseId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="courseId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="courseId" id="courseId" required>
+                            <option *ngFor="let course of getcourse" [value]="course.courseId" selected="selected">
                               {{ course.courseCode }} - {{ course.courseName }}
                             </option>
                           </select>
@@ -121,28 +93,15 @@
                       </div>
 
                       <div class="form-group row">
-                        <label for="agentId" class="col-sm-3 control-label"
-                          >Agent Id<span class="star">*</span></label
-                        >
+                        <label for="agentId" class="col-sm-3 control-label">Agent Id<span class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error3 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="agentId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="agentId"
-                            id="agentId"
-                            required
-                          >
-                            <option
-                              *ngFor="let agent of getagent"
-                              [value]="agent.agentId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="agentId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="agentId" id="agentId" required>
+                            <option *ngFor="let agent of getagent" [value]="agent.agentId" selected="selected">
                               {{ agent.agencyName }}
                             </option>
                           </select>
@@ -150,30 +109,18 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="courseIntakeDateId"
-                          class="col-sm-3 control-label"
-                          >Course Intake Date<span class="star">*</span></label
-                        >
+                        <label for="courseIntakeDateId" class="col-sm-3 control-label">Course Intake Date<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error4 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="courseIntakeDateId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="courseIntakeDateId"
-                            id="courseIntakeDateId"
-                            required
-                          >
-                            <option
-                              *ngFor="let courseintake of getcourseintakedate"
-                              [value]="courseintake.courseIntakeDateId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="courseIntakeDateId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="courseIntakeDateId" id="courseIntakeDateId"
+                            required>
+                            <option *ngFor="let courseintake of getcourseintakedate"
+                              [value]="courseintake.courseIntakeDateId" selected="selected">
                               {{ courseintake.startDate }} -
                               {{ courseintake.endDate }}
                             </option>
@@ -182,30 +129,18 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="applicationStatusId"
-                          class="col-sm-3 control-label"
-                          >Application Status<span class="star">*</span></label
-                        >
+                        <label for="applicationStatusId" class="col-sm-3 control-label">Application Status<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error5 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="applicationStatusId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="applicationStatusId"
-                            id="applicationStatusId"
-                            required
-                          >
-                            <option
-                              *ngFor="let appstatus of getapplicationstatus"
-                              [value]="appstatus.applicationStatusId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="applicationStatusId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="applicationStatusId" id="applicationStatusId"
+                            required>
+                            <option *ngFor="let appstatus of getapplicationstatus"
+                              [value]="appstatus.applicationStatusId" selected="selected">
                               {{ appstatus.applicationStatusName }}
                             </option>
                           </select>
@@ -213,30 +148,17 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="deliveryModeId"
-                          class="col-sm-3 control-label"
-                          >Delivery Mode<span class="star">*</span></label
-                        >
+                        <label for="deliveryModeId" class="col-sm-3 control-label">Delivery Mode<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error6 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="deliveryModeId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="deliveryModeId"
-                            id="deliveryModeId"
-                            required
-                          >
-                            <option
-                              *ngFor="let delivery of getdeliverymode"
-                              [value]="delivery.deliveryModeId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="deliveryModeId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="deliveryModeId" id="deliveryModeId" required>
+                            <option *ngFor="let delivery of getdeliverymode" [value]="delivery.deliveryModeId"
+                              selected="selected">
                               {{ delivery.deliveryModeName }}
                             </option>
                           </select>
@@ -244,32 +166,18 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="fundingSourceNationalId"
-                          class="col-sm-3 control-label"
-                          >Funding Source National<span class="star"
-                            >*</span
-                          ></label
-                        >
+                        <label for="fundingSourceNationalId" class="col-sm-3 control-label">Funding Source National<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error7 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="fundingSourceNationalId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="fundingSourceNationalId"
-                            id="fundingSourceNationalId"
-                            required
-                          >
-                            <option
-                              *ngFor="let fundnat of getfundingsourcenational"
-                              [value]="fundnat.fundingSourceNationalId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="fundingSourceNationalId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="fundingSourceNationalId"
+                            id="fundingSourceNationalId" required>
+                            <option *ngFor="let fundnat of getfundingsourcenational"
+                              [value]="fundnat.fundingSourceNationalId" selected="selected">
                               {{ fundnat.fundingSourceNationalName }}
                             </option>
                           </select>
@@ -277,32 +185,18 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="fundingSourceStateId"
-                          class="col-sm-3 control-label"
-                          >Funding Source State<span class="star"
-                            >*</span
-                          ></label
-                        >
+                        <label for="fundingSourceStateId" class="col-sm-3 control-label">Funding Source State<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error8 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="fundingSourceStateId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="fundingSourceStateId"
-                            id="fundingSourceStateId"
-                            required
-                          >
-                            <option
-                              *ngFor="let fundstate of getfundingsourcestate"
-                              [value]="fundstate.fundingSourceStateId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="fundingSourceStateId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="fundingSourceStateId"
+                            id="fundingSourceStateId" required>
+                            <option *ngFor="let fundstate of getfundingsourcestate"
+                              [value]="fundstate.fundingSourceStateId" selected="selected">
                               {{ fundstate.fundingSourceStateName }}
                             </option>
                           </select>
@@ -310,30 +204,18 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="commencingProgramId"
-                          class="col-sm-3 control-label"
-                          >Commencing Program<span class="star">*</span></label
-                        >
+                        <label for="commencingProgramId" class="col-sm-3 control-label">Commencing Program<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error9 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="commencingProgramId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="commencingProgramId"
-                            id="commencingProgramId"
-                            required
-                          >
-                            <option
-                              *ngFor="let commencing of getcommencingprogram"
-                              [value]="commencing.commencingProgramId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="commencingProgramId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="commencingProgramId" id="commencingProgramId"
+                            required>
+                            <option *ngFor="let commencing of getcommencingprogram"
+                              [value]="commencing.commencingProgramId" selected="selected">
                               {{ commencing.commencingProgramName }}
                             </option>
                           </select>
@@ -341,30 +223,18 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="trainingContractid"
-                          class="col-sm-3 control-label"
-                          >Training Contract<span class="star">*</span></label
-                        >
+                        <label for="trainingContractid" class="col-sm-3 control-label">Training Contract<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error10 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="trainingContractid"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="trainingContractid"
-                            id="trainingContractid"
-                            required
-                          >
-                            <option
-                              *ngFor="let training of gettrainingcontract"
-                              [value]="training.trainingContractId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="trainingContractid" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="trainingContractid" id="trainingContractid"
+                            required>
+                            <option *ngFor="let training of gettrainingcontract" [value]="training.trainingContractId"
+                              selected="selected">
                               {{ training.trainingContractCode }} -
                               {{ training.trainingContractName }}
                             </option>
@@ -373,32 +243,18 @@
                       </div>
 
                       <div class="form-group row">
-                        <label
-                          for="reasonTakingCourseId"
-                          class="col-sm-3 control-label"
-                          >Reason Taking Course<span class="star"
-                            >*</span
-                          ></label
-                        >
+                        <label for="reasonTakingCourseId" class="col-sm-3 control-label">Reason Taking Course<span
+                            class="star">*</span></label>
                         <div class="input-group col-sm-9">
-                          <select
-                            [ngClass]="
+                          <select [ngClass]="
                               error11 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                            [(ngModel)]="reasonTakingCourseId"
-                            class="form-control select2 select2-danger"
-                            data-dropdown-css-class="select2-danger"
-                            name="reasonTakingCourseId"
-                            id="reasonTakingCourseId"
-                            required
-                          >
-                            <option
-                              *ngFor="let reasontaking of getreasontakingcourse"
-                              [value]="reasontaking.reasonTakingCourseId"
-                              selected="selected"
-                            >
+                            " [(ngModel)]="reasonTakingCourseId" class="form-control select2 select2-danger"
+                            data-dropdown-css-class="select2-danger" name="reasonTakingCourseId"
+                            id="reasonTakingCourseId" required>
+                            <option *ngFor="let reasontaking of getreasontakingcourse"
+                              [value]="reasontaking.reasonTakingCourseId" selected="selected">
                               {{ reasontaking.reasonName }}
                             </option>
                           </select>
@@ -415,39 +271,22 @@
                             </div>  -->
 
                       <div class="form-group row">
-                        <label
-                          for="applyForRPL"
-                          class="col-sm-3 control-label gender"
-                          >Apply For RPL<span class="star">*</span></label
-                        >
+                        <label for="applyForRPL" class="col-sm-3 control-label gender">Apply For RPL<span
+                            class="star">*</span></label>
                         <div class="col-sm-9">
-                          <div
-                            [ngClass]="
+                          <div [ngClass]="
                               error12 == ''
                                 ? 'form-control select2'
                                 : 'form-control select2 is-invalid'
-                            "
-                          >
+                            ">
                             <div class="form-check radio">
-                              <input
-                                class="form-check-input"
-                                type="radio"
-                                name="applyForRPL"
-                                id="applyForRPL1"
-                                value="1"
-                                [(ngModel)]="applyForRPL"
-                              />
+                              <input class="form-check-input" type="radio" name="applyForRPL" id="applyForRPL1"
+                                value="1" [(ngModel)]="applyForRPL" />
                               <label class="form-check-label">Yes</label>
                             </div>
                             <div class="form-check radio">
-                              <input
-                                class="form-check-input"
-                                type="radio"
-                                name="applyForRPL"
-                                id="applyForRPL2"
-                                value="2"
-                                [(ngModel)]="applyForRPL"
-                              />
+                              <input class="form-check-input" type="radio" name="applyForRPL" id="applyForRPL2"
+                                value="2" [(ngModel)]="applyForRPL" />
                               <label class="form-check-label">No</label>
                             </div>
                           </div>
@@ -455,25 +294,16 @@
                       </div>
 
                       <div class="form-group row">
-                        <label for="TuitionFee" class="col-sm-3 control-label"
-                          >Tuition Fee<span class="star">*</span></label
-                        >
+                        <label for="TuitionFee" class="col-sm-3 control-label">Tuition Fee<span
+                            class="star">*</span></label>
                         <div class="col-sm-9">
                           <div class="input-group">
-                            <input
-                              [ngClass]="
+                            <input [ngClass]="
                                 error13 == ''
                                   ? 'form-control select2'
                                   : 'form-control select2 is-invalid'
-                              "
-                              [(ngModel)]="TuitionFee"
-                              type="text"
-                              class="form-control"
-                              name="TuitionFee"
-                              id="TuitionFee"
-                              placeholder="Enter Tuition Fee here"
-                              required
-                            />
+                              " [(ngModel)]="TuitionFee" type="text" class="form-control" name="TuitionFee"
+                              id="TuitionFee" placeholder="Enter Tuition Fee here" required />
                           </div>
                         </div>
                       </div>
@@ -486,13 +316,8 @@
 
                 <!--submit-button-->
                 <div class="submit-button">
-                  <button
-                    (click)="createStudentEnrolment(f)"
-                    type="submit"
-                    class="btn btn-success"
-                    name="enrollmentfeesetupbtn"
-                    id="enrollmentfeesetupbtn"
-                  >
+                  <button (click)="createStudentEnrolment(f)" type="submit" class="btn btn-success"
+                    name="enrollmentfeesetupbtn" id="enrollmentfeesetupbtn">
                     Setup
                   </button>
                 </div>
