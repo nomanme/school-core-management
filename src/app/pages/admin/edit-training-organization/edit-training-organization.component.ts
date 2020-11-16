@@ -76,7 +76,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
   // tslint:disable-next-line: typedef
   editTrainingOrg(form) {
     // tslint:disable-next-line: triple-equals
-    if (form.value.RTOCode == '') {
+    if (form.value.RTOCode === '') {
       this.error0 = 'true';
       this.errors = 'true';
     } else {
@@ -85,7 +85,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
     }
 
     // tslint:disable-next-line: triple-equals
-    if (form.value.address1 == '') {
+    if (form.value.address1 ==='') {
       this.error1 = 'true';
       this.errors = 'true';
     } else {
@@ -94,7 +94,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
     }
 
     // tslint:disable-next-line: triple-equals
-    if (form.value.contactPerson == '') {
+    if (form.value.contactPerson === '') {
       this.error2 = 'true';
       this.errors = 'true';
     } else {
@@ -103,7 +103,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
     }
 
     // tslint:disable-next-line: triple-equals
-    if (form.value.telephone == '') {
+    if (form.value.telephone === '') {
       this.error3 = 'true';
       this.errors = 'true';
     } else {
@@ -112,7 +112,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
     }
 
     // tslint:disable-next-line: triple-equals
-    if (form.value.ABN == '') {
+    if (form.value.ABN === '') {
       this.error4 = 'true';
       this.errors = 'true';
     } else {
@@ -121,7 +121,7 @@ export class EditTrainingOrganizationComponent implements OnInit {
     }
 
     // tslint:disable-next-line: triple-equals
-    if (form.value.contactEmail == '') {
+    if (form.value.contactEmail === '') {
       this.error5 = 'true';
       this.errors = 'true';
     } else {

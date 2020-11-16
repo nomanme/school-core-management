@@ -60,7 +60,7 @@ export class CreateTrainingOrganizationComponent implements OnInit {
   }
 
   createtrainingOrg(form) {
-    if (form.value.RTOCode == '') {
+    if (form.value.RTOCode === '') {
       this.error0 = 'true';
       this.errors = 'true';
     } else {
@@ -68,7 +68,7 @@ export class CreateTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
-    if (form.value.address1 == '') {
+    if (form.value.address1 === '') {
       this.error1 = 'true';
       this.errors = 'true';
     } else {
@@ -76,7 +76,7 @@ export class CreateTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
-    if (form.value.contactPerson == '') {
+    if (form.value.contactPerson === '') {
       this.error2 = 'true';
       this.errors = 'true';
     } else {
@@ -84,7 +84,7 @@ export class CreateTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
-    if (form.value.telephone == '') {
+    if (form.value.telephone === '') {
       this.error3 = 'true';
       this.errors = 'true';
     } else {
@@ -92,7 +92,7 @@ export class CreateTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
-    if (form.value.ABN == '') {
+    if (form.value.ABN === '') {
       this.error4 = 'true';
       this.errors = 'true';
     } else {
@@ -100,7 +100,7 @@ export class CreateTrainingOrganizationComponent implements OnInit {
       this.errors = 'false';
     }
 
-    if (form.value.contactEmail == '') {
+    if (form.value.contactEmail === '') {
       this.error5 = 'true';
       this.errors = 'true';
     } else {
@@ -120,6 +120,7 @@ export class CreateTrainingOrganizationComponent implements OnInit {
           this.router.navigate(['/admin/list-training-organization']);
         });
     } else {
+      // tslint:disable-next-line: no-unused-expression
       ('There is error');
     }
   }

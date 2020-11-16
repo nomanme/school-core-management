@@ -133,6 +133,10 @@ import { FooterComponent } from './parts/footer/footer.component';
 import { HeaderComponent } from './parts/header/header.component';
 import { SidebarComponent } from './parts/sidebar/sidebar.component';
 import { EditTrainingOrganizationComponent } from './pages/admin/edit-training-organization/edit-training-organization.component';
+import { StudentpostaldetailsComponent } from './pages/admin/studentpostaldetails/studentpostaldetails.component';
+import { CreateStudentpostaldetailsComponent } from './pages/admin/create-studentpostaldetails/create-studentpostaldetails.component';
+import { ViewStudentpostaldetailsComponent } from './pages/admin/view-studentpostaldetails/view-studentpostaldetails.component';
+import { EditStudentpostaldetailsComponent } from './pages/admin/edit-studentpostaldetails/edit-studentpostaldetails.component';
 
 @NgModule({
   declarations: [
@@ -264,6 +268,10 @@ import { EditTrainingOrganizationComponent } from './pages/admin/edit-training-o
     CreateTrainingOrganizationComponent,
     ViewTrainingOrganizationComponent,
     EditTrainingOrganizationComponent,
+    StudentpostaldetailsComponent,
+    CreateStudentpostaldetailsComponent,
+    ViewStudentpostaldetailsComponent,
+    EditStudentpostaldetailsComponent,
   ],
 
   imports: [
