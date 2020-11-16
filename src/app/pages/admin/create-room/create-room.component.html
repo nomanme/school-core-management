@@ -14,9 +14,11 @@
             </li>
           </ol>
         </div>
-        <span class="text-star">In order to setup Rooms, you must first setup training
+        <span class="text-star"
+          >In order to setup Rooms, you must first setup training
           location/venue. There must be at least one room in order to setup a
-          timable.</span>
+          timable.</span
+        >
       </div>
     </div>
     <!-- container-fluid -->
@@ -38,19 +40,29 @@
                 <div class="row">
                   <div class="col-md-12 sub-form">
                     <div class="inner-row">
-
-
                       <div class="form-group row">
-                        <label for="venueId" class="col-sm-4 control-label">Venue Id</label>
+                        <label for="venueId" class="col-sm-4 control-label"
+                          >Venue Id</label
+                        >
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <select [ngClass]="
-                            error1 == ''
-                              ? 'form-control select2'
-                              : 'form-control select2 is-invalid'
-                          " [(ngModel)]="venueId" class="form-control select2 select2-danger"
-                              data-dropdown-css-class="select2-danger" name="venueId" id="venueId">
-                              <option *ngFor="let venue of getvenue" [value]="venue.venueId" selected="selected">
+                            <select
+                              [ngClass]="
+                                error1 == ''
+                                  ? 'form-control select2'
+                                  : 'form-control select2 is-invalid'
+                              "
+                              [(ngModel)]="venueId"
+                              class="form-control select2 select2-danger"
+                              data-dropdown-css-class="select2-danger"
+                              name="venueId"
+                              id="venueId"
+                            >
+                              <option
+                                *ngFor="let venue of getvenue"
+                                [value]="venue.venueId"
+                                selected="selected"
+                              >
                                 {{ venue.venueCode }} - {{ venue.venueName }}
                               </option>
                             </select>
@@ -58,23 +70,38 @@
                         </div>
                       </div>
 
-
                       <div class="form-group row">
-                        <label for="roomName" class="col-sm-4 control-label">Room Name</label>
+                        <label for="roomName" class="col-sm-4 control-label"
+                          >Room Name</label
+                        >
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input [(ngModel)]="roomName" class="form-control" type="text" name="roomName" id="roomName"
-                              placeholder="Enter Room Name here" />
+                            <input
+                              [(ngModel)]="roomName"
+                              class="form-control"
+                              type="text"
+                              name="roomName"
+                              id="roomName"
+                              placeholder="Enter Room Name here"
+                            />
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label for="roomNumber" class="col-sm-4 control-label">Room Number</label>
+                        <label for="roomNumber" class="col-sm-4 control-label"
+                          >Room Number</label
+                        >
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input [(ngModel)]="roomNumber" class="form-control" type="text" name="roomNumber"
-                              id="roomNumber" placeholder="Enter Room Name here" />
+                            <input
+                              [(ngModel)]="roomNumber"
+                              class="form-control"
+                              type="text"
+                              name="roomNumber"
+                              id="roomNumber"
+                              placeholder="Enter Room Name here"
+                            />
                           </div>
                         </div>
                       </div>
@@ -85,10 +112,21 @@
                 </div>
                 <br />
                 <div class="submit-button">
-                  <button type="submit" (click)="createRoom(f)" class="btn btn-success" name="add" id="add">
+                  <button
+                    type="submit"
+                    (click)="createRoom(f)"
+                    class="btn btn-success"
+                    name="add"
+                    id="add"
+                  >
                     Add New
                   </button>
-                  <button type="button" class="btn btn-warning" name="res" id="res">
+                  <button
+                    type="button"
+                    class="btn btn-warning"
+                    name="res"
+                    id="res"
+                  >
                     Reset
                   </button>
                 </div>

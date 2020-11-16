@@ -12,23 +12,21 @@ export class CreateRoomComponent implements OnInit {
 
   venuerooms;
   dataString;
-  roomName = "";
-  roomNumber = "";
-  venueId = "";
+  roomName = '';
+  roomNumber = '';
+  venueId = '';
 
   error0 = '';
   error1 = '';
 
   errors = '';
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
-
     this.apiService.getAPI('dev/getvenue').subscribe((data) => {
       this.getvenue = data;
     });
-
   }
 
   createRoom(form) {
@@ -40,18 +38,18 @@ export class CreateRoomComponent implements OnInit {
       this.errors = 'false';
     }
 
-
     if (this.errors != 'true') {
       // console.log(form.value);
       this.dataString = `{"venueId":"${form.value.venueId}", "roomName":"${form.value.roomName}", "roomNumber":"${form.value.roomNumber}"}`;
       console.log(this.dataString);
 
-      this.apiService.postAPI('dev/addvenueroom', this.dataString).subscribe((data) => {
-        console.log(data);
-        this.router.navigate(['/admin/list-venueroom']);
-      });
-    }
-    else {
+      this.apiService
+        .postAPI('dev/addvenueroom', this.dataString)
+        .subscribe((data) => {
+          console.log(data);
+          // this.router.navigate(['/admin/list-venueroom']);
+        });
+    } else {
       console.log('submit the form');
     }
   }

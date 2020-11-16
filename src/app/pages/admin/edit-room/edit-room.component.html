@@ -1,5 +1,4 @@
 <div class="content-wrapper">
-
   <section class="content-header">
     <div class="container-fluid">
       <div class="row m-0 p-0">
@@ -9,14 +8,16 @@
         <div class="col-sm-12 text-center">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active"><i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Edit Venue Room
+            <li class="breadcrumb-item active">
+              <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Edit
+              Venue Room
             </li>
           </ol>
         </div>
       </div>
-    </div><!-- container-fluid -->
+    </div>
+    <!-- container-fluid -->
   </section>
-
 
   <!-- Main content -->
   <div class="row p-0 m-0">
@@ -33,7 +34,6 @@
                 <!-- form start -->
                 <form #f="ngForm">
                   <div class="card-body">
-
                     <div class="row">
                       <div class="col-md-12 sub-form">
                         <div class="alert alert-success">
@@ -41,66 +41,96 @@
                         </div>
 
                         <div class="inner-row">
-
                           <div class="form-group row">
-                            <label for="venueId" class="col-sm-4 control-label">Venue Id</label>
+                            <label for="venueId" class="col-sm-4 control-label"
+                              >Venue Id<span class="star">*</span></label
+                            >
                             <div class="col-sm-8">
                               <div class="input-group">
-                                <select [ngClass]="
-                                                    error1 == ''
-                                                      ? 'form-control select2'
-                                                      : 'form-control select2 is-invalid'
-                                                  " [(ngModel)]="venueroom.venueId"
-                                  class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger"
-                                  name="venueId" id="venueId">
-                                  <option *ngFor="let venue of getvenue" [value]="venue.venueId" selected="selected">
-                                    {{ venue.venueCode }} - {{ venue.venueName }}
+                                <select
+                                  [ngClass]="
+                                    error1 == ''
+                                      ? 'form-control select2'
+                                      : 'form-control select2 is-invalid'
+                                  "
+                                  [(ngModel)]="venueroom.venueId"
+                                  class="form-control select2 select2-danger"
+                                  data-dropdown-css-class="select2-danger"
+                                  name="venueId"
+                                  id="venueId"
+                                >
+                                  <option
+                                    *ngFor="let venue of getvenue"
+                                    [value]="venue.venueId"
+                                    selected="selected"
+                                  >
+                                    {{ venue.venueCode }} -
+                                    {{ venue.venueName }}
                                   </option>
                                 </select>
                               </div>
                             </div>
                           </div>
 
-
                           <div class="form-group row">
-                            <label for="roomName" class="col-sm-4 control-label">Room Name<span
-                                class="star">*</span></label>
+                            <label for="roomName" class="col-sm-4 control-label"
+                              >Room Name</label
+                            >
                             <div class="col-sm-8">
                               <div class="input-group">
-                                <input [(ngModel)]='venueroom.roomName' class="form-control" type="text" name="roomName"
-                                  id="roomName" placeholder="Enter Room Name here" required>
+                                <input
+                                  [(ngModel)]="venueroom.roomName"
+                                  class="form-control"
+                                  type="text"
+                                  name="roomName"
+                                  id="roomName"
+                                  placeholder="Enter Room Name here"
+                                  required
+                                />
                               </div>
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label for="roomNumber" class="col-sm-4 control-label">Room Number<span
-                                class="star">*</span></label>
+                            <label
+                              for="roomNumber"
+                              class="col-sm-4 control-label"
+                              >Room Number</label
+                            >
                             <div class="col-sm-8">
                               <div class="input-group">
-                                <input [(ngModel)]='venueroom.roomNumber' class="form-control" type="text"
-                                  name="roomNumber" id="roomNumber" placeholder="Enter Room Name here" required>
+                                <input
+                                  [(ngModel)]="venueroom.roomNumber"
+                                  class="form-control"
+                                  type="text"
+                                  name="roomNumber"
+                                  id="roomNumber"
+                                  placeholder="Enter Room Name here"
+                                  required
+                                />
                               </div>
                             </div>
                           </div>
-
                         </div>
                         <!--inner-row-->
-
-
                       </div>
                       <!--col-md-12 sub-form-->
-                    </div><!-- row1 -->
+                    </div>
+                    <!-- row1 -->
 
-                    <br>
+                    <br />
 
                     <div class="submit-button">
-                      <button type="submit" (click)="editRoom(f)" class="btn btn-primary" name="submit"
-                        id="submit">Submit</button>
+                      <button
+                        type="submit"
+                        (click)="editRoom(f)"
+                        class="btn btn-primary"
+                        name="submit"
+                        id="submit"
+                      >
+                        Submit
+                      </button>
                     </div>
-
-
-
                   </div>
                   <!--card-body-->
                 </form>

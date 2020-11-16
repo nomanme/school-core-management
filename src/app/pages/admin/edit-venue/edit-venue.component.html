@@ -44,44 +44,85 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label for="venueCode" class="col-sm-4 label">Venue Code<span
-                                    class="star">*</span></label>
+                                <label for="venueCode" class="col-sm-4 label"
+                                  >Venue Code<span class="star">*</span></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.venueCode" type="text" class="form-control"
-                                      name="venueCode" id="venueCode" placeholder="Enter venue code here" required />
+                                    <input
+                                      [ngClass]="
+                                        error0 == ''
+                                          ? 'form-control'
+                                          : 'form-control is-invalid'
+                                      "
+                                      [(ngModel)]="venue.venueCode"
+                                      type="text"
+                                      class="form-control"
+                                      name="venueCode"
+                                      id="venueCode"
+                                      placeholder="Enter venue code here"
+                                      required
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="address1" class="col-sm-4 label flstart">Address</label>
+                                <label
+                                  for="address1"
+                                  class="col-sm-4 label flstart"
+                                  >Address</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.address1" class="form-control" type="text" name="address1"
-                                      id="address1" placeholder="Enter your address here" />
+                                    <input
+                                      [(ngModel)]="venue.address1"
+                                      class="form-control"
+                                      type="text"
+                                      name="address1"
+                                      id="address1"
+                                      placeholder="Enter your address here"
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="suburb" class="col-sm-4 label">Suburb</label>
+                                <label for="suburb" class="col-sm-4 label"
+                                  >Suburb</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.suburb" class="form-control" type="text" name="suburb"
-                                      id="suburb" placeholder="Enter Suburb here" />
+                                    <input
+                                      [(ngModel)]="venue.suburb"
+                                      class="form-control"
+                                      type="text"
+                                      name="suburb"
+                                      id="suburb"
+                                      placeholder="Enter Suburb here"
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="stateId" class="col-sm-4 label">State</label>
+                                <label for="stateId" class="col-sm-4 label"
+                                  >State</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <select [(ngModel)]="venue.stateId" class="form-control select2 select2-danger"
-                                      data-dropdown-css-class="select2-danger" name="stateId" id="stateId">
-                                      <option *ngFor="let state of getstate" [value]="state.stateId"
-                                        selected="selected">
+                                    <select
+                                      [(ngModel)]="venue.stateId"
+                                      class="form-control select2 select2-danger"
+                                      data-dropdown-css-class="select2-danger"
+                                      name="stateId"
+                                      id="stateId"
+                                    >
+                                      <option
+                                        *ngFor="let state of getstate"
+                                        [value]="state.stateId"
+                                        selected="selected"
+                                      >
                                         {{ state.stateCode }} -
                                         {{ state.stateName }}
                                       </option>
@@ -91,23 +132,44 @@
                               </div>
 
                               <div class="form-group row">
-                                <label for="ABN" class="col-sm-4 label">ABN</label>
+                                <label for="ABN" class="col-sm-4 label"
+                                  >ABN</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.ABN" class="form-control" type="text" name="ABN" id="ABN"
-                                      placeholder="Enter your ABN here" />
+                                    <input
+                                      [(ngModel)]="venue.ABN"
+                                      class="form-control"
+                                      type="text"
+                                      name="ABN"
+                                      id="ABN"
+                                      placeholder="Enter your ABN here"
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="effectiveDateFrom" class="col-sm-4 label flstart">Venue Effective From
-                                  Date</label>
-                                <div class="col-sm-8" id="reservationdate" data-target-input="nearest">
+                                <label
+                                  for="effectiveDateFrom"
+                                  class="col-sm-4 label flstart"
+                                  >Venue Effective From Date</label
+                                >
+                                <div
+                                  class="col-sm-8"
+                                  id="reservationdate"
+                                  data-target-input="nearest"
+                                >
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.effectiveDateFrom" type="date"
-                                      class="form-control datetimepicker-input" name="effectiveDateFrom"
-                                      id="effectiveDateFrom" data-target="#reservationdate" placeholder="03/10/2016" />
+                                    <input
+                                      [(ngModel)]="venue.effectiveDateFrom"
+                                      type="date"
+                                      class="form-control datetimepicker-input"
+                                      name="effectiveDateFrom"
+                                      id="effectiveDateFrom"
+                                      data-target="#reservationdate"
+                                      placeholder="03/10/2016"
+                                    />
                                   </div>
                                 </div>
                               </div>
@@ -116,26 +178,54 @@
 
                             <div class="col-md-6">
                               <div class="form-group row">
-                                <label for="venueName" class="col-sm-4 label flstart">Venue Name/ Description</label>
+                                <label
+                                  for="venueName"
+                                  class="col-sm-4 label flstart"
+                                  >Venue Name/ Description</label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.venueName" class="form-control" type="text"
-                                      name="venueName" id="venueName" placeholder="Enter Venu Name here" />
+                                    <input
+                                      [(ngModel)]="venue.venueName"
+                                      class="form-control"
+                                      type="text"
+                                      name="venueName"
+                                      id="venueName"
+                                      placeholder="Enter Venu Name here"
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="trainingOrgId" class="col-sm-4 label">Training Organization<span
-                                    class="star">*</span></label>
+                                <label
+                                  for="trainingOrgId"
+                                  class="col-sm-4 label"
+                                  >Training Organization<span class="star"
+                                    >*</span
+                                  ></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <select [(ngModel)]="venue.trainingOrgId"
+                                    <select
+                                      [ngClass]="
+                                        error1 == ''
+                                          ? 'form-control'
+                                          : 'form-control is-invalid'
+                                      "
+                                      [(ngModel)]="venue.trainingOrgId"
                                       class="form-control select2 select2-danger"
-                                      data-dropdown-css-class="select2-danger" name="trainingOrgId" id="trainingOrgId">
-                                      <option *ngFor="
+                                      data-dropdown-css-class="select2-danger"
+                                      name="trainingOrgId"
+                                      id="trainingOrgId"
+                                    >
+                                      <option
+                                        *ngFor="
                                           let trainingOrg of gettrainingOrg
-                                        " [value]="trainingOrg.trainingOrgId" selected="selected">
+                                        "
+                                        [value]="trainingOrg.trainingOrgId"
+                                        selected="selected"
+                                      >
                                         {{ trainingOrg.trainingOrgName }}
                                       </option>
                                     </select>
@@ -144,12 +234,22 @@
                               </div>
 
                               <div class="form-group row">
-                                <label for="countryId" class="col-sm-4 label">Country</label>
+                                <label for="countryId" class="col-sm-4 label"
+                                  >Country</label
+                                >
                                 <div class="input-group col-sm-8">
-                                  <select [(ngModel)]="venue.countryId" class="form-control select2 select2-danger"
-                                    data-dropdown-css-class="select2-danger" name="countryId" id="countryId">
-                                    <option *ngFor="let countries of getcountry" [value]="countries.countryId"
-                                      selected="selected">
+                                  <select
+                                    [(ngModel)]="venue.countryId"
+                                    class="form-control select2 select2-danger"
+                                    data-dropdown-css-class="select2-danger"
+                                    name="countryId"
+                                    id="countryId"
+                                  >
+                                    <option
+                                      *ngFor="let countries of getcountry"
+                                      [value]="countries.countryId"
+                                      selected="selected"
+                                    >
                                       {{ countries.countryName }}
                                     </option>
                                   </select>
@@ -157,35 +257,75 @@
                               </div>
 
                               <div class="form-group row">
-                                <label for="contactNo" class="col-sm-4 label">Contact No.<span
-                                    class="star">*</span></label>
+                                <label for="contactNo" class="col-sm-4 label"
+                                  >Contact No.<span class="star">*</span></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.contactNo" class="form-control" type="text"
-                                      name="contactNo" id="contactNo" placeholder="Enter Contact No. here" required />
+                                    <input
+                                      [ngClass]="
+                                        error2 == ''
+                                          ? 'form-control'
+                                          : 'form-control is-invalid'
+                                      "
+                                      [(ngModel)]="venue.contactNo"
+                                      class="form-control"
+                                      type="text"
+                                      name="contactNo"
+                                      id="contactNo"
+                                      placeholder="Enter Contact No. here"
+                                      required
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="postCode" class="col-sm-4 label">Postcode<span class="star">*</span></label>
+                                <label for="postCode" class="col-sm-4 label"
+                                  >Postcode<span class="star">*</span></label
+                                >
                                 <div class="col-sm-8">
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.postCode" class="form-control" type="text"
-                                      pattern="[0-9]{5}" name="postCode" id="postCode"
-                                      placeholder="Enter your Postcode here" required />
+                                    <input
+                                      [ngClass]="
+                                        error3 == ''
+                                          ? 'form-control'
+                                          : 'form-control is-invalid'
+                                      "
+                                      [(ngModel)]="venue.postCode"
+                                      class="form-control"
+                                      type="text"
+                                      pattern="[0-9]{5}"
+                                      name="postCode"
+                                      id="postCode"
+                                      placeholder="Enter your Postcode here"
+                                      required
+                                    />
                                   </div>
                                 </div>
                               </div>
 
                               <div class="form-group row">
-                                <label for="effectiveDateTo" class="col-sm-4 label flstart">Venue Effective To
-                                  Date</label>
-                                <div class="col-sm-8" id="reservationdate" data-target-input="nearest">
+                                <label
+                                  for="effectiveDateTo"
+                                  class="col-sm-4 label flstart"
+                                  >Venue Effective To Date</label
+                                >
+                                <div
+                                  class="col-sm-8"
+                                  id="reservationdate"
+                                  data-target-input="nearest"
+                                >
                                   <div class="input-group">
-                                    <input [(ngModel)]="venue.effectiveDateTo" type="date"
-                                      class="form-control datetimepicker-input" name="effectiveDateTo"
-                                      id="effectiveDateTo" data-target="#reservationdate" placeholder="03/10/2024" />
+                                    <input
+                                      [(ngModel)]="venue.effectiveDateTo"
+                                      type="date"
+                                      class="form-control datetimepicker-input"
+                                      name="effectiveDateTo"
+                                      id="effectiveDateTo"
+                                      data-target="#reservationdate"
+                                      placeholder="03/10/2024"
+                                    />
                                   </div>
                                 </div>
                               </div>
@@ -202,7 +342,13 @@
                     <br />
 
                     <div class="submit-button">
-                      <button type="submit" (click)="editVenue(f)" class="btn btn-primary" name="update" id="update">
+                      <button
+                        type="submit"
+                        (click)="editVenue(f)"
+                        class="btn btn-primary"
+                        name="update"
+                        id="update"
+                      >
                         Update
                       </button>
                     </div>

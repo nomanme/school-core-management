@@ -51,12 +51,13 @@
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label for="venueCode" class="col-sm-4 label"
-                              >Venue Code<span class="star">*</span></label>
+                              >Venue Code<span class="star">*</span></label
+                            >
                             <div class="col-sm-8">
                               <div class="input-group">
                                 <input
                                   [ngClass]="
-                                    error1 == ''
+                                    error0 == ''
                                       ? 'form-control select2'
                                       : 'form-control select2 is-invalid'
                                   "
@@ -208,6 +209,11 @@
                             <div class="col-sm-8">
                               <div class="input-group">
                                 <select
+                                  [ngClass]="
+                                    error1 == ''
+                                      ? 'form-control'
+                                      : 'form-control is-invalid'
+                                  "
                                   [(ngModel)]="trainingOrgId"
                                   class="form-control select2 select2-danger"
                                   data-dropdown-css-class="select2-danger"
@@ -256,6 +262,11 @@
                             <div class="col-sm-8">
                               <div class="input-group">
                                 <input
+                                  [ngClass]="
+                                    error2 == ''
+                                      ? 'form-control'
+                                      : 'form-control is-invalid'
+                                  "
                                   [(ngModel)]="contactNo"
                                   class="form-control"
                                   type="text"
@@ -275,6 +286,11 @@
                             <div class="col-sm-8">
                               <div class="input-group">
                                 <input
+                                  [ngClass]="
+                                    error3 == ''
+                                      ? 'form-control'
+                                      : 'form-control is-invalid'
+                                  "
                                   [(ngModel)]="postCode"
                                   class="form-control"
                                   type="text"
