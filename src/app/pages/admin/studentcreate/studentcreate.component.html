@@ -284,9 +284,12 @@
                                         <select [(ngModel)]="schoolTypeId" class="form-control select2 select2-danger"
                                           data-dropdown-css-class="select2-danger" name="schoolTypeId" id="schoolTypeId"
                                           required>
+                                          <option value="" selected>
+                                            Please Select a Option
+                                          </option>
                                           <option *ngFor="
                                               let schooltype of getschooltype
-                                            " [value]="schooltype.schoolTypeId" selected="selected">
+                                            " [value]="schooltype.schoolTypeId">
                                             {{ schooltype.schoolTypeCode }} -
                                             {{ schooltype.schoolTypeName }}
                                           </option>
@@ -370,7 +373,7 @@
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="australianPr"
                                             id="OverseasStudent" value="Y" [(ngModel)]="australianPr"
-                                            ng-value="australianPr" (click)="HideVisa()" />
+                                            ng-value="australianPr"  />
                                           <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
@@ -380,13 +383,13 @@
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="australianPr"
                                             id="OverseasStudent" value="N" [(ngModel)]="australianPr"
-                                            (click)="ShowVisa()" />
+                                             />
                                           <label class="form-check-label">No</label>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" *ngIf="Visa">
+                                    <div class="form-group row">
                                       <label for="visaNo" class="col-sm-4 control-label">Visa Number</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
@@ -397,22 +400,19 @@
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" *ngIf="Visa">
+                                    <div class="form-group row" >
                                       <label for="visaStatusId" class="col-sm-4 control-label">Visa Status</label>
                                       <div class="input-group col-sm-8">
-                                        <select [(ngModel)]="visaStatusId" class="form-control select2 select2-danger"
+                                        <select  class="form-control select2 select2-danger"
                                           data-dropdown-css-class="select2-danger" name="visaStatusId"
-                                          id="visaStatusId">
-                                          <option value="0" selected>Please Select a Options</option>
-                                          <option *ngFor="let visa of getvisastatus" [value]="visa.visaStatusId"
-                                            selected="selected">
-                                            {{ visa.visaStatusName }}
-                                          </option>
+                                          id="visaStatusId" [(ngModel)]="visaStatusId">
+                                          <option value=None selected>Please Select a Option</option>
+                                          <option *ngFor="let visa of getvisastatus" [value]="visa.visaStatusId">{{ visa.visaStatusName }}</option>
                                         </select>
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" *ngIf="Visa">
+                                    <div class="form-group row" >
                                       <label for="visaExpdate" class="col-sm-4 control-label">Visa Expiry Date</label>
                                       <div class="col-sm-8" id="visaExpirydate" data-target-input="nearest">
                                         <input type="date" class="form-control datetimepicker-input" name="visaExpdate"
@@ -854,7 +854,7 @@
                         </div>
                         <!-- row4 -->
 
-                        <div class="row" *ngIf="PostalDetail">
+                        <!-- <div class="row" *ngIf="PostalDetail">
                           <div class="col-md-12 sub-form">
                             <div class="card-header">
                               <h3 class="card-title Title2">
@@ -964,12 +964,11 @@
                                   </div>
                                 </div>
                               </div>
-                              <!--col-md-12-->
                             </div>
-                            <!--inner-row-->
+                            
                           </div>
-                          <!--col-md-12 sub-form-->
-                        </div>
+                          
+                        </div> -->
                         <!-- row5 -->
 
                         <div class="submit-button">

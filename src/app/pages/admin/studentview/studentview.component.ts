@@ -11,6 +11,9 @@ export class StudentviewComponent implements OnInit {
 
   studentID;
   students;
+
+  studentPostalDetailsId;
+  studentpostal;
   getstudent;
   getclientid;
   outputD;
@@ -35,9 +38,16 @@ export class StudentviewComponent implements OnInit {
     this.apiService.getAPI(`dev/getstudent?studentId=${this.studentID}`).subscribe((data) => {
       console.log(data);
       this.students = data;
-      this.students = JSON.parse(this.students);
+      // this.students = JSON.parse(this.students);
 
-    })
+    });
+
+    this.studentPostalDetailsId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    this.apiService.getAPI2(`dev/getstudentpostaldetails?studentPostalDetailsId=${this.studentPostalDetailsId}`).subscribe((data) => {
+      console.log(data);
+      this.studentpostal = data;
+    });
 
 
   }

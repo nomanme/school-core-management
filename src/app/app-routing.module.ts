@@ -22,7 +22,10 @@ import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
 
-// postal details 
+// StudentPostalDetails 
+import { StudentpostaldetailsComponent } from './pages/admin/studentpostaldetails/studentpostaldetails.component';
+import { CreateStudentpostaldetailsComponent } from './pages/admin/create-studentpostaldetails/create-studentpostaldetails.component';
+import { ViewStudentpostaldetailsComponent } from './pages/admin/view-studentpostaldetails/view-studentpostaldetails.component';
 import { EditStudentpostaldetailsComponent } from './pages/admin/edit-studentpostaldetails/edit-studentpostaldetails.component';
 
 
@@ -179,7 +182,10 @@ const routes: Routes = [
 
   { path: 'admin/edit-training-organization/:id', component: EditTrainingOrganizationComponent, canActivate: [AuthGuardService], },
 
-  // postal details 
+  // StudentPostalDetails 
+  { path: 'admin/student-postal-details-list', component: StudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+  { path: 'admin/create-student-postal-details', component: CreateStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+  { path: 'admin/view-student-postal-details/:id', component: ViewStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
   { path: 'admin/edit-student-postal-details/:id', component: EditStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
 
 

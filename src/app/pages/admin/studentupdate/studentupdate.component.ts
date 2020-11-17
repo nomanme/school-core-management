@@ -161,8 +161,10 @@ export class StudentupdateComponent implements OnInit {
       this.editstudent = data[0];
       // this.student=this.getStudentFromList(this.studentID, data);
       console.log(this.editstudent)
-      this.outputD = JSON.parse(this.outputD['msg']);
-    })
+      // this.editstudent = JSON.parse(this.editstudent['msg']);
+
+      // this.outputD = JSON.parse(this.outputD['msg']);
+    });
   }
 
 

@@ -34,9 +34,9 @@
                                         <div class="col-md-12">
                                             <div class="row">
 
-                                                <div class="inner-row">
+                                                <!-- <div class="inner-row">
                                                     {{getclientid}}
-                                                </div>
+                                                </div> -->
 
                                             </div>
 
@@ -53,13 +53,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-group row">
-                                                        <label for="australianPr"
-                                                            class="col-sm-3 control-label">Australian PR</label>
-                                                        <div class="col-sm-9">
-                                                            {{ getstudent.australianPr }}
-                                                        </div>
-                                                    </div>
+                                                    
 
                                                     <div class="form-group row">
                                                         <label for="forFullName" class="col-sm-3 control-label">Full
@@ -124,46 +118,6 @@
                                                             class="col-sm-3 control-label">Nationality</label>
                                                         <div class="col-sm-9">
                                                             {{ getstudent.nationalityName }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="passportNo" class="col-sm-3 control-label">Passport
-                                                            No.</label>
-                                                        <div class="col-sm-9">
-                                                            {{ getstudent.passportNo }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="passportExpdate"
-                                                            class="col-sm-3 control-label">Passport Expiry Date</label>
-                                                        <div class="col-sm-9">
-                                                            {{ getstudent.passportExpdate }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="visaNo" class="col-sm-3 control-label">Visa
-                                                            Number</label>
-                                                        <div class="col-sm-9">
-                                                            {{ getstudent.visaNo }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="visaStatusId" class="col-sm-3 control-label">Visa
-                                                            Status</label>
-                                                        <div class="col-sm-9">
-                                                            {{ getstudent.visaStatusName }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="visaExpdate" class="col-sm-3 control-label">Visa
-                                                            Expiry Date</label>
-                                                        <div class="col-sm-9">
-                                                            {{ getstudent.visaExpdate }}
                                                         </div>
                                                     </div>
 
@@ -259,6 +213,55 @@
                                                         <div class="col-sm-9">
                                                             {{ getstudent.disabilityCode }} -
                                                             {{ getstudent.disabilityName }}
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group row">
+                                                        <label for="passportNo" class="col-sm-3 control-label">Passport
+                                                            No.</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudent.passportNo }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="passportExpdate"
+                                                            class="col-sm-3 control-label">Passport Expiry Date</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudent.passportExpdate }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="australianPr"
+                                                            class="col-sm-3 control-label">Australian PR</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudent.australianPr }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="visaNo" class="col-sm-3 control-label">Visa
+                                                            Number</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudent.visaNo }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="visaStatusId" class="col-sm-3 control-label">Visa
+                                                            Status</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudent.visaStatusName }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="visaExpdate" class="col-sm-3 control-label">Visa
+                                                            Expiry Date</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudent.visaExpdate }}
                                                         </div>
                                                     </div>
 
@@ -380,9 +383,98 @@
                                                             {{ getstudent.differentPostalAddress }}
                                                         </div>
                                                     </div>
-
-
                                                 </form>
+
+
+
+                                                <form method="post" action="" enctype="multipart/form-data"
+                                                    *ngFor="let getstudentpostal of studentpostal">
+                                                    <h4>Different Postal Address</h4>
+
+
+                                                    <div class="form-group row">
+                                                        <label for="flatUnitDetails"
+                                                            class="col-sm-3 control-label">Flat/ Unit Details</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.flatUnitDetails }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="streetNumber" class="col-sm-3 control-label">Street
+                                                            Number</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.streetNumber }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="streetName" class="col-sm-3 control-label">Street
+                                                            Name</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.streetName }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="suburb" class="col-sm-3 control-label">City/ Town/
+                                                            Suburb</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.suburb }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="buildingName"
+                                                            class="col-sm-3 control-label">Building/ Property
+                                                            Name</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.buildingName }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="stateId"
+                                                            class="col-sm-3 control-label">State</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.stateCode }} - {{ getstudentpostal.stateName }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="postCode"
+                                                            class="col-sm-3 control-label">Postcode</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.postCode }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="telHome" class="col-sm-3 control-label">Home
+                                                            Phone</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.telHome }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="telWork" class="col-sm-3 control-label">Work
+                                                            Phone</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.telWork }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="mobile" class="col-sm-3 control-label">Mobile
+                                                            Phone</label>
+                                                        <div class="col-sm-9">
+                                                            {{ getstudentpostal.mobile }}
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                                    
                                             </div>
                                             <!--inner-row-->
                                         </div>
