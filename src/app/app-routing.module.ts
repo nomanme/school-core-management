@@ -22,6 +22,11 @@ import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
 
+// postal details 
+import { EditStudentpostaldetailsComponent } from './pages/admin/edit-studentpostaldetails/edit-studentpostaldetails.component';
+
+
+
 import { EditTrainingOrganizationComponent } from './pages/admin/edit-training-organization/edit-training-organization.component';
 
 import { EditUnitComponent } from './pages/admin/edit-unit/edit-unit.component';
@@ -173,6 +178,10 @@ const routes: Routes = [
   // { path: 'admin/edit-training-organization-type', component: EditTrainingOrganizationTypeComponent, canActivate: [AuthGuardService], },
 
   { path: 'admin/edit-training-organization/:id', component: EditTrainingOrganizationComponent, canActivate: [AuthGuardService], },
+
+  // postal details 
+  { path: 'admin/edit-student-postal-details/:id', component: EditStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+
 
 
   { path: 'admin/view-training-organization/:id', component: ViewTrainingOrganizationComponent, canActivate: [AuthGuardService] },
