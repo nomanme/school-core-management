@@ -3,14 +3,14 @@
         <div class="container-fluid">
             <div class="row m-0 p-0">
                 <div class="col-sm-12">
-                    <h3 class="page-heading">View Student Postal Detail</h3>
+                    <h3 class="page-heading">View Course Intake Date</h3>
                 </div>
                 <div class="col-sm-12 text-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">
-                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>
-                            View Student Postal Detail
+                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>View
+                            Course Intake Date
                         </li>
                     </ol>
                 </div>
@@ -29,83 +29,73 @@
                             <!-- general form elements -->
                             <div class="card card-primary mb-0">
                                 <div class="card-header">
-                                    <h5 class="card-title">View Student Postal Detail</h5>
+                                    <h5 class="card-title">View Course Intake Date</h5>
                                 </div>
                                 <!-- form start -->
-                                <form method="post" action="" enctype="multipart/form-data" *ngFor="let studentpostal of StudentPostalDetails">
+                                <form method="post" action="" enctype="multipart/form-data"
+                                    *ngFor="let CourseIntake of CourseIntakeDate">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-12 sub-form">
                                                 <div class="inner-row">
                                                     <div class="form-group row">
-                                                        <label for="studentId" class="col-sm-3 control-label">Student Id</label>
+                                                        <label for="courseId"
+                                                            class="col-sm-3 control-label">Course</label>
                                                         <div class="col-sm-9">
-                                                            {{ studentpostal.studentId }}
+                                                            {{ CourseIntake.courseCode }} -
+                                                            {{ CourseIntake.courseName }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="buildingName" class="col-sm-3 control-label">Building Name</label>
+                                                        <label for="userId" class="col-sm-3 control-label">User
+                                                            Id</label>
                                                         <div class="col-sm-9">
-                                                            {{ studentpostal.buildingName }}
+                                                            {{ CourseIntake.userId }} - {{  CourseIntake.email }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="flatUnitDetails" class="col-sm-3 control-label">Flat Unit Details</label>
+                                                        <label for="startDate" class="col-sm-3 control-label">Start
+                                                            Date</label>
                                                         <div class="col-sm-9">
-                                                            {{ studentpostal.flatUnitDetails }}
+                                                            {{ CourseIntake.startDate }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="streetNumber" class="col-sm-3 control-label">Street Number</label>
+                                                        <label for="endDate" class="col-sm-3 control-label">End
+                                                            Date</label>
                                                         <div class="col-sm-9">
-                                                            {{ studentpostal.streetNumber }}
+                                                            {{ CourseIntake.endDate }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="streetName" class="col-sm-3 control-label">Street Name</label>
+                                                        <label for="studentOriginIds"
+                                                            class="col-sm-3 control-label">Student
+                                                            Origin Ids</label>
                                                         <div class="col-sm-9">
-                                                            {{ studentpostal.streetName }}
+                                                            {{ CourseIntake.studentOriginIds }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="pobox"
-                                                            class="col-sm-3 control-label">Pobox</label>
+                                                        <label for="enrolmentFee"
+                                                            class="col-sm-3 control-label">Enrolment Fee</label>
                                                         <div class="col-sm-9">
-                                                            {{ studentpostal.pobox }}
+                                                            {{ CourseIntake.enrolmentFee }}
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
-                                                        <label for="suburb" class="col-sm-3 control-label">Suburb</label>
+                                                        <label for="publish"
+                                                            class="col-sm-3 control-label">Publish</label>
                                                         <div class="col-sm-9">
-                                                            {{ studentpostal.suburb }}
+                                                            {{ CourseIntake.publish }}
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-group row">
-                                                        <label for="postCode" class="col-sm-3 control-label">PostCode</label>
-                                                        <div class="col-sm-9">
-                                                            {{ studentpostal.postCode }}
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label for="stateId" class="col-sm-3 control-label">State</label>
-                                                        <div class="col-sm-9">
-                                                            {{ studentpostal.stateId }}
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <label for="userId" class="col-sm-3 control-label">User Id</label>
-                                                        <div class="col-sm-9">
-                                                            {{ studentpostal.userId }}
-                                                        </div>
-                                                    </div>
 
                                                 </div>
                                                 <!--inner-row-->

@@ -1,0 +1,155 @@
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <div class="col-sm-12">
+                    <h3 class="page-heading">Create Course Intake Date</h3>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">
+                            <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>Create Course Intake Date</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row m-0 p-0">
+                <!-- left column -->
+                <div class="col-md-8 offset-md-2">
+                    <!-- general form elements -->
+                    <div class="card card-primary mb-0">
+                        <div class="card-header">
+                            <h4 class="card-title">Add Course Intake Date</h4>
+                        </div>
+                        <form role="form" #f="ngForm">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 sub-form">
+                                        <div class="inner-row">
+
+
+                                            <div class="form-group row">
+                                                <label for="courseId" class="col-sm-3 control-label">Course</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select [(ngModel)]="courseId"
+                                                            class="form-control select2 select2-danger"
+                                                            data-dropdown-css-class="select2-danger" name="courseId"
+                                                            id="courseId">
+                                                            <option value="" selected>Please Select Option</option>
+                                                            <option *ngFor="let course of getcourse"
+                                                                [value]="course.courseId">{{ course.courseCode }} -
+                                                                {{ course.courseName }}</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="userId" class="col-sm-3 control-label">User Id</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <select [(ngModel)]="userId"
+                                                            class="form-control select2 select2-danger"
+                                                            data-dropdown-css-class="select2-danger" name="userId"
+                                                            id="userId">
+                                                            <option value="" selected>Please Select a Option</option>
+                                                            <option *ngFor="let user of getuser" [value]="user.userId">
+                                                                {{ user.userId }}
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="startDate" class="col-sm-3 control-label">Start Date</label>
+                                                <div class="col-sm-9" id="DateofBirth" data-target-input="nearest">
+                                                    <input type="date" class="form-control datetimepicker-input"
+                                                        name="startDate" id="startDate" data-target="#reservationdate"
+                                                        placeholder="17/9/1999" [(ngModel)]="startDate" required />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="endDate" class="col-sm-3 control-label">End Date</label>
+                                                <div class="col-sm-9" id="DateofBirth" data-target-input="nearest">
+                                                    <input type="date" class="form-control datetimepicker-input"
+                                                        name="endDate" id="endDate" data-target="#reservationdate"
+                                                        placeholder="17/9/1999" [(ngModel)]="endDate" required />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="studentOriginIds" class="col-sm-3 control-label">Student
+                                                    Origin Ids</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="studentOriginIds" class="form-control"
+                                                            type="text" name="studentOriginIds" id="studentOriginIds"
+                                                            placeholder="Enter Student Origin here" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="enrolmentFee" class="col-sm-3 control-label">Enrolment
+                                                    Fee</label>
+                                                <div class="col-sm-9">
+                                                    <div class="input-group">
+                                                        <input [(ngModel)]="enrolmentFee" class="form-control"
+                                                            type="text" name="enrolmentFee" id="enrolmentFee"
+                                                            placeholder="Enter Enrolment Fee here" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group row">
+                                                <label for="publish" class="col-sm-3 control-label">Publish<span
+                                                        class="star">*</span></label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-check radio">
+                                                        <input class="form-check-input" type="radio" name="publish"
+                                                            id="publish1" value="Y" [(ngModel)]="publish" />
+                                                        <label class="form-check-label">Yes</label>
+                                                    </div>
+                                                    <div class="form-check radio">
+                                                        <input class="form-check-input" type="radio" name="publish"
+                                                            id="publish2" value="N" [(ngModel)]="publish" />
+                                                        <label class="form-check-label">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--inner-row-->
+                                    </div>
+                                    <!--col-md-12 sub-form-->
+                                </div>
+                                <br />
+                                <div class="submit-button">
+                                    <button type="submit" (click)="createCourseIntakeDate(f)" class="btn btn-success"
+                                        name="add" id="add">Add
+                                        New</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--card card-primary-->
+                </div>
+                <!--col-md-6 offset-md-2-->
+            </div>
+            <!--row-->
+        </div>
+        <!--container-fluid-->
+    </section>
+    <!--section2-->
+</div>

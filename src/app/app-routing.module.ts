@@ -22,12 +22,6 @@ import { EditRoleComponent } from './pages/admin/edit-role/edit-role.component';
 import { EditRoomComponent } from './pages/admin/edit-room/edit-room.component';
 import { EditStudentenrolmentComponent } from './pages/admin/edit-studentenrolment/edit-studentenrolment.component';
 
-// StudentPostalDetails 
-import { StudentpostaldetailsComponent } from './pages/admin/studentpostaldetails/studentpostaldetails.component';
-import { CreateStudentpostaldetailsComponent } from './pages/admin/create-studentpostaldetails/create-studentpostaldetails.component';
-import { ViewStudentpostaldetailsComponent } from './pages/admin/view-studentpostaldetails/view-studentpostaldetails.component';
-import { EditStudentpostaldetailsComponent } from './pages/admin/edit-studentpostaldetails/edit-studentpostaldetails.component';
-
 
 
 import { EditTrainingOrganizationComponent } from './pages/admin/edit-training-organization/edit-training-organization.component';
@@ -91,6 +85,35 @@ import { AddcoursetemplateComponent } from './pages/course/addcoursetemplate/add
 import { AddholidaysComponent } from './pages/course/addholidays/addholidays.component';
 import { AddnewsubjectComponent } from './pages/course/addnewsubject/addnewsubject.component';
 import { AddsubjectComponent } from './pages/course/addsubject/addsubject.component';
+
+
+// // StudentPostalDetails 
+// import { StudentpostaldetailsComponent } from './pages/admin/studentpostaldetails/studentpostaldetails.component';
+// import { CreateStudentpostaldetailsComponent } from './pages/admin/create-studentpostaldetails/create-studentpostaldetails.component';
+// import { ViewStudentpostaldetailsComponent } from './pages/admin/view-studentpostaldetails/view-studentpostaldetails.component';
+// import { EditStudentpostaldetailsComponent } from './pages/admin/edit-studentpostaldetails/edit-studentpostaldetails.component';
+
+
+
+// //StudentDisability
+// import { StudentDisabilityComponent } from './pages/admin/student-disability/student-disability.component';
+// import { CreateStudentDisabilityComponent } from './pages/admin/create-student-disability/create-student-disability.component';
+// import { EditStudentDisabilityComponent } from './pages/admin/edit-student-disability/edit-student-disability.component';
+// import { ViewStudentDisabilityComponent } from './pages/admin/view-student-disability/view-student-disability.component';
+
+//CourseIntakeDate
+import { CourseIntakeDateComponent } from './pages/course/course-intake-date/course-intake-date.component';
+import { CreateCourseIntakeDateComponent } from './pages/course/create-course-intake-date/create-course-intake-date.component';
+import { EditCourseIntakeDateComponent } from './pages/course/edit-course-intake-date/edit-course-intake-date.component';
+import { ViewCourseIntakeDateComponent } from './pages/course/view-course-intake-date/view-course-intake-date.component';
+
+// //PriorEducationalAchievement
+// import { PriorEducationalAchievementComponent } from './pages/admin/prior-educational-achievement/prior-educational-achievement.component';
+// import { CreatePriorEducationalAchievementComponent } from './pages/admin/create-prior-educational-achievement/create-prior-educational-achievement.component';
+// import { EditPriorEducationalAchievementComponent } from './pages/admin/edit-prior-educational-achievement/edit-prior-educational-achievement.component';
+// import { ViewPriorEducationalAchievementComponent } from './pages/admin/view-prior-educational-achievement/view-prior-educational-achievement.component';
+
+
 //Course-Unit
 import { CourseUnitComponent } from './pages/course/course-unit/course-unit.component';
 import { CoursesComponent } from './pages/course/courses/courses.component';
@@ -182,11 +205,31 @@ const routes: Routes = [
 
   { path: 'admin/edit-training-organization/:id', component: EditTrainingOrganizationComponent, canActivate: [AuthGuardService], },
 
-  // StudentPostalDetails 
-  { path: 'admin/student-postal-details-list', component: StudentpostaldetailsComponent, canActivate: [AuthGuardService], },
-  { path: 'admin/create-student-postal-details', component: CreateStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
-  { path: 'admin/view-student-postal-details/:id', component: ViewStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
-  { path: 'admin/edit-student-postal-details/:id', component: EditStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+  // // StudentPostalDetails 
+  // { path: 'admin/student-postal-details-list', component: StudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/create-student-postal-details', component: CreateStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/view-student-postal-details/:id', component: ViewStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/edit-student-postal-details/:id', component: EditStudentpostaldetailsComponent, canActivate: [AuthGuardService], },
+
+
+  // // StudentDisability 
+  // { path: 'admin/student-disability-list', component: StudentDisabilityComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/create-student-disability', component: CreateStudentDisabilityComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/view-student-disability/:id', component: ViewStudentDisabilityComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/edit-student-disability/:id', component: EditStudentDisabilityComponent, canActivate: [AuthGuardService], },
+
+  // CourseIntakeDate 
+  { path: 'course/course-intake-date-list', component: CourseIntakeDateComponent, canActivate: [AuthGuardService], },
+  { path: 'course/create-course-intake-date', component: CreateCourseIntakeDateComponent, canActivate: [AuthGuardService], },
+  { path: 'course/view-course-intake-date/:id', component: ViewCourseIntakeDateComponent, canActivate: [AuthGuardService], },
+  { path: 'course/edit-course-intake-date/:id', component: EditCourseIntakeDateComponent, canActivate: [AuthGuardService], },
+
+  // // PriorEducationalAchievement 
+  // { path: 'admin/prior-educational-achievement-list', component: PriorEducationalAchievementComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/create-prior-educational-achievement', component: CreatePriorEducationalAchievementComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/view-prior-educational-achievement/:id', component: ViewPriorEducationalAchievementComponent, canActivate: [AuthGuardService], },
+  // { path: 'admin/edit-prior-educational-achievement/:id', component: EditPriorEducationalAchievementComponent, canActivate: [AuthGuardService], },
+
 
 
 

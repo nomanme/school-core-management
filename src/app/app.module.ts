@@ -133,10 +133,10 @@ import { FooterComponent } from './parts/footer/footer.component';
 import { HeaderComponent } from './parts/header/header.component';
 import { SidebarComponent } from './parts/sidebar/sidebar.component';
 import { EditTrainingOrganizationComponent } from './pages/admin/edit-training-organization/edit-training-organization.component';
-import { StudentpostaldetailsComponent } from './pages/admin/studentpostaldetails/studentpostaldetails.component';
-import { CreateStudentpostaldetailsComponent } from './pages/admin/create-studentpostaldetails/create-studentpostaldetails.component';
-import { ViewStudentpostaldetailsComponent } from './pages/admin/view-studentpostaldetails/view-studentpostaldetails.component';
-import { EditStudentpostaldetailsComponent } from './pages/admin/edit-studentpostaldetails/edit-studentpostaldetails.component';
+import { CourseIntakeDateComponent } from './pages/course/course-intake-date/course-intake-date.component';
+import { CreateCourseIntakeDateComponent } from './pages/course/create-course-intake-date/create-course-intake-date.component';
+import { EditCourseIntakeDateComponent } from './pages/course/edit-course-intake-date/edit-course-intake-date.component';
+import { ViewCourseIntakeDateComponent } from './pages/course/view-course-intake-date/view-course-intake-date.component';
 
 @NgModule({
   declarations: [
@@ -268,10 +268,11 @@ import { EditStudentpostaldetailsComponent } from './pages/admin/edit-studentpos
     CreateTrainingOrganizationComponent,
     ViewTrainingOrganizationComponent,
     EditTrainingOrganizationComponent,
-    StudentpostaldetailsComponent,
-    CreateStudentpostaldetailsComponent,
-    ViewStudentpostaldetailsComponent,
-    EditStudentpostaldetailsComponent,
+    CourseIntakeDateComponent,
+    CreateCourseIntakeDateComponent,
+    EditCourseIntakeDateComponent,
+    ViewCourseIntakeDateComponent,
+
   ],
 
   imports: [
