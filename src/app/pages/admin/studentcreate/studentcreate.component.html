@@ -373,7 +373,7 @@
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="australianPr"
                                             id="OverseasStudent" value="Y" [(ngModel)]="australianPr"
-                                            ng-value="australianPr"  />
+                                            ng-value="australianPr" />
                                           <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
@@ -382,8 +382,7 @@
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="australianPr"
-                                            id="OverseasStudent" value="N" [(ngModel)]="australianPr"
-                                             />
+                                            id="OverseasStudent" value="N" [(ngModel)]="australianPr" />
                                           <label class="form-check-label">No</label>
                                         </div>
                                       </div>
@@ -400,19 +399,20 @@
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" >
+                                    <div class="form-group row">
                                       <label for="visaStatusId" class="col-sm-4 control-label">Visa Status</label>
                                       <div class="input-group col-sm-8">
-                                        <select  class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger" name="visaStatusId"
-                                          id="visaStatusId" [(ngModel)]="visaStatusId">
-                                          <option value=None selected>Please Select a Option</option>
-                                          <option *ngFor="let visa of getvisastatus" [value]="visa.visaStatusId">{{ visa.visaStatusName }}</option>
+                                        <select class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="visaStatusId" id="visaStatusId"
+                                          [(ngModel)]="visaStatusId">
+                                          <option value="None">Please Select a Option</option>
+                                          <option *ngFor="let visa of getvisastatus" [value]="visa.visaStatusId">
+                                            {{ visa.visaStatusName }}</option>
                                         </select>
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" >
+                                    <div class="form-group row">
                                       <label for="visaExpdate" class="col-sm-4 control-label">Visa Expiry Date</label>
                                       <div class="col-sm-8" id="visaExpirydate" data-target-input="nearest">
                                         <input type="date" class="form-control datetimepicker-input" name="visaExpdate"
@@ -545,7 +545,7 @@
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="completedSchoolLevelId"
                                             id="completedSchoolLevelId" [value]="schlevel.schoolLevelId"
-                                            [(ngModel)]="completedSchoolLevelId" checked="checked" />
+                                            [(ngModel)]="completedSchoolLevelId" checked="checked" required />
                                           <label class="form-check-label">{{
                                             schlevel.SchoolLevelName
                                           }}</label>
@@ -854,7 +854,7 @@
                         </div>
                         <!-- row4 -->
 
-                        <!-- <div class="row" *ngIf="PostalDetail">
+                        <div class="row" *ngIf="PostalDetail">
                           <div class="col-md-12 sub-form">
                             <div class="card-header">
                               <h3 class="card-title Title2">
@@ -870,8 +870,9 @@
                                         Name</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="buildingName" id="buildingName"
-                                            placeholder="Enter your Building Name here" [(ngModel)]="buildingName" />
+                                          <input class="form-control" type="text" name="postalbuildingName"
+                                            id="buildingName" placeholder="Enter your Building Name here"
+                                            [(ngModel)]="postalbuildingName" />
                                         </div>
                                       </div>
                                     </div>
@@ -881,9 +882,9 @@
                                         Details</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="flatUnitDetails"
+                                          <input class="form-control" type="text" name="postalflatUnitDetails"
                                             id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here"
-                                            [(ngModel)]="flatUnitDetails" />
+                                            [(ngModel)]="postalflatUnitDetails" />
                                         </div>
                                       </div>
                                     </div>
@@ -893,8 +894,9 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="streetNumber" id="streetNumber"
-                                            placeholder="(e.g. 205 or Lot 118)" [(ngModel)]="streetNumber" required />
+                                          <input class="form-control" type="text" name="postalstreetName"
+                                            id="streetNumber" placeholder="(e.g. 205 or Lot 118)"
+                                            [(ngModel)]="postalstreetName" required />
                                         </div>
                                       </div>
                                     </div>
@@ -904,9 +906,9 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="streetName" id="streetName"
-                                            placeholder="Enter your Street Name here" [(ngModel)]="streetName"
-                                            required />
+                                          <input class="form-control" type="text" name="postalstreetNumber"
+                                            id="streetName" placeholder="Enter your Street Name here"
+                                            [(ngModel)]="postalstreetNumber" required />
                                         </div>
                                       </div>
                                     </div>
@@ -918,8 +920,8 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="suburb" id="suburb"
-                                            placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="suburb"
+                                          <input class="form-control" type="text" name="postalsuburb" id="suburb"
+                                            placeholder="Enter your City/ Town/ Suburb here" [(ngModel)]="postalsuburb"
                                             required />
                                         </div>
                                       </div>
@@ -928,8 +930,9 @@
                                       <label for="stateId" class="col-sm-4 control-label">State<span
                                           class="star">*</span></label>
                                       <div class="input-group col-sm-8">
-                                        <select [(ngModel)]="stateId" class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
+                                        <select [(ngModel)]="postalstateId" class="form-control select2 select2-danger"
+                                          data-dropdown-css-class="select2-danger" name="postalstateId" id="stateId"
+                                          required>
                                           <option value="" selected>Please Select a Option</option>
                                           <option *ngFor="let state of getstate" [value]="state.stateId"
                                             selected="selected">
@@ -945,9 +948,9 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode"
-                                            id="postCode" placeholder="Enter your Postcode here" [(ngModel)]="postCode"
-                                            required />
+                                          <input class="form-control" type="text" pattern="[0-9]{5}"
+                                            name="postalpostCode" id="postCode" placeholder="Enter your Postcode here"
+                                            [(ngModel)]="postalpostCode" required />
                                         </div>
                                       </div>
                                     </div>
@@ -956,8 +959,8 @@
                                       <label for="pobox" class="col-sm-4 control-label">Post Box</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="pobox" id="pobox"
-                                            placeholder="Enter post box here" [(ngModel)]="pobox" />
+                                          <input class="form-control" type="text" name="postalpobox" id="pobox"
+                                            placeholder="Enter post box here" [(ngModel)]="postalpobox" />
                                         </div>
                                       </div>
                                     </div>
@@ -965,11 +968,11 @@
                                 </div>
                               </div>
                             </div>
-                            
+
                           </div>
-                          
-                        </div> -->
-                        <!-- row5 -->
+
+                        </div>
+                        <!-- row5-->
 
                         <div class="submit-button">
                           <button type="submit" (click)="createStudent(f)" class="btn btn-primary" name="create"
