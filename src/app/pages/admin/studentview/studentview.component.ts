@@ -44,9 +44,9 @@ export class StudentviewComponent implements OnInit {
 
     this.studentPostalDetailsId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.apiService.getAPI2(`dev/getstudentpostaldetails?studentPostalDetailsId=${this.studentPostalDetailsId}`).subscribe((data) => {
-      console.log(data);
-      this.studentpostal = data;
+    this.apiService.getAPI2(`dev/getstudentpostaldetails?studentPostalDetailsId=${this.students}`).subscribe((data2) => {
+      console.log(data2);
+      this.studentpostal = data2;
     });
 
 

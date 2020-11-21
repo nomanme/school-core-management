@@ -27,23 +27,23 @@ export class StudentcreateComponent implements OnInit {
   getschooltype;
   getclientid;
   getdisability;
+  getstudentenrolment;
 
   addstudentpostaldetails;
 
   students;
   dataString;
-  dataString3;
-
+  outputD;
   PriorEducationalAchievementFlag = '';
   altEmail = '';
-  australianPr = '';
+  australianPr = 'Y';
   birthcountryId = '';
   buildingName = '';
   clientId = '';
   completedSchoolLevelId = '';
   dateModified = '';
-  differentPostalAddress = '';
-  disability = '';
+  differentPostalAddress = 'N';
+  disability = 'N';
   dob = '';
   email = '';
   employmentStatusId = '';
@@ -80,8 +80,25 @@ export class StudentcreateComponent implements OnInit {
   visaNo = '';
   visaStatusId = "None";
 
+
+  //studentdisability
   dataString2;
   outputD2;
+  // studentDisabilityId;
+  disabilityId;
+
+
+  //prioreducational
+  dataString3;
+  outputD3;
+  // priorEducationalAchievementId;
+  studentEnrolmentId;
+  QualificationId;
+
+
+  //studentpostal
+  dataString4;
+  outputD4;
   postalbuildingName = '';
   postalflatUnitDetails = '';
   postalpostCode = '';
@@ -96,7 +113,7 @@ export class StudentcreateComponent implements OnInit {
 
 
 
-  outputD;
+
 
 
   errors = '';
@@ -157,12 +174,10 @@ export class StudentcreateComponent implements OnInit {
       this.getlanguage = data;
     });
 
-    this.apiService
-      .getAPI3('dev/getenglishspeakingstatus')
-      .subscribe((data) => {
-        // console.log(data);
-        this.getenglishspeakingstatus = data;
-      });
+    this.apiService.getAPI3('dev/getenglishspeakingstatus').subscribe((data) => {
+      // console.log(data);
+      this.getenglishspeakingstatus = data;
+    });
 
     this.apiService.getAPI3('dev/getstate').subscribe((data) => {
       // console.log(data);
@@ -195,6 +210,10 @@ export class StudentcreateComponent implements OnInit {
 
     this.apiService.getAPI3('dev/getdisability').subscribe((data) => {
       this.getdisability = data;
+    });
+
+    this.apiService.getAPI2('dev/getstudentenrolment').subscribe((data) => {
+      this.getstudentenrolment = data;
     });
   }
 
@@ -403,7 +422,7 @@ export class StudentcreateComponent implements OnInit {
     }
 
     // if (form.value.australianPr == 'Y') {
-    //   this.visaStatusId = " ";
+    //   this.visaStatusId = "None";
 
     //   console.log(this.visaStatusId);
     // }
@@ -427,41 +446,50 @@ export class StudentcreateComponent implements OnInit {
           this.outputD = this.outputD[0].studentId;
           // this.outputD = data['msg'][0];
           // console.log(data);
-
           console.log(this.outputD);
 
 
-          this.dataString2 = `{"studentId":"${this.outputD}", "buildingName":"${form.value.postalbuildingName}", "flatUnitDetails":"${form.value.postalflatUnitDetails}", "streetName":"${form.value.postalstreetName}", "streetNumber": "${form.value.postalstreetNumber}", "suburb": "${form.value.postalsuburb}", "stateId": "${form.value.postalstateId}", "postCode": "${form.value.postalpostCode}", "pobox": "${form.value.postalpobox}"}`;
+
+          //Student Disability
+          this.dataString2 = `{"userId":"1", "studentId":"${this.outputD}", "disabilityId":"${form.value.studentdisabilityId}"}`;
 
           console.log(this.dataString2);
           // console.log(this.outputD);
           this.apiService.setLocalStorage('studentId', this.outputD);
 
-          this.apiService.postAPI2('dev/addstudentpostaldetails', this.dataString2).subscribe((data2) => {
-            // this.outputD2=JSON.parse(data2['msg'])[0]['studentPostalDetailsId'];
-            // console.log(data2);
+          this.apiService.postAPI2('dev/addstudentdisability', this.dataString2).subscribe((data2) => {
+            // this.outputD2 = JSON.parse(data2['msg'])[0]['studentDisabilityId'];
+            console.log(data2);
             // this.outputD2=data2;
-            // this.outputD2=JSON.parse(this.outputD2['msg']);
-            // this.outputD2=this.outputD2[0].studentPostalDetailsId;
+            // this.outputD2 = JSON.parse(data2['msg']);
+            // this.outputD2 = this.outputD2[0].studentDisabilityId;
+
+            // console.log(this.outputD2);
+
+          });
+
+
+
+          //StudentPostal
+          this.dataString3 = `{"userId":"1", "studentId":"${this.outputD}", "buildingName":"${form.value.postalbuildingName}", "flatUnitDetails":"${form.value.postalflatUnitDetails}", "streetName":"${form.value.postalstreetName}", "streetNumber": "${form.value.postalstreetNumber}", "suburb": "${form.value.postalsuburb}", "stateId": "${form.value.postalstateId}", "postCode": "${form.value.postalpostCode}", "pobox": "${form.value.postalpobox}"}`;
+
+          console.log(this.dataString3);
+          // console.log(this.outputD);
+          this.apiService.setLocalStorage('studentId', this.outputD);
+
+          this.apiService.postAPI2('dev/addstudentpostaldetails', this.dataString3).subscribe((data3) => {
+            // this.outputD2 = JSON.parse(data2['msg'])[0]['studentPostalDetailsId'];
+            console.log(data3);
+            // this.outputD2=data2;
+            // this.outputD4 = JSON.parse(data3['msg']);
+            // this.outputD4 = this.outputD4[0].studentPostalDetailsId;
+
+            // console.log(this.outputD4);
 
             this.router.navigate(['/admin/create-student-enrolment']);
           });
 
 
-          // this.dataString3 = `{"userId":"1", "studentId":"${this.outputD}",  "buildingName":"${form.value.buildingName}", "flatUnitDetails":"${form.value.flatUnitDetails}", "streetName":"${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.suburb}", "stateId": "${form.value.stateId}", "postCode": "${form.value.postCode}", "pobox": "${form.value.pobox}", "stateId": "${form.value.stateId}"}`;
-          // console.log(this.dataString2);
-          // // console.log(this.outputD);
-          // this.apiService.setLocalStorage('studentId', this.outputD);
-
-          // this.apiService.postAPI2('dev/addstudentpostaldetails', this.dataString2).subscribe((data2) => {
-          //   // this.outputD2=JSON.parse(data2['msg'])[0]['studentPostalDetailsId'];
-          //   // console.log(data2);
-          //   // this.outputD2=data2;
-          //   // this.outputD2=JSON.parse(this.outputD2['msg']);
-          //   // this.outputD2=this.outputD2[0].studentPostalDetailsId;
-
-          //   this.router.navigate(['/admin/create-student-enrolment']);
-          // });
         });
     }
     else {
