@@ -200,7 +200,7 @@ button.dropdown-btn.active i.fas.fa-angle-left.right {
   overflow: hidden;
 }
 .scrollable {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 4.2rem);
   max-height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -245,32 +245,53 @@ button.btn.btn-link.active {
   border-radius: 5px;
 }
 
-
-
-
-/* body.sidebar-collapse aside.main-sidebar {
-  width: 5%;
-  overflow: hidden !important;
+aside.main-sidebar .sidenav-heading {
+  background: #3f51b5;
+  /* padding-bottom: 0.80rem !important; */
 }
 
-body.sidebar-collapse aside.main-sidebar .sidebar {
-  width: 5%;
-  overflow: hidden;
+aside.main-sidebar .sidebar {
+  background: white;
 }
 
-body.sidebar-collapse aside.main-sidebar .sidebar .user-panel {
-  display: none;
+aside.main-sidebar .sidebar li.nav-item a.sub-item span {
+    color: #585858 !important;
 }
 
-body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item a, body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item button {
-  height: 40px;
+aside.main-sidebar .sidebar li.nav-item a.sub-item i {
+    color: #737373 !important;
 }
 
-body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item i {
-  width: 100%;
-  text-align: center;
+aside.main-sidebar .sidebar li.nav-item button.dropdown-btn span {
+    color: #585858 !important;
 }
 
-body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item span, body.sidebar-collapse aside.main-sidebar .sidebar nav li.nav-item i.fa-angle-left {
-  display: none;
-} */
+aside.main-sidebar .sidebar li.nav-item button.dropdown-btn i {
+    color: #737373 !important;
+}
+
+aside.main-sidebar .sidebar li.nav-item button.dropdown-btn:hover {
+  background: #e6e6e6 !important;
+}
+
+aside.main-sidebar .sidebar li.nav-item .dropdown-container .sub-item:hover {
+  background: #e6e6e6 !important;
+}
+
+aside.main-sidebar .sidebar li.nav-item button.dropdown-btn.active {
+  background: #b6c2ff !important;
+}
+
+aside.main-sidebar .sidebar li.nav-item .dropdown-container .sub-item.current {
+  background: #cad6e4 !important;
+}
+
+aside.main-sidebar .sidebar li.nav-item a.sub-item {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+aside.main-sidebar .sidebar li.nav-item button.dropdown-btn {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}

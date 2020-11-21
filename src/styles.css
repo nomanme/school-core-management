@@ -83,3 +83,41 @@ body.sidebar-collapse .content-wrapper {
 body.sidebar-collapse .inner-content {
     left: 5%;
 }
+
+body.sidebar-collapse .main-sidebar .scrollable {
+    height: calc(100vh - 5rem);
+}
+
+.card-header {
+    background: #3f51b5 !important;
+}
+
+body.sidebar-collapse aside.main-sidebar:hover {
+    width: 19% !important;
+    z-index: 101 !important;
+}
+  
+body.sidebar-collapse aside.main-sidebar:hover .sidebar {
+    width: 19%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+body.sidebar-collapse aside.main-sidebar:hover .sidebar nav li.nav-item a, body.sidebar-collapse aside.main-sidebar:hover .sidebar nav li.nav-item button {
+    height: unset;
+}
+
+body.sidebar-collapse aside.main-sidebar:hover .sidebar nav li.nav-item i {
+    width: unset;
+    text-align: unset;
+}
+
+body.sidebar-collapse aside.main-sidebar:hover .sidebar nav li.nav-item span, body.sidebar-collapse aside.main-sidebar:hover .sidebar nav li.nav-item i.fa-angle-left {
+    display: unset;
+    transition: 0.5s;
+}
+
+body.sidebar-collapse .main-sidebar:hover .sidenav-heading span.brand-text {
+    display: unset;
+    transition: 0.5s;
+}
