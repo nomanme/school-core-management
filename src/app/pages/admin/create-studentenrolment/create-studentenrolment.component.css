@@ -111,3 +111,12 @@ ol.breadcrumb {
 button#add {
     margin-right: 6px;
 }
+.qualification {
+    width: 100% !important;
+}
+
+.ng-select {
+    display: block;
+    position: relative;
+    width: 100%;
+}

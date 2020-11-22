@@ -16,7 +16,29 @@ function myFunction() {
         $(this).addClass('active').siblings().removeClass('active');
      });
   }
+
+/*Visa Status*/
+  function hideVisa() {
+    var x = document.getElementById("myVisa");
+      x.style.display = "none";
+    
+  }
+  function showVisa() {
+    var x = document.getElementById("myVisa");
+      x.style.display = "block";
+  }
+
   
+/*Different Postal Address*/ 
+  function showPostal() {
+    var x = document.getElementById("myPostal");
+      x.style.display = "block"; 
+  }
+  function hidePostal() {
+    var x = document.getElementById("myPostal");
+      x.style.display = "none";
+  }
+
 
 
 

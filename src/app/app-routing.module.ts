@@ -174,6 +174,10 @@ import { ManageuseraccountComponent } from './pages/users/manageuseraccount/mana
 import { UseractivityComponent } from './pages/users/useractivity/useractivity.component';
 import { ViewUsersComponent } from './pages/users/view-users/view-users.component';
 
+import { TestComponent } from './pages/test/test.component';
+
+
+
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuardService], },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService], },
@@ -487,6 +491,10 @@ const routes: Routes = [
   { path: 'users/create-user', component: CreateUserComponent, canActivate: [AuthGuardService], },
   { path: 'users/view-user/:id', component: ViewUsersComponent, canActivate: [AuthGuardService], },
   { path: 'users/edit-user/:id', component: EditUsersComponent, canActivate: [AuthGuardService], },
+
+
+  { path: 'test', component: TestComponent, canActivate: [AuthGuardService], },
+
 
   { path: 'login', component: LoginComponent },
 ];

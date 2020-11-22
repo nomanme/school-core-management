@@ -137,6 +137,7 @@ import { CourseIntakeDateComponent } from './pages/course/course-intake-date/cou
 import { CreateCourseIntakeDateComponent } from './pages/course/create-course-intake-date/create-course-intake-date.component';
 import { EditCourseIntakeDateComponent } from './pages/course/edit-course-intake-date/edit-course-intake-date.component';
 import { ViewCourseIntakeDateComponent } from './pages/course/view-course-intake-date/view-course-intake-date.component';
+import { TestComponent } from './pages/test/test.component';
 
 @NgModule({
   declarations: [
@@ -272,6 +273,7 @@ import { ViewCourseIntakeDateComponent } from './pages/course/view-course-intake
     CreateCourseIntakeDateComponent,
     EditCourseIntakeDateComponent,
     ViewCourseIntakeDateComponent,
+    TestComponent,
 
   ],
 

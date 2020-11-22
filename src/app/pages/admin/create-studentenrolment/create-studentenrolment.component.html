@@ -307,6 +307,42 @@
                           </div>
                         </div>
                       </div>
+
+                      <!--Prior Educational Achievment Flag-->
+                      <div class="row">
+                        <div class="col-md-12 sub-form">
+                          <div class="card-header">
+                            <h3 class="card-title Title2">
+                              <i class="fa fa-bars pr-1" aria-hidden="true"></i>Prior Educational Achievment Flag
+                            </h3>
+                          </div>
+                          <div class="inner-row">
+                            <div class="col-md-12">
+                              <div class="row">
+
+                                <div class="form-group row qualification">
+                                  <label for="priorEducationalAchievementId"
+                                    class="col-sm-3 control-label">Qualification</label>
+                                  <div class="input-group col-sm-9">
+                                    <ng-select [(ngModel)]="priorqualification" name="priorqualification"
+                                      class="dropdown" multiple="true">
+                                      <ng-option value="" selected>Please Select Options</ng-option>
+                                      <ng-option *ngFor="
+                                                let qualification of getqualification
+                                              " [value]="qualification.qualificationId">
+                                        {{ qualification.qualificationCode }} -
+                                        {{ qualification.qualificationName }}</ng-option>
+                                    </ng-select>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </div>
                     </div>
                     <!--inner-row-->
                   </div>
