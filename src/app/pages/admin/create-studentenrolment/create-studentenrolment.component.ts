@@ -46,7 +46,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
   qualificationId;
   dataString2;
   priorEducationalAchievementId;
-
+  priorqualification;
 
   allerrors = '';
 

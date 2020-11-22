@@ -837,13 +837,13 @@
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="differentPostalAddress"
                                             id="on" value="Y" [(ngModel)]="differentPostalAddress"
-                                            onclick="showPostal()" />
+                                            (click)="ShowStudentPostal()" />
                                           <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
                                           <input class="form-check-input" type="radio" name="differentPostalAddress"
                                             id="off" value="N" [(ngModel)]="differentPostalAddress"
-                                            onclick="hidePostal()" />
+                                            (click)="HideStudentPostal() " />
                                           <label class="form-check-label">No</label>
                                         </div>
                                       </div>
@@ -859,7 +859,7 @@
                         </div>
                         <!-- row4 -->
 
-                        <div class="row" id="myPostal">
+                        <div class="row" *ngIf="PostalDetail">
                           <div class="col-md-12 sub-form">
                             <div class="card-header">
                               <h3 class="card-title Title2">

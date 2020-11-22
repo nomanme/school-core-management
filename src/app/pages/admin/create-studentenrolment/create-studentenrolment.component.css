@@ -120,3 +120,6 @@ button#add {
     position: relative;
     width: 100%;
 }
+#qualification {
+    display: none;
+}
