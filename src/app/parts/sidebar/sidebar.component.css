@@ -286,6 +286,10 @@ aside.main-sidebar .sidebar li.nav-item .dropdown-container .sub-item.current {
   background: #cad6e4 !important;
 }
 
+aside.main-sidebar .sidebar li.nav-item a.current {
+  background: #cad6e4 !important;
+}
+
 aside.main-sidebar .sidebar li.nav-item a.sub-item {
   padding-left: 10px !important;
   padding-right: 10px !important;

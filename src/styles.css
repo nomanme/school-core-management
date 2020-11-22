@@ -92,6 +92,10 @@ body.sidebar-collapse .main-sidebar .scrollable {
     background: #3f51b5 !important;
 }
 
+.card-body .card-header {
+    background: transparent !important;
+}
+
 body.sidebar-collapse aside.main-sidebar:hover {
     width: 19% !important;
     z-index: 101 !important;
