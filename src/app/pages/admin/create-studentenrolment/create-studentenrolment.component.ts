@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/api/api.service';
+
 
 @Component({
   selector: 'app-create-studentenrolment',
@@ -43,7 +44,6 @@ export class CreateStudentenrolmentComponent implements OnInit {
   userId;
   outputD;
 
-  qualificationId;
   dataString2;
   priorEducationalAchievementId;
   priorqualification;
@@ -67,9 +67,15 @@ export class CreateStudentenrolmentComponent implements OnInit {
   errors = '';
   errorCodes: { studentOriginId: '' };
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  prioreducation;
+  qualification = false;
+
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.prioreducation = this.activatedRoute.snapshot.paramMap.get('prioreducation');
+
     this.outputD = this.apiService.getLocalStorage('studentId');
     console.log(this.outputD);
 
@@ -134,8 +140,15 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.getqualification = data;
     });
 
-
+    if (this.prioreducation == 'yes') {
+      this.qualification = true;
+    }
+    else {
+      this.qualification = false;
+    }
   }
+
+
 
   createStudentEnrolment(form) {
     if (form.value.allerrors == '') {
@@ -278,23 +291,25 @@ export class CreateStudentenrolmentComponent implements OnInit {
       console.log(this.dataString);
       this.apiService.postAPI2('dev/addstudentenrolment', this.dataString).subscribe((data) => {
         console.log(data);
-        this.studentenrolment = data;
+        this.studentenrolment = JSON.parse(data['msg']);
+        this.studentenrolment = this.studentenrolment[0].studentEnrolmentId;
 
         console.log(this.studentenrolment);
-        this.router.navigate(['/admin/student-list']);
 
 
         //Prior Educational Achievement Flag
-        this.dataString2 = `{"userId":"1", "studentEnrolmentId":"${this.studentenrolment}", "qualificationId":"${form.value.priorqualification}"}`;
+        this.dataString2 = `{"userId":"1", "studentEnrolmentId":"${this.studentenrolment}", "QualificationId":"${form.value.priorqualification}"}`;
 
         console.log(this.dataString2);
 
-        this.apiService.setLocalStorage('studentId', this.outputD);
+        // this.apiService.setLocalStorage('studentId', this.outputD);
 
         this.apiService.postAPI2('dev/addprioreducationalachievement', this.dataString2).subscribe((data2) => {
           console.log(data2);
-          // this.router.navigate(['/admin/student-list']);
+
         });
+
+        this.router.navigate(['/admin/student-list']);
 
 
       });

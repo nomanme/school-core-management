@@ -29,7 +29,7 @@ export class StudentupdateComponent implements OnInit {
   getdisability;
 
   addstudentpostaldetails;
-
+  studentPostalDetailsId;
 
 
 
@@ -40,6 +40,11 @@ export class StudentupdateComponent implements OnInit {
   studentId;
   getstudent;
   editstudent = { PriorEducationalAchievementFlag: null, altEmail: null, australianPr: null, birthcountryId: null, buildingName: null, clientId: null, completedSchoolLevelId: null, dateModified: null, differentPostalAddress: null, disability: null, dob: null, email: null, employmentStatusId: null, englishSpeakingStatusId: null, firstName: null, flatUnitDetails: null, gender: null, homeLanguageId: null, indigenousStatusId: null, lastName: null, middleName: null, mobile: null, nationalityId: null, passportExpdate: null, passportNo: null, postCode: null, schoolTypeId: null, signatoryText: null, stateId: null, statisticalAreaLevel1Id: null, statisticalAreaLevel2Id: null, stillInSecSchool: null, streetName: null, streetNumber: null, studentId: null, suburb: null, surveyContactStatusId: null, telHome: null, telWork: null, title: null, userId: null, usiNo: null, visaExpdate: null, visaNo: null, visaStatusId: null };
+
+
+  editstudentpostal = { buildingName: null, flatUnitDetails: null, streetName: null, streetNumber: null, suburb: null, stateId: null, postCode: null, pobox: null };
+
+
   dataString;
 
 
@@ -161,6 +166,16 @@ export class StudentupdateComponent implements OnInit {
       this.editstudent = data[0];
       // this.student=this.getStudentFromList(this.studentID, data);
       console.log(this.editstudent)
+      // this.editstudent = JSON.parse(this.editstudent['msg']);
+
+      // this.outputD = JSON.parse(this.outputD['msg']);
+    });
+
+    this.apiService.getAPI2(`dev/getstudentpostaldetails?studentId=${this.studentId}`).subscribe((data) => {
+      console.log(data[0]['streetName']);
+      this.editstudentpostal = data[0];
+      // this.student=this.getStudentFromList(this.studentID, data);
+      console.log(this.editstudentpostal)
       // this.editstudent = JSON.parse(this.editstudent['msg']);
 
       // this.outputD = JSON.parse(this.outputD['msg']);
@@ -375,10 +390,23 @@ export class StudentupdateComponent implements OnInit {
       this.apiService.postAPI(`dev/editstudent?studentId=${this.studentId}`, datajson).subscribe((data) => {
         console.log(data);
 
+
+
+        if (form.value.differentPostalAddress == "Y") {
+          //Postal
+          let datajson = `{"userId":"1", "studentId":"${this.outputD}", "buildingName":"${form.value.postalbuildingName}", "flatUnitDetails":"${form.value.postalflatUnitDetails}", "streetName":"${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.postalsuburb}", "stateId": ${form.value.postalstateId}, "postCode": "${form.value.postalpostCode}", "pobox": "${form.value.postalpobox}"}`;
+          console.log(datajson);
+          this.apiService.postAPI(`dev/editstudentpostaldetails?studentPostalDetailsId=${this.studentPostalDetailsId}`, datajson).subscribe((data) => {
+            console.log(data);
+          });
+        }
+
+
         this.router.navigate(['/admin/student-list']);
 
       });
     }
+
     else {
       console.log('There are error');
     }

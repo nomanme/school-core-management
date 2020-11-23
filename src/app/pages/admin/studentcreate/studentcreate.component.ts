@@ -1,3 +1,4 @@
+import { IfStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api/api.service';
@@ -68,7 +69,7 @@ export class StudentcreateComponent implements OnInit {
   stillInSecSchool = '';
   streetName = '';
   streetNumber = '';
-  studentId = null;
+  studentId = '';
   suburb = '';
   surveyContactStatusId = '';
   telHome = '';
@@ -143,6 +144,10 @@ export class StudentcreateComponent implements OnInit {
   errorMessage = '';
 
   errorCodes: { firstName: null };
+
+
+  differentpostal;
+
   constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
@@ -438,40 +443,41 @@ export class StudentcreateComponent implements OnInit {
 
 
 
-      this.apiService
-        .postAPI('dev/addstudent', this.dataString).subscribe((data) => {
-          console.log(data);
-          // this.outputD = data;
-          this.outputD = JSON.parse(data['msg']);
-          this.outputD = this.outputD[0].studentId;
-          // this.outputD = data['msg'][0];
-          // console.log(data);
-          console.log(this.outputD);
+      this.apiService.postAPI('dev/addstudent', this.dataString).subscribe((data) => {
+        console.log(data);
+        // this.outputD = data;
+        this.outputD = JSON.parse(data['msg']);
+        this.outputD = this.outputD[0].studentId;
+        // this.outputD = data['msg'][0];
+        // console.log(data);
+        console.log(this.outputD);
 
 
 
-          //Student Disability
-          this.dataString2 = `{"userId":"1", "studentId":"${this.outputD}", "disabilityId":"${form.value.studentdisabilityId}"}`;
+        //Student Disability
+        this.dataString2 = `{"userId":"1", "studentId":"${this.outputD}", "disabilityId":"${form.value.studentdisabilityId}"}`;
 
-          console.log(this.dataString2);
-          // console.log(this.outputD);
-          this.apiService.setLocalStorage('studentId', this.outputD);
+        console.log(this.dataString2);
+        // console.log(this.outputD);
+        this.apiService.setLocalStorage('studentId', this.outputD);
 
-          this.apiService.postAPI2('dev/addstudentdisability', this.dataString2).subscribe((data2) => {
-            // this.outputD2 = JSON.parse(data2['msg'])[0]['studentDisabilityId'];
-            console.log(data2);
-            // this.outputD2=data2;
-            // this.outputD2 = JSON.parse(data2['msg']);
-            // this.outputD2 = this.outputD2[0].studentDisabilityId;
+        this.apiService.postAPI2('dev/addstudentdisability', this.dataString2).subscribe((data2) => {
+          // this.outputD2 = JSON.parse(data2['msg'])[0]['studentDisabilityId'];
+          console.log(data2);
+          // this.outputD2=data2;
+          // this.outputD2 = JSON.parse(data2['msg']);
+          // this.outputD2 = this.outputD2[0].studentDisabilityId;
 
-            // console.log(this.outputD2);
+          // console.log(this.outputD2);
 
-          });
+        });
 
-
-
+        // if (form.value.postalstateId) {
+        //   this.postalstateId = form.value.postalstateId;
+        // }
+        if (form.value.differentPostalAddress == "Y") {
           //StudentPostal
-          this.dataString3 = `{"userId":"1", "studentId":"${this.outputD}", "buildingName":"${form.value.postalbuildingName}", "flatUnitDetails":"${form.value.postalflatUnitDetails}", "streetName":"${form.value.postalstreetName}", "streetNumber": "${form.value.postalstreetNumber}", "suburb": "${form.value.postalsuburb}", "stateId": ${form.value.postalstateId}, "postCode": "${form.value.postalpostCode}", "pobox": "${form.value.postalpobox}"}`;
+          this.dataString3 = `{"userId":"1", "studentId":"${this.outputD}", "buildingName":"${form.value.postalbuildingName}", "flatUnitDetails":"${form.value.postalflatUnitDetails}", "streetName":"${form.value.postalstreetName}", "streetNumber": "${form.value.postalstreetNumber}", "suburb": "${form.value.postalsuburb}", "stateId": ${this.postalstateId}, "postCode": "${form.value.postalpostCode}", "pobox": "${form.value.postalpobox}"}`;
 
           console.log(this.dataString3);
           // console.log(this.outputD);
@@ -486,11 +492,15 @@ export class StudentcreateComponent implements OnInit {
 
             // console.log(this.outputD4);
 
-            this.router.navigate(['/admin/create-student-enrolment']);
           });
+        }
 
 
-        });
+        this.router.navigate(['/admin/create-student-enrolment/' + this.PriorEducationalAchievementFlag]);
+
+
+
+      });
     }
     else {
       console.log('There are error');
