@@ -13,6 +13,8 @@ export class StudentviewComponent implements OnInit {
   students;
 
   studentPostalDetailsId;
+  studentDisabilityId;
+  studentdistabilty;
   studentpostal;
   getstudent;
   getclientid;
@@ -41,6 +43,15 @@ export class StudentviewComponent implements OnInit {
       // this.students = JSON.parse(this.students);
 
     });
+
+    this.studentDisabilityId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    this.apiService.getAPI2(`dev/getstudentdisability?studentId=${this.studentID}`).subscribe((data) => {
+      console.log(data[0]['disabilityName']);
+      this.studentdistabilty = data;
+      console.log(this.studentdistabilty);
+    });
+
 
     this.studentPostalDetailsId = this.activatedRoute.snapshot.paramMap.get('id');
 

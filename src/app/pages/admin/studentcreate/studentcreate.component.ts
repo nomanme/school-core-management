@@ -29,6 +29,8 @@ export class StudentcreateComponent implements OnInit {
   getclientid;
   getdisability;
   getstudentenrolment;
+  getstudentorigin;
+
 
   addstudentpostaldetails;
 
@@ -85,8 +87,12 @@ export class StudentcreateComponent implements OnInit {
   //studentdisability
   dataString2;
   outputD2;
-  // studentDisabilityId;
+  studentdisabilityId;
   disabilityId;
+
+
+  //Student Origin
+  studentOriginId;
 
 
   //prioreducational
@@ -219,6 +225,12 @@ export class StudentcreateComponent implements OnInit {
 
     this.apiService.getAPI2('dev/getstudentenrolment').subscribe((data) => {
       this.getstudentenrolment = data;
+    });
+
+
+    this.apiService.getAPI3('dev/getstudentorigin').subscribe((data) => {
+      console.log(data);
+      this.getstudentorigin = data;
     });
   }
 
@@ -496,7 +508,7 @@ export class StudentcreateComponent implements OnInit {
         }
 
 
-        this.router.navigate(['/admin/create-student-enrolment/' + this.PriorEducationalAchievementFlag]);
+        this.router.navigate(['/admin/create-student-enrolment/' + this.PriorEducationalAchievementFlag + '/' + this.studentOriginId]);
 
 
 

@@ -265,36 +265,38 @@
                                         <div class="form-check radio pr-1">
                                           <input class="form-check-input" type="radio" name="stillInSecSchool" id="yes"
                                             value="yes" [(ngModel)]="editstudent.stillInSecSchool"
-                                            (click)="showschltype()" />
+                                            onclick="showschltype()" />
                                           <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio pr-1">
                                           <input class="form-check-input" type="radio" name="stillInSecSchool" id="no"
                                             value="no" [(ngModel)]="editstudent.stillInSecSchool"
-                                            (click)="hideschltype()" />
+                                            onclick="hideschltype()" />
                                           <label class="form-check-label">No</label>
                                         </div>
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" *ngIf="schltype">
+                                    <div class="form-group row" id="schltype">
                                       <label for="schoolTypeId" class="col-sm-4 control-label alignstart">School
                                         Type</label>
-                                      <div class="input-group col-sm-8">
-                                        <select [(ngModel)]="editstudent.schoolTypeId"
-                                          class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger" name="schoolTypeId" id="schoolTypeId"
-                                          required>
-                                          <option value="" selected>
-                                            Please Select a Option
-                                          </option>
-                                          <option *ngFor="
-                                              let schooltype of getschooltype
-                                            " [value]="schooltype.schoolTypeId">
-                                            {{ schooltype.schoolTypeCode }} -
-                                            {{ schooltype.schoolTypeName }}
-                                          </option>
-                                        </select>
+                                      <div class="col-sm-8">
+                                        <div class="input-group">
+                                          <select [(ngModel)]="editstudent.schoolTypeId"
+                                            class="form-control select2 select2-danger"
+                                            data-dropdown-css-class="select2-danger" name="schoolTypeId"
+                                            id="schoolTypeId" required>
+                                            <option value="" selected>
+                                              Please Select a Option
+                                            </option>
+                                            <option *ngFor="
+                                                  let schooltype of getschooltype
+                                                " [value]="schooltype.schoolTypeId">
+                                              {{ schooltype.schoolTypeCode }} -
+                                              {{ schooltype.schoolTypeName }}
+                                            </option>
+                                          </select>
+                                        </div>
                                       </div>
                                     </div>
 
@@ -308,7 +310,7 @@
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="disability" id="yes"
-                                            value="Y" (click)="ShowDisablity()" />
+                                            value="Y" onclick="showStudentDisability()" />
                                           <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
@@ -317,12 +319,12 @@
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="disability" id="no" value="N"
-                                            (click)="HideDisablity()" />
+                                            onclick="hideStudentDisability()" />
                                           <label class="form-check-label">No</label>
                                         </div>
 
-                                        <div class="input-group" *ngIf="disable">
-                                          <ng-select [(ngModel)]="editstudent.studentdisabilityId"
+                                        <div class="input-group" id="studentdisability">
+                                          <ng-select [(ngModel)]="editstudentdisability.studentdisabilityId"
                                             name="studentdisabilityId" class="dropdown" multiple="true">
                                             <ng-option value="" selected>Please Select Options</ng-option>
                                             <ng-option *ngFor="
@@ -882,8 +884,7 @@
                                         <div class="input-group">
                                           <input class="form-control" type="text" name="buildingName" id="buildingName"
                                             placeholder="Enter your Building Name here"
-                                            [(ngModel)]="editstudentpostal.buildingName"
-                                            value="{{editstudentpostal.buildingName}}" />
+                                            [(ngModel)]="editstudentpostal.buildingName" />
                                         </div>
                                       </div>
                                     </div>
@@ -893,7 +894,7 @@
                                         Details</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="flatUnitDetails"
+                                          <input class="form-control" type="text" name="postalflatUnitDetails"
                                             id="flatUnitDetails" placeholder="Enter your Flat/ Unit details here"
                                             [(ngModel)]="editstudentpostal.flatUnitDetails" />
                                         </div>
@@ -905,10 +906,9 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="streetNumber" id="streetNumber"
-                                            placeholder="(e.g. 205 or Lot 118)"
-                                            [(ngModel)]="editstudentpostal.streetNumber"
-                                            value="{{editstudentpostal.streetNumber}}" required />
+                                          <input class="form-control" type="text" name="postalstreetNumber"
+                                            id="streetNumber" placeholder="(e.g. 205 or Lot 118)"
+                                            [(ngModel)]="editstudentpostal.streetNumber" required />
                                         </div>
                                       </div>
                                     </div>
@@ -918,10 +918,9 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="streetName" id="streetName"
-                                            placeholder="Enter your Street Name here"
-                                            [(ngModel)]="editstudentpostal.streetName"
-                                            value="{{editstudentpostal.streetName}}" required />
+                                          <input class="form-control" type="text" name="postalstreetName"
+                                            id="streetName" placeholder="Enter your Street Name here"
+                                            [(ngModel)]="editstudentpostal.streetName" required />
                                         </div>
                                       </div>
                                     </div>
@@ -933,7 +932,7 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="suburb" id="suburb"
+                                          <input class="form-control" type="text" name="postalsuburb" id="suburb"
                                             placeholder="Enter your City/ Town/ Suburb here"
                                             [(ngModel)]="editstudentpostal.suburb" required />
                                         </div>
@@ -945,7 +944,8 @@
                                       <div class="input-group col-sm-8">
                                         <select [(ngModel)]="editstudentpostal.stateId"
                                           class="form-control select2 select2-danger"
-                                          data-dropdown-css-class="select2-danger" name="stateId" id="stateId" required>
+                                          data-dropdown-css-class="select2-danger" name="postalstateId" id="stateId"
+                                          required>
                                           <option value="" selected>Please Select a Option</option>
                                           <option *ngFor="let state of getstate" [value]="state.stateId"
                                             selected="selected">
@@ -961,8 +961,8 @@
                                           class="star">*</span></label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" pattern="[0-9]{5}" name="postCode"
-                                            id="postCode" placeholder="Enter your Postcode here"
+                                          <input class="form-control" type="text" pattern="[0-9]{5}"
+                                            name="postalpostCode" id="postCode" placeholder="Enter your Postcode here"
                                             [(ngModel)]="editstudentpostal.postCode" required />
                                         </div>
                                       </div>
@@ -972,7 +972,7 @@
                                       <label for="pobox" class="col-sm-4 control-label">Post Box</label>
                                       <div class="col-sm-8">
                                         <div class="input-group">
-                                          <input class="form-control" type="text" name="pobox" id="pobox"
+                                          <input class="form-control" type="text" name="postalpobox" id="pobox"
                                             placeholder="Enter post box here" [(ngModel)]="editstudentpostal.pobox" />
                                         </div>
                                       </div>

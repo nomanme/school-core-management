@@ -38,11 +38,27 @@ function myFunction() {
     var x = document.getElementById("myPostal");
       x.style.display = "none";
   }
+  
+/*Student disabiltity*/ 
+function showStudentDisability() {
+  var x = document.getElementById("studentdisability");
+    x.style.display = "block"; 
+}
+function hideStudentDisability() {
+  var x = document.getElementById("studentdisability");
+    x.style.display = "none";
+}
 
 
-
-
-
+/*School Type*/ 
+function showschltype() {
+  var x = document.getElementById("schltype");
+    x.style.display = "block"; 
+}
+function hideschltype() {
+  var x = document.getElementById("schltype");
+    x.style.display = "none";
+}
 
 
  

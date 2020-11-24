@@ -42,14 +42,16 @@ export class StudentupdateComponent implements OnInit {
   editstudent = { PriorEducationalAchievementFlag: null, altEmail: null, australianPr: null, birthcountryId: null, buildingName: null, clientId: null, completedSchoolLevelId: null, dateModified: null, differentPostalAddress: null, disability: null, dob: null, email: null, employmentStatusId: null, englishSpeakingStatusId: null, firstName: null, flatUnitDetails: null, gender: null, homeLanguageId: null, indigenousStatusId: null, lastName: null, middleName: null, mobile: null, nationalityId: null, passportExpdate: null, passportNo: null, postCode: null, schoolTypeId: null, signatoryText: null, stateId: null, statisticalAreaLevel1Id: null, statisticalAreaLevel2Id: null, stillInSecSchool: null, streetName: null, streetNumber: null, studentId: null, suburb: null, surveyContactStatusId: null, telHome: null, telWork: null, title: null, userId: null, usiNo: null, visaExpdate: null, visaNo: null, visaStatusId: null };
 
 
+  editstudentdisability = { studentdisabilityId: null };
+
   editstudentpostal = { buildingName: null, flatUnitDetails: null, streetName: null, streetNumber: null, suburb: null, stateId: null, postCode: null, pobox: null };
 
 
+
+
+
+
   dataString;
-
-
-
-
   errors = '';
   allerrors = '';
   error0 = '';
@@ -171,14 +173,21 @@ export class StudentupdateComponent implements OnInit {
       // this.outputD = JSON.parse(this.outputD['msg']);
     });
 
+    this.apiService.getAPI2(`dev/getstudentdisability?studentId=${this.studentId}`).subscribe((data) => {
+      console.log(data[0]['disabilityName']);
+      this.editstudentdisability = data[0];
+      let arr = new Array(this.editstudentdisability);
+      let str = arr.toString();
+      console.log("Returned string is : " + str);
+      // console.log(this.editstudentdisability)
+
+    });
+
     this.apiService.getAPI2(`dev/getstudentpostaldetails?studentId=${this.studentId}`).subscribe((data) => {
       console.log(data[0]['streetName']);
       this.editstudentpostal = data[0];
-      // this.student=this.getStudentFromList(this.studentID, data);
       console.log(this.editstudentpostal)
-      // this.editstudent = JSON.parse(this.editstudent['msg']);
 
-      // this.outputD = JSON.parse(this.outputD['msg']);
     });
   }
 
@@ -385,18 +394,32 @@ export class StudentupdateComponent implements OnInit {
 
 
       //console.log(form.value);
-      let datajson = `{"userId":"1", "clientId":"${form.value.clientId}", "PriorEducationalAchievementFlag":"${form.value.PriorEducationalAchievementFlag}", "altEmail":"${form.value.altEmail}", "australianPr":"${form.value.australianPr}", "birthcountryId": "${form.value.birthcountryId}", "buildingName": "${form.value.buildingName}",  "completedSchoolLevelId": "${form.value.completedSchoolLevelId}", "differentPostalAddress": "${form.value.differentPostalAddress}", "disability": "${form.value.disability}", "dob": "${form.value.dob}", "email":"${form.value.email}", "employmentStatusId": "${form.value.employmentStatusId}", "englishSpeakingStatusId": "${form.value.englishSpeakingStatusId}", "firstName": "${form.value.firstName}", "flatUnitDetails": "${form.value.flatUnitDetails}", "gender": "${form.value.gender}", "homeLanguageId": "${form.value.homeLanguageId}", "indigenousStatusId": "${form.value.indigenousStatusId}", "lastName": "${form.value.lastName}", "middleName": "${form.value.middleName}", "mobile": "${form.value.mobile}", "nationalityId": "${form.value.nationalityId}", "passportExpdate": "${form.value.passportExpdate}", "passportNo": "${form.value.passportNo}", "postCode": "${form.value.postCode}", "schoolTypeId": "${form.value.schoolTypeId}", "signatoryText": "${form.value.signatoryText}", "stateId": "${form.value.stateId}", "statisticalAreaLevel1Id": "${form.value.statisticalAreaLevel1Id}", "statisticalAreaLevel2Id": "${form.value.statisticalAreaLevel2Id}", "stillInSecSchool": "${form.value.stillInSecSchool}", "streetName": "${form.value.streetName}", "streetnull": "${form.value.streetnull}", "suburb": "${form.value.suburb}", "surveyContactStatusId": "${form.value.surveyContactStatusId}", "telHome": "${form.value.telHome}", "telWork": "${form.value.telWork}", "title": "${form.value.title}", "usiNo": "${form.value.usiNo}", "visaExpdate": "${form.value.visaExpdate}", "visaNo": "${form.value.visaNo}", "visaStatusId": "${form.value.visaStatusId}"}`;
+      let datajson = `{"userId":"1", "clientId":"${form.value.clientId}", "PriorEducationalAchievementFlag":"${form.value.PriorEducationalAchievementFlag}", "altEmail":"${form.value.altEmail}", "australianPr":"${form.value.australianPr}", "birthcountryId": "${form.value.birthcountryId}", "buildingName": "${form.value.buildingName}",  "completedSchoolLevelId": "${form.value.completedSchoolLevelId}", "differentPostalAddress": "${form.value.differentPostalAddress}", "disability": "${form.value.disability}", "dob": "${form.value.dob}", "email":"${form.value.email}", "employmentStatusId": "${form.value.employmentStatusId}", "englishSpeakingStatusId": "${form.value.englishSpeakingStatusId}", "firstName": "${form.value.firstName}", "flatUnitDetails": "${form.value.flatUnitDetails}", "gender": "${form.value.gender}", "homeLanguageId": "${form.value.homeLanguageId}", "indigenousStatusId": "${form.value.indigenousStatusId}", "lastName": "${form.value.lastName}", "middleName": "${form.value.middleName}", "mobile": "${form.value.mobile}", "nationalityId": ${form.value.nationalityId}, "passportExpdate": "${form.value.passportExpdate}", "passportNo": "${form.value.passportNo}", "postCode": "${form.value.postCode}", "schoolTypeId": "${form.value.schoolTypeId}", "signatoryText": "${form.value.signatoryText}", "stateId": "${form.value.stateId}", "statisticalAreaLevel1Id": "${form.value.statisticalAreaLevel1Id}", "statisticalAreaLevel2Id": "${form.value.statisticalAreaLevel2Id}", "stillInSecSchool": "${form.value.stillInSecSchool}", "streetName": "${form.value.streetName}", "streetnull": "${form.value.streetnull}", "suburb": "${form.value.suburb}", "surveyContactStatusId": "${form.value.surveyContactStatusId}", "telHome": "${form.value.telHome}", "telWork": "${form.value.telWork}", "title": "${form.value.title}", "usiNo": "${form.value.usiNo}", "visaExpdate": "${form.value.visaExpdate}", "visaNo": "${form.value.visaNo}", "visaStatusId": ${form.value.visaStatusId}}`;
       console.log(datajson);
       this.apiService.postAPI(`dev/editstudent?studentId=${this.studentId}`, datajson).subscribe((data) => {
         console.log(data);
 
 
+        if (form.value.disability == "yes") {
+          //Student Disability
+          let datajson = `{"userId":"1", "studentId":"${this.outputD}", "disabilityId":"${form.value.studentdisabilityId}"}`;
+
+          console.log(datajson);
+          this.apiService.postAPI2(`dev/editstudentdisabilitys?studentId=${this.studentId}`, datajson).subscribe((data) => {
+            console.log(data);
+
+          });
+        }
+
+
+
+
 
         if (form.value.differentPostalAddress == "Y") {
           //Postal
-          let datajson = `{"userId":"1", "studentId":"${this.outputD}", "buildingName":"${form.value.postalbuildingName}", "flatUnitDetails":"${form.value.postalflatUnitDetails}", "streetName":"${form.value.streetName}", "streetNumber": "${form.value.streetNumber}", "suburb": "${form.value.postalsuburb}", "stateId": ${form.value.postalstateId}, "postCode": "${form.value.postalpostCode}", "pobox": "${form.value.postalpobox}"}`;
+          let datajson = `{"userId":"1", "studentId":"${this.outputD}", "buildingName":"${form.value.postalbuildingName}", "flatUnitDetails":"${form.value.postalflatUnitDetails}", "streetName":"${form.value.postalstreetName}", "streetNumber": "${form.value.postalstreetNumber}", "suburb": "${form.value.postalsuburb}", "stateId": ${form.value.postalstateId}, "postCode": "${form.value.postalpostCode}", "pobox": "${form.value.postalpobox}"}`;
           console.log(datajson);
-          this.apiService.postAPI(`dev/editstudentpostaldetails?studentPostalDetailsId=${this.studentPostalDetailsId}`, datajson).subscribe((data) => {
+          this.apiService.postAPI2(`dev/editstudentpostaldetails?studentId=${this.studentId}`, datajson).subscribe((data) => {
             console.log(data);
           });
         }

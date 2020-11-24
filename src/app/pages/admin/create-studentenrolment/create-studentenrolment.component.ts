@@ -26,9 +26,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
   studentenrolment;
   addstudentenrolment;
   dataString;
-  getstudentorigin;
   studentEnrolmentId;
-  studentOriginId = '';
   courseId = '';
   agentId = '';
   courseIntakeDateId = '';
@@ -69,12 +67,15 @@ export class CreateStudentenrolmentComponent implements OnInit {
 
   prioreducation;
   qualification = false;
-
+  studentOrigin;
+  studentOriginId = null;
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
 
     this.prioreducation = this.activatedRoute.snapshot.paramMap.get('prioreducation');
+
+    this.studentOrigin = this.activatedRoute.snapshot.paramMap.get('studentOrigin');
 
     this.outputD = this.apiService.getLocalStorage('studentId');
     console.log(this.outputD);
@@ -126,10 +127,10 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.getagent = data;
     });
 
-    this.apiService.getAPI3('dev/getstudentorigin').subscribe((data) => {
-      console.log(data);
-      this.getstudentorigin = data;
-    });
+    // this.apiService.getAPI3('dev/getstudentorigin').subscribe((data) => {
+    //   console.log(data);
+    //   this.getstudentorigin = data;
+    // });
 
     this.apiService.getAPI3('dev/gettrainingcontract').subscribe((data) => {
       // console.log(data);
@@ -146,6 +147,17 @@ export class CreateStudentenrolmentComponent implements OnInit {
     else {
       this.qualification = false;
     }
+
+    if (this.studentOrigin == 1) {
+      this.studentOriginId = 1;
+    }
+    else if (this.studentOrigin == 2) {
+      this.studentOriginId = 2;
+    }
+    else {
+      this.studentOriginId = 3;
+    }
+    console.log('hi!' + this.studentOriginId);
   }
 
 
@@ -159,15 +171,8 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.errors = 'false';
     }
 
-    console.log(form.value.studentOriginId);
 
-    if (form.value.studentOriginId == '') {
-      this.error1 = 'true';
-      this.errors = 'true';
-    } else {
-      this.error1 = '';
-      this.errors = 'false';
-    }
+
     console.log(`1: ${this.errors}`);
 
     if (form.value.courseId == '') {
@@ -276,9 +281,9 @@ export class CreateStudentenrolmentComponent implements OnInit {
         'studentId'
       )}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId
         }", "courseIntakeDateId":"${form.value.courseIntakeDateId
+        }", "studentOriginId":"${this.studentOriginId
         }", "applicationStatusId":"${form.value.applicationStatusId
         }",  "applicationStatusId":"${form.value.applicationStatusId
-        }","studentOriginId":"${form.value.studentOriginId
         }", "fundingSourceNationalId":"${form.value.fundingSourceNationalId
         }", "fundingSourceStateId":"${form.value.fundingSourceStateId
         }", "commencingProgramId":"${form.value.commencingProgramId

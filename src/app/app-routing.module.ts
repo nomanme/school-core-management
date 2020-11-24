@@ -347,7 +347,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'admin/create-student-enrolment/:prioreducation',
+    path: 'admin/create-student-enrolment/:prioreducation/:studentOrigin',
     component: CreateStudentenrolmentComponent,
     canActivate: [AuthGuardService],
   },

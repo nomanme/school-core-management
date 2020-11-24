@@ -30,22 +30,21 @@
               <h2 class="card-title Title2">Are You?</h2>
               <div class="inner-row">
                 <div class="col-md-12">
+
+
                   <div class="form-group row">
-                    <div class="col-sm-12 p-0">
-                      <div class="form-check radio pr-1">
-                        <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="1" />
-                        <label class="form-check-label">Overseas Student<b>(<u>Offshore</u>)</b></label>
-                      </div>
-                      <div class="form-check radio pr-1">
-                        <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="2" />
-                        <label class="form-check-label">Overseas Student in Australia<b>(<u>Onshore</u>)</b></label>
-                      </div>
-                      <div class="form-check radio">
-                        <input class="form-check-input" type="radio" name="" id="ResidentStudent" value="3" />
-                        <label class="form-check-label">Resident Student<b>(<u>Domestic</u>)</b></label>
+
+                    <div class="col-sm-8">
+                      <div class="form-check" *ngFor="let studentorigin of getstudentorigin">
+                        <input class="form-check-input" type="radio" name="studentOriginId" id="studentOriginId"
+                          [value]="studentorigin.studentOriginId" [(ngModel)]="studentOriginId" checked="checked" />
+                        <label class="form-check-label">{{
+                          studentorigin.originName
+                        }}</label>
                       </div>
                     </div>
                   </div>
+
                 </div>
                 <!--col-md-12-->
                 <div class="col-sm-12" *ngIf="errors == 'true'">
@@ -307,7 +306,7 @@
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="disability" id="yes"
-                                            value="Y" (click)="ShowDisablity()" />
+                                            value="Y" onclick="showStudentDisability()" />
                                           <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio">
@@ -316,11 +315,11 @@
                                                 ? 'form-control'
                                                 : 'form-control is-invalid'
                                             " class="form-check-input" type="radio" name="disability" id="no" value="N"
-                                            (click)="HideDisablity()" />
+                                            onclick="hideStudentDisability()" />
                                           <label class="form-check-label">No</label>
                                         </div>
 
-                                        <div class="input-group" *ngIf="disable">
+                                        <div class="input-group" id="studentdisability">
                                           <ng-select [(ngModel)]="studentdisabilityId" name="studentdisabilityId"
                                             class="dropdown" multiple="true">
                                             <ng-option value="" selected>Please Select Options</ng-option>
