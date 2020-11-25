@@ -52,11 +52,11 @@ function hideStudentDisability() {
 
 /*School Type*/ 
 function showschltype() {
-  var x = document.getElementById("schltype");
+  var x = document.getElementById("schlType");
     x.style.display = "block"; 
 }
 function hideschltype() {
-  var x = document.getElementById("schltype");
+  var x = document.getElementById("schlType");
     x.style.display = "none";
 }
 

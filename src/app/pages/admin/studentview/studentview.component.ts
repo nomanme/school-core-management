@@ -15,10 +15,15 @@ export class StudentviewComponent implements OnInit {
   studentPostalDetailsId;
   studentDisabilityId;
   studentdistabilty;
+  disabilityId;
   studentpostal;
   getstudent;
   getclientid;
   outputD;
+
+
+  myString = '';
+
 
 
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
@@ -44,13 +49,48 @@ export class StudentviewComponent implements OnInit {
 
     });
 
-    this.studentDisabilityId = this.activatedRoute.snapshot.paramMap.get('id');
 
+
+    this.studentDisabilityId = this.activatedRoute.snapshot.paramMap.get('id');
     this.apiService.getAPI2(`dev/getstudentdisability?studentId=${this.studentID}`).subscribe((data) => {
-      console.log(data[0]['disabilityName']);
+      // var test = '';
+      // console.log(data['disabilityId']);
+      // test = test + '' + data[0]['disabilityId'];
+      // for (let disability of data[0]['disabilityId']) {
+      //   // console.log(data);
+      //   this.studentdistabilty = data[0];
+      //   var firstKeyValue = this.studentdistabilty[Object.keys(this.studentdistabilty)[0]]; //"Steve"
+      //   console.log(firstKeyValue + ',');
+      // }
+      var str = ''
+      console.log(data);
       this.studentdistabilty = data;
-      console.log(this.studentdistabilty);
+      for (let disability of this.studentdistabilty) {
+        const values = Object.keys(disability).map(key => disability[key]);
+        const commaJoinedValues = values[5] + ' - ' + values[7];
+
+        str = str + ', ' + commaJoinedValues;
+        // console.log(str);
+        // console.log(commaJoinedValues);
+      }
+      // console.log(this.studentdistabilty);
+      // console.log(test);
+
+      this.myString = str.substring(1);
+      console.log(this.myString);
     });
+
+
+
+
+
+    // this.studentDisabilityId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    // this.apiService.getAPI2(`dev/getstudentdisability?studentId=${studentID}`).subscribe((data) => {
+    //   console.log(data);
+    //   this.studentdistabilty = data;
+    //   console.log(studentdistabilty);
+    // });
 
 
     this.studentPostalDetailsId = this.activatedRoute.snapshot.paramMap.get('id');

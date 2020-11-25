@@ -127,11 +127,19 @@
   .dropdown {
     width: 250px !important;
   }
-  
+  #studentdisability {
+    display: none;
+  }
   input[type="radio"] {
     width: auto;
     height: auto;
   }
   .areyou {
     background-color:#e4e6ec !important;
+  }
+  #myVisa {
+    display: none;
+  }
+  #myPostal {
+    display: none;
   }

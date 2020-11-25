@@ -30,22 +30,19 @@
               <h2 class="card-title Title2">Are You?</h2>
               <div class="inner-row">
                 <div class="col-md-12">
+
                   <div class="form-group row">
-                    <div class="col-sm-12 p-0">
-                      <div class="form-check radio pr-1">
-                        <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="1" />
-                        <label class="form-check-label">Overseas Student<b>(<u>Offshore</u>)</b></label>
-                      </div>
-                      <div class="form-check radio pr-1">
-                        <input class="form-check-input" type="radio" name="" id="OverseasStudent" value="2" />
-                        <label class="form-check-label">Overseas Student in Australia<b>(<u>Onshore</u>)</b></label>
-                      </div>
-                      <div class="form-check radio">
-                        <input class="form-check-input" type="radio" name="" id="ResidentStudent" value="3" />
-                        <label class="form-check-label">Resident Student<b>(<u>Domestic</u>)</b></label>
+                    <div class="col-sm-8">
+                      <div class="form-check" *ngFor="let studentorigin of getstudentorigin">
+                        <input class="form-check-input" type="radio" name="studentOriginId" id="studentOriginId"
+                          [value]="studentorigin.studentOriginId" [(ngModel)]="studentOriginId" checked="checked" />
+                        <label class="form-check-label">{{
+                          studentorigin.originName
+                        }}</label>
                       </div>
                     </div>
                   </div>
+
                 </div>
                 <!--col-md-12-->
                 <div class="col-sm-12" *ngIf="errors == 'true'">
@@ -264,41 +261,43 @@
                                       <div class="col-sm-8">
                                         <div class="form-check radio pr-1">
                                           <input class="form-check-input" type="radio" name="stillInSecSchool" id="yes"
-                                            value="yes" [(ngModel)]="editstudent.stillInSecSchool"
+                                            value="y" [(ngModel)]="editstudent.stillInSecSchool"
                                             onclick="showschltype()" />
                                           <label class="form-check-label">Yes</label>
                                         </div>
                                         <div class="form-check radio pr-1">
                                           <input class="form-check-input" type="radio" name="stillInSecSchool" id="no"
-                                            value="no" [(ngModel)]="editstudent.stillInSecSchool"
+                                            value="n" [(ngModel)]="editstudent.stillInSecSchool"
                                             onclick="hideschltype()" />
                                           <label class="form-check-label">No</label>
                                         </div>
                                       </div>
                                     </div>
-
-                                    <div class="form-group row" id="schltype">
-                                      <label for="schoolTypeId" class="col-sm-4 control-label alignstart">School
-                                        Type</label>
-                                      <div class="col-sm-8">
-                                        <div class="input-group">
-                                          <select [(ngModel)]="editstudent.schoolTypeId"
-                                            class="form-control select2 select2-danger"
-                                            data-dropdown-css-class="select2-danger" name="schoolTypeId"
-                                            id="schoolTypeId" required>
-                                            <option value="" selected>
-                                              Please Select a Option
-                                            </option>
-                                            <option *ngFor="
-                                                  let schooltype of getschooltype
-                                                " [value]="schooltype.schoolTypeId">
-                                              {{ schooltype.schoolTypeCode }} -
-                                              {{ schooltype.schoolTypeName }}
-                                            </option>
-                                          </select>
+                                    <div id="schlType">
+                                      <div class="form-group row">
+                                        <label for="schoolTypeId" class="col-sm-4 control-label alignstart">School
+                                          Type</label>
+                                        <div class="col-sm-8">
+                                          <div class="input-group">
+                                            <select [(ngModel)]="editstudent.schoolTypeId"
+                                              class="form-control select2 select2-danger"
+                                              data-dropdown-css-class="select2-danger" name="schoolTypeId"
+                                              id="schoolTypeId" required>
+                                              <option value="" selected>
+                                                Please Select a Option
+                                              </option>
+                                              <option *ngFor="
+                                                    let schooltype of getschooltype
+                                                  " [value]="schooltype.schoolTypeId">
+                                                {{ schooltype.schoolTypeCode }} -
+                                                {{ schooltype.schoolTypeName }}
+                                              </option>
+                                            </select>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
+
 
                                     <div class="form-group row">
                                       <label for="disability" class="col-sm-4 control-label alignstart">Any
@@ -323,7 +322,7 @@
                                           <label class="form-check-label">No</label>
                                         </div>
 
-                                        <div class="input-group" id="studentdisability">
+                                        <div class="input-group" id="StudentDisability">
                                           <ng-select [(ngModel)]="editstudentdisability.studentdisabilityId"
                                             name="studentdisabilityId" class="dropdown" multiple="true">
                                             <ng-option value="" selected>Please Select Options</ng-option>

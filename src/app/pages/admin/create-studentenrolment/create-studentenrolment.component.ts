@@ -141,7 +141,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
       this.getqualification = data;
     });
 
-    if (this.prioreducation == 'yes') {
+    if (this.prioreducation == 'Y') {
       this.qualification = true;
     }
     else {
@@ -149,15 +149,15 @@ export class CreateStudentenrolmentComponent implements OnInit {
     }
 
     if (this.studentOrigin == 1) {
-      this.studentOriginId = 1;
+      this.studentOriginId = 3;
     }
     else if (this.studentOrigin == 2) {
-      this.studentOriginId = 2;
+      this.studentOriginId = 3;
     }
     else {
       this.studentOriginId = 3;
     }
-    console.log('hi!' + this.studentOriginId);
+    // console.log('hi!' + this.studentOriginId);
   }
 
 

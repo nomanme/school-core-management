@@ -12,6 +12,7 @@ export class StudentupdateComponent implements OnInit {
   Visa = false;
   disable = false;
   PostalDetail = false;
+  myVisa = false;
 
   Users;
   getvisastatus;
@@ -27,11 +28,13 @@ export class StudentupdateComponent implements OnInit {
   getschooltype;
   getclientid;
   getdisability;
+  getstudentorigin
 
   addstudentpostaldetails;
   studentPostalDetailsId;
 
-
+  //Student Origin
+  studentOriginId = 3;
 
 
 
@@ -81,13 +84,15 @@ export class StudentupdateComponent implements OnInit {
   errorCodes: { firstName: null };
 
 
-
+  // differentPostalAddress = '';
 
 
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
 
   ngOnInit(): void {
+
+
 
 
     this.outputD = this.apiService.getLocalStorage('studentId');
@@ -157,6 +162,11 @@ export class StudentupdateComponent implements OnInit {
       this.getdisability = data;
     });
 
+    this.apiService.getAPI3('dev/getstudentorigin').subscribe((data) => {
+      console.log(data);
+      this.getstudentorigin = data;
+    });
+
 
 
     this.studentId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -171,15 +181,24 @@ export class StudentupdateComponent implements OnInit {
       // this.editstudent = JSON.parse(this.editstudent['msg']);
 
       // this.outputD = JSON.parse(this.outputD['msg']);
+
+      if (data[0]['stillInSecSchool'] == 'Y') {
+        var x = document.getElementById("schlType");
+        x.style.display = "block";
+      }
+
     });
 
     this.apiService.getAPI2(`dev/getstudentdisability?studentId=${this.studentId}`).subscribe((data) => {
       console.log(data[0]['disabilityName']);
       this.editstudentdisability = data[0];
-      let arr = new Array(this.editstudentdisability);
-      let str = arr.toString();
-      console.log("Returned string is : " + str);
-      // console.log(this.editstudentdisability)
+      console.log(this.editstudentdisability)
+
+
+      if (data[0]['disability'] == 'Y') {
+        var x = document.getElementById("StudentDisability");
+        x.style.display = "block";
+      }
 
     });
 
@@ -187,6 +206,12 @@ export class StudentupdateComponent implements OnInit {
       console.log(data[0]['streetName']);
       this.editstudentpostal = data[0];
       console.log(this.editstudentpostal)
+
+
+      if (data[0]['differentPostalAddress'] == 'Y') {
+        var y = document.getElementById("myPostal");
+        y.style.display = "block";
+      }
 
     });
   }
@@ -386,11 +411,11 @@ export class StudentupdateComponent implements OnInit {
       this.errordifferentPostalAddress = '';
       this.errors = 'false';
     }
+
+
+
+
     if (this.errors != 'true') {
-
-
-
-
 
 
       //console.log(form.value);
@@ -400,7 +425,7 @@ export class StudentupdateComponent implements OnInit {
         console.log(data);
 
 
-        if (form.value.disability == "yes") {
+        if (form.value.disability == "Y") {
           //Student Disability
           let datajson = `{"userId":"1", "studentId":"${this.outputD}", "disabilityId":"${form.value.studentdisabilityId}"}`;
 
@@ -425,7 +450,8 @@ export class StudentupdateComponent implements OnInit {
         }
 
 
-        this.router.navigate(['/admin/student-list']);
+        // this.router.navigate(['/admin/student-list']);
+        this.router.navigate(['/admin/create-student-enrolment/' + form.value.PriorEducationalAchievementFlag + '/' + form.value.studentOriginId]);
 
       });
     }

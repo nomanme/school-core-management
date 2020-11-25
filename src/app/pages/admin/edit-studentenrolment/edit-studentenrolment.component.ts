@@ -19,6 +19,7 @@ export class EditStudentenrolmentComponent implements OnInit {
   getcommencingprogram;
   getreasontakingcourse;
   gettrainingcontract;
+  getqualification;
 
   studentEnrolmentId;
   getstudentenrolment;
@@ -40,11 +41,16 @@ export class EditStudentenrolmentComponent implements OnInit {
     userId: null,
   };
 
+
+  prioreducation;
+  qualification = false;
+  studentOrigin;
+  studentOriginId = null;
   constructor(
     private apiService: ApiService,
     private router: Router,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.apiService.getAPI3('dev/getapplicationstatus').subscribe((data) => {
@@ -58,9 +64,9 @@ export class EditStudentenrolmentComponent implements OnInit {
     });
 
     this.apiService.getAPI3('dev/getfundingsourcenational').subscribe((data) => {
-        console.log(data);
-        this.getfundingsourcenational = data;
-      });
+      console.log(data);
+      this.getfundingsourcenational = data;
+    });
 
     this.apiService.getAPI3('dev/getfundingsourcestate').subscribe((data) => {
       console.log(data);
@@ -102,23 +108,45 @@ export class EditStudentenrolmentComponent implements OnInit {
       this.gettrainingcontract = data;
     });
 
+    this.apiService.getAPI3('dev/getqualification').subscribe((data) => {
+      this.getqualification = data;
+    });
+
+    if (this.prioreducation == 'Y') {
+      this.qualification = true;
+    }
+    else {
+      this.qualification = false;
+    }
+
+    if (this.studentOrigin == 1) {
+      this.studentOriginId = 1;
+    }
+    else if (this.studentOrigin == 2) {
+      this.studentOriginId = 2;
+    }
+    else {
+      this.studentOriginId = 3;
+    }
+
+
+
     this.studentEnrolmentId = this.activatedRoute.snapshot.paramMap.get('id');
 
     this.apiService.getAPI2(`dev/getstudentenrolment?studentEnrolmentId=${this.studentEnrolmentId}`).subscribe((data) => {
-        console.log(data);
-        this.editstudentenrolment = data[0];
-        console.log(this.editstudentenrolment);
-      });
+      console.log(data);
+      this.editstudentenrolment = data[0];
+      console.log(this.editstudentenrolment);
+    });
   }
 
   editStudentEnrolment(form) {
     console.log(form.value);
     let datajson = `{"userId":"1", "studentId":"${form.value.studentId}", "studentOriginId":"${form.value.studentOriginId}", "courseId":"${form.value.courseId}", "agentId":"${form.value.agentId}", "courseIntakeDateId":"${form.value.courseIntakeDateId}", "applicationStatusId":"${form.value.applicationStatusId}", "deliveryModeId":"${form.value.deliveryModeId}", "fundingSourceNationalId":"${form.value.fundingSourceNationalId}", "fundingSourceStateId":"${form.value.fundingSourceStateId}", "commencingProgramId":"${form.value.commencingProgramId}", "trainingContractid":"${form.value.trainingContractid}", "reasonTakingCourseId":"${form.value.reasonTakingCourseId}", "applyForRPL":"${form.value.applyForRPL}", "TuitionFee":"${form.value.TuitionFee}"}`;
     console.log(datajson);
-    this.apiService.postAPI2(`dev/editstudentenrolment?studentEnrolmentId=${this.studentEnrolmentId}`,datajson).subscribe((data)=> 
-    {
-        console.log(data);
-        this.router.navigate(['/admin/list-student-enrolment']);
-      });
+    this.apiService.postAPI2(`dev/editstudentenrolment?studentEnrolmentId=${this.studentEnrolmentId}`, datajson).subscribe((data) => {
+      console.log(data);
+      this.router.navigate(['/admin/list-student-enrolment']);
+    });
   }
 }

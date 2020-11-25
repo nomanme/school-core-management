@@ -1,6 +1,7 @@
 import { IfStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { from } from 'rxjs';
 import { ApiService } from 'src/app/api/api.service';
 
 @Component({
@@ -37,23 +38,23 @@ export class StudentcreateComponent implements OnInit {
   students;
   dataString;
   outputD;
-  PriorEducationalAchievementFlag = '';
+  PriorEducationalAchievementFlag = 'N';
   altEmail = '';
   australianPr = 'Y';
   birthcountryId = '';
   buildingName = '';
   clientId = '';
-  completedSchoolLevelId = '';
+  completedSchoolLevelId = 1;
   dateModified = '';
   differentPostalAddress = 'N';
   disability = 'N';
   dob = '';
   email = '';
   employmentStatusId = '';
-  englishSpeakingStatusId = '';
+  englishSpeakingStatusId = 1;
   firstName = '';
   flatUnitDetails = '';
-  gender = '';
+  gender = 'M';
   homeLanguageId = '';
   indigenousStatusId = '';
   lastName = '';
@@ -68,12 +69,12 @@ export class StudentcreateComponent implements OnInit {
   stateId = '';
   statisticalAreaLevel1Id = '';
   statisticalAreaLevel2Id = '';
-  stillInSecSchool = '';
+  stillInSecSchool = 'no';
   streetName = '';
   streetNumber = '';
   studentId = '';
   suburb = '';
-  surveyContactStatusId = '';
+  surveyContactStatusId = 1;
   telHome = '';
   telWork = '';
   title = '';
@@ -92,7 +93,7 @@ export class StudentcreateComponent implements OnInit {
 
 
   //Student Origin
-  studentOriginId;
+  studentOriginId = 3;
 
 
   //prioreducational
@@ -465,24 +466,33 @@ export class StudentcreateComponent implements OnInit {
         console.log(this.outputD);
 
 
+        if (form.value.disability == "Y") {
 
-        //Student Disability
-        this.dataString2 = `{"userId":"1", "studentId":"${this.outputD}", "disabilityId":"${form.value.studentdisabilityId}"}`;
 
-        console.log(this.dataString2);
-        // console.log(this.outputD);
-        this.apiService.setLocalStorage('studentId', this.outputD);
+          for (let disability of this.studentdisabilityId) {
+            console.log(disability);
+            //Student Disability
+            this.dataString2 = `{"userId":"1", "studentId":"${this.outputD}", "disabilityId":"${disability}"}`;
 
-        this.apiService.postAPI2('dev/addstudentdisability', this.dataString2).subscribe((data2) => {
-          // this.outputD2 = JSON.parse(data2['msg'])[0]['studentDisabilityId'];
-          console.log(data2);
-          // this.outputD2=data2;
-          // this.outputD2 = JSON.parse(data2['msg']);
-          // this.outputD2 = this.outputD2[0].studentDisabilityId;
+            console.log(this.dataString2);
+            // console.log(this.outputD);
+            this.apiService.setLocalStorage('studentId', this.outputD);
 
-          // console.log(this.outputD2);
+            this.apiService.postAPI2('dev/addstudentdisability', this.dataString2).subscribe((data2) => {
+              // this.outputD2 = JSON.parse(data2['msg'])[0]['studentDisabilityId'];
+              console.log(data2);
 
-        });
+              // this.outputD2=data2;
+              // this.outputD2 = JSON.parse(data2['msg']);
+              // this.outputD2 = this.outputD2[0].studentDisabilityId;
+
+              // console.log(this.outputD2);
+
+            });
+          }
+
+        }
+
 
         // if (form.value.postalstateId) {
         //   this.postalstateId = form.value.postalstateId;
