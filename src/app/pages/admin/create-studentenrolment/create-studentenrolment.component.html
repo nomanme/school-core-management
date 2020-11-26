@@ -121,7 +121,7 @@
                             required>
                             <option *ngFor="let courseintake of getcourseintakedate"
                               [value]="courseintake.courseIntakeDateId" selected="selected">
-                              {{ courseintake.startDate }} -
+                              {{ courseintake.startDate }} ---
                               {{ courseintake.endDate }}
                             </option>
                           </select>
@@ -159,7 +159,7 @@
                             data-dropdown-css-class="select2-danger" name="deliveryModeId" id="deliveryModeId" required>
                             <option *ngFor="let delivery of getdeliverymode" [value]="delivery.deliveryModeId"
                               selected="selected">
-                              {{ delivery.deliveryModeName }}
+                              {{ delivery.deliveryModeCode }} - {{ delivery.deliveryModeName }}
                             </option>
                           </select>
                         </div>
@@ -178,7 +178,7 @@
                             id="fundingSourceNationalId" required>
                             <option *ngFor="let fundnat of getfundingsourcenational"
                               [value]="fundnat.fundingSourceNationalId" selected="selected">
-                              {{ fundnat.fundingSourceNationalName }}
+                              {{ fundnat.fundingSourceNationalCode }} - {{ fundnat.fundingSourceNationalName }}
                             </option>
                           </select>
                         </div>
@@ -197,7 +197,7 @@
                             id="fundingSourceStateId" required>
                             <option *ngFor="let fundstate of getfundingsourcestate"
                               [value]="fundstate.fundingSourceStateId" selected="selected">
-                              {{ fundstate.fundingSourceStateName }}
+                              {{ fundstate.fundingSourceStateCode }} - {{ fundstate.fundingSourceStateName }}
                             </option>
                           </select>
                         </div>
@@ -216,7 +216,7 @@
                             required>
                             <option *ngFor="let commencing of getcommencingprogram"
                               [value]="commencing.commencingProgramId" selected="selected">
-                              {{ commencing.commencingProgramName }}
+                              {{ commencing.commencingProgramCode }} - {{ commencing.commencingProgramName }}
                             </option>
                           </select>
                         </div>
@@ -255,7 +255,7 @@
                             id="reasonTakingCourseId" required>
                             <option *ngFor="let reasontaking of getreasontakingcourse"
                               [value]="reasontaking.reasonTakingCourseId" selected="selected">
-                              {{ reasontaking.reasonName }}
+                              {{ reasontaking.reasonCode }} - {{ reasontaking.reasonName }}
                             </option>
                           </select>
                         </div>

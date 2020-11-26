@@ -8,11 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./studentupdate.component.css']
 })
 export class StudentupdateComponent implements OnInit {
-  schltype = false;
-  Visa = false;
-  disable = false;
-  PostalDetail = false;
-  myVisa = false;
+  // schltype = false;
+  // Visa = false;
+  // disable = false;
+  // PostalDetail = false;
+  // myVisa = false;
 
   Users;
   getvisastatus;
@@ -182,9 +182,13 @@ export class StudentupdateComponent implements OnInit {
 
       // this.outputD = JSON.parse(this.outputD['msg']);
 
-      if (data[0]['stillInSecSchool'] == 'Y') {
+      if (data[0]['stillInSecSchool'] == 'y') {
         var x = document.getElementById("schlType");
         x.style.display = "block";
+      }
+      else {
+        var x = document.getElementById("schlType");
+        x.style.display = "none";
       }
 
     });
@@ -196,7 +200,7 @@ export class StudentupdateComponent implements OnInit {
 
 
       if (data[0]['disability'] == 'Y') {
-        var x = document.getElementById("StudentDisability");
+        var x = document.getElementById("studentdisability");
         x.style.display = "block";
       }
 
@@ -218,30 +222,30 @@ export class StudentupdateComponent implements OnInit {
 
 
 
-  showschltype() {
-    this.schltype = true;
-  }
-  hideschltype() {
-    this.schltype = false;
-  }
-  ShowVisa() {
-    this.Visa = true;
-  }
-  HideVisa() {
-    this.Visa = false;
-  }
-  ShowDisablity() {
-    this.disable = true;
-  }
-  HideDisablity() {
-    this.disable = false;
-  }
-  ShowStudentPostal() {
-    this.PostalDetail = true;
-  }
-  HideStudentPostal() {
-    this.PostalDetail = false;
-  }
+  // showschltype() {
+  //   this.schltype = true;
+  // }
+  // hideschltype() {
+  //   this.schltype = false;
+  // }
+  // ShowVisa() {
+  //   this.Visa = true;
+  // }
+  // HideVisa() {
+  //   this.Visa = false;
+  // }
+  // ShowDisablity() {
+  //   this.disable = true;
+  // }
+  // HideDisablity() {
+  //   this.disable = false;
+  // }
+  // ShowStudentPostal() {
+  //   this.PostalDetail = true;
+  // }
+  // HideStudentPostal() {
+  //   this.PostalDetail = false;
+  // }
 
 
 

@@ -10,10 +10,10 @@ import { ApiService } from 'src/app/api/api.service';
   styleUrls: ['./studentcreate.component.css'],
 })
 export class StudentcreateComponent implements OnInit {
-  schltype = false;
-  Visa = false;
-  disable = false;
-  PostalDetail = false;
+  // schltype = false;
+  // Visa = false;
+  // disable = false;
+  // PostalDetail = false;
 
   Users;
   getvisastatus;
@@ -69,7 +69,7 @@ export class StudentcreateComponent implements OnInit {
   stateId = '';
   statisticalAreaLevel1Id = '';
   statisticalAreaLevel2Id = '';
-  stillInSecSchool = 'no';
+  stillInSecSchool = 'n';
   streetName = '';
   streetNumber = '';
   studentId = '';
@@ -235,35 +235,33 @@ export class StudentcreateComponent implements OnInit {
     });
   }
 
-  showschltype() {
-    this.schltype = true;
-  }
-  hideschltype() {
-    this.schltype = false;
-  }
-  ShowVisa() {
-    this.Visa = true;
-  }
-  HideVisa() {
-    this.Visa = false;
-  }
-  ShowDisablity() {
-    this.disable = true;
-  }
-  HideDisablity() {
-    this.disable = false;
-  }
-  ShowStudentPostal() {
-    this.PostalDetail = true;
-  }
-  HideStudentPostal() {
-    this.PostalDetail = false;
-  }
-
-
-  // auspr(){
-  //   this.auspr = true;
+  // showschltype() {
+  //   this.schltype = true;
   // }
+  // hideschltype() {
+  //   this.schltype = false;
+  // }
+  // ShowVisa() {
+  //   this.Visa = true;
+  // }
+  // HideVisa() {
+  //   this.Visa = false;
+  // }
+  // ShowDisablity() {
+  //   this.disable = true;
+  // }
+  // HideDisablity() {
+  //   this.disable = false;
+  // }
+  // ShowStudentPostal() {
+  //   this.PostalDetail = true;
+  // }
+  // HideStudentPostal() {
+  //   this.PostalDetail = false;
+  // }
+
+
+
 
 
 

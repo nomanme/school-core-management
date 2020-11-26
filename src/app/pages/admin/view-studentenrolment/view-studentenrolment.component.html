@@ -36,15 +36,15 @@
                                         <div class="inner-row">
 
                                             <!-- <div class="form-group row">
-                                <label for="studentId" class="col-sm-3 control-label">Student Id</label> 
-                                <div class="col-sm-9">   
-                                    {{ studentenrolment.studentId }}
-                                </div>
-                            </div>
--->
+                                                    <label for="studentId" class="col-sm-3 control-label">Student Id</label> 
+                                                    <div class="col-sm-9">   
+                                                        {{ studentenrolment.studentId }}
+                                                    </div>
+                                                </div>
+                                            -->
                                             <div class="form-group row">
                                                 <label for="studentOriginId" class="col-sm-3 control-label">Student
-                                                    Origin Id</label>
+                                                    Origin </label>
                                                 <div class="col-sm-9">
                                                     {{ studentenrolment.originName }}
                                                 </div>
@@ -65,9 +65,9 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="courseIntakeDateId" class="col-sm-4 control-label">Course
+                                                <label for="courseIntakeDateId" class="col-sm-3 control-label">Course
                                                     Intake Date</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-9">
                                                     {{studentenrolment.startDate}} - {{studentenrolment.endDate}}
                                                 </div>
                                             </div>
@@ -75,73 +75,77 @@
                                             <div class="form-group row">
                                                 <label for="applicationStatusId"
                                                     class="col-sm-3 control-label">Application Status</label>
-                                                <div class="col-sm-9" *ngFor="let appstatus of getapplicationstatus"
-                                                    [value]="appstatus.applicationStatusId">
-                                                    {{ appstatus.applicationStatusName }}
+                                                <div class="col-sm-9">
+                                                    {{ studentenrolment.applicationStatusName }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="deliveryModeId" class="col-sm-4 control-label">Delivery
+                                                <label for="deliveryModeId" class="col-sm-3 control-label">Delivery
                                                     Mode</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-9">
+                                                    {{ studentenrolment.deliveryModeCode }} -
                                                     {{ studentenrolment.deliveryModeName }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="fundingSourceNationalId"
-                                                    class="col-sm-4 control-label">Funding Source National</label>
-                                                <div class="col-sm-8">
+                                                    class="col-sm-3 control-label">Funding Source National</label>
+                                                <div class="col-sm-9">
+                                                    {{ studentenrolment.fundingSourceNationalCode }} -
                                                     {{ studentenrolment.fundingSourceNationalName }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="fundingSourceStateId" class="col-sm-4 control-label">Funding
+                                                <label for="fundingSourceStateId" class="col-sm-3 control-label">Funding
                                                     Source State</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-9">
+                                                    {{ studentenrolment.fundingSourceStateCode }} -
                                                     {{ studentenrolment.fundingSourceStateName }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="commencingProgramId"
-                                                    class="col-sm-4 control-label">Commencing Program</label>
-                                                <div class="col-sm-8">
+                                                    class="col-sm-3 control-label">Commencing Program</label>
+                                                <div class="col-sm-9">
+                                                    {{ studentenrolment.commencingProgramCode }} -
                                                     {{ studentenrolment.commencingProgramName }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="trainingContractid" class="col-sm-4 control-label">Training
+                                                <label for="trainingContractid" class="col-sm-3 control-label">Training
                                                     Contract</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-9">
                                                     {{ studentenrolment.trainingContractCode }} -
                                                     {{ studentenrolment.trainingContractName }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="reasonTakingCourseId" class="col-sm-4 control-label">Reason
+                                                <label for="reasonTakingCourseId" class="col-sm-3 control-label">Reason
                                                     Taking Course</label>
-                                                <div class="col-sm-8">
-                                                    {{ studentenrolment.reasonTakingCour }}
+                                                <div class="col-sm-9">
+                                                    {{ studentenrolment.reasonCode }} -
+                                                    {{ studentenrolment.reasonName }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="applyForRPL" class="col-sm-4 control-label">Apply For
+                                                <label for="applyForRPL" class="col-sm-3 control-label">Apply For
                                                     RPL</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-9">
                                                     {{ studentenrolment.applyForRPL }}
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="TuitionFee" class="col-sm-4 control-label">Tuition
+                                                <label for="TuitionFee" class="col-sm-3 control-label">Tuition
                                                     Fee</label>
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-9">
                                                     {{ studentenrolment.TuitionFee }}
                                                 </div>
                                             </div>

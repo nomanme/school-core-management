@@ -81,49 +81,38 @@ export class CreateStudentenrolmentComponent implements OnInit {
     console.log(this.outputD);
 
     this.apiService.getAPI3('dev/getapplicationstatus').subscribe((data) => {
-      // console.log(data);
       this.getapplicationstatus = data;
     });
 
     this.apiService.getAPI3('dev/getdeliverymode').subscribe((data) => {
-      // console.log(data);
       this.getdeliverymode = data;
     });
 
-    this.apiService
-      .getAPI3('dev/getfundingsourcenational')
-      .subscribe((data) => {
-        // console.log(data);
-        this.getfundingsourcenational = data;
-      });
+    this.apiService.getAPI3('dev/getfundingsourcenational').subscribe((data) => {
+      this.getfundingsourcenational = data;
+    });
 
     this.apiService.getAPI3('dev/getfundingsourcestate').subscribe((data) => {
-      // console.log(data);
       this.getfundingsourcestate = data;
     });
 
     this.apiService.getAPI3('dev/getcommencingprogram').subscribe((data) => {
-      // console.log(data);
       this.getcommencingprogram = data;
     });
 
     this.apiService.getAPI3('dev/getreasontakingcourse').subscribe((data) => {
-      // console.log(data);
       this.getreasontakingcourse = data;
     });
 
     this.apiService.getAPI('dev/getcourse').subscribe((data) => {
-      // console.log(data);
       this.getcourse = data;
     });
 
     this.apiService.getAPI2('dev/getcourseintakedate').subscribe((data) => {
-      // console.log(data);
       this.getcourseintakedate = data;
     });
 
     this.apiService.getAPI3('dev/getagent').subscribe((data) => {
-      // console.log(data);
       this.getagent = data;
     });
 
@@ -133,7 +122,6 @@ export class CreateStudentenrolmentComponent implements OnInit {
     // });
 
     this.apiService.getAPI3('dev/gettrainingcontract').subscribe((data) => {
-      // console.log(data);
       this.gettrainingcontract = data;
     });
 
@@ -301,18 +289,17 @@ export class CreateStudentenrolmentComponent implements OnInit {
 
         console.log(this.studentenrolment);
 
+        if (this.prioreducation == "Y") {
+          //Prior Educational Achievement Flag
+          this.dataString2 = `{"userId":"1", "studentEnrolmentId":"${this.studentenrolment}", "QualificationId":"${form.value.priorqualification}"}`;
+          console.log(this.dataString2);
+          // this.apiService.setLocalStorage('studentId', this.outputD);
+          this.apiService.postAPI2('dev/addprioreducationalachievement', this.dataString2).subscribe((data2) => {
+            console.log(data2);
+          });
+        }
 
-        //Prior Educational Achievement Flag
-        this.dataString2 = `{"userId":"1", "studentEnrolmentId":"${this.studentenrolment}", "QualificationId":"${form.value.priorqualification}"}`;
 
-        console.log(this.dataString2);
-
-        // this.apiService.setLocalStorage('studentId', this.outputD);
-
-        this.apiService.postAPI2('dev/addprioreducationalachievement', this.dataString2).subscribe((data2) => {
-          console.log(data2);
-
-        });
 
         this.router.navigate(['/admin/student-list']);
 
