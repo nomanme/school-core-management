@@ -67,7 +67,7 @@ export class StudentviewComponent implements OnInit {
       this.studentdistabilty = data;
       for (let disability of this.studentdistabilty) {
         const values = Object.keys(disability).map(key => disability[key]);
-        const commaJoinedValues = values[5] + ' - ' + values[7];
+        const commaJoinedValues = values[18] + ' - ' + values[20];
 
         str = str + ', ' + commaJoinedValues;
         // console.log(str);

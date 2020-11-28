@@ -44,7 +44,7 @@ export class StudentcreateComponent implements OnInit {
   birthcountryId = '';
   buildingName = '';
   clientId = '';
-  completedSchoolLevelId = 1;
+  completedSchoolLevelId = 6;
   dateModified = '';
   differentPostalAddress = 'N';
   disability = 'N';

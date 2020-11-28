@@ -127,9 +127,7 @@
   .dropdown {
     width: 250px !important;
   }
-  #studentdisability {
-    display: none;
-  }
+ 
   input[type="radio"] {
     width: auto;
     height: auto;

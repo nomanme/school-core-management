@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { ShareService } from '../../share/share.service'
+
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
+  img = "";
+
+
   openDropDown = '';
   openSubDropDown = '';
   currentURL = '';
@@ -13,7 +19,7 @@ export class SidebarComponent implements OnInit {
   active_slug = '';
   classList = '';
 
-  constructor() {
+  constructor(private shared: ShareService) {
     this.currentURL = window.location.href;
     this.active_slug = this.currentURL.split('/').pop();
     this.parts = this.currentURL.split('/');
@@ -102,6 +108,10 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
     const current = document.getElementsByClassName(this.active_slug)[0];
     current.classList.add('current');
+
+    this.shared.imageSouce.subscribe((image) => (this.img = image))
+
+
   }
 
   getDataForDropDown($event: any) {
@@ -117,7 +127,7 @@ export class SidebarComponent implements OnInit {
     this.openSubDropDown = '';
     // get data for table since we are opening the div to show the body
     console.log('here');
-    
+
   }
 
   removeDataForDropDown($event: any) {
@@ -131,7 +141,7 @@ export class SidebarComponent implements OnInit {
   getDataForSubDropDown($event: any) {
     // $event.target.classList.add('active');
     // console.log($event.target.getAttribute('data-opener'));
-    
+
     if (this.openSubDropDown && $event.target.parentElement.classList.contains('active')) {
       this.openSubDropDown = '';
       $event.target.parentElement.classList.remove('active');

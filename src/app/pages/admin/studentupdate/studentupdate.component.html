@@ -325,14 +325,13 @@
                                         <div class="input-group" id="studentdisability">
                                           <ng-select [(ngModel)]="editstudentdisability.studentdisabilityId"
                                             name="studentdisabilityId" class="dropdown" multiple="true">
-                                            <ng-option value="" selected>Please Select Options</ng-option>
-                                            <ng-option *ngFor="
-                                                let disable of getdisability
-                                              " [value]="disable.disabilityId">{{ disable.disabilityCode }} -
-                                              {{
-                                                disable.disabilityName
-                                              }}</ng-option>
+                                            <ng-option value="">Please Select Option
+                                            </ng-option>
+                                            <ng-option *ngFor=" let disable of getstudentdisability"
+                                              [value]="disable.studentDisabilityId">{{ disable.disabilityId }} -
+                                              {{ disable.disabilityName }}</ng-option>
                                           </ng-select>
+
                                         </div>
                                       </div>
                                     </div>

@@ -45,7 +45,7 @@ export class StudentupdateComponent implements OnInit {
   editstudent = { PriorEducationalAchievementFlag: null, altEmail: null, australianPr: null, birthcountryId: null, buildingName: null, clientId: null, completedSchoolLevelId: null, dateModified: null, differentPostalAddress: null, disability: null, dob: null, email: null, employmentStatusId: null, englishSpeakingStatusId: null, firstName: null, flatUnitDetails: null, gender: null, homeLanguageId: null, indigenousStatusId: null, lastName: null, middleName: null, mobile: null, nationalityId: null, passportExpdate: null, passportNo: null, postCode: null, schoolTypeId: null, signatoryText: null, stateId: null, statisticalAreaLevel1Id: null, statisticalAreaLevel2Id: null, stillInSecSchool: null, streetName: null, streetNumber: null, studentId: null, suburb: null, surveyContactStatusId: null, telHome: null, telWork: null, title: null, userId: null, usiNo: null, visaExpdate: null, visaNo: null, visaStatusId: null };
 
 
-  editstudentdisability = { studentdisabilityId: null };
+  editstudentdisability = { studentdisabilityId: "" };
 
   editstudentpostal = { buildingName: null, flatUnitDetails: null, streetName: null, streetNumber: null, suburb: null, stateId: null, postCode: null, pobox: null };
 
@@ -82,6 +82,12 @@ export class StudentupdateComponent implements OnInit {
   errorMessage = '';
 
   errorCodes: { firstName: null };
+
+  myString;
+  studentdistabilty;
+
+
+  getstudentdisability;
 
 
   // differentPostalAddress = '';
@@ -167,6 +173,10 @@ export class StudentupdateComponent implements OnInit {
       this.getstudentorigin = data;
     });
 
+    this.apiService.getAPI2('dev/getstudentdisability').subscribe((data) => {
+      this.getstudentdisability = data;
+    });
+
 
 
     this.studentId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -192,6 +202,28 @@ export class StudentupdateComponent implements OnInit {
       }
 
     });
+
+
+
+    //Student Disability
+    // this.studentDisabilityId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.apiService.getAPI2(`dev/getstudentdisability?studentId=${this.studentId}`).subscribe((data) => {
+      var str = ''
+      console.log(data);
+      this.studentdistabilty = data;
+      for (let disability of this.studentdistabilty) {
+        const values = Object.keys(disability).map(key => disability[key]);
+        const commaJoinedValues = values[18] + ' - ' + values[20];
+        str = str + ' ' + commaJoinedValues;
+      };
+      this.myString = str.substring(1);
+      console.log(this.myString);
+      // this.editstudentdisability = this.myString
+    });
+
+
+
+
 
     this.apiService.getAPI2(`dev/getstudentdisability?studentId=${this.studentId}`).subscribe((data) => {
       console.log(data[0]['disabilityName']);

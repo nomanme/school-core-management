@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ShareService } from '../../share/share.service'
+
 
 @Component({
   selector: 'app-footer',
@@ -6,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  constructor() {}
+  message: string = "";
+  constructor(private shared: ShareService) { }
 
-  ngOnInit(): void {}
+  public ngOnInit() {
+
+    this.shared.messageSource.subscribe((message) => (this.message = message))
+  };
 }
