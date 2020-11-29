@@ -125,3 +125,4 @@ body.sidebar-collapse .main-sidebar:hover .sidenav-heading span.brand-text {
     display: unset;
     transition: 0.5s;
 }
+body { margin: 0; }

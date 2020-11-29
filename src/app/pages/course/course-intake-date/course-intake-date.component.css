@@ -179,19 +179,22 @@
     padding: 10px;
   }
   
-  th.rowid,
+  /* th.rowid,
   td.rowid {
     min-width: 40px !important;
+  } */
+  
+  th.course-name,
+  td.course-name {
+    width: 230px !important;
+    
   }
   
-  th.name,
-  td.name {
-    min-width: 215px !important;
-  }
-  
-  th.email,
-  td.email {
-    min-width: 250px !important;
+
+
+  th.date,
+  td.date {
+    min-width: 200px !important;
   }
   
   th.action,

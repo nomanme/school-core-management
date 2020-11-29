@@ -39,19 +39,43 @@
                                             <div class="col-md-12 p-0 m-0">
                                                 <table class="table table-stripe">
                                                     <tr class="heading">
-                                                        <th class="rowid">Id</th>
-                                                        <th class="email">Course Name</th>
+                                                        <th class="course-name">Course Name</th>
+                                                        <th class="date">Start Date</th>
+                                                        <th class="date">End Date</th>
                                                         <th class="action">Action</th>
                                                     </tr>
                                                     <tr *ngFor="let coursedate of CourseIntakeDate">
-                                                        <td class="rowid">{{ coursedate.courseIntakeDateId }}</td>
-                                                        <td class="email">{{ coursedate.courseName }}</td>
+                                                        <!-- <td class="rowid">{{ coursedate.courseIntakeDateId }}</td> -->
+                                                        <td class="course-name">{{ coursedate.courseName }}</td>
+                                                        <td class="date">
+                                                            <mat-form-field appearance="fill">
+                                                                <mat-label>Choose a date</mat-label>
+                                                                <input matInput [matDatepicker]="picker1">
+                                                                <mat-datepicker-toggle matSuffix [for]="picker1">
+                                                                </mat-datepicker-toggle>
+                                                                <mat-datepicker #picker1></mat-datepicker>
+                                                            </mat-form-field>
+                                                        </td>
+
+
+                                                        <td class="date">
+                                                            <mat-form-field appearance="fill">
+                                                                <mat-label>Choose a date</mat-label>
+                                                                <input matInput [matDatepicker]="picker2">
+                                                                <mat-datepicker-toggle matSuffix [for]="picker2">
+                                                                </mat-datepicker-toggle>
+                                                                <mat-datepicker #picker2></mat-datepicker>
+                                                            </mat-form-field>
+                                                        </td>
                                                         <td class="action">
-                                                            <a
+                                                            <button type="submit" class="btn btn-success" name="click"
+                                                                id="click">click</button>
+
+                                                            <!-- <a
                                                                 href="course/view-course-intake-date/{{ coursedate.courseIntakeDateId }}">View</a>
                                                             |
                                                             <a
-                                                                href="course/edit-course-intake-date/{{ coursedate.courseIntakeDateId }}">Edit</a>
+                                                                href="course/edit-course-intake-date/{{ coursedate.courseIntakeDateId }}">Edit</a> -->
                                                         </td>
                                                     </tr>
                                                 </table>

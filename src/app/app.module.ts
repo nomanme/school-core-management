@@ -140,6 +140,9 @@ import { CreateCourseIntakeDateComponent } from './pages/course/create-course-in
 import { EditCourseIntakeDateComponent } from './pages/course/edit-course-intake-date/edit-course-intake-date.component';
 import { ViewCourseIntakeDateComponent } from './pages/course/view-course-intake-date/view-course-intake-date.component';
 import { TestComponent } from './pages/test/test.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core'
 
 @NgModule({
   declarations: [
@@ -286,6 +289,9 @@ import { TestComponent } from './pages/test/test.component';
     HttpClientModule,
     FormsModule,
     NgSelectModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],

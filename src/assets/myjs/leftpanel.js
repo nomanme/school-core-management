@@ -59,6 +59,3 @@ function hideschltype() {
   var x = document.getElementById("schlType");
     x.style.display = "none";
 }
-
-
- 
