@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ShareService {
   imageSrc = 'assets/image/school1.png'
 
+
   public messageSource = new BehaviorSubject<string>('School Management System')
   public imageSouce = new BehaviorSubject<any>(this.imageSrc)
 
