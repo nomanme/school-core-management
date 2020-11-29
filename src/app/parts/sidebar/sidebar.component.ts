@@ -19,7 +19,7 @@ export class SidebarComponent implements OnInit {
   active_slug = '';
   classList = '';
 
-  constructor(private shared: ShareService) {
+  constructor(private share: ShareService) {
     this.currentURL = window.location.href;
     this.active_slug = this.currentURL.split('/').pop();
     this.parts = this.currentURL.split('/');
@@ -109,7 +109,7 @@ export class SidebarComponent implements OnInit {
     const current = document.getElementsByClassName(this.active_slug)[0];
     current.classList.add('current');
 
-    this.shared.imageSouce.subscribe((image) => (this.img = image))
+    this.share.imageSouce.subscribe((image) => (this.img = image))
 
 
   }
