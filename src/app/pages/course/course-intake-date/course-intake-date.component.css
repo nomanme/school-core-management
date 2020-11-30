@@ -194,11 +194,11 @@
 
   th.date,
   td.date {
-    min-width: 200px !important;
+    width: 270px !important;
   }
   
   th.action,
   td.action {
-    min-width: 80px !important;
+    width: 80px !important;
   }
   

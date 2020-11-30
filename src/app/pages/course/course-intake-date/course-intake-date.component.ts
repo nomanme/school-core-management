@@ -23,9 +23,14 @@ export class CourseIntakeDateComponent implements OnInit {
     enrolmentFee: null,
     publish: null,
     userId: null,
+    courseIntakeDateId: null
   };
   courseIntakeDateId;
-  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private mgitatDatepickerModule: MatDatepickerModule) { }
+
+
+  startDate: string;
+
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private matDatepickerModule: MatDatepickerModule) { }
 
   ngOnInit(): void {
     this.apiService.getAPI2('dev/getcourseintakedate').subscribe((data) => {
@@ -33,14 +38,37 @@ export class CourseIntakeDateComponent implements OnInit {
       this.CourseIntakeDate = data;
 
 
-      this.apiService.getAPI2(`dev/getcourseintakedate?courseIntakeDateId=${this.courseIntakeDateId}`).subscribe((data) => {
-        console.log(data);
-        this.editcourseintakedate = data[0];
-        console.log(this.editcourseintakedate);
-      });
+      // this.apiService.getAPI2(`dev/getcourseintakedate?courseIntakeDateId=${this.courseIntakeDateId}`).subscribe((data) => {
+      //   console.log(data);
+      //   this.editcourseintakedate = data[0];
+      //   console.log(this.editcourseintakedate);
+      // });
     });
-
-
   }
+
+  myFunction($event: any) {
+    var rowId = $event.currentTarget.getAttribute('id');
+    var startDate = document.getElementById("sdate" + rowId).value;
+    // var startD = document.getElementById("sdate");
+    // if (startD) {
+    //   var startDate = startD.value;
+    // }
+    this.courseIntakeDateId = rowId
+    console.log(startDate + ' ' + this.courseIntakeDateId)
+
+
+    // var endDate = document.getElementById("edate" + rowId).value;
+    // console.log(endDate)
+
+
+    let datajson = `{"startDate":"${startDate}"}`;
+    console.log(datajson);
+    this.apiService.postAPI2(`dev/editcourseintakedate?courseIntakeDateId=${this.courseIntakeDateId}`, datajson).subscribe((data) => {
+      // console.log(data);
+      // this.router.navigate(['/course/course-intake-date-list']);
+    });
+  }
+
+
 
 }
