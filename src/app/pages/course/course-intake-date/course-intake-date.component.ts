@@ -25,8 +25,6 @@ export class CourseIntakeDateComponent implements OnInit {
   courseIntakeDateId;
 
 
-  startDate: string;
-
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private matDatepickerModule: MatDatepickerModule) { }
 
   ngOnInit(): void {
@@ -45,46 +43,25 @@ export class CourseIntakeDateComponent implements OnInit {
 
   myFunction($event: any) {
     var rowId = $event.currentTarget.getAttribute('id');
+
     var startDate = (<HTMLInputElement>document.getElementById("sdate" + rowId)).value;
     var startDateParts = startDate.split("/");
-    startDate = startDateParts[2] + '/' + startDateParts[0] + '/' + startDateParts[1];
-    // var startD = document.getElementById("sdate");
-    // if (startD) {
-    //   var startDate = startD.value;
-    // }
+    startDate = startDateParts[2] + '-' + startDateParts[0] + '-' + startDateParts[1];
 
-    // startDate.toISOString().split('T')[0]
-
-    // let date_ob = new Date();
-
-    // // adjust 0 before single digit date
-    // let date = ("0" + date_ob.getDate()).slice(-2);
-
-    // // current month
-    // let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
-
-    // // current year
-    // let year = date_ob.getFullYear();
-
-    // // prints date in YYYY-MM-DD format
-    // console.log(year + "-" + month + "-" + date);
-
-
-
-
+    var endDate = (<HTMLInputElement>document.getElementById("edate" + rowId)).value;
+    var endtDateParts = endDate.split("/");
+    endDate = endtDateParts[2] + '-' + endtDateParts[0] + '-' + endtDateParts[1];
 
     this.courseIntakeDateId = rowId
     console.log(startDate + ' ' + this.courseIntakeDateId)
+    console.log(endDate + ' ' + this.courseIntakeDateId)
 
 
-    // var endDate = document.getElementById("edate" + rowId).value;
-    // console.log(endDate)
 
-
-    let datajson = `{"startDate":"${startDate}"}`;
+    let datajson = `{"startDate":"${startDate}", "endDate":"${endDate}"}`;
     console.log(datajson);
     this.apiService.postAPI2(`dev/editcourseintakedate?courseIntakeDateId=${this.courseIntakeDateId}`, datajson).subscribe((data) => {
-      // console.log(data);
+      console.log(data);
       // this.router.navigate(['/course/course-intake-date-list']);
     });
   }
