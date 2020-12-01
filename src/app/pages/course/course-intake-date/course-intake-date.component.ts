@@ -4,9 +4,6 @@ import { ApiService } from 'src/app/api/api.service';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
-
-
-
 @Component({
   selector: 'app-course-intake-date',
   templateUrl: './course-intake-date.component.html',
@@ -53,6 +50,27 @@ export class CourseIntakeDateComponent implements OnInit {
     // if (startD) {
     //   var startDate = startD.value;
     // }
+
+    // startDate.toISOString().split('T')[0]
+
+    // let date_ob = new Date();
+
+    // // adjust 0 before single digit date
+    // let date = ("0" + date_ob.getDate()).slice(-2);
+
+    // // current month
+    // let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+
+    // // current year
+    // let year = date_ob.getFullYear();
+
+    // // prints date in YYYY-MM-DD format
+    // console.log(year + "-" + month + "-" + date);
+
+
+
+
+
     this.courseIntakeDateId = rowId
     console.log(startDate + ' ' + this.courseIntakeDateId)
 
