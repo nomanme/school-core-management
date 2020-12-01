@@ -45,7 +45,9 @@ export class CourseIntakeDateComponent implements OnInit {
 
   myFunction($event: any) {
     var rowId = $event.currentTarget.getAttribute('id');
-    var startDate = document.getElementById("sdate" + rowId).value;
+    var startDate = (<HTMLInputElement>document.getElementById("sdate" + rowId)).value;
+    var startDateParts = startDate.split("/");
+    startDate = startDateParts[2] + '/' + startDateParts[0] + '/' + startDateParts[1];
     // var startD = document.getElementById("sdate");
     // if (startD) {
     //   var startDate = startD.value;
