@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api/api.service';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import { AmazingTimePickerService } from 'amazing-time-picker';
 
 
 @Component({
@@ -12,15 +12,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 export class ClassTimetableComponent implements OnInit {
 
   getclasstimetable;
+  classTimetableId;
   editClassTimetable = {
     startTime: null,
     endTime: null,
-
   };
-  courseIntakeDateId;
 
 
-  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private matDatepickerModule: MatDatepickerModule) { }
+
+  constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private atp: AmazingTimePickerService) { }
 
   ngOnInit(): void {
     this.apiService.getAPI2('dev/getclasstimetable').subscribe((data) => {
@@ -28,30 +28,30 @@ export class ClassTimetableComponent implements OnInit {
       this.getclasstimetable = data;
     });
   }
-
   myFunction($event: any) {
     var rowId = $event.currentTarget.getAttribute('id');
 
-    var startDate = (<HTMLInputElement>document.getElementById("sdate" + rowId)).value;
-    var startDateParts = startDate.split("/");
-    startDate = startDateParts[2] + '-' + startDateParts[0] + '-' + startDateParts[1];
+    var startTime = (<HTMLInputElement>document.getElementById("sTime" + rowId)).value;
+    // var startDateParts = startDate.split("/");
+    // startDate = startDateParts[2] + '-' + startDateParts[0] + '-' + startDateParts[1];
 
-    var endDate = (<HTMLInputElement>document.getElementById("edate" + rowId)).value;
-    var endtDateParts = endDate.split("/");
-    endDate = endtDateParts[2] + '-' + endtDateParts[0] + '-' + endtDateParts[1];
+    var endTime = (<HTMLInputElement>document.getElementById("eTime" + rowId)).value;
+    // var endtDateParts = endDate.split("/");
+    // endDate = endtDateParts[2] + '-' + endtDateParts[0] + '-' + endtDateParts[1];
 
-    this.courseIntakeDateId = rowId
-    console.log(startDate + ' ' + this.courseIntakeDateId)
-    console.log(endDate + ' ' + this.courseIntakeDateId)
+    this.classTimetableId = rowId
+    console.log(startTime + ' ' + this.classTimetableId)
+    console.log(endTime + ' ' + this.classTimetableId)
 
 
 
-    let datajson = `{"startDate":"${startDate}", "endDate":"${endDate}"}`;
+    let datajson = `{"startTime":"${startTime}", "endTime":"${endTime}"}`;
     console.log(datajson);
-    this.apiService.postAPI2(`dev/editcourseintakedate?courseIntakeDateId=${this.courseIntakeDateId}`, datajson).subscribe((data) => {
+    this.apiService.postAPI2(`dev/editclasstimetable?classTimetableId=${this.classTimetableId}`, datajson).subscribe((data) => {
       console.log(data);
-      // this.router.navigate(['/course/course-intake-date-list']);
+      this.router.navigate(['/course/class-setup']);
     });
   }
+
 
 }

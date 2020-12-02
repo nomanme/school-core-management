@@ -3,14 +3,14 @@
         <div class="container-fluid">
             <div class="row m-0 p-0">
                 <div class="col-sm-12">
-                    <h3 class="page-heading">Course Intake Date List</h3>
+                    <h3 class="page-heading">Class Timetable</h3>
                 </div>
                 <div class="col-sm-12 text-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">
                             <i class="fa fa-angle-right pr-2" aria-hidden="true"></i>
-                            Course Intake Date List
+                            Class Timetable
                         </li>
                     </ol>
                 </div>
@@ -28,7 +28,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary mb-0 shadow-lg bg-white rounded">
                         <div class="card-header">
-                            <h5 class="card-title">Course Intake Date List Table</h5>
+                            <h5 class="card-title">Class Timetable</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -38,43 +38,28 @@
                                         <div class="col-md-12 p-0 m-0">
                                             <table class="table table-stripe">
                                                 <tr class="heading">
-                                                    <th class="course-name">Course Name</th>
+                                                    <th class="course-name">Class Timetable Name</th>
                                                     <th class="date">Start Time</th>
                                                     <th class="date">End Time</th>
                                                     <th class="action">Action</th>
                                                 </tr>
                                                 <tr *ngFor="let classTimetable of getclasstimetable"
-                                                    id="{{ coursedate.courseIntakeDateId }}">
-                                                    <td class="course-name">{{ classTimetable.courseName }}</td>
+                                                    id="{{ classTimetable.classTimetableId }}">
+                                                    <td class="course-name">{{ classTimetable.classTimetableName }}</td>
                                                     <td class="date">
-                                                        <mat-form-field appearance="fill">
-                                                            <mat-label>Choose a date</mat-label>
-                                                            <input value="{{ classTimetable.startDate }}"
-                                                                id="sdate{{ classTimetable.classTimetableId }}" matInput
-                                                                [matDatepicker]="picker1">
-                                                            <mat-datepicker-toggle matSuffix [for]="picker1">
-                                                            </mat-datepicker-toggle>
-                                                            <mat-datepicker #picker1></mat-datepicker>
-                                                        </mat-form-field>
+                                                        <input type="time" placeholder="00:00"
+                                                            value="{{ classTimetable.startTime }}"
+                                                            id="sTime{{ classTimetable.classTimetableId }}" />
                                                     </td>
                                                     <td class="date">
-                                                        <mat-form-field appearance="fill">
-                                                            <mat-label>Choose a date</mat-label>
-                                                            <input value="{{ classTimetable.endDate }}"
-                                                                id="edate{{ classTimetable.classTimetableId }}" matInput
-                                                                [matDatepicker]="picker2">
-                                                            <mat-datepicker-toggle matSuffix [for]="picker2">
-                                                            </mat-datepicker-toggle>
-                                                            <mat-datepicker #picker2></mat-datepicker>
-                                                        </mat-form-field>
+                                                        <input type="time" placeholder="00:00"
+                                                            value="{{ classTimetable.endTime }}"
+                                                            id="eTime{{ classTimetable.classTimetableId }}" />
                                                     </td>
                                                     <td class="action">
                                                         <button type="submit" id="{{classTimetable.classTimetableId}}"
                                                             (click)="myFunction($event)" class="btn btn-success"
                                                             name="click">click</button>
-                                                        <!-- <a href="course/view-course-intake-date/{{ coursedate.courseIntakeDateId }}">View</a>
-                                                            |
-                                                            <a href="course/edit-course-intake-date/{{ coursedate.courseIntakeDateId }}">Edit</a> -->
                                                     </td>
                                                 </tr>
                                             </table>

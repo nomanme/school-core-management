@@ -146,6 +146,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ClasssetupComponent } from './pages/course/classsetup/classsetup.component';
 import { ClassTimetableComponent } from './pages/course/class-timetable/class-timetable.component'
 
+import { AmazingTimePickerModule } from 'amazing-time-picker';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -295,7 +297,8 @@ import { ClassTimetableComponent } from './pages/course/class-timetable/class-ti
     NgSelectModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    AmazingTimePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

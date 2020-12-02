@@ -193,4 +193,18 @@
   th.action,td.action {
     width: 80px !important;
   }
-  
+
+
+  div#time-picker-wrapper {
+    display: none;
+}
+div#time-picker {
+  display: none;
+}
+
+#time-picker-wrapper[_ngcontent-ebn-c177] #time-picker.active[_ngcontent-ebn-c177] {
+  -webkit-transform: scale(1) !important;
+  transform: scale(1) !important;
+  opacity: 1;
+  display: none !important;
+}

@@ -23,13 +23,15 @@ export class CourseIntakeDateComponent implements OnInit {
     courseIntakeDateId: null
   };
   courseIntakeDateId;
-
+  CourseID;
 
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private matDatepickerModule: MatDatepickerModule) { }
 
   ngOnInit(): void {
     this.apiService.getAPI2('dev/getcourseintakedate').subscribe((data) => {
       console.log(data);
+      this.CourseID = data[0]['courseId']
+      console.log(this.CourseID);
       this.CourseIntakeDate = data;
     });
   }
@@ -55,7 +57,8 @@ export class CourseIntakeDateComponent implements OnInit {
     console.log(datajson);
     this.apiService.postAPI2(`dev/editcourseintakedate?courseIntakeDateId=${this.courseIntakeDateId}`, datajson).subscribe((data) => {
       console.log(data);
-      this.router.navigate(['/course/class-setup']);
+      // this.router.navigate(['/course/class-setup' ]);
+      this.router.navigateByUrl('/course/class-setup', { state: { id: 1, courseId: this.CourseID } });
     });
   }
 }
