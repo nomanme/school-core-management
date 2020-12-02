@@ -86,6 +86,13 @@ import { AddholidaysComponent } from './pages/course/addholidays/addholidays.com
 import { AddnewsubjectComponent } from './pages/course/addnewsubject/addnewsubject.component';
 import { AddsubjectComponent } from './pages/course/addsubject/addsubject.component';
 
+//classSetup
+import { ClasssetupComponent } from './pages/course/classsetup/classsetup.component';
+
+//ClassTimetable
+import { ClassTimetableComponent } from './pages/course/class-timetable/class-timetable.component';
+
+
 
 // // StudentPostalDetails 
 // import { StudentpostaldetailsComponent } from './pages/admin/studentpostaldetails/studentpostaldetails.component';
@@ -227,6 +234,15 @@ const routes: Routes = [
   { path: 'course/create-course-intake-date', component: CreateCourseIntakeDateComponent, canActivate: [AuthGuardService], },
   { path: 'course/view-course-intake-date/:id', component: ViewCourseIntakeDateComponent, canActivate: [AuthGuardService], },
   { path: 'course/edit-course-intake-date/:id', component: EditCourseIntakeDateComponent, canActivate: [AuthGuardService], },
+
+  //ClassSetup
+  { path: 'course/class-setup', component: ClasssetupComponent, canActivate: [AuthGuardService], },
+
+  //ClassTimetable
+  { path: 'course/class-timetable', component: ClassTimetableComponent, canActivate: [AuthGuardService], },
+
+
+
 
   // // PriorEducationalAchievement 
   // { path: 'admin/prior-educational-achievement-list', component: PriorEducationalAchievementComponent, canActivate: [AuthGuardService], },

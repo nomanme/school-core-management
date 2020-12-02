@@ -167,15 +167,12 @@
     cursor: pointer;
   }
   
-  table,
-  td,
-  th {
+  table,td,th {
     border: none;
     text-align: left;
   }
   
-  th,
-  td {
+  th,td {
     padding: 10px;
   }
   
@@ -184,18 +181,16 @@
     min-width: 40px !important;
   } */
   
-  th.class-setup-name,td.class-setup-name {
-    width: 200px !important;
+  th.course-name,td.course-name {
+    width: 230px !important;
+
   }
-  th.unit-name,td.unit-name {
-    width: 255px !important;
-  }
+  
   th.date,td.date {
-    width: 200px !important;
+    width: 270px !important;
   }
+  
   th.action,td.action {
     width: 80px !important;
   }
-  mat-form-field {
-    width: 180px !important;
-  }
+  

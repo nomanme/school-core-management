@@ -5,22 +5,17 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @Component({
-  selector: 'app-course-intake-date',
-  templateUrl: './course-intake-date.component.html',
-  styleUrls: ['./course-intake-date.component.css']
+  selector: 'app-class-timetable',
+  templateUrl: './class-timetable.component.html',
+  styleUrls: ['./class-timetable.component.css']
 })
-export class CourseIntakeDateComponent implements OnInit {
+export class ClassTimetableComponent implements OnInit {
 
-  CourseIntakeDate;
-  editcourseintakedate = {
-    courseId: null,
-    startDate: null,
-    endDate: null,
-    studentOriginIds: null,
-    enrolmentFee: null,
-    publish: null,
-    userId: null,
-    courseIntakeDateId: null
+  getclasstimetable;
+  editClassTimetable = {
+    startTime: null,
+    endTime: null,
+
   };
   courseIntakeDateId;
 
@@ -28,9 +23,9 @@ export class CourseIntakeDateComponent implements OnInit {
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private matDatepickerModule: MatDatepickerModule) { }
 
   ngOnInit(): void {
-    this.apiService.getAPI2('dev/getcourseintakedate').subscribe((data) => {
+    this.apiService.getAPI2('dev/getclasstimetable').subscribe((data) => {
       console.log(data);
-      this.CourseIntakeDate = data;
+      this.getclasstimetable = data;
     });
   }
 
@@ -55,7 +50,8 @@ export class CourseIntakeDateComponent implements OnInit {
     console.log(datajson);
     this.apiService.postAPI2(`dev/editcourseintakedate?courseIntakeDateId=${this.courseIntakeDateId}`, datajson).subscribe((data) => {
       console.log(data);
-      this.router.navigate(['/course/class-setup']);
+      // this.router.navigate(['/course/course-intake-date-list']);
     });
   }
+
 }

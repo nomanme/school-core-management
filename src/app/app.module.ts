@@ -143,7 +143,8 @@ import { TestComponent } from './pages/test/test.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ClasssetupComponent } from './pages/course/classsetup/classsetup.component'
+import { ClasssetupComponent } from './pages/course/classsetup/classsetup.component';
+import { ClassTimetableComponent } from './pages/course/class-timetable/class-timetable.component'
 
 @NgModule({
   declarations: [
@@ -281,6 +282,7 @@ import { ClasssetupComponent } from './pages/course/classsetup/classsetup.compon
     ViewCourseIntakeDateComponent,
     TestComponent,
     ClasssetupComponent,
+    ClassTimetableComponent,
 
   ],
 
