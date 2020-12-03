@@ -236,7 +236,7 @@ const routes: Routes = [
   { path: 'course/edit-course-intake-date/:id', component: EditCourseIntakeDateComponent, canActivate: [AuthGuardService], },
 
   //ClassSetup
-  { path: 'course/class-setup', component: ClasssetupComponent, canActivate: [AuthGuardService], },
+  { path: 'course/class-setup/:course', component: ClasssetupComponent, canActivate: [AuthGuardService], },
 
   //ClassTimetable
   { path: 'course/class-timetable', component: ClassTimetableComponent, canActivate: [AuthGuardService], },

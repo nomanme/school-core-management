@@ -37,17 +37,17 @@
 
                                         <div class="col-md-12 p-0 m-0">
                                             <table class="table table-stripe">
-                                                <tr class="heading">
+                                                <!-- <tr class="heading">
                                                     <th class="class-setup-name">Class Setup Name</th>
                                                     <th class="unit-name">Unit Name</th>
                                                     <th class="date">Start Date</th>
                                                     <th class="date">End Date</th>
                                                     <th class="action">Action</th>
-                                                </tr>
+                                                </tr> -->
                                                 <tr *ngFor="let classSetup of getClassSetup"
                                                     id="{{ classSetup.classSetupId }}">
                                                     <td class="class-setup-name">{{ classSetup.classSetupName }}</td>
-                                                    <td class="unit-name">{{ classSetup.unitName }}</td>
+                                                    <td class="unit-name"><input type="text" [(ngModel)]="str"> </td>
                                                     <td class="date">
                                                         <mat-form-field appearance="fill" id="matfield">
                                                             <mat-label>Choose a date</mat-label>
@@ -76,15 +76,87 @@
                                                         <button type="submit" id="{{classSetup.classSetupId}}"
                                                             (click)="myFunction($event)" class="btn btn-success"
                                                             name="click">Setup Timetable</button>
-                                                        <!-- <a href="course/view-course-intake-date/{{ coursedate.courseIntakeDateId }}">View</a>
-                                                            |
-                                                        <a href="course/edit-course-intake-date/{{ coursedate.courseIntakeDateId }}">Edit</a> -->
                                                     </td>
                                                 </tr>
+
+                                                
+                                                <!-- <tr *ngFor="let classSetup of getClassSetup"
+                                                    id="{{ classSetup.classSetupId }}">
+                                                    <td class="class-setup-name">{{ classSetup.classSetupName }}</td>
+                                                    <td class="unit-name">{{ str }}</td>
+                                                    <td class="date">
+                                                        <mat-form-field appearance="fill" id="matfield">
+                                                            <mat-label>Choose a date</mat-label>
+                                                            <input value="{{ classSetup.startDate }}"
+                                                                id="sdate{{ classSetup.classSetupId }}" matInput
+                                                                [matDatepicker]="picker1">
+                                                            <mat-datepicker-toggle matSuffix [for]="picker1">
+                                                            </mat-datepicker-toggle>
+                                                            <mat-datepicker #picker1></mat-datepicker>
+                                                        </mat-form-field>
+                                                    </td>
+
+
+                                                    <td class="date">
+                                                        <mat-form-field appearance="fill">
+                                                            <mat-label>Choose a date</mat-label>
+                                                            <input value="{{ classSetup.endDate }}"
+                                                                id="edate{{ classSetup.classSetupId }}" matInput
+                                                                [matDatepicker]="picker2">
+                                                            <mat-datepicker-toggle matSuffix [for]="picker2">
+                                                            </mat-datepicker-toggle>
+                                                            <mat-datepicker #picker2></mat-datepicker>
+                                                        </mat-form-field>
+                                                    </td>
+                                                    <td class="action">
+                                                        <button type="submit" id="{{classSetup.classSetupId}}"
+                                                            (click)="myFunction($event)" class="btn btn-success"
+                                                            name="click">Setup Timetable</button>
+                                                        
+                                                    </td>
+                                                </tr>
+
+                                                <tr *ngFor="let classSetup of getClassSetup" 
+                                                    id="{{ classSetup.classSetupId }}">
+                                                    <td class="class-setup-name">{{ classSetup.classSetupName }}</td>
+                                                    <td class="unit-name">{{ str }}</td>
+                                                    <td class="date">
+                                                        <mat-form-field appearance="fill" id="matfield">
+                                                            <mat-label>Choose a date</mat-label>
+                                                            <input value="{{ classSetup.startDate }}"
+                                                                id="sdate{{ classSetup.classSetupId }}" matInput
+                                                                [matDatepicker]="picker1">
+                                                            <mat-datepicker-toggle matSuffix [for]="picker1">
+                                                            </mat-datepicker-toggle>
+                                                            <mat-datepicker #picker1></mat-datepicker>
+                                                        </mat-form-field>
+                                                    </td>
+
+
+                                                    <td class="date">
+                                                        <mat-form-field appearance="fill">
+                                                            <mat-label>Choose a date</mat-label>
+                                                            <input value="{{ classSetup.endDate }}"
+                                                                id="edate{{ classSetup.classSetupId }}" matInput
+                                                                [matDatepicker]="picker2">
+                                                            <mat-datepicker-toggle matSuffix [for]="picker2">
+                                                            </mat-datepicker-toggle>
+                                                            <mat-datepicker #picker2></mat-datepicker>
+                                                        </mat-form-field>
+                                                    </td>
+                                                    <td class="action">
+                                                        <button type="submit" id="{{classSetup.classSetupId}}"
+                                                            (click)="myFunction($event)" class="btn btn-success"
+                                                            name="click">Setup Timetable</button>
+                                                        
+                                                    </td>
+                                                </tr> -->
                                             </table>
                                         </div>
                                     </div>
                                     <!--inner-row-->
+                                    <a href="/course/course-intake-date-list" class="btn btn-primary" role="button" aria-pressed="true">Go Back</a>
+
                                 </div>
                                 <!--col-md-12 sub-form-->
                             </div>

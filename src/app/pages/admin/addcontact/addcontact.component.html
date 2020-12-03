@@ -41,20 +41,7 @@
                         >
                         <div class="col-sm-8">
                           <div class="input-group">
-                            <input
-                              [ngClass]="
-                                error2 == ''
-                                  ? 'form-control select2'
-                                  : 'form-control select2 is-invalid'
-                              "
-                              [(ngModel)]="ContractCode"
-                              class="form-control"
-                              type="text"
-                              name="ContractCode"
-                              id="ContractCode"
-                              placeholder="Enter Contract Code here"
-                              required
-                            />
+                            <input [ngClass]="error2 == '' ? 'form-control select2' : 'form-control select2 is-invalid'" [(ngModel)]="ContractCode"class="form-control" type="text" name="ContractCode" id="ContractCode"placeholder="Enter Contract Code here"required/>
                           </div>
                         </div>
                       </div>

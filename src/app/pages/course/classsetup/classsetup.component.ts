@@ -18,22 +18,41 @@ export class ClasssetupComponent implements OnInit {
   getschedule;
   classSetupId;
   CourseId;
-  // editClassSetup = {
-  //   startScheduleId: null,
-  //   endScheduleId: null, 
-  // };
+  course;
+  getcourseunit;
+  getcourseunitbycourseid;
+  myString = '';
+  str ='';
 
   constructor(private apiService: ApiService, private router: Router, private activatedRoute: ActivatedRoute, private matDatepickerModule: MatDatepickerModule, private location: Location) { }
 
   ngOnInit(): void {
-    //get data from course intake date
-    this.CourseId = console.log(this.location.getState());
+
+    this.course = this.activatedRoute.snapshot.paramMap.get('course');
 
     this.apiService.getAPI2('dev/getclasssetup').subscribe((data) => {
       console.log(data);
       this.getClassSetup = data;
     });
+
+    this.apiService.getAPI3(`dev/getcourseunitbycourseid?courseId=${this.course}`).subscribe((data) => {
+      console.log(data);
+      this.getcourseunitbycourseid = data;
+      console.log(this.getcourseunitbycourseid)
+
+      const unitname = this.getcourseunitbycourseid;
+      const result = unitname.map(t => t.unitName);
+      console.log(result)
+      // this.str=result
+      this.str = result.join(", "); 
+      console.log(this.str)
+      
+    });
+
+
+    
   }
+  
   myFunction($event: any) {
     var rowId = $event.currentTarget.getAttribute('id');
 
@@ -49,7 +68,7 @@ export class ClasssetupComponent implements OnInit {
     console.log(startDate + ' ' + this.classSetupId)
     console.log(endDate + ' ' + this.classSetupId)
 
-    let datajson = `{"startDate":"${startDate}", "endDate":"${endDate}"}`;
+    let datajson = `{"startDate":"${startDate}", "endDate":"${endDate}" }`;
     console.log(datajson);
     this.apiService.postAPI2(`dev/editclasssetup?classSetupId=${this.classSetupId}`, datajson).subscribe((data) => {
       console.log(data);

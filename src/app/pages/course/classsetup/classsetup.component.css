@@ -199,3 +199,6 @@
   mat-form-field {
     width: 180px !important;
   }
+  a.btn.btn-primary {
+    margin-left: 26px;
+}

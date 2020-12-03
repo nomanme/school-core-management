@@ -64,7 +64,7 @@ export class CreateStudentenrolmentComponent implements OnInit {
   error13 = '';
   errors = '';
   errorCodes: { studentOriginId: '' };
-
+ 
   prioreducation;
   qualification = false;
   studentOrigin;
